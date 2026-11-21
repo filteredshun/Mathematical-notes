@@ -1,7 +1,6 @@
 /* Mathematical typography: classical AMS/LaTeX-like serif, no decorative fonts.
    STIX Two Text is a standard scholarly serif designed for mathematical texts;
    mathematical symbols continue to use Quartz/KaTeX's Computer Modern fonts. */
-@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
   --mathNotesTextFont: "Latin Modern Roman", "CMU Serif", "Computer Modern Serif", "STIX Two Text", "Times New Roman", serif;
