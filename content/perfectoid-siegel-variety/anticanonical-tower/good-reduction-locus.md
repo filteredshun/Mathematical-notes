@@ -11,6 +11,8 @@ tags:
 
 *A short note on Siegel moduli spaces · 21 November 2026*
 
+**Prerequisite.** [[perfectoid-siegel-variety/anticanonical-tower/siegel-modular-varieties|Siegel Modular Varieties and Level Structures]] recalls the $K^p$-orbit moduli problem and the $p$-level towers used here.
+
 The phrase **good reduction locus** refers to the abelian varieties represented by moduli points. We explain why taking the generic fibre of the formal completion of an integral Siegel moduli space detects exactly this condition.
 
 ## 1. Formal completion versus analytification
