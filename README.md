@@ -12,3 +12,6 @@ Run `bash scripts/build.sh` (requires git, Node.js 22, npm, Python 3). The scrip
 Under **Settings → Pages**, choose **GitHub Actions** as the source, if GitHub Pages is available for this repository. The repository remains private unless you change it, but a Pages website may be publicly accessible even for a private repository. Only publish material you intend to make public.
 
 Quartz renders Obsidian-style theorem callouts and foldable proof/remark sections. Styles live in `assets/math-notes.scss`.
+
+
+Deployment note: GitHub Pages is configured to build from GitHub Actions; every push to `main` triggers a site rebuild.
