@@ -1,0 +1,60 @@
+/* Minimal seminar notes: framed propositions and expandable proofs */
+.callout[data-callout="theorem"], .callout[data-callout="lemma"],
+.callout[data-callout="proposition"], .callout[data-callout="definition"],
+.callout[data-callout="example"] {
+  --color: 67, 110, 150;
+  --border: #5e819f;
+  --bg: transparent;
+  border: 0 !important;
+  border-left: 2px solid #5e819f !important;
+  border-bottom: 1px solid #5e819f !important;
+  border-radius: 0 !important;
+  padding: 0.25rem 0.75rem 0.8rem !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin: 1.4rem 0 1rem !important;
+}
+.callout[data-callout="theorem"] > .callout-title,
+.callout[data-callout="lemma"] > .callout-title,
+.callout[data-callout="proposition"] > .callout-title,
+.callout[data-callout="definition"] > .callout-title,
+.callout[data-callout="example"] > .callout-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: var(--dark);
+}
+.callout[data-callout="theorem"] .callout-icon,
+.callout[data-callout="lemma"] .callout-icon,
+.callout[data-callout="proposition"] .callout-icon,
+.callout[data-callout="definition"] .callout-icon,
+.callout[data-callout="example"] .callout-icon { display: none !important; }
+.callout[data-callout="proof"], .callout[data-callout="remark"] {
+  --color: 57, 102, 147;
+  --border: #5e819f;
+  --bg: transparent;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0.6rem 0 1.3rem !important;
+}
+.callout[data-callout="proof"] > .callout-title,
+.callout[data-callout="remark"] > .callout-title {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0 0.35rem;
+  border: 1px solid #5e819f;
+  border-radius: 3px;
+  color: #275b8c;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.callout[data-callout="proof"] > .callout-content,
+.callout[data-callout="remark"] > .callout-content { margin-top: 0.7rem; padding-left: 0.4rem; }
+.callout[data-callout="proof"] .callout-icon,
+.callout[data-callout="remark"] .callout-icon { display: none !important; }
+article { font-family: Georgia, "Times New Roman", serif; line-height: 1.65; }
+article h1, article h2, article h3 { font-family: Georgia, "Times New Roman", serif; }
+article .katex-display { overflow-x: auto; overflow-y: hidden; }
