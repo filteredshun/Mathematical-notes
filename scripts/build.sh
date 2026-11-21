@@ -20,7 +20,7 @@ if '@use "./math-notes.scss";' not in s:
 style.write_text(s)
 config=root/'quartz.config.ts'
 s=config.read_text()
-s=s.replace('pageTitle: "Quartz 4",', 'pageTitle: "Mathematical Notes",')
+s=s.replace('pageTitle: "Quartz 4",', 'pageTitle: "Perfectoid Siegel Variety",')
 s=s.replace('baseUrl: "quartz.jzhao.xyz",', 'baseUrl: "filteredshun.github.io/Mathematical-notes",')
 config.write_text(s)
 PY
