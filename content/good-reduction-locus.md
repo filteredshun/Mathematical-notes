@@ -129,7 +129,7 @@ $$
 \underbrace{\mathcal X(0)}_{\text{ordinary}}
 \ \subseteq\underbrace{\mathcal X(\epsilon)}_{\text{Hasse neighborhood}}
 \ \subseteq\underbrace{\mathcal X}_{\text{good reduction}}
-\ \subseteqX_C^{\mathrm{ad}}.
+\ \subseteq X_C^{\mathrm{ad}}.
 $$
 
 Nonordinary reduction means $h(A_x)>0$; it need not mean $h(A_x)=1$.
