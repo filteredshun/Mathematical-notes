@@ -1,3 +1,28 @@
+/* Mathematical typography: classical AMS/LaTeX-like serif, no decorative fonts.
+   STIX Two Text is a standard scholarly serif designed for mathematical texts;
+   mathematical symbols continue to use Quartz/KaTeX's Computer Modern fonts. */
+@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --mathNotesTextFont: "Latin Modern Roman", "CMU Serif", "Computer Modern Serif", "STIX Two Text", "Times New Roman", serif;
+  --bodyFont: var(--mathNotesTextFont);
+  --headerFont: var(--mathNotesTextFont);
+}
+body, article, .page-title, .sidebar, .explorer, .search, .toc {
+  font-family: var(--mathNotesTextFont);
+}
+article {
+  font-size: 1.095rem;
+  line-height: 1.72;
+  letter-spacing: 0;
+}
+article h1 { font-size: 2.05rem; font-weight: 600; }
+article h2 { font-size: 1.52rem; font-weight: 600; }
+article h3 { font-size: 1.24rem; font-weight: 600; }
+article p, article li { color: var(--dark); }
+html[saved-theme="light"] article { color: #20242b; }
+html[saved-theme="dark"] article { color: #ececf0; }
+
 /* Minimal seminar notes: framed propositions and expandable proofs */
 .callout[data-callout="theorem"], .callout[data-callout="lemma"],
 .callout[data-callout="proposition"], .callout[data-callout="definition"],
@@ -19,7 +44,7 @@
 .callout[data-callout="proposition"] > .callout-title,
 .callout[data-callout="definition"] > .callout-title,
 .callout[data-callout="example"] > .callout-title {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--mathNotesTextFont);
   font-weight: 700;
   color: var(--dark);
 }
@@ -46,7 +71,7 @@
   border: 1px solid #5e819f;
   border-radius: 3px;
   color: #275b8c;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--mathNotesTextFont);
   font-size: 1.05rem;
   font-weight: bold;
   cursor: pointer;
@@ -55,6 +80,5 @@
 .callout[data-callout="remark"] > .callout-content { margin-top: 0.7rem; padding-left: 0.4rem; }
 .callout[data-callout="proof"] .callout-icon,
 .callout[data-callout="remark"] .callout-icon { display: none !important; }
-article { font-family: Georgia, "Times New Roman", serif; line-height: 1.65; }
-article h1, article h2, article h3 { font-family: Georgia, "Times New Roman", serif; }
+article h1, article h2, article h3 { font-family: var(--mathNotesTextFont); }
 article .katex-display { overflow-x: auto; overflow-y: hidden; }
