@@ -448,7 +448,114 @@ C_n(A)=\ker(A[p^n]\to\mathcal G_n).
 }
 $
 
-> [!remark]- Remark 4.2 (Ordinary versus near-ordinary)
+### Quotients by canonical subgroups
+
+Let $f_n:A\to A':=A/C_n(A)$ be the quotient isogeny. Recall that, by construction,
+
+$$
+C_n(A)_0=\ker(F^n_{A_0/R_0}).
+$$
+
+> [!proposition] Proposition 4.2 (The canonical quotient remains ordinary)
+> The quotient $A'=A/C_n(A)$ is an abelian scheme over $R$ with ordinary reduction, and there is a canonical identification
+>
+> $$
+> \boxed{\quad A'_0\simeq A_0^{(p^n)}.\quad}
+> $$
+>
+> Under this identification, the reduction of $f_n$ is the iterated relative Frobenius $F^n:A_0\to A_0^{(p^n)}$.
+
+> [!proof]- Proof
+> Quotients of abelian schemes by finite locally free subgroup schemes exist as abelian schemes and commute with base change. Therefore
+>
+> $$
+> A'_0=A_0/C_n(A)_0
+> =A_0/\ker F^n
+> \simeq A_0^{(p^n)},
+> $$
+>
+> with quotient map $F^n$. Frobenius base change preserves the ordinary condition: the Hasse invariant remains invertible after pullback by $\operatorname{Fr}_{R_0}^n$. Hence $A'_0$, and therefore $A'$ in the sense of ordinary reduction, is ordinary. $\square$
+
+We can now compare the subgroup arising from $f_n$ with the first canonical subgroup of $A'$. Write
+
+$$
+D_n:=f_n(A[p^n])
+\simeq A[p^n]/C_n(A)
+\subset A'[p^n],
+\qquad C'_1:=C_1(A').
+$$
+
+Here $D_n$ is **finite étale of rank $p^{ng}$**, since it identifies with the finite étale quotient $\mathcal G_n$ of Proposition 4.1.
+
+> [!proposition] Proposition 4.3 (Transversality; Zhu, Lemma 3.7.4)
+> Inside $A'[p^n]$, one has
+>
+> $$
+> \boxed{\qquad D_n\cap C'_1=\{0\}.\qquad}
+> $$
+>
+> For $n=1$, the two rank-$p^g$ subgroups $D_1$ and $C'_1$ are complementary in $A'[p]$:
+>
+> $$
+> A'[p]\simeq D_1\times_R C'_1.
+> $$
+
+> [!proof]- Proof
+> On the special fibre, the identification $A'_0\simeq A_0^{(p^n)}$ gives
+>
+> $$
+> (D_n)_0\simeq\ker(V^n_{A_0/R_0})
+> \quad\text{(étale)},\qquad
+> (C'_1)_0=\ker(F_{A'_0/R_0})
+> \quad\text{(connected)}.
+> $$
+>
+> Their intersection is trivial on every geometric fibre: a subgroup scheme of a finite étale group scheme is étale over an algebraically closed field, whereas a finite connected group scheme has only the identity as a geometric point. Hence their scheme-theoretic intersection has trivial special fibre.
+>
+> The intersection is a finite closed subgroup scheme of $D_n$. Since $R$ is $p$-adically complete, $pR$ is contained in the Jacobson radical; Nakayama's lemma applied to its augmentation ideal implies that the intersection itself is the identity subgroup.
+>
+> When $n=1$, both $D_1$ and $C'_1$ have rank $p^g$, and their trivial intersection implies that $D_1\times_R C'_1\to A'[p]$ is an isomorphism: it is so on the ordinary special fibre, and hence over $R$ by the same finite-module/Nakayama argument. $\square$
+
+In particular, for $n=1$, **the image of $A[p]$ in the canonical quotient is an étale complement to the new canonical subgroup**. This is the basic geometric picture behind an *anticanonical level*.
+
+### Canonical subgroups and duality
+
+Suppose additionally that $A$ carries a principal polarization $\lambda:A\xrightarrow{\sim}A^\vee$. The canonical Weil pairing with the dual abelian scheme is
+
+$$
+e_{p^n}:A[p^n]\times A^\vee[p^n]\longrightarrow\mu_{p^n}.
+$$
+
+Let $C_n(A)^\perp\subset A^\vee[p^n]$ be the annihilator of $C_n(A)$ under this perfect pairing.
+
+> [!proposition] Proposition 4.4 (Orthogonality of canonical subgroups)
+> We have
+>
+> $$
+> \boxed{\quad C_n(A)^\perp=C_n(A^\vee).\quad}
+> $$
+>
+> In particular, under the principal polarization $\lambda$, the subgroup $C_n(A)$ is Lagrangian in $A[p^n]$ for the induced Weil pairing:
+> $C_n(A)^\perp=C_n(A)$.
+
+> [!proof]- Proof via Cartier duality
+> Cartier duality applied to the exact sequence of Proposition 4.1 gives
+>
+> $$
+> 0\longrightarrow\mathcal G_n^D
+> \longrightarrow A^\vee[p^n]
+> \longrightarrow C_n(A)^D\longrightarrow0.
+> $$
+>
+> By definition of the perfect pairing, the image of $\mathcal G_n^D$ is precisely $C_n(A)^\perp$. Its special fibre is the Cartier dual of $\ker V^n_{A_0/R_0}$, which identifies with $\ker F^n_{A_0^\vee/R_0}$ by duality of Frobenius and Verschiebung. Thus $\mathcal G_n^D$ is a finite locally free subgroup of $A^\vee[p^n]$ lifting $\ker F^n$ on the dual abelian scheme. Uniqueness in Proposition 4.1 yields
+>
+> $$
+> C_n(A)^\perp=\mathcal G_n^D=C_n(A^\vee).
+> $$
+>
+> A principal polarization carries the canonical subgroup of $A$ to that of $A^\vee$, proving the last assertion. $\square$
+
+> [!remark]- Remark 4.5 (Ordinary versus near-ordinary)
 > The construction above uses an **ordinary reduction modulo $p$** and works at every level $n$. Canonical subgroups on larger Hasse-invariant neighborhoods require a separate canonical subgroup theorem, with restrictions on the Hasse height. We will distinguish these two settings when constructing the anticanonical tower.
 
 ## 5. From ordinary to a neighborhood
