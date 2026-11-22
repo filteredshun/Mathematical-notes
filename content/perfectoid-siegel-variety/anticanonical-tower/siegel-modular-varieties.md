@@ -11,9 +11,9 @@ tags:
 
 *Preliminaries for the anticanonical tower*
 
-Before defining the good-reduction locus, we recall what the Siegel modular variety parametrizes, and what changes when we add level at $p$. The essential point is that a **level structure is an orbit of trivializations**: changing the subgroup $K_p$ changes how much of a symplectic basis of $A[p^m]$ we remember.
+Before defining the good-reduction locus, we recall what the Siegel modular variety parametrizes, and what changes when we add level at $p$. The essential point is that a **level structure is an orbit of trivializations**: changing the subgroup $K_p$ changes how much of a symplectic basis of $A[p^m]$ we remember, while the tame subgroup $K^p$ is fixed.
 
-These conventions follow [Scholze, Chapter III, §III.1](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) and [Zhu, §3.4](https://ymsc.tsinghua.edu.cn/__local/D/72/98/0BE6DF2EB56ABADC7E9F0EC6804_5E438507_11E279.pdf). One small distinction between their definitions of $\Gamma_0$ is recorded explicitly in §5 below.
+These conventions follow [Scholze, Chapter III, §III.1](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) and [Zhu, §3.4](https://ymsc.tsinghua.edu.cn/__local/D/72/98/0BE6DF2EB56ABADC7E9F0EC6804_5E438507_11E279.pdf). One small distinction between their definitions of $\Gamma_0$ is recorded explicitly in §5 below. Our §2 expands the general orbit language, which Zhu deliberately omits, and follows his exact principal-level convention in Definition 3.4.2.
 
 ## 1. The symplectic space and the moduli problem
 
@@ -55,48 +55,205 @@ After choosing a trivialization of $\mu_n$, this makes $A[n]$ into a symplectic 
 > [!proof]- Background
 > This representability theorem is used as an input, not reproved here. For a principal tame level $N\geq3$, it is the familiar fine moduli problem of symplectic level-$N$ structures, with the Weil-pairing similitude convention. See Zhu, Theorem 3.4.1.
 
-## 2. What is a $K^p$-orbit level structure?
+## 2. Prime-to-$p$ level: from an orbit to Zhu's explicit definition
 
-For a geometric point $A/\overline{k}$ in characteristic $0$, set
+There are two descriptions of the same idea which should **not** be confused:
+
+1. **General tame level** $K^p$: an orbit $\eta^p=[\alpha^p]_{K^p}$ of compatible prime-to-$p$ trivializations.
+2. **Principal tame level** $K^p=\Gamma(N)^p$: an explicit pair $(\eta_N,t_N)$ of isomorphisms of finite étale group schemes.
+
+The second is precisely the formulation in **Zhu, Definition 3.4.2**. Zhu first states the general $K^p$-level moduli problem in Theorem 3.4.1, says that he will omit the general definition, and then spells out the principal level. We explain how the orbit viewpoint leads to his pair.
+
+### 2.1 The Weil pairing takes values in $\mu_N$
+
+For a principally polarized abelian scheme $(A,\lambda)/S$ and any $N$ invertible on $S$, the canonical pairing between an abelian scheme and its dual, composed with the polarization, gives
 
 $$
-\widehat T^{\,p}(A)=\prod_{\ell\neq p}T_\ell(A),\qquad
-\widehat{\mathbf Z}^{\,p}=\prod_{\ell\neq p}\mathbf Z_\ell,\qquad
-\mathbf A_f^p=\widehat{\mathbf Z}^{\,p}[1/\text{primes}\neq p].
+\begin{aligned}
+e_{\lambda,N}: A[N]\times_S A[N]
+&\xrightarrow{(\mathrm{id},\,\lambda)}
+ A[N]\times_S A^\vee[N]\\
+&\xrightarrow{\ e_N\ }\mu_{N,S}.
+\end{aligned}
 $$
 
-More precisely, one usually takes the prime-to-$p$ rational Tate module
-$V^p(A)=\widehat T^{\,p}(A)\otimes_{\widehat{\mathbf Z}^{\,p}}\mathbf A_f^p$.
-A prime-to-$p$ trivialization is a compatible symplectic **similitude**
+It is a perfect alternating pairing. The distinction between the target $\mu_{N,S}$ and the **constant** group scheme $(\mathbf Z/N\mathbf Z)_S$ is crucial: no primitive root of unity has been globally chosen.
+
+> [!remark]- Remark 2.1 (Why $\operatorname{GSp}$ and not only $\operatorname{Sp}$?)
+> If we change the identification of $\mu_N$ with the constant group $(\mathbf Z/N\mathbf Z)_S$ by multiplication by $u\in(\mathbf Z/N\mathbf Z)^\times$, the resulting standard form is rescaled by $u$. Thus change-of-basis matrices naturally preserve the standard form **up to a unit**:
+>
+> $$
+> \psi(kv,kw)=\nu(k)\psi(v,w).
+> $$
+>
+> This gives $\operatorname{GSp}$, with $\operatorname{Sp}=\ker\nu$ as the subgroup preserving a *fixed* pairing trivialization. Equivalently, on geometric fibres the similitude character of the Galois/étale monodromy representation is the cyclotomic character.
+
+### 2.2 General $K^p$: what exactly is $\alpha^p$?
+
+Write
 
 $$
-\alpha^p: V\otimes_{\mathbf Q}\mathbf A_f^p
-  \xrightarrow{\sim} V^p(A)
+\widehat{\mathbf Z}^{\,p}=\prod_{\ell\ne p}\mathbf Z_\ell,\qquad
+\mathbf A_f^p=\prod_{\ell\ne p}'\mathbf Q_\ell,\qquad
+T^pA=\prod_{\ell\ne p}T_\ell A,\qquad
+V^pA=T^pA\otimes_{\widehat{\mathbf Z}^{\,p}}\mathbf A_f^p.
 $$
 
-(with the usual cyclotomic twist in the target pairing). We quotient by the right action of $K^p$:
+The polarization yields a perfect alternating pairing with Tate twist
+
+$$
+e_\lambda^p:V^pA\times V^pA\longrightarrow\mathbf A_f^p(1).
+$$
+
+For the moment take a geometric point $\bar s$, and choose a compatible trivialization
 
 $$
 \boxed{\quad
-\eta^p=[\alpha^p]_{K^p}.
+\alpha^p:V\otimes_\mathbf Q\mathbf A_f^p
+\xrightarrow{\ \sim\ }V^pA_{\bar s}.
 \quad}
 $$
 
-Thus $\eta^p$ does **not** specify a distinguished basis. It remembers a trivialization only modulo the allowed changes of basis in $K^p$. Over a general base scheme this is formulated using the corresponding étale sheaf of trivializations, rather than choosing bases pointwise.
+We require it to be a *similitude trivialization*: the transported pairing is a scalar multiple of the standard form $\psi$. Explicitly, there is an $\mathbf A_f^p$-linear isomorphism
 
-> [!example] Example 2.1 (Principal tame level)
-> For $K^p$ the prime-to-$p$ principal congruence subgroup of level $N$, the orbit amounts to specifying a full symplectic-similitude level-$N$ structure. In Zhu's explicit convention, this is a pair
+$$
+c_\alpha:\mathbf A_f^p\xrightarrow{\sim}\mathbf A_f^p(1)
+$$
+
+such that
+
+$$
+\boxed{\quad
+e_\lambda^p(\alpha^p(v),\alpha^p(w))
+=c_\alpha\bigl(\psi(v,w)\bigr).
+\quad}
+\tag{2.1}
+$$
+
+If we choose integral trivializations of $T^pA$ instead, the group acting is $G(\widehat{\mathbf Z}^{\,p})$. Below we focus on small $K^p\subseteq G(\widehat{\mathbf Z}^{\,p})$ as in Zhu; arbitrary adelic compact opens can be treated by rational Tate modules and the corresponding lattice/orbit conventions.
+
+**Where does $\alpha^p$ come from?** It is **not canonically supplied by $(A,\lambda)$**. After passing to a geometric fibre, we *choose* one of the compatible frames. It is the extra level data, modulo the equivalence specified by $K^p$.
+
+Given a fixed compact open subgroup $K^p\subset G(\mathbf A_f^p)$, define the **$K^p$-orbit** by
+
+$$
+\boxed{\qquad
+\eta^p=[\alpha^p]_{K^p}
+=\{\alpha^p\circ k:k\in K^p\}.
+\qquad}
+\tag{2.2}
+$$
+
+In particular, $\eta^p$ is **not** an individual basis. It is the class of all bases obtained from a representative $\alpha^p$ by the allowed changes of coordinates.
+
+> [!proposition] Proposition 2.2 (Compatibility with Weil pairing)
+> If $\alpha'^p=\alpha^p\circ k$ with $k\in K^p$, then $\alpha'^p$ still satisfies (2.1), but its cyclotomic scalar changes according to
 >
 > $$
-> \eta_N:A[N]\xrightarrow{\sim}(\mathbf Z/N\mathbf Z)^{2g},
-> \qquad t_N:\mu_N\xrightarrow{\sim}\mathbf Z/N\mathbf Z,
+> \boxed{\quad c_{\alpha'}=\nu(k)c_\alpha.\quad}
 > $$
 >
-> such that $\eta_N$ identifies $t_N\circ e_{\lambda,N}$ with the standard pairing $\psi$ modulo $N$. See Zhu, Definition 3.4.2.
->
-> The choice of $t_N$ is the cyclotomic component; suppressing it is convenient shorthand but is not literally the same moduli problem over the original base.
+> Hence the condition of being a compatible similitude trivialization is preserved by the $K^p$-action, though $c_\alpha$ itself need not be fixed on the orbit.
 
-Fix this tame level $K^p$ from now on. With hyperspecial level $G(\mathbf Z_p)$ at $p$, we write simply $X=X_{g,K^p}$.
+> [!proof]- Proof
+> The defining identity for $G=\operatorname{GSp}$ is $\psi(kv,kw)=\nu(k)\psi(v,w)$. Therefore
+>
+> $$
+> \begin{aligned}
+> e_\lambda^p(\alpha'^p(v),\alpha'^p(w))
+> &=e_\lambda^p(\alpha^p(kv),\alpha^p(kw))\\
+> &=c_\alpha(\psi(kv,kw))\\
+> &=\nu(k)c_\alpha(\psi(v,w)).
+> \end{aligned}
+> $$
+>
+> This is exactly the stated formula. $\square$
+
+### 2.3 Zhu, Definition 3.4.2: the principal tame level
+
+Let $(N,p)=1$, with $N\ge 3$, and put
+
+$$
+\Gamma(N)^p=
+\ker\!\left(
+G(\widehat{\mathbf Z}^{\,p})\longrightarrow G(\mathbf Z/N\mathbf Z)
+\right).
+$$
+
+A $\Gamma(N)^p$-orbit of **integral** prime-to-$p$ frames remembers precisely their reduction modulo $N$. In the direction of trivialization used by Zhu, this becomes the following.
+
+> [!definition] Definition 2.3 (Full prime-to-$p$ level $N$; Zhu, Definition 3.4.2)
+> A level-$\Gamma(N)^p$ structure on a principally polarized abelian scheme $(A,\lambda)/S$ over a $\mathbf Z_{(p)}$-scheme $S$ is a **pair**
+>
+> $$
+> \boxed{
+> (\eta_N,t_N),\qquad
+> \eta_N:A[N]\xrightarrow{\sim}(\mathbf Z/N\mathbf Z)_S^{2g},
+> \qquad
+> t_N:\mu_{N,S}\xrightarrow{\sim}(\mathbf Z/N\mathbf Z)_S,
+> }
+> $$
+>
+> of isomorphisms of **group schemes over $S$**, satisfying
+>
+> $$
+> \boxed{\quad
+> t_N\!\left(e_{\lambda,N}(x,y)\right)
+> =\psi_N\!\left(\eta_N(x),\eta_N(y)\right)
+> \quad}
+> \tag{2.3}
+> $$
+>
+> for all sections $x,y$ locally on $S$. Here $\psi_N$ is the reduction of $\psi$ modulo $N$.
+
+Notice the direction: in §2.2 we chose $\alpha_N:(\mathbf Z/N\mathbf Z)^{2g}\to A[N]$ for ease of taking orbits, while Zhu uses $\eta_N=\alpha_N^{-1}$. The two descriptions agree after reversing the arrow.
+
+> [!proof]- Why the orbit gives the pair $(\eta_N,t_N)$
+> Choose an integral frame $\alpha^p$ of $T^pA$ compatible with the pairing. Reduction modulo $N$ gives
+>
+> $$
+> \alpha_N:(\mathbf Z/N\mathbf Z)^{2g}\xrightarrow{\sim}A[N].
+> $$
+>
+> Since the kernel of reduction $G(\widehat{\mathbf Z}^{\,p})\to G(\mathbf Z/N\mathbf Z)$ is $\Gamma(N)^p$, the orbit determines $\alpha_N$ but forgets its particular lift. Set $\eta_N=\alpha_N^{-1}$. The transported Weil pairing is a nondegenerate alternating form proportional to $\psi_N$; its proportionality determines the unique $t_N$ satisfying (2.3). Conversely, an étale-locally defined pair $(\eta_N,t_N)$ admits compatible lifts to full prime-to-$p$ frames, which differ by $\Gamma(N)^p$.
+>
+> On a general base, these local descriptions descend to the **group-scheme isomorphisms** in Definition 2.3; a chosen global Tate-module basis need not exist. $\square$
+
+### 2.4 What does $t_N$ remember, and what does it forget?
+
+The pairing determines $t_N$ **from** a compatible $\eta_N$, but it does *not* determine $\eta_N$ from $t_N$. Once $t_N$ is fixed, the possible pairing-preserving frames form an $\operatorname{Sp}_{2g}(\mathbf Z/N\mathbf Z)$-torsor (étale locally, when nonempty).
+
+> [!example] Example 2.4 (Elliptic curve)
+> Let $E/\bar k$ be an elliptic curve, $P,Q\in E[N]$ a basis, and $\zeta=e_N(P,Q)$ a primitive $N$-th root. The basis $(P,Q)$ determines $t_N(\zeta)=1$.
+>
+> The different basis $(P,Q+P)$ has the **same** value of $\zeta$, hence the same $t_N$. So does $(Q,-P)$. In the last case even the cyclic subgroup spanned by the first basis vector changes:
+>
+> $$
+> \langle P\rangle\ne\langle Q\rangle.
+> $$
+>
+> Thus $t_N$ records the cyclotomic part, not the full level structure.
+
+> [!remark]- Remark 2.5 (Cyclotomic base)
+> As Zhu notes immediately after Definition 3.4.2, the functor of isomorphisms $t_N:\mu_N\simeq\mathbf Z/N\mathbf Z$ is represented by $\operatorname{Spec}\mathbf Z_{(p)}[\zeta_N]$, where $\zeta_N$ denotes a primitive $N$-th root. Consequently a full tame level-$N$ Siegel moduli space carries a natural morphism to this cyclotomic base. This explains why the $t_N$ is not merely optional notation.
+
+### 2.5 General base schemes and the notation $\eta^p$
+
+Over an arbitrary connected base $S$ with $p$ locally nilpotent (or a $\mathbf Z_{(p)}$-base), the prime-to-$p$ Tate module is a lisse étale sheaf, not necessarily globally constant. The geometric-fibre frame torsor is therefore endowed with $\pi_1(S,\bar s)$-descent data.
+
+A **global $K^p$-level structure** is a global section of the appropriate *étale sheaf of $K^p$-orbits of compatible frames*, subject to the usual integral/rational conventions. One should not assume it is represented by a global trivialization $\alpha^p$.
+
+Thus the notation
+
+$$
+\boxed{\qquad
+(A,\lambda,\eta^p),\qquad \eta^p=[\alpha^p]_{K^p},
+\qquad}
+$$
+
+means that the moduli problem remembers **one orbit**, not a globally singled-out representative. When $K^p=\Gamma(N)^p$, the precise global interpretation is the pair $(\eta_N,t_N)$ in Definition 2.3, exactly as in Zhu's notes.
+
+**We will fix this tame level $\eta^p$ in the sequel.** The tower varies only the level $K_p\subset G(\mathbf Z_p)$ at the prime $p$.
 
 ## 3. Adding level at $p$ by taking an orbit
 
