@@ -15,30 +15,44 @@ We now work **inside the good-reduction locus** introduced in [[perfectoid-siege
 
 This note sets up the definitions needed before constructing canonical subgroups and the anticanonical tower. The detailed canonical subgroup theorem will be treated separately.
 
-## 1. Relative Frobenius and Verschiebung
+## 1. Frobenius and Verschiebung
 
-Let $S$ be an $\mathbf F_p$-scheme and $A/S$ an abelian scheme of relative dimension $g$. Write
-
-$$
-A^{(p)}=A\times_{S,F_S}S.
-$$
-
-The relative Frobenius and Verschiebung are isogenies
+Let $S$ be an $\mathbf F_p$-scheme and $A/S$ an abelian scheme of relative dimension $g$. Denote by $\operatorname{Fr}_S$ and $\operatorname{Fr}_A$ the **absolute Frobenius** morphisms. Define the Frobenius twist
 
 $$
-F_{A/S}:A\longrightarrow A^{(p)},\qquad
-V_{A/S}:A^{(p)}\longrightarrow A
+A^{(p)}=A\times_{S,\operatorname{Fr}_S}S.
 $$
 
-satisfying
+The following diagram defines the **relative Frobenius** $F=F_{A/S}$; the right-hand square is cartesian:
 
 $$
-V_{A/S}\circ F_{A/S}=[p]_A,\qquad
-F_{A/S}\circ V_{A/S}=[p]_{A^{(p)}}.
+\begin{array}{ccccc}
+A & \xrightarrow{\ F_{A/S}\ } & A^{(p)}
+  & \xrightarrow{\ \operatorname{pr}_1\ } & A\\
+{\scriptstyle\pi}\downarrow\phantom{\scriptstyle\pi}
+&& {\scriptstyle\operatorname{pr}_2}\downarrow\phantom{\scriptstyle\operatorname{pr}_2}
+&& {\scriptstyle\pi}\downarrow\phantom{\scriptstyle\pi}\\
+S & \xrightarrow{\ \operatorname{id}_S\ } & S
+  & \xrightarrow{\ \operatorname{Fr}_S\ } & S .
+\end{array}
 $$
 
-> [!remark]- Remark 1.1 (Why relative Frobenius?)
-> The absolute Frobenius of $A$ is not generally an $S$-morphism. The relative Frobenius has source $A$ and target its Frobenius twist $A^{(p)}$, so it is a morphism over $S$. This distinction is essential for families.
+Thus $\operatorname{pr}_1\circ F_{A/S}=\operatorname{Fr}_A$ and $\operatorname{pr}_2\circ F_{A/S}=\pi$. Unlike absolute Frobenius, $F_{A/S}:A\to A^{(p)}$ is an $S$-morphism.
+
+> [!proposition] Fact (Frobenius and Verschiebung; Zhu §3.3)
+> The relative Frobenius $F:A\to A^{(p)}$ is an isogeny of degree $p^g$. There is a uniquely determined **Verschiebung** isogeny $V:A^{(p)}\to A$, also of degree $p^g$, satisfying
+>
+> $$
+> \boxed{\qquad
+> V\circ F=[p]_A,\qquad
+> F\circ V=[p]_{A^{(p)}}.
+> \qquad}
+> $$
+
+> [!proof]- Brief explanation
+> Locally in smooth coordinates, relative Frobenius has degree $p^g$. The standard construction of Verschiebung gives $V\circ F=[p]$. Since $\deg[p]_A=p^{2g}$, one has $\deg V=p^g$. Finally $F\circ V\circ F=F\circ[p]_A=[p]_{A^{(p)}}\circ F$; the surjectivity of $F$ gives $F\circ V=[p]_{A^{(p)}}$. $\square$
+
+In particular, $\ker F\subset A[p]$ is a finite locally free subgroup of rank $p^g$. **It is this subgroup that the canonical subgroup will lift** on the ordinary locus.
 
 ## 2. The ordinary condition
 
@@ -99,6 +113,6 @@ Here $\mathcal X$ is the good-reduction locus from the preceding note. **A point
 ## References
 
 - P. Scholze, [*On torsion in the cohomology of locally symmetric varieties*](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), Chapter III, §III.2.
-- Y. Zhu, *The Hodge–Tate period map on perfectoid Shimura varieties*, §§3.5–3.9.
+- Y. Zhu, [*The Hodge–Tate period map on perfectoid Shimura variety*](https://yhzhumath.github.io/HT%20final.pdf), §3.3 (Frobenius and Verschiebung), and §§3.5–3.9.
 
 [[perfectoid-siegel-variety/anticanonical-tower/index|Back to Anticanonical Tower]]
