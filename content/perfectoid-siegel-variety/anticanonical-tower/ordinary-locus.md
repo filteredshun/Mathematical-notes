@@ -339,9 +339,80 @@ $
 >
 > If $A$ is ordinary, $V$ is étale by Proposition 3.2. Frobenius twists of ordinary abelian varieties remain ordinary (equivalently, the Hasse invariant remains nonzero after Frobenius base change). Thus each successive Verschiebung is étale; so is their composite $V^m$, and therefore its kernel $\ker V^m$ is finite étale. $\square$
 
-The significance for the next construction is that, **over an ordinary special fibre**, $\ker F^m$ is the connected part of $A[p^m]$, and the quotient $\ker V^m$ is étale. Over a suitable $p$-adically complete integral base, the finite étale quotient lifts uniquely; its kernel in the lifted $p^m$-torsion gives the **level-$m$ canonical subgroup**. We will explain this construction in the next subsection rather than proving the lifting theorem here.
+The significance for the next construction is that, **over an ordinary special fibre**, $\ker F^m$ is the connected part of $A[p^m]$, and the quotient $\ker V^m$ is étale. Over a suitable $p$-adically complete integral base, the finite étale quotient lifts uniquely; its kernel in the lifted $p^m$-torsion gives the **level-$m$ canonical subgroup**. The lifting construction is given in the next section.
 
-## 4. From ordinary to a neighborhood
+## 4. Canonical Subgroup
+
+We now lift the connected subgroup $\ker F^n$ from an **ordinary special fibre** to characteristic zero, as in Zhu §3.7 and Caraiani §4.2.
+
+Let $R$ be a $p$-adically complete, flat $\mathbf Z_p$-algebra and $A/\operatorname{Spec}R$ an abelian scheme of relative dimension $g$. Put $R_0=R/pR$ and $A_0=A\times_R R_0$, and assume that $A_0$ is ordinary (equivalently, its Hasse invariant is invertible). The preceding section gives, for each $n\geq1$, an exact sequence over $R_0$:
+
+$
+0\longrightarrow\ker(F^n_{A_0/R_0})
+\longrightarrow A_0[p^n]
+\xrightarrow{F^n}\ker(V^n_{A_0/R_0})
+\longrightarrow0.
+$
+
+The last term is finite étale of rank $p^{ng}$. This allows us to lift the sequence.
+
+> [!proposition] Proposition 4.1 (Canonical subgroup over the ordinary locus; Zhu §3.7)
+> Under the assumptions above, for every $n\geq1$ there is a **unique finite locally free closed subgroup scheme**
+>
+> $
+> \boxed{\quad C_n(A)\subset A[p^n]\quad}
+> $
+>
+> whose reduction modulo $p$ is $\ker(F^n_{A_0/R_0})$. It has rank $p^{ng}$ and fits into a canonical exact sequence
+>
+> $
+> \boxed{\quad
+> 0\longrightarrow C_n(A)\longrightarrow A[p^n]
+> \longrightarrow\mathcal G_n\longrightarrow0,
+> \quad}
+> $
+>
+> where $\mathcal G_n/R$ is finite étale and reduces to $\ker(V^n_{A_0/R_0})$.
+>
+> The subgroup $C_n(A)$ is called the **canonical subgroup of level $n$**.
+
+> [!proof]- Construction and uniqueness
+> Since $(R,pR)$ is a henselian pair, finite étale group schemes over $R_0$ lift uniquely (up to unique isomorphism) to $R$. Let $\mathcal G_n$ be the lift of $\ker V^n$.
+>
+> The quotient homomorphism $A_0[p^n]\to\ker V^n$ lifts uniquely to a morphism
+>
+> $
+> q_n:A[p^n]\longrightarrow\mathcal G_n.
+> $
+>
+> Indeed, the target is formally étale: one lifts the map over each nilpotent thickening $R/p^{r+1}\to R/p^r$, and then passes to the $p$-adic limit. Uniqueness at each stage also preserves the group law.
+>
+> Since $q_n$ is surjective on the special fibre, it is a finite faithfully flat quotient map. Hence its kernel
+>
+> $
+> C_n(A):=\ker(q_n)
+> $
+>
+> is finite locally free of rank $p^{ng}$; its special fibre is $\ker F^n$.
+>
+> Conversely, suppose $C\subset A[p^n]$ is finite locally free with $C_0=\ker F^n$. Then $A[p^n]/C$ is a finite locally free group scheme whose special fibre is the étale group $\ker V^n$. The étale locus is open, and because $R$ is $p$-adically complete this quotient is étale everywhere. It therefore identifies with $\mathcal G_n$, and its quotient map agrees with $q_n$ by formal étaleness. Thus $C=C_n(A)$. $\square$
+
+The essential mechanism is
+
+$
+\boxed{
+\ker V^n\ \text{finite étale}
+\quad\Longrightarrow\quad
+\mathcal G_n\ \text{lifts uniquely}
+\quad\Longrightarrow\quad
+C_n(A)=\ker(A[p^n]\to\mathcal G_n).
+}
+$
+
+> [!remark]- Remark 4.2 (Ordinary versus near-ordinary)
+> The construction above uses an **ordinary reduction modulo $p$** and works at every level $n$. Canonical subgroups on larger Hasse-invariant neighborhoods require a separate canonical subgroup theorem, with restrictions on the Hasse height. We will distinguish these two settings when constructing the anticanonical tower.
+
+## 5. From ordinary to a neighborhood
 
 For a good-reduction point over a complete rank-one valued extension $L/\mathbf Q_p$, evaluate a local integral lift of the Hasse invariant, and normalize $v(p)=1$. In the relevant range $0\leq\epsilon<1$, the condition that the valuation is at most $\epsilon$ defines a neighborhood $\mathcal X(\epsilon)$ of the ordinary locus:
 
@@ -351,7 +422,7 @@ $$
 
 Here $\mathcal X$ is the good-reduction locus from the preceding note. **A point in $\mathcal X(\epsilon)$ need not have ordinary special fibre** when $\epsilon>0$.
 
-> [!remark]- Remark 4.1 (What comes next?)
+> [!remark]- Remark 5.1 (What comes next?)
 > The canonical subgroup theorem applies when the Hasse invariant is sufficiently small. It constructs a finite flat subgroup lifting the kernel of relative Frobenius to characteristic zero. This gives the Frobenius-lift mechanism behind the anticanonical tower.
 
 ## References
