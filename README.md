@@ -6,8 +6,9 @@ A Quartz-powered collection of mathematical lecture notes.
 
 This is the current main note project. **Anticanonical Tower** is a section within it.
 
-- [Good Reduction and the Formal Generic Fibre](content/good-reduction-locus.md) — first completed subsection in the anticanonical tower material.
-- Future subsections: relative Frobenius, Hasse invariant, canonical subgroups, anticanonical levels, and perfectoid limit.
+- [Siegel Modular Varieties and Level Structures](content/perfectoid-siegel-variety/anticanonical-tower/siegel-modular-varieties.md) — including the good-reduction locus, formal generic fibres and the affine/projective-line examples.
+- [Ordinary Locus](content/perfectoid-siegel-variety/anticanonical-tower/ordinary-locus.md) — relative Frobenius, Verschiebung, the Hasse invariant and ordinary neighborhoods.
+- Future sections: canonical subgroups, anticanonical levels and perfectoid limit.
 
 ## Develop locally
 Run `bash scripts/build.sh` (requires git, Node.js 22, npm, Python 3). The script checks out upstream Quartz and builds the content.
