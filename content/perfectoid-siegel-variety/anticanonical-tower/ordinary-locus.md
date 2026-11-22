@@ -110,17 +110,17 @@ This identifies the subgroup that we will lift in the theory of canonical subgro
 Let $\pi:A\to S$ be an abelian scheme of relative dimension $g$, with identity section $e:S\to A$. Write
 
 $
-\omega_A=e^*\Omega^1_{A/S}.
+\mathbb E_{A/S}:=e^*\Omega^1_{A/S}.
 $
 
-This is a locally free $\mathcal O_S$-module of rank $g$, called the **Hodge bundle** (or the sheaf of invariant differentials). We recall two facts underlying its interpretation.
+This is a locally free $\mathcal O_S$-module of rank $g$, called the **Hodge bundle** (or the sheaf of invariant differentials). Its determinant line bundle will be denoted by $\omega_{A/S}$ below.
 
 > [!proposition] Proposition 2.1 (Invariant differentials; Zhu §3.5)
 > There are natural isomorphisms
 >
 > $
 > \boxed{\quad
-> \pi^*\omega_A\xrightarrow{\sim}\Omega^1_{A/S},
+> \pi^*\mathbb E_{A/S}\xrightarrow{\sim}\Omega^1_{A/S},
 > \qquad
 > \mathcal O_S\xrightarrow{\sim}\pi_*\mathcal O_A.
 > \quad}
@@ -131,17 +131,17 @@ This is a locally free $\mathcal O_S$-module of rank $g$, called the **Hodge bun
 > $
 > \boxed{\quad
 > \pi_*\Omega^1_{A/S}\xrightarrow[\ e^*\ ]{\sim}
-> e^*\Omega^1_{A/S}=\omega_A.
+> e^*\Omega^1_{A/S}=\mathbb E_{A/S}.
 > \quad}
 > $
 >
 > In particular, every relative global differential on an abelian scheme is translation-invariant.
 
 > [!proof]- Proof
-> **(1) Translation-invariant trivialization.** For any smooth group scheme $G/S$, let $m:G\times_S G\to G$ be multiplication and $\omega_G=e^*\Omega^1_{G/S}$. Pull back $dm$ along the map $s:G\to G\times_S G$, $a\mapsto(a,e(\pi(a)))$, and project to the differential in the second factor. This gives a natural morphism
+> **(1) Translation-invariant trivialization.** For any smooth group scheme $G/S$, let $m:G\times_S G\to G$ be multiplication and $\mathbb E_G=e^*\Omega^1_{G/S}$. Pull back $dm$ along the map $s:G\to G\times_S G$, $a\mapsto(a,e(\pi(a)))$, and project to the differential in the second factor. This gives a natural morphism
 >
 > $
-> v:\Omega^1_{G/S}\longrightarrow\pi^*\omega_G.
+> v:\Omega^1_{G/S}\longrightarrow\pi^*\mathbb E_G.
 > $
 >
 > At a geometric point $a$ of a fibre, $v_a$ is the cotangent map of translation by $a$ at the identity:
@@ -150,7 +150,7 @@ This is a locally free $\mathcal O_S$-module of rank $g$, called the **Hodge bun
 > (d\,t_a)_e^*:T_a^*G_{\bar s}\xrightarrow{\sim}T_e^*G_{\bar s}.
 > $
 >
-> Translation by $a$ is an isomorphism with inverse translation by $-a$, so $v$ is an isomorphism on all geometric fibres. Both sides are locally free of the same rank, hence $v$ is an isomorphism; its inverse is the required $\pi^*\omega_G\simeq\Omega^1_{G/S}$. Associativity of the group law shows that the resulting forms are translation-invariant. This part does **not** use properness.
+> Translation by $a$ is an isomorphism with inverse translation by $-a$, so $v$ is an isomorphism on all geometric fibres. Both sides are locally free of the same rank, hence $v$ is an isomorphism; its inverse is the required $\pi^*\mathbb E_G\simeq\Omega^1_{G/S}$. Associativity of the group law shows that the resulting forms are translation-invariant. This part does **not** use properness.
 >
 > **(2) Functions on an abelian scheme.** For a geometric point $\bar s\to S$, the fibre $A_{\bar s}$ is proper, smooth and connected, hence geometrically integral. Therefore
 >
@@ -165,9 +165,9 @@ This is a locally free $\mathcal O_S$-module of rank $g$, called the **Hodge bun
 > $
 > \begin{aligned}
 > \pi_*\Omega^1_{A/S}
-> &\simeq\pi_*\pi^*\omega_A\\
-> &\simeq\omega_A\otimes_{\mathcal O_S}\pi_*\mathcal O_A\\
-> &\simeq\omega_A.
+> &\simeq\pi_*\pi^*\mathbb E_{A/S}\\
+> &\simeq\mathbb E_{A/S}\otimes_{\mathcal O_S}\pi_*\mathcal O_A\\
+> &\simeq\mathbb E_{A/S}.
 > \end{aligned}
 > $
 >
@@ -176,52 +176,96 @@ This is a locally free $\mathcal O_S$-module of rank $g$, called the **Hodge bun
 > [!remark]- Remark 2.2 (Why properness matters)
 > The first isomorphism also holds for $\mathbf G_{a,k}$, but $H^0(\mathbf G_{a,k},\Omega^1)=k[T]\,dT$ is much larger than $e^*\Omega^1_{\mathbf G_a/k}=k\,dT$. For abelian schemes, $\pi_*\mathcal O_A=\mathcal O_S$ eliminates such nonconstant coefficients.
 
-This identification lets us define the Hasse invariant using the rank-$g$ bundle $\omega_A$ on the **base** $S$, rather than working directly with all differentials on $A$.
+### Frobenius pullback of the determinant line
 
-## 3. The ordinary condition
-
-For an abelian variety $A$ over an algebraically closed field $k$ of characteristic $p$, one says that $A$ is **ordinary** if its $p$-rank is maximal:
+To follow Zhu's notation, distinguish the rank-$g$ Hodge bundle from its determinant:
 
 $$
-\#A[p](k)=p^g.
+\mathbb E_{A/S}:=e^*\Omega^1_{A/S},
+\qquad
+\omega_{A/S}:=\det\mathbb E_{A/S}
+=\bigwedge^g(e^*\Omega^1_{A/S}).
 $$
 
-Equivalently, the $p$-divisible group has an étale part of height $g$ and a multiplicative part of height $g$.
+For any base change $g:S'\to S$, with $A'=A\times_S S'$, the base-change isomorphism for relative differentials, together with the compatibility of identity sections, gives
 
-> [!example] Example 3.1 (Elliptic curve)
-> For an ordinary elliptic curve $E/k$,
+$$
+\mathbb E_{A'/S'}\simeq g^*\mathbb E_{A/S},
+\qquad
+\omega_{A'/S'}\simeq g^*\omega_{A/S}.
+$$
+
+In characteristic $p$, take $g=\operatorname{Fr}_S$ and $A'=A^{(p)}$. For **any** line bundle $\mathcal L$ on an $\mathbf F_p$-scheme, there is a canonical isomorphism
+
+$$
+\operatorname{Fr}_S^*\mathcal L\simeq\mathcal L^{\otimes p}.
+$$
+
+> [!proof]- Proof via transition functions
+> Trivialize $\mathcal L$ locally, with transition functions $g_{ij}\in\mathcal O_S^\times$. The transition functions of $\operatorname{Fr}_S^*\mathcal L$ are $g_{ij}^p$, because absolute Frobenius acts on functions by $f\mapsto f^p$. The transition functions of $\mathcal L^{\otimes p}$ are also $g_{ij}^p$. Locally the isomorphism sends $a\otimes\ell$ to $a\,\ell^{\otimes p}$, so it is independent of the chosen trivializations. $\square$
+
+In particular,
+
+$$
+\boxed{\quad
+\omega_{A^{(p)}/S}
+\simeq\operatorname{Fr}_S^*\omega_{A/S}
+\simeq\omega_{A/S}^{\otimes p}.
+\quad}
+$$
+
+This identity is exactly what makes the determinant of Verschiebung into a section of a line bundle.
+
+## 3. The Hasse Invariant and the Ordinary Locus
+
+Assume now that $S$ is an $\mathbf F_p$-scheme. The Verschiebung $V:A^{(p)}\to A$ induces a map on invariant differentials,
+
+$$
+V^*:\mathbb E_{A/S}
+\longrightarrow\mathbb E_{A^{(p)}/S}
+\simeq\operatorname{Fr}_S^*\mathbb E_{A/S}.
+$$
+
+Taking the top exterior power, and using the Frobenius pullback formula from §2, gives a morphism of line bundles
+
+$$
+\det(V^*):\omega_{A/S}
+\longrightarrow\omega_{A/S}^{\otimes p}.
+$$
+
+Since $\operatorname{Hom}_{\mathcal O_S}(\omega,\omega^{\otimes p})
+\simeq\omega^{\otimes(p-1)}$ for a line bundle $\omega$, we obtain:
+
+> [!definition] Definition 3.1 (Hasse invariant; Zhu §3.6)
+> The **Hasse invariant** of $A/S$ is the section corresponding to $\det(V^*)$:
 >
 > $$
-> E[p]\simeq \mu_p\oplus\mathbf Z/p\mathbf Z
+> \boxed{\quad
+> \operatorname{Ha}(A/S)
+> \in H^0\!\left(S,\omega_{A/S}^{\otimes(p-1)}\right).
+> \quad}
+> $$
+
+> [!proposition] Proposition 3.2 (Ordinary criterion)
+> For a geometric point $\bar s\to S$, the abelian variety $A_{\bar s}$ is **ordinary** if and only if $\operatorname{Ha}(A/S)$ is nonzero at $\bar s$. Equivalently, its $p$-rank is $g$:
+>
+> $$
+> \#A_{\bar s}[p](k(\bar s))=p^g.
+> $$
+
+> [!proof]- Standard Hasse–Witt criterion
+> At $\bar s$, nonvanishing of the determinant is equivalent to $V^*$ being an isomorphism on invariant differentials. The Hasse–Witt criterion identifies this with maximal $p$-rank. We use this standard criterion here, as in Zhu's discussion. $\square$
+
+> [!example] Example 3.3 (Ordinary elliptic curve)
+> For an ordinary elliptic curve $E$ over an algebraically closed field of characteristic $p$,
+>
+> $$
+> E[p]\simeq\mu_p\oplus(\mathbf Z/p\mathbf Z).
 > $$
 >
-> over an algebraically closed field. Its connected multiplicative subgroup is $\ker(F_{E/k})=\mu_p$, whereas its étale subgroup is transverse to it. The supersingular elliptic curve does not have such an étale direct summand of rank $p$.
+> The subgroup $\ker F=\mu_p$ is the connected multiplicative part, while the étale factor has order $p$. For a supersingular elliptic curve, the $p$-rank is zero and the Hasse invariant vanishes.
 
-## 4. The Hasse invariant
-
-Let $\omega_A=e^*\Omega^1_{A/S}$ be the rank-$g$ Hodge bundle and let $\det\omega_A$ denote its determinant line bundle. The pullback by Verschiebung yields
-
-$$
-V^*:\omega_A\longrightarrow \omega_{A^{(p)}}
-\simeq F_S^*\omega_A.
-$$
-
-Taking determinants produces the **Hasse invariant**
-
-$$
-\boxed{
-\operatorname{Ha}(A)\in
-H^0\!\left(S,(\det\omega_A)^{\otimes(p-1)}\right).
-}
-$$
-
-> [!proposition] Proposition 4.1 (Ordinary criterion)
-> For a geometric point $s\to S$, the abelian variety $A_s$ is ordinary if and only if $\operatorname{Ha}(A)$ does not vanish at $s$.
-
-> [!proof]- Standard criterion
-> The nonvanishing of $\operatorname{Ha}$ is equivalent to the map induced by Verschiebung on invariant differentials being an isomorphism. This is the usual Hasse–Witt (or ordinary) criterion for abelian varieties. We use the criterion here as a standard input.
-
-## 5. From ordinary to a neighborhood
+## 4. From ordinary to a neighborhood
 
 For a good-reduction point over a complete rank-one valued extension $L/\mathbf Q_p$, evaluate a local integral lift of the Hasse invariant, and normalize $v(p)=1$. In the relevant range $0\leq\epsilon<1$, the condition that the valuation is at most $\epsilon$ defines a neighborhood $\mathcal X(\epsilon)$ of the ordinary locus:
 
@@ -231,12 +275,12 @@ $$
 
 Here $\mathcal X$ is the good-reduction locus from the preceding note. **A point in $\mathcal X(\epsilon)$ need not have ordinary special fibre** when $\epsilon>0$.
 
-> [!remark]- Remark 5.1 (What comes next?)
+> [!remark]- Remark 4.1 (What comes next?)
 > The canonical subgroup theorem applies when the Hasse invariant is sufficiently small. It constructs a finite flat subgroup lifting the kernel of relative Frobenius to characteristic zero. This gives the Frobenius-lift mechanism behind the anticanonical tower.
 
 ## References
 
 - P. Scholze, [*On torsion in the cohomology of locally symmetric varieties*](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), Chapter III, §III.2.
-- Y. Zhu, [*The Hodge–Tate period map on perfectoid Shimura variety*](https://yhzhumath.github.io/HT%20final.pdf), §3.3 (Frobenius and Verschiebung), §3.5 (translation-invariant differentials), and §§3.6–3.9.
+- Y. Zhu, [*The Hodge–Tate period map on perfectoid Shimura variety*](https://yhzhumath.github.io/HT%20final.pdf), §3.3 (Frobenius and Verschiebung), §3.5 (translation-invariant differentials), §3.6 (Hasse invariant), and §§3.7–3.9.
 
 [[perfectoid-siegel-variety/anticanonical-tower/index|Back to Anticanonical Tower]]
