@@ -81,3 +81,15 @@ html[saved-theme="dark"] article { color: #ececf0; }
 .callout[data-callout="remark"] .callout-icon { display: none !important; }
 article h1, article h2, article h3 { font-family: var(--mathNotesTextFont); }
 article .katex-display { overflow-x: auto; overflow-y: hidden; }
+
+/* Quartz v4.5.2 collapses only the first child of a callout by default.
+   Mathematical proofs contain several block children (math, paragraphs, lists):
+   collapse the complete content container instead, in both themes. */
+.callout[data-callout="proof"].is-collapsed > .callout-content,
+.callout[data-callout="remark"].is-collapsed > .callout-content {
+  display: none !important;
+}
+.callout[data-callout="proof"]:not(.is-collapsed) > .callout-content,
+.callout[data-callout="remark"]:not(.is-collapsed) > .callout-content {
+  display: block !important;
+}
