@@ -39,20 +39,71 @@ $$
 
 Thus $\operatorname{pr}_1\circ F_{A/S}=\operatorname{Fr}_A$ and $\operatorname{pr}_2\circ F_{A/S}=\pi$. Unlike absolute Frobenius, $F_{A/S}:A\to A^{(p)}$ is an $S$-morphism.
 
-> [!proposition] Fact (Frobenius and Verschiebung; Zhu §3.3)
-> The relative Frobenius $F:A\to A^{(p)}$ is an isogeny of degree $p^g$. There is a uniquely determined **Verschiebung** isogeny $V:A^{(p)}\to A$, also of degree $p^g$, satisfying
+> [!proposition] Proposition 1.1 (Frobenius and Verschiebung; cf. Zhu §3.3)
+> The relative Frobenius
 >
 > $$
-> \boxed{\qquad
-> V\circ F=[p]_A,\qquad
-> F\circ V=[p]_{A^{(p)}}.
-> \qquad}
+> F=F_{A/S}:A\longrightarrow A^{(p)}
 > $$
+>
+> is a **finite faithfully flat isogeny of degree $p^g$**. Multiplication by $p$ factors uniquely through $F$, defining the **Verschiebung**
+>
+> $$
+> V=V_{A/S}:A^{(p)}\longrightarrow A.
+> $$
+>
+> It is an isogeny of degree $p^g$, and
+>
+> $$
+> \boxed{\qquad V\circ F=[p]_A,\qquad
+> F\circ V=[p]_{A^{(p)}}.\qquad}
+> $$
+>
+> In particular, $\ker F\subseteq A[p]$ is finite locally free of rank $p^g$.
 
-> [!proof]- Brief explanation
-> Locally in smooth coordinates, relative Frobenius has degree $p^g$. The standard construction of Verschiebung gives $V\circ F=[p]$. Since $\deg[p]_A=p^{2g}$, one has $\deg V=p^g$. Finally $F\circ V\circ F=F\circ[p]_A=[p]_{A^{(p)}}\circ F$; the surjectivity of $F$ gives $F\circ V=[p]_{A^{(p)}}$. $\square$
+> [!proof]- Construction and proof
+> **(1) Flatness and degree of $F$.** Since $A/S$ is smooth of relative dimension $g$, the relative Frobenius is étale-locally the base change of the map on affine space given by $T_i\mapsto T_i^p$. For this model,
+>
+> $$
+> R[T_1,\dots,T_g]
+> =\bigoplus_{0\le i_1,\dots,i_g<p}
+> R[T_1^p,\dots,T_g^p]\,
+> T_1^{i_1}\cdots T_g^{i_g}.
+> $$
+>
+> Hence $F$ is finite locally free of constant positive rank $p^g$, and consequently faithfully flat and surjective. Since $F$ respects the group law, it is an isogeny.
+>
+> **(2) Constructing $V$.** The differential of multiplication by $p$ vanishes:
+>
+> $$
+> d[p]_A=p\cdot\mathrm{id}_{\operatorname{Lie}(A/S)}=0.
+> $$
+>
+> For a smooth $S$-scheme in characteristic $p$, an $S$-morphism with zero relative differential factors uniquely through relative Frobenius (the standard Frobenius factorization lemma, checked étale-locally). Applied to $[p]_A$, this gives a morphism $V:A^{(p)}\to A$ with
+>
+> $$
+> V\circ F=[p]_A.
+> $$
+>
+> Faithfully flat descent along $F$ shows that $V$ is a homomorphism of group schemes. The factorization immediately implies $\ker F\subseteq A[p]$.
+>
+> **(3) The other identity.** Since $F$ is a group homomorphism,
+>
+> $$
+> F\circ V\circ F=F\circ[p]_A
+> =[p]_{A^{(p)}}\circ F.
+> $$
+>
+> As $F$ is faithfully flat, it is an epimorphism of fppf sheaves, so we may cancel $F$ on the right and obtain $F\circ V=[p]_{A^{(p)}}$. Finally,
+>
+> $$
+> \deg V=\frac{\deg[p]_A}{\deg F}
+> =\frac{p^{2g}}{p^g}=p^g.
+> $$
+>
+> Thus $V$ is also an isogeny. $\square$
 
-In particular, $\ker F\subset A[p]$ is a finite locally free subgroup of rank $p^g$. **It is this subgroup that the canonical subgroup will lift** on the ordinary locus.
+This identifies the subgroup that we will lift in the theory of canonical subgroups: **on an ordinary special fibre, the level-one canonical subgroup lifts $\ker F$**.
 
 ## 2. The ordinary condition
 
