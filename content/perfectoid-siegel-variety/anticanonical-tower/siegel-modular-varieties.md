@@ -114,7 +114,7 @@ The preceding Shimura–Deligne statement concerns a variety **over $\mathbf Q$*
 > [!proof]- Reference and scope
 > We use this representability and smoothness theorem as a standard input, following Zhu, Theorem 3.4.1. For principal tame level $N\geq3$ it is the fine moduli scheme of principally polarized abelian schemes with full prime-to-$p$ level-$N$ data; its deformation theory gives smoothness and the stated dimension. The identification of its generic fibre with the Shimura variety of Theorem 1.1 is Zhu, Theorem 3.4.3, attributed to Shimura and Deligne.
 >
-> The hypothesis $K_p=G(\mathbf Z_p)$ is essential in the present discussion: it is the **hyperspecial** level at $p$. When we later impose $\Gamma_0(p^m)$, $\Gamma_1(p^m)$, or $\Gamma(p^m)$, we first work with the corresponding **generic-fibre** covers. A smooth integral model over $\mathbf Z_{(p)}$ is not being asserted for those levels.
+> The hypothesis $K_p=G(\mathbf Z_p)$ is essential in the present discussion: it is the **hyperspecial** level at $p$. When we later impose $\Gamma_0(p^m)$, $\Gamma_s(p^m)$, or $\Gamma(p^m)$, we first work with the corresponding **generic-fibre** covers. A smooth integral model over $\mathbf Z_{(p)}$ is not being asserted for those levels.
 
 Thus the notation $X_{K,\mathbf Z_{(p)}}$ refers to the integral moduli scheme, whereas $X_{K,\mathbf Q}$ is its generic fibre and admits the adelic uniformization (1.1).
 
@@ -358,11 +358,11 @@ $$
 > On geometric points in characteristic $0$, together with the fixed prime-to-$p$ structure $\eta^p$, the corresponding information is:
 >
 > 1. **Full level $\Gamma(p^m)$:** a complete symplectic-similitude frame of $A[p^m]$, including the cyclotomic pairing identification.
-> 2. **Parahoric level $\Gamma_0^{\mathrm{std}}(p^m)$:** a maximal isotropic finite étale subgroup $D\subset A[p^m]$, geometrically isomorphic to $(\mathbf Z/p^m\mathbf Z)^g$.
+> 2. **Parahoric level $\Gamma_0(p^m)$:** a maximal isotropic finite étale subgroup $D\subset A[p^m]$, geometrically isomorphic to $(\mathbf Z/p^m\mathbf Z)^g$.
 > 3. **Cyclotomic refinement $\Gamma_s(p^m)$:** the pair $(D,t_p)$, where $t_p:\mu_{p^m}\xrightarrow{\sim}\mathbf Z/p^m\mathbf Z$ trivializes the Weil-pairing target.
 
 > [!proof]- Why this follows from the orbit description
-> Under a full level trivialization $\alpha_m:M_m\xrightarrow{\sim}A[p^m]$, let $D=\alpha_m(L_0)$. A matrix stabilizes $L_0$ precisely when its lower-left block is zero: this gives $\Gamma_0^{\mathrm{std}}$.
+> Under a full level trivialization $\alpha_m:M_m\xrightarrow{\sim}A[p^m]$, let $D=\alpha_m(L_0)$. A matrix stabilizes $L_0$ precisely when its lower-left block is zero: this gives $\Gamma_0$.
 >
 > Modulo $\Gamma_s$, the subgroup $D$ is fixed and the similitude character is $1$ modulo $p^m$, so the induced cyclotomic trivialization $t_p$ is fixed as well.
 >
@@ -376,8 +376,8 @@ The inclusions of groups give maps of modular varieties. In particular,
 
 $$
 X_{\Gamma(p^m)}
- \longrightarrow X_{\Gamma_1(p^m)}
- \longrightarrow X_{\Gamma_0^{\mathrm{std}}(p^m)}
+ \longrightarrow X_{\Gamma_s(p^m)}
+ \longrightarrow X_{\Gamma_0(p^m)}
  \longrightarrow X.
 $$
 
