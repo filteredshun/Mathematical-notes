@@ -377,25 +377,64 @@ The last term is finite étale of rank $p^{ng}$. This allows us to lift the sequ
 > The subgroup $C_n(A)$ is called the **canonical subgroup of level $n$**.
 
 > [!proof]- Construction and uniqueness
-> Since $(R,pR)$ is a henselian pair, finite étale group schemes over $R_0$ lift uniquely (up to unique isomorphism) to $R$. Let $\mathcal G_n$ be the lift of $\ker V^n$.
+> Put $H=A[p^n]$ and $H_0=A_0[p^n]$, and write
 >
-> The quotient homomorphism $A_0[p^n]\to\ker V^n$ lifts uniquely to a morphism
+> $$
+> G_0=\ker(V^n_{A_0/R_0}),\qquad
+> q_0:H_0\longrightarrow G_0
+> $$
 >
-> $
-> q_n:A[p^n]\longrightarrow\mathcal G_n.
-> $
+> for the finite étale quotient in characteristic $p$.
 >
-> Indeed, the target is formally étale: one lifts the map over each nilpotent thickening $R/p^{r+1}\to R/p^r$, and then passes to the $p$-adic limit. Uniqueness at each stage also preserves the group law.
+> **(1) Lift the étale quotient.** Because $R$ is $p$-adically complete, $(R,pR)$ is a henselian pair. The reduction functor from finite étale $R$-schemes to finite étale $R/pR$-schemes is an equivalence. It also preserves finite products, so the group law on $G_0$ lifts uniquely. We obtain a finite étale group scheme $\mathcal G_n/R$ with $\mathcal G_n\otimes_R R_0\simeq G_0$.
 >
-> Since $q_n$ is surjective on the special fibre, it is a finite faithfully flat quotient map. Hence its kernel
+> **(2) Lift the quotient map.** It is important that *formal étaleness concerns maps into the étale target*; the source $H$ need not be étale. For each $r\geq1$ set
 >
-> $
-> C_n(A):=\ker(q_n)
-> $
+> $$
+> R_r=R/p^rR,\qquad
+> H_r=H\times_R R_r,\qquad
+> G_r=\mathcal G_n\times_R R_r.
+> $$
 >
-> is finite locally free of rank $p^{ng}$; its special fibre is $\ker F^n$.
+> Suppose we have constructed $q_r:H_r\to G_r$, beginning with $q_1=q_0$. The closed immersion
 >
-> Conversely, suppose $C\subset A[p^n]$ is finite locally free with $C_0=\ker F^n$. Then $A[p^n]/C$ is a finite locally free group scheme whose special fibre is the étale group $\ker V^n$. The étale locus is open, and because $R$ is $p$-adically complete this quotient is étale everywhere. It therefore identifies with $\mathcal G_n$, and its quotient map agrees with $q_n$ by formal étaleness. Thus $C=C_n(A)$. $\square$
+> $$
+> H_r\hookrightarrow H_{r+1}
+> $$
+>
+> is defined by the square-zero ideal $p^r\mathcal O_{H_{r+1}}$ (indeed $2r\geq r+1$). Regard $q_r$ as a morphism $H_r\to G_{r+1}$ using the closed immersion $G_r\hookrightarrow G_{r+1}$. Since $G_{r+1}/R_{r+1}$ is formally étale, the infinitesimal lifting criterion gives a **unique** morphism
+>
+> $$
+> q_{r+1}:H_{r+1}\longrightarrow G_{r+1}
+> $$
+>
+> extending $q_r$. Thus the $q_r$ are compatible for every $r$.
+>
+> To pass to the limit, write $H=\operatorname{Spec}B$ and $\mathcal G_n=\operatorname{Spec}C$. As $B$ is finite locally free over the $p$-adically complete ring $R$,
+>
+> $$
+> B\simeq\varprojlim_r B/p^rB.
+> $$
+>
+> The compatible algebra maps $C\to B/p^rB$ therefore define a unique $R$-algebra map $C\to B$, hence a unique
+>
+> $$
+> \boxed{\quad q_n:A[p^n]\longrightarrow\mathcal G_n\quad}
+> $$
+>
+> reducing to $q_0$. This is why one **cannot** simply apply formal étaleness to $H_0\hookrightarrow H$: the ideal $p\mathcal O_H$ is not nilpotent. We first lift modulo every $p^r$, then use completeness.
+>
+> **(3) Preserve the group law.** The maps $q_n\circ m_H$ and $m_{\mathcal G_n}\circ(q_n\times q_n)$ from $H\times_RH$ to $\mathcal G_n$ have the same reduction, since $q_0$ is a homomorphism. Uniqueness of the preceding lifting argument (applied to the finite locally free source $H\times_RH$) shows that they agree. The identity and inverse are treated similarly. Thus $q_n$ is a homomorphism of group schemes.
+>
+> **(4) Take the kernel.** The reduction $q_0$ is faithfully flat, and the finite map $q_n$ is finite locally free and surjective by the flatness criterion applied along the $p$-adic thickenings. Hence
+>
+> $$
+> C_n(A):=\ker q_n
+> $$
+>
+> is finite locally free of rank $p^{ng}$ and has special fibre $\ker F^n$.
+>
+> Finally, if another finite locally free closed subgroup $C\subseteq A[p^n]$ has special fibre $\ker F^n$, the quotient $A[p^n]/C$ is finite locally free with étale special fibre. Because $p$ lies in the Jacobson radical of $R$, this quotient is finite étale over $R$. Its reduction agrees with $G_0$, so it identifies uniquely with $\mathcal G_n$; the resulting quotient map agrees with $q_n$ by the uniqueness in (2). Hence $C=C_n(A)$. $\square$
 
 The essential mechanism is
 
