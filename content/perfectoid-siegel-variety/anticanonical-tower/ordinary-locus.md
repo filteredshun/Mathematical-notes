@@ -302,6 +302,45 @@ Since $\operatorname{Hom}_{\mathcal O_S}(\omega,\omega^{\otimes p})
 >
 > **Caution:** the conclusion is **not** $\ker V=E[p]$; $\ker V$ has rank $p$, whereas $E[p]$ has rank $p^2$.
 
+### Iterated Frobenius and Verschiebung
+
+For $m\geq1$, write $A^{(p^m)}$ for the $m$-fold Frobenius twist, and let
+
+$
+F^m:A\longrightarrow A^{(p^m)},\qquad
+V^m:A^{(p^m)}\longrightarrow A
+$
+
+be the successive compositions of relative Frobenius and Verschiebung (with the appropriate twists at each stage). In particular,
+
+$
+V^m\circ F^m=[p^m]_A,\qquad
+F^m\circ V^m=[p^m]_{A^{(p^m)}}.
+$
+
+> [!proposition] Proposition 3.4 (The $p^m$-torsion sequence)
+> There is a short exact sequence of finite locally free group schemes, exact as fppf sheaves,
+>
+> $
+> \boxed{\quad
+> 0\longrightarrow\ker F^m
+> \longrightarrow A[p^m]
+> \xrightarrow{\ F^m\ }\ker V^m
+> \longrightarrow0.
+> \quad}
+> $
+>
+> Both $\ker F^m$ and $\ker V^m$ have rank $p^{mg}$. Over an algebraically closed field of characteristic $p$, $\ker F^m$ is connected. If $A$ is ordinary, then $\ker V^m$ is finite étale.
+
+> [!proof]- Proof
+> The compositions $F^m$ and $V^m$ have degree $p^{mg}$; their identities follow inductively from $VF=FV=[p]$ on the appropriate Frobenius twists.
+>
+> Since $F^m$ is faithfully flat and $V^mF^m=[p^m]$, the same fppf-lifting argument as for $m=1$ gives the asserted exact sequence. Over an algebraically closed field, relative Frobenius is radicial, hence $F^m$ is radicial and $\ker F^m$ is connected.
+>
+> If $A$ is ordinary, $V$ is étale by Proposition 3.2. Frobenius twists of ordinary abelian varieties remain ordinary (equivalently, the Hasse invariant remains nonzero after Frobenius base change). Thus each successive Verschiebung is étale; so is their composite $V^m$, and therefore its kernel $\ker V^m$ is finite étale. $\square$
+
+The significance for the next construction is that, **over an ordinary special fibre**, $\ker F^m$ is the connected part of $A[p^m]$, and the quotient $\ker V^m$ is étale. Over a suitable $p$-adically complete integral base, the finite étale quotient lifts uniquely; its kernel in the lifted $p^m$-torsion gives the **level-$m$ canonical subgroup**. We will explain this construction in the next subsection rather than proving the lifting theorem here.
+
 ## 4. From ordinary to a neighborhood
 
 For a good-reduction point over a complete rank-one valued extension $L/\mathbf Q_p$, evaluate a local integral lift of the Hasse invariant, and normalize $v(p)=1$. In the relevant range $0\leq\epsilon<1$, the condition that the valuation is at most $\epsilon$ defines a neighborhood $\mathcal X(\epsilon)$ of the ordinary locus:
@@ -318,6 +357,6 @@ Here $\mathcal X$ is the good-reduction locus from the preceding note. **A point
 ## References
 
 - P. Scholze, [*On torsion in the cohomology of locally symmetric varieties*](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), Chapter III, §III.2.
-- Y. Zhu, [*The Hodge–Tate period map on perfectoid Shimura variety*](https://yhzhumath.github.io/HT%20final.pdf), §3.3 (Frobenius and Verschiebung), §3.5 (translation-invariant differentials), §3.6 (Hasse invariant), and §§3.7–3.9.
+- Y. Zhu, [*The Hodge–Tate period map on perfectoid Shimura variety*](https://yhzhumath.github.io/HT%20final.pdf), §3.3 (Frobenius and Verschiebung), §3.5 (translation-invariant differentials), §3.6 (Hasse invariant and iterated Frobenius–Verschiebung), and §§3.7–3.9; A. Caraiani, [*Perfectoid Shimura Varieties*](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf), §4.2.
 
 [[perfectoid-siegel-variety/anticanonical-tower/index|Back to Anticanonical Tower]]
