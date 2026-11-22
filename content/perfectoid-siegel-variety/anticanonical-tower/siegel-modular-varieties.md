@@ -394,84 +394,45 @@ The corresponding full-level map reduces a basis modulo $p^m$. These maps become
 > [!remark]- Remark 4.1 (Why $\Gamma_0$ comes first)
 > The anticanonical tower is initially constructed at $\Gamma_0$-level because the distinguished subgroup $D_m$ can be compared directly with the canonical subgroup of $A[p^m]$. The crucial anticanonical condition says that its first-level part is transverse to the canonical subgroup. This is much more transparent in terms of subgroups than in terms of full symplectic bases.
 
-## 5. Why the $p$-level moduli spaces are introduced on the generic fibre
+## 5. Deep $p$-level structures on the generic fibre
 
-For $U=\Gamma(p^m),\Gamma_s(p^m),\Gamma_0(p^m)$, the preceding moduli interpretations are **over characteristic $0$**. In Zhu §3.4 one has finite étale covers
-
-$$
-\boxed{
-X_{K^p\Gamma(p^m),\mathbf Q}\longrightarrow
-X_{K^p\Gamma_s(p^m),\mathbf Q}\longrightarrow
-X_{K^p\Gamma_0(p^m),\mathbf Q}\longrightarrow
-X_{K^pG(\mathbf Z_p),\mathbf Q}.
-}
-$$
-
-The first space remembers $(A,\lambda,\eta^p,\eta_{p^m},t_{p^m})$; the second remembers $(A,\lambda,\eta^p,D,t_{p^m})$; the third remembers $(A,\lambda,\eta^p,D)$. Here $D\subset A[p^m]$ is a finite étale maximal isotropic subgroup which is locally free of rank $g$ over $\mathbf Z/p^m\mathbf Z$.
-
-These **are not definitions of integral moduli schemes over $\mathbf Z_{(p)}$**. The distinction matters because in characteristic $p$, the group scheme $A[p^m]$ is generally *not* finite étale. A constant-group isomorphism
+In the construction under discussion, the $p$-level moduli spaces are introduced **over $\mathbf Q$**, or after base change over $\mathbf Q_p$. For $U=\Gamma(p^m),\Gamma_s(p^m),\Gamma_0(p^m)$, the levels give finite étale maps
 
 $$
-(\mathbf Z/p^m\mathbf Z)^{2g}_S\xrightarrow{\sim} A[p^m]
+X_{K^p\Gamma(p^m),\mathbf Q}
+\longrightarrow X_{K^p\Gamma_s(p^m),\mathbf Q}
+\longrightarrow X_{K^p\Gamma_0(p^m),\mathbf Q}
+\longrightarrow X_{K^pG(\mathbf Z_p),\mathbf Q}.
 $$
 
-cannot be imposed over an arbitrary characteristic-$p$ base. This is a problem with this **naive full-level moduli condition**, not a claim that deep-level integral models do not exist.
+Their moduli data respectively consist of a full $p^m$-level frame (with its Weil-pairing trivialization), a Lagrangian subgroup $D$ together with cyclotomic trivialization $t_{p^m}$, and just $D$. These descriptions are straightforward because $A[p^m]$ is finite étale in characteristic zero.
 
-> [!remark]- Remark 5.1 (Some integral models do exist)
-> At $\Gamma_0(p^m)$-level, finite locally free subgroup schemes $D\subset A[p^m]$ make sense even in mixed or characteristic $p$, though the resulting integral geometry is typically less smooth. At full level one needs a different integral condition, for example a Drinfeld-type structure. Such integral models need not be smooth or identical to the normalization of the hyperspecial model without further hypotheses.
+**We are not asserting that deep-level integral models do not exist.** Rather, a naive full-level isomorphism from a constant étale group fails to describe $A[p^m]$ in characteristic $p$. Scholze's approach uses the analytic generic-fibre covers over the good-reduction locus, instead of requiring a detailed study of their entire integral models.
+
+> [!remark]- Remark 5.1 (Drinfeld integral level structures)
+> To see how full $p$-level can nevertheless be extended integrally, consider an elliptic curve $E/S$ where $p$ may not be invertible. A **Drinfeld full level-$p^m$ structure** is a homomorphism
 >
-> Our goal in these notes is different: follow Scholze and work with the **adic generic-fibre** level covers, pulled back to the good-reduction locus, and use canonical subgroups to study a distinguished anticanonical part.
-
-### 5.1 Comparison: Drinfeld full level on an elliptic curve
-
-Let $E/S$ be an elliptic curve over a base where $p$ may not be invertible. We can still choose sections
-
-$$
-\alpha:(\mathbf Z/p^m\mathbf Z)^2\longrightarrow E[p^m](S),
-\qquad (a,b)\longmapsto aP+bQ,
-$$
-
-but do **not** require that $\alpha$ be a group-scheme isomorphism.
-
-> [!definition] Definition 5.2 (Drinfeld full level; elliptic-curve version)
-> A full Drinfeld level-$p^m$ structure on $E/S$ is a homomorphism of abstract groups into sections as above satisfying the equality of effective relative Cartier divisors
+> $$
+> \alpha:(\mathbf Z/p^m\mathbf Z)^2\to E[p^m](S),
+> \qquad (a,b)\mapsto aP+bQ,
+> $$
+>
+> for which, as effective relative Cartier divisors,
 >
 > $$
 > \boxed{\quad
 > E[p^m]=\sum_{(a,b)\in(\mathbf Z/p^m\mathbf Z)^2}[aP+bQ].
 > \quad}
-> \tag{5.1}
 > $$
 >
-> Here $[x]$ denotes the Cartier divisor of a section $x:S\to E$. Repetitions are allowed and carry scheme-theoretic multiplicities.
-
-> [!proposition] Proposition 5.3 (Generic-fibre comparison)
-> If $p$ is invertible on an algebraically closed field $k$, (5.1) is equivalent to $P,Q$ forming a basis of the finite étale group $E[p^m](k)$. Hence on the generic fibre the Drinfeld definition recovers ordinary full $\Gamma(p^m)$-level.
-
-> [!proof]- Proof
-> In characteristic different from $p$, $E[p^m]$ consists of $p^{2m}$ distinct geometric points. Equality of divisors in (5.1) forces the $p^{2m}$ listed points to be pairwise distinct and to enumerate all of $E[p^m](k)$. The homomorphism $\alpha$ is therefore bijective. $\square$
-
-> [!example] Example 5.4 (An ordinary special fibre)
-> Suppose $k$ is algebraically closed of characteristic $p$, and $E/k$ is ordinary. Then
+> When $p$ is invertible, this says precisely that $P,Q$ form a full basis of the étale torsion. In characteristic $p$, repeated sections are permitted: for an ordinary elliptic curve over an algebraically closed field, $E[p]\simeq\mu_p\oplus\mathbf Z/p\mathbf Z$, and with $Q$ generating the étale factor, the map $(a,b)\mapsto bQ$ satisfies
 >
 > $$
-> E[p]\simeq\mu_p\oplus(\mathbf Z/p\mathbf Z).
+> \sum_{a,b\in\mathbf F_p}[bQ]
+> =p\sum_{b\in\mathbf F_p}[bQ]=E[p].
 > $$
 >
-> Choose a point $Q$ generating the étale part, and let $P=0$. The homomorphism $(a,b)\mapsto bQ$ is **not injective on geometric points**, but
->
-> $$
-> \sum_{a,b\in\mathbf F_p}[aP+bQ]
-> =p\sum_{b\in\mathbf F_p}[bQ]
-> =E[p]
-> $$
->
-> as effective Cartier divisors. Each connected component of $E[p]$ is a length-$p$ infinitesimal thickening of its unique point. Thus multiplicities can encode the non-étale part that a naive full-level isomorphism cannot see.
-
-> [!remark]- Remark 5.5 (Scope of the divisor formulation)
-> This Cartier-divisor description is specific to dimension-one groups (such as elliptic curves and one-dimensional formal groups). For a higher-dimensional abelian scheme, a section is not an effective Cartier divisor, so (5.1) cannot simply be copied verbatim. There are higher-dimensional integral level structures, but constructing them is outside the scope of our anticanonical-tower discussion.
-
-The point of this comparison is **not** to replace Scholze's $X_{K^pU,\mathbf Q}$ by a Drinfeld moduli scheme. It is to explain why a moduli problem that is straightforward over $\mathbf Q$ may require a substantially different formulation over $\mathbf Z_p$.
+> Thus scheme-theoretic multiplicities replace distinct geometric torsion points. The Cartier-divisor formula is special to dimension one; higher-dimensional integral level structures require a different formulation. See Katz–Mazur, *Arithmetic Moduli of Elliptic Curves*.
 
 ## 6. Transition to the good-reduction locus
 
