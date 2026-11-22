@@ -43,17 +43,82 @@ $$
 
 After choosing a trivialization of $\mu_n$, this makes $A[n]$ into a symplectic $(\mathbf Z/n\mathbf Z)$-module. The ambiguity of that choice is exactly why the group of **similitudes** rather than just $\operatorname{Sp}_{2g}$ naturally appears.
 
-> [!theorem] Theorem 1.1 (Siegel moduli space; Mumford)
-> Let $K^p\subset G(\mathbf A_f^p)$ be sufficiently small, for example contained in a principal congruence subgroup of tame level $N\geq 3$ with $(N,p)=1$. There is a smooth quasi-projective moduli scheme $X_{g,K^p}$ over $\mathbf Z_{(p)}$, of relative dimension
->
-> $$
-> \dim X_{g,K^p}=\frac{g(g+1)}2,
-> $$
->
-> parametrizing principally polarized abelian schemes $(A,\lambda)$ equipped with a $K^p$-level structure.
+### 1.1 The Siegel Shimura datum and its complex points
 
-> [!proof]- Background
-> This representability theorem is used as an input, not reproved here. For a principal tame level $N\geq3$, it is the familiar fine moduli problem of symplectic level-$N$ structures, with the Weil-pairing similitude convention. See Zhu, Theorem 3.4.1.
+The familiar genus-$g$ Siegel upper half space is
+
+$$
+\mathfrak H_g=
+\{Z\in M_g(\mathbf C):Z^t=Z,\ \operatorname{Im}Z>0\}.
+$$
+
+It is a complex manifold of dimension $g(g+1)/2$. For the Shimura datum of $G=\operatorname{GSp}_{2g}$, we use the **two-component** symmetric domain
+
+$$
+\mathfrak H_g^\pm=\mathfrak H_g\sqcup\overline{\mathfrak H_g},
+$$
+
+which may equivalently be described by compatible positive and negative complex structures on $V_{\mathbf R}$, or by the corresponding conjugacy class of morphisms $h:\mathbb S\to G_{\mathbf R}$. The positive component yields principally polarized complex abelian varieties as complex tori. The two components are useful when describing the full action of $G(\mathbf Q)$.
+
+Fix a sufficiently small compact open subgroup
+
+$$
+K=K^pK_p\subset G(\mathbf A_f),\qquad
+K_p=G(\mathbf Z_p),\qquad
+K^p\subset G(\mathbf A_f^p).
+$$
+
+> [!theorem] Theorem 1.1 (Shimura–Deligne; complex uniformization)
+> The Siegel Shimura datum $(G,\mathfrak H_g^\pm)$ has reflex field $\mathbf Q$ and a canonical model $X_{K,\mathbf Q}$ over $\mathbf Q$. Its complex analytification satisfies
+>
+> $$
+> \boxed{\quad
+> X_{K,\mathbf Q}(\mathbf C)
+> \simeq
+> G(\mathbf Q)\backslash
+> \bigl(\mathfrak H_g^\pm\times G(\mathbf A_f)/K\bigr).
+> \quad}
+> \tag{1.1}
+> $$
+>
+> Here $G(\mathbf Q)$ acts diagonally on both factors. The algebraic variety $X_{K,\mathbf Q}$ is identified with the characteristic-zero Siegel moduli variety described below.
+
+> [!remark]- Remark 1.2 (What does a complex point represent?)
+> A point of $\mathfrak H_g$ yields a principally polarized complex torus $A_Z=\mathbf C^g/(\mathbf Z^g+Z\mathbf Z^g)$. The finite-adelic coordinate $g_fK$ records the finite-adelic level (up to the $K$-action); quotienting by $G(\mathbf Q)$ accounts for changing the rational symplectic coordinates. This is a conceptual description of (1.1), not a replacement for the scheme-theoretic moduli problem over a general base.
+
+### 1.2 The smooth integral model at hyperspecial $p$-level
+
+The preceding Shimura–Deligne statement concerns a variety **over $\mathbf Q$**. Its extension over $\mathbf Z_{(p)}$ uses the algebraic geometry of the Siegel moduli problem; it is not simply a consequence of complex uniformization.
+
+> [!theorem] Theorem 1.3 (Mumford; Siegel moduli over $\mathbf Z_{(p)}$)
+> Suppose $K^p\subset G(\widehat{\mathbf Z}^{\,p})$ is sufficiently small, for instance contained in the principal tame congruence subgroup of some level $N\geq3$ prime to $p$, and take $K_p=G(\mathbf Z_p)$. Then there is a smooth quasi-projective scheme
+>
+> $$
+> X_{K,\mathbf Z_{(p)}}\longrightarrow\operatorname{Spec}\mathbf Z_{(p)},
+> \qquad
+> \dim_{\mathrm{rel}}X_{K,\mathbf Z_{(p)}}=\frac{g(g+1)}2,
+> $$
+>
+> representing the functor
+>
+> $$
+> \boxed{\quad
+> S\longmapsto
+> \{(A,\lambda,\eta^p)/S\}/\cong,
+> \quad}
+> \tag{1.2}
+> $$
+>
+> where $A/S$ is a projective abelian scheme of relative dimension $g$, $\lambda:A\xrightarrow{\sim}A^\vee$ is a principal polarization, and $\eta^p$ is a $K^p$-level structure. Its generic fibre is $X_{K,\mathbf Q}$.
+
+> [!proof]- Reference and scope
+> We use this representability and smoothness theorem as a standard input, following Zhu, Theorem 3.4.1. For principal tame level $N\geq3$ it is the fine moduli scheme of principally polarized abelian schemes with full prime-to-$p$ level-$N$ data; its deformation theory gives smoothness and the stated dimension. The identification of its generic fibre with the Shimura variety of Theorem 1.1 is Zhu, Theorem 3.4.3, attributed to Shimura and Deligne.
+>
+> The hypothesis $K_p=G(\mathbf Z_p)$ is essential in the present discussion: it is the **hyperspecial** level at $p$. When we later impose $\Gamma_0(p^m)$, $\Gamma_1(p^m)$, or $\Gamma(p^m)$, we first work with the corresponding **generic-fibre** covers. A smooth integral model over $\mathbf Z_{(p)}$ is not being asserted for those levels.
+
+Thus the notation $X_{K,\mathbf Z_{(p)}}$ refers to the integral moduli scheme, whereas $X_{K,\mathbf Q}$ is its generic fibre and admits the adelic uniformization (1.1).
+
+**Our next task** is to explain the symbol $\eta^p$ in (1.2). This is a $K^p$-orbit of prime-to-$p$ symplectic-similitude trivializations, and in the principal tame-level case Zhu writes it explicitly as $(\eta_N,t_N)$.
 
 ## 2. Prime-to-$p$ level: from an orbit to Zhu's explicit definition
 
