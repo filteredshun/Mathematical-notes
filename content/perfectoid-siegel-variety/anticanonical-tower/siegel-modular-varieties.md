@@ -13,7 +13,7 @@ tags:
 
 Before defining the good-reduction locus, we recall what the Siegel modular variety parametrizes, and what changes when we add level at $p$. The essential point is that a **level structure is an orbit of trivializations**: changing the subgroup $K_p$ changes how much of a symplectic basis of $A[p^m]$ we remember, while the tame subgroup $K^p$ is fixed.
 
-These conventions follow [Scholze, Chapter III, §III.1](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) and [Zhu, §3.4](https://ymsc.tsinghua.edu.cn/__local/D/72/98/0BE6DF2EB56ABADC7E9F0EC6804_5E438507_11E279.pdf). One small distinction between their definitions of $\Gamma_0$ is recorded explicitly in §5 below. Our §2 expands the general orbit language, which Zhu deliberately omits, and follows his exact principal-level convention in Definition 3.4.2.
+These conventions follow [Scholze, Chapter III, §III.1](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) and [Zhu, §3.4](https://ymsc.tsinghua.edu.cn/__local/D/72/98/0BE6DF2EB56ABADC7E9F0EC6804_5E438507_11E279.pdf). Our §2 expands the general orbit language (which Zhu does not spell out) and follows Zhu's precise principal-level formulation in Definition 3.4.2. For $p$-level structures we use Zhu's notation $\Gamma_0$ and $\Gamma_s$ throughout.
 
 ## 1. The symplectic space and the moduli problem
 
@@ -320,9 +320,9 @@ means that the moduli problem remembers **one orbit**, not a globally singled-ou
 
 **We will fix this tame level $\eta^p$ in the sequel.** The tower varies only the level $K_p\subset G(\mathbf Z_p)$ at the prime $p$.
 
-## 3. Adding level at $p$ by taking an orbit
+## 3. Changing the $p$-level: first over $\mathbf Q$
 
-Now work in characteristic $0$, where $A[p^m]$ is finite étale. A full $p^m$-level trivialization identifies the standard symplectic module
+Fix the prime-to-$p$ subgroup $K^p$ and put $K_p=G(\mathbf Z_p)$. In this section the deep $p$-level schemes are **defined over $\mathbf Q$ (or over $\mathbf Q_p$ after base change)**, not over $\mathbf Z_{(p)}$. Over characteristic $0$, $A[p^m]$ is finite étale. A full $p^m$-level trivialization identifies the standard symplectic module
 
 $$
 M_m=(\mathbf Z/p^m\mathbf Z)^{2g}
@@ -330,7 +330,7 @@ $$
 
 with $A[p^m]$, compatibly with the Weil pairing up to its cyclotomic similitude. It is convenient to regard such trivializations as a torsor under $G(\mathbf Z/p^m\mathbf Z)$ (with the cyclotomic component understood).
 
-Given $K_p\subset G(\mathbf Z_p)$ containing the principal congruence subgroup $\Gamma(p^m)$, a **$K_p$-level structure** is the $K_p$-orbit of a full trivialization. The resulting finite-level Shimura variety, over the appropriate characteristic-zero base, is denoted $X_{K_pK^p}$.
+For an open subgroup $U\subseteq G(\mathbf Z_p)$ containing $\Gamma(p^m)$, a **$U$-level structure** is the $U$-orbit of a full trivialization. The corresponding smooth Shimura variety $X_{K^pU,\mathbf Q}$ is a **finite étale cover of the hyperspecial generic fibre** $X_{K^pG(\mathbf Z_p),\mathbf Q}$, as in Zhu §3.4. This does not assert that the same moduli functor has a smooth model over $\mathbf Z_{(p)}$.
 
 The standard Lagrangian submodule is
 
@@ -346,12 +346,11 @@ $$
 \Gamma(p^m)
  &=\left\{\gamma\in G(\mathbf Z_p):\gamma\equiv
  \begin{pmatrix}I_g&0\\0&I_g\end{pmatrix}\pmod{p^m}\right\},\\[2mm]
-\Gamma_0^{\mathrm{std}}(p^m)
+\Gamma_0(p^m)
  &=\left\{\gamma\in G(\mathbf Z_p):\gamma\equiv
  \begin{pmatrix}*&*\\0&*\end{pmatrix}\pmod{p^m}\right\},\\[2mm]
-\Gamma_1(p^m)
- &=\left\{\gamma\in G(\mathbf Z_p):\gamma\equiv
- \begin{pmatrix}I_g&*\\0&I_g\end{pmatrix}\pmod{p^m}\right\}.
+\Gamma_s(p^m)
+ &=\left\{\gamma\in\Gamma_0(p^m):\nu(\gamma)\equiv1\pmod{p^m}\right\}.
 \end{aligned}
 $$
 
@@ -360,18 +359,16 @@ $$
 >
 > 1. **Full level $\Gamma(p^m)$:** a complete symplectic-similitude frame of $A[p^m]$, including the cyclotomic pairing identification.
 > 2. **Parahoric level $\Gamma_0^{\mathrm{std}}(p^m)$:** a maximal isotropic finite étale subgroup $D\subset A[p^m]$, geometrically isomorphic to $(\mathbf Z/p^m\mathbf Z)^g$.
-> 3. **Level $\Gamma_1(p^m)$:** the refinement of the $\Gamma_0$-data obtained by retaining a specified frame of $D$ **and** the induced compatible frame of $A[p^m]/D$. Equivalently, it is the orbit of a full symplectic-similitude frame under the upper-unitriangular block subgroup displayed above.
->
-> In the last item, the compatibility includes the Weil-pairing/cyclotomic data; saying merely “choose a basis of $D$” can omit this extra datum.
+> 3. **Cyclotomic refinement $\Gamma_s(p^m)$:** the pair $(D,t_p)$, where $t_p:\mu_{p^m}\xrightarrow{\sim}\mathbf Z/p^m\mathbf Z$ trivializes the Weil-pairing target.
 
 > [!proof]- Why this follows from the orbit description
 > Under a full level trivialization $\alpha_m:M_m\xrightarrow{\sim}A[p^m]$, let $D=\alpha_m(L_0)$. A matrix stabilizes $L_0$ precisely when its lower-left block is zero: this gives $\Gamma_0^{\mathrm{std}}$.
 >
-> Modulo $\Gamma_1$, the first $g$ standard vectors (and the quotient classes of the last $g$ vectors) are fixed. Their images give the two compatible frames in (3). The remaining upper-right block changes the lifts of the quotient frame by elements of $D$, which is exactly the ambiguity we wish to forget.
+> Modulo $\Gamma_s$, the subgroup $D$ is fixed and the similitude character is $1$ modulo $p^m$, so the induced cyclotomic trivialization $t_p$ is fixed as well.
 >
 > Modulo $\Gamma(p^m)$ no such change remains; the whole frame is remembered. $\square$
 
-For $g=1$, $\Gamma_0(p^m)$ remembers a cyclic subgroup of order $p^m$, while $\Gamma_1(p^m)$ amounts to remembering a generator, with the above conventions. This is the classical modular-curve picture.
+For $g=1$, $\Gamma_0(p^m)$ remembers a cyclic subgroup of order $p^m$, while $\Gamma_s(p^m)$ also remembers a primitive $p^m$-th root of unity (or equivalently $t_p$).
 
 ## 4. Forgetting level and the reason for the tower
 
@@ -384,7 +381,7 @@ X_{\Gamma(p^m)}
  \longrightarrow X.
 $$
 
-All of these are finite étale in characteristic $0$. In the $\Gamma_0$-tower the transition map has the especially simple moduli description
+These are finite étale maps **over the generic fibre** (write $X_U=X_{K^pU,\mathbf Q}$). In the $\Gamma_0$-tower the transition map has the especially simple moduli description
 
 $$
 (A,\lambda,\eta^p,D_{m+1})
@@ -397,49 +394,88 @@ The corresponding full-level map reduces a basis modulo $p^m$. These maps become
 > [!remark]- Remark 4.1 (Why $\Gamma_0$ comes first)
 > The anticanonical tower is initially constructed at $\Gamma_0$-level because the distinguished subgroup $D_m$ can be compared directly with the canonical subgroup of $A[p^m]$. The crucial anticanonical condition says that its first-level part is transverse to the canonical subgroup. This is much more transparent in terms of subgroups than in terms of full symplectic bases.
 
-## 5. A convention in Scholze versus Zhu
+## 5. Why the $p$-level moduli spaces are introduced on the generic fibre
 
-There is a **genuine notational distinction** that matters in comparing the references.
-
-Scholze's Definition III.1.1 uses the name $\Gamma_0(p^m)$ for the upper-block-triangular group with an **additional condition**
+For $U=\Gamma(p^m),\Gamma_s(p^m),\Gamma_0(p^m)$, the preceding moduli interpretations are **over characteristic $0$**. In Zhu §3.4 one has finite étale covers
 
 $$
-\det(\gamma)\equiv1\pmod{p^m}.
+\boxed{
+X_{K^p\Gamma(p^m),\mathbf Q}\longrightarrow
+X_{K^p\Gamma_s(p^m),\mathbf Q}\longrightarrow
+X_{K^p\Gamma_0(p^m),\mathbf Q}\longrightarrow
+X_{K^pG(\mathbf Z_p),\mathbf Q}.
+}
 $$
 
-Zhu, §3.4, separates ordinary $\Gamma_0(p^m)$ from a special subgroup
+The first space remembers $(A,\lambda,\eta^p,\eta_{p^m},t_{p^m})$; the second remembers $(A,\lambda,\eta^p,D,t_{p^m})$; the third remembers $(A,\lambda,\eta^p,D)$. Here $D\subset A[p^m]$ is a finite étale maximal isotropic subgroup which is locally free of rank $g$ over $\mathbf Z/p^m\mathbf Z$.
+
+These **are not definitions of integral moduli schemes over $\mathbf Z_{(p)}$**. The distinction matters because in characteristic $p$, the group scheme $A[p^m]$ is generally *not* finite étale. A constant-group isomorphism
 
 $$
-\Gamma_s(p^m)=
-\left\{\gamma\in\Gamma_0^{\mathrm{std}}(p^m):
-\nu(\gamma)\equiv1\pmod{p^m}\right\}.
+(\mathbf Z/p^m\mathbf Z)^{2g}_S\xrightarrow{\sim} A[p^m]
 $$
 
-Zhu explicitly notes that $\det$ in Scholze's displayed definition may be a typo for $\nu$. Indeed in $\operatorname{GSp}_{2g}$,
+cannot be imposed over an arbitrary characteristic-$p$ base. This is a problem with this **naive full-level moduli condition**, not a claim that deep-level integral models do not exist.
+
+> [!remark]- Remark 5.1 (Some integral models do exist)
+> At $\Gamma_0(p^m)$-level, finite locally free subgroup schemes $D\subset A[p^m]$ make sense even in mixed or characteristic $p$, though the resulting integral geometry is typically less smooth. At full level one needs a different integral condition, for example a Drinfeld-type structure. Such integral models need not be smooth or identical to the normalization of the hyperspecial model without further hypotheses.
+>
+> Our goal in these notes is different: follow Scholze and work with the **adic generic-fibre** level covers, pulled back to the good-reduction locus, and use canonical subgroups to study a distinguished anticanonical part.
+
+### 5.1 Comparison: Drinfeld full level on an elliptic curve
+
+Let $E/S$ be an elliptic curve over a base where $p$ may not be invertible. We can still choose sections
 
 $$
-\det(\gamma)=\nu(\gamma)^g,
+\alpha:(\mathbf Z/p^m\mathbf Z)^2\longrightarrow E[p^m](S),
+\qquad (a,b)\longmapsto aP+bQ,
 $$
 
-so these two congruences are **not equivalent for arbitrary $g$**. We do not silently identify them.
+but do **not** require that $\alpha$ be a group-scheme isomorphism.
 
-> [!remark]- Remark 5.1 (Extra cyclotomic datum)
-> For Zhu's $\Gamma_s(p^m)$, the moduli problem over characteristic $0$ is
+> [!definition] Definition 5.2 (Drinfeld full level; elliptic-curve version)
+> A full Drinfeld level-$p^m$ structure on $E/S$ is a homomorphism of abstract groups into sections as above satisfying the equality of effective relative Cartier divisors
 >
 > $$
-> (A,\lambda,\eta^p,D,t_p),
-> \qquad t_p:\mu_{p^m}\xrightarrow{\sim}\mathbf Z/p^m\mathbf Z,
+> \boxed{\quad
+> E[p^m]=\sum_{(a,b)\in(\mathbf Z/p^m\mathbf Z)^2}[aP+bQ].
+> \quad}
+> \tag{5.1}
 > $$
 >
-> where $D$ is maximal isotropic as above. Thus the map
-> $X_{\Gamma_s(p^m)}\to X_{\Gamma_0^{\mathrm{std}}(p^m)}$
-> forgets $t_p$, and $X_{\Gamma_s(p^m)}$ naturally lives over the $p^m$-cyclotomic extension.
+> Here $[x]$ denotes the Cartier divisor of a section $x:S\to E$. Repetitions are allowed and carry scheme-theoretic multiplicities.
+
+> [!proposition] Proposition 5.3 (Generic-fibre comparison)
+> If $p$ is invertible on an algebraically closed field $k$, (5.1) is equivalent to $P,Q$ forming a basis of the finite étale group $E[p^m](k)$. Hence on the generic fibre the Drinfeld definition recovers ordinary full $\Gamma(p^m)$-level.
+
+> [!proof]- Proof
+> In characteristic different from $p$, $E[p^m]$ consists of $p^{2m}$ distinct geometric points. Equality of divisors in (5.1) forces the $p^{2m}$ listed points to be pairwise distinct and to enumerate all of $E[p^m](k)$. The homomorphism $\alpha$ is therefore bijective. $\square$
+
+> [!example] Example 5.4 (An ordinary special fibre)
+> Suppose $k$ is algebraically closed of characteristic $p$, and $E/k$ is ordinary. Then
 >
-> In the remainder of these notes we will **write $\Gamma_0^{\mathrm{std}}$ for the subgroup-only level**, and explicitly name $\Gamma_s$ when the cyclotomic refinement is needed. Statements taken directly from Scholze will retain his notation with a warning where necessary.
+> $$
+> E[p]\simeq\mu_p\oplus(\mathbf Z/p\mathbf Z).
+> $$
+>
+> Choose a point $Q$ generating the étale part, and let $P=0$. The homomorphism $(a,b)\mapsto bQ$ is **not injective on geometric points**, but
+>
+> $$
+> \sum_{a,b\in\mathbf F_p}[aP+bQ]
+> =p\sum_{b\in\mathbf F_p}[bQ]
+> =E[p]
+> $$
+>
+> as effective Cartier divisors. Each connected component of $E[p]$ is a length-$p$ infinitesimal thickening of its unique point. Thus multiplicities can encode the non-étale part that a naive full-level isomorphism cannot see.
 
-## 6. Transition to good reduction
+> [!remark]- Remark 5.5 (Scope of the divisor formulation)
+> This Cartier-divisor description is specific to dimension-one groups (such as elliptic curves and one-dimensional formal groups). For a higher-dimensional abelian scheme, a section is not an effective Cartier divisor, so (5.1) cannot simply be copied verbatim. There are higher-dimensional integral level structures, but constructing them is outside the scope of our anticanonical-tower discussion.
 
-The basic variety $X$ has a smooth integral model at $p$ because its level at $p$ is hyperspecial. By contrast, in the discussion above, the finite $p$-power level spaces were introduced over characteristic $0$.
+The point of this comparison is **not** to replace Scholze's $X_{K^pU,\mathbf Q}$ by a Drinfeld moduli scheme. It is to explain why a moduli problem that is straightforward over $\mathbf Q$ may require a substantially different formulation over $\mathbf Z_p$.
+
+## 6. Transition to the good-reduction locus
+
+The hyperspecial variety $X=X_{K^pG(\mathbf Z_p)}$ has a smooth integral model at $p$. The deeper $p$-level varieties in §§3–5, by contrast, have deliberately been introduced on their characteristic-zero generic fibres. This is a choice of setup, not a nonexistence assertion for integral models.
 
 We will next work with the $p$-adic completion $\mathfrak X$ of the integral Siegel moduli space and its adic generic fibre $\mathcal X$. Its geometric points are precisely those for which the underlying abelian variety has good reduction. This is explained in [[perfectoid-siegel-variety/anticanonical-tower/good-reduction-locus|Good Reduction and the Formal Generic Fibre]].
 
@@ -447,6 +483,6 @@ For the higher $p$-levels, **good reduction means good reduction of the underlyi
 
 ---
 
-**References.** P. Scholze, [*On torsion in the cohomology of locally symmetric varieties*](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), §III.1, Definition III.1.1; Y. Zhu, [*The Hodge–Tate period map on perfectoid Shimura variety*](https://ymsc.tsinghua.edu.cn/__local/D/72/98/0BE6DF2EB56ABADC7E9F0EC6804_5E438507_11E279.pdf), §3.4, especially Theorem 3.4.1, Definition 3.4.2, and the discussion following Theorem 3.4.3.
+**References.** See also A. Caraiani, [*Perfectoid Shimura Varieties*](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf), §4, and Katz–Mazur, *Arithmetic Moduli of Elliptic Curves*, for the integral Drinfeld-level comparison. P. Scholze, [*On torsion in the cohomology of locally symmetric varieties*](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), §III.1, Definition III.1.1; Y. Zhu, [*The Hodge–Tate period map on perfectoid Shimura variety*](https://ymsc.tsinghua.edu.cn/__local/D/72/98/0BE6DF2EB56ABADC7E9F0EC6804_5E438507_11E279.pdf), §3.4, especially Theorem 3.4.1, Definition 3.4.2, and the discussion following Theorem 3.4.3.
 
 [[perfectoid-siegel-variety/anticanonical-tower/index|Back to Anticanonical Tower]]
