@@ -438,7 +438,7 @@ Their moduli data respectively consist of a full $p^m$-level frame (with its Wei
 
 The hyperspecial integral model remembers which characteristic-zero points extend to abelian schemes over the valuation ring. This explains the **good-reduction locus** used in the anticanonical construction; it is an integral-model question that belongs naturally to the preliminary geometry of Siegel varieties.
 
-Following Caraiani, Example 4.1.2 and Exercise 4.1.3, we first compare $\mathbf A^1_{\mathbf Z_p}$ and $\mathbf P^1_{\mathbf Z_p}$ before translating their extension criteria into the moduli language.
+We first give an adic factorization criterion and its affine-local proof, then illustrate it with Caraiani's $\mathbf A^1$ and $\mathbf P^1$ examples before applying it to Siegel moduli.
 
 ### 6.1 Two ways to pass from a scheme to an adic space
 
@@ -464,7 +464,7 @@ $$
 \tag{6.1}
 $$
 
-This need not be surjective. We shall see why through coordinates.
+This need not be surjective. The following criterion describes its image on complete rank-one valued-field points.
 
 #### General adic factorization criterion
 
@@ -509,163 +509,49 @@ We can formulate the underlying extension condition **directly in the category o
 > [!remark]- Remark (Valuative criterion versus factorization)
 > This is a *pointwise factorization criterion* through an open immersion of adic spaces, not the full Huber valuative criterion for properness. The latter involves more general valuations and their specializations. In the statement above we work only with complete rank-one valued-field points.
 
-### 6.2 The affine line: an integral point means $|T|\leq1$
+### 6.2 Two examples: the affine and projective lines
 
-Let
-$$
-X=\mathbf A^1_{\mathbf Z_p}=\operatorname{Spec}\mathbf Z_p[T].
-$$
-
-#### 6.2.1 First complete, then take the generic fibre
-
-The completion is
-
-$$
-\widehat{\mathbf Z_p[T]}
-=\varprojlim_n(\mathbf Z_p/p^n)[T]
-=\mathbf Z_p\langle T\rangle,
-$$
-
-where
-
-$$
-\mathbf Z_p\langle T\rangle
-=\left\{\sum_{i\geq0}a_iT^i:
-a_i\in\mathbf Z_p,\quad v_p(a_i)\to+\infty\right\}.
-$$
-
-This is the ring of *restricted power series*, not $\mathbf Z_p[[T]]$: we complete in the $p$-direction, **not** in the $T$-direction.
-
-Taking the adic generic fibre gives
-
-$$
-(\widehat X)_\eta=
-\operatorname{Spa}\bigl(
-\mathbf Q_p\langle T\rangle,\mathbf Z_p\langle T\rangle
-\bigr).
-$$
-
-By the definition of $\operatorname{Spa}(B,B^+)$, its points satisfy $|f(x)|\leq1$ for $f\in B^+$. In particular, $T\in\mathbf Z_p\langle T\rangle$, so $|T(x)|\leq1$. Thus
-
-$$
-\boxed{\quad
-(\widehat{\mathbf A^1_{\mathbf Z_p}})_\eta
-=D(0,1)=\{|T|\leq1\}.
-\quad}
-\tag{6.2}
-$$
-
-This is the **closed unit disc** as an adic space.
-
-#### 6.2.2 Compare it with the entire analytic affine line
-
-If instead we first invert $p$ and then analytify, we get
-
-$$
-(\mathbf A^1_{\mathbf Q_p})^{\mathrm{ad}}
-=
-\bigcup_{r\geq0}
-\operatorname{Spa}\bigl(
-\mathbf Q_p\langle p^rT\rangle,
-\mathbf Z_p\langle p^rT\rangle
-\bigr).
-$$
-
-The $r$-th term is the closed disc $\{|T|\leq p^r\}$ (with $|p|=p^{-1}$). Consequently
-
-$$
-\boxed{\quad
-D(0,1)\subsetneq(\mathbf A^1_{\mathbf Q_p})^{\mathrm{ad}}.
-\quad}
-\tag{6.3}
-$$
-
-For example, the point $T=p^{-1}$ lies on the right but not on the left.
-
-> [!remark]- Remark 6.1 (A closed disc that is open)
-> Despite its name, the closed unit disc is an **open adic subspace** of the entire analytic affine line: it is a rational domain defined by $|T|\leq1$. The phrase *proper open subset* here means a **strict** open subset, not a proper morphism. The inclusion (6.3) is not a proper morphism.
-
-#### 6.2.3 What does “extend to the integral model” mean?
-
-Let $L/\mathbf Q_p$ be any complete rank-one valued extension. An $L$-valued analytic point is a morphism
-
-$
-x_a:\operatorname{Spa}(L,\mathcal O_L)\longrightarrow
-(\mathbf A^1_{\mathbf Q_p})^{\mathrm{ad}}
-$
-
-specified by $T\mapsto a\in L$. We ask whether it admits an **adic factorization** through the closed unit disc.
-
-> [!proposition] Proposition 6.2 (The affine-line adic criterion)
-> The morphism $x_a$ factors through
+> [!example] Example 6.2 (The affine line; Caraiani, Example 4.1.2)
+> Let $X=\mathbf A^1_{\mathbf Z_p}=\operatorname{Spec}\mathbf Z_p[T]$. Completing **only in the $p$-direction** yields the restricted power-series ring
 >
-> $
+> $$
+> \widehat{\mathbf Z_p[T]}=\mathbf Z_p\langle T\rangle
+> =\left\{\sum_{i\geq0}a_iT^i:\ a_i\in\mathbf Z_p,\ a_i\to0\ p\text{-adically}\right\}.
+> $$
+>
+> Thus the formal generic fibre is the closed unit disc
+>
+> $$
+> \boxed{
 > (\widehat{\mathbf A^1_{\mathbf Z_p}})_\eta
 > =\operatorname{Spa}(\mathbf Q_p\langle T\rangle,\mathbf Z_p\langle T\rangle)
-> $
+> =\{|T|\leq1\}.
+> }
+> $$
 >
-> if and only if
+> By contrast, the whole analytic affine line is the increasing union of discs $\{|T|\leq p^r\}$ for $r\geq0$. The inclusion of the unit disc is therefore a **strict open immersion** of adic spaces (not a proper morphism).
 >
-> $
-> \boxed{\quad |a|\leq1\quad\Longleftrightarrow\quad a\in\mathcal O_L.\quad}
-> $
+> For $a\in L$, the morphism $x_a:\operatorname{Spa}(L,\mathcal O_L)\to(\mathbf A^1_{\mathbf Q_p})^{\mathrm{ad}}$ given by $T\mapsto a$ factors through the formal generic fibre exactly when $|a|\leq1$. This is the explicit affine instance of the general criterion above; **no additional extension argument is needed**.
 
-> [!proof]- Proof
-> A factorization is induced by a continuous Huber-pair homomorphism
->
-> $
-> (\mathbf Q_p\langle T\rangle,\mathbf Z_p\langle T\rangle)
-> \longrightarrow(L,\mathcal O_L),\qquad T\longmapsto a.
-> $
->
-> Because $T$ belongs to the plus-ring, necessarily $a\in\mathcal O_L$. Conversely, if $|a|\leq1$, evaluation at $a$ converges for every restricted power series and maps $\mathbf Z_p\langle T\rangle$ into $\mathcal O_L$. It therefore defines the required morphism. $\square$
-
-**Key observation.** We have inverted $p$, but the Huber pair
-
-$$
-\bigl(\mathbf Q_p\langle T\rangle,\mathbf Z_p\langle T\rangle\bigr)
-$$
-
-still remembers the integral subring. The role of the $+$-part is precisely to encode boundedness, hence extendability.
-
-### 6.3 The projective line: properness removes the restriction
-
-Now replace the affine line with
-
-$$
-Y=\mathbf P^1_{\mathbf Z_p}.
-$$
-
-Its two standard affine charts have coordinates $T$ and $U=1/T$. Completing them separately and passing to adic generic fibres gives
-
-$$
-D_T=\{|T|\leq1\},\qquad D_U=\{|U|\leq1\}.
-$$
-
-The second disc contains the point at infinity. On the overlap, the relation $U=1/T$ identifies the boundary annulus $|T|=1$ with $|U|=1$. Every analytic point of the projective line is in one of the two discs: if $|T|>1$, then $|U|<1$.
-
-> [!proposition] Proposition 6.3 (Caraiani, Exercise 4.1.3)
-> The canonical map
+> [!example] Example 6.3 (The projective line; Caraiani, Exercise 4.1.3)
+> For $Y=\mathbf P^1_{\mathbf Z_p}$, the formal generic fibres of the standard charts with coordinates $T$ and $U=T^{-1}$ are respectively
 >
 > $$
-> \boxed{\quad
+> D_T=\{|T|\leq1\},\qquad D_U=\{|U|\leq1\}.
+> $$
+>
+> They glue along $|T|=|U|=1$ and cover the entire analytic projective line. Consequently
+>
+> $$
+> \boxed{
 > (\widehat{\mathbf P^1_{\mathbf Z_p}})_\eta
-> \xrightarrow{\ \sim\ }
-> (\mathbf P^1_{\mathbf Q_p})^{\mathrm{ad}}
-> \quad}
+> \simeq(\mathbf P^1_{\mathbf Q_p})^{\mathrm{ad}}.
+> }
 > $$
 >
-> is an isomorphism.
+> Conceptually this reflects **properness**: unlike $\mathbf A^1_{\mathbf Z_p}$, every valued-field generic point extends to the projective integral model. For example, $T=p^{-1}$ becomes integral in the second chart via $U=p$.
 
-> [!proof]- Proof
-> The formal generic fibre of the two standard affine charts is $D_T$ and $D_U$. These glue along $|T|=|U|=1$ and together cover the entire adic projective line. This identifies the glued spaces. $\square$
-
-There is a conceptual reason: $\mathbf P^1_{\mathbf Z_p}$ is **proper**. By the valuative criterion, a point over a valued field $L/\mathbf Q_p$ extends to an $\mathcal O_L$-point. For example $T=p^{-1}$ fails to extend into the *affine* chart $\mathbf A^1_{\mathbf Z_p}$, but extends to the *projective* model using $U=p$.
-
-> [!remark]- Remark 6.4 (Properness and formal generic fibres)
-> More generally, for a proper finite-type $\mathbf Z_p$-scheme, the adic generic fibre of its $p$-adic formal completion agrees with the analytification of its algebraic generic fibre. Thus the difference in (6.3) reflects **non-properness and the choice of integral model**, not a failure of analytification.
-
-### 6.4 Returning to Siegel moduli: integral points are good-reduction points
+### 6.3 Siegel moduli: integral points and good reduction
 
 Fix sufficiently small tame level $K^p$ and hyperspecial $K_p=G(\mathbf Z_p)$. Let $X$ denote the smooth Siegel moduli scheme over $\mathbf Z_{(p)}$ of triples $(A,\lambda,\eta^p)$.
 
@@ -683,7 +569,7 @@ Recall: $A_x/L$ has **good reduction** if there exists an abelian scheme $\mathc
 
 The analogy with the affine line is exact at the level of integral moduli points:
 
-> [!proposition] Proposition 6.5 (The good-reduction locus)
+> [!proposition] Proposition 6.4 (The good-reduction locus)
 > For the geometric points above,
 >
 > $$
@@ -693,17 +579,17 @@ The analogy with the affine line is exact at the level of integral moduli points
 > \text{ extends over }\mathcal O_L\\
 > &\iff A_x/L\text{ has good reduction}.
 > \end{aligned}}
-> \tag{6.4}
+> \tag{6.2}
 > $$
 >
 > Therefore $\mathcal X$ is called the **good-reduction locus** in the analytic Siegel variety.
 
 > [!proof]- Proof
-> A map $\operatorname{Spec}\mathcal O_L\to X$ pulls back the universal abelian scheme to a good-reduction model of $A_x$. Conversely, if $A_x$ extends to an abelian scheme over $\mathcal O_L$, the polarization extends (by the extension property for abelian schemes), and the tame torsion and level structure extend because orders prime to $p$ are étale over the valuation ring. These data give an integral moduli point. Locally, the criterion for lying in $\mathfrak X_\eta$ is that the coordinate functions of an affine integral chart are bounded, exactly as in Proposition 6.2. $\square$
+> A map $\operatorname{Spec}\mathcal O_L\to X$ pulls back the universal abelian scheme to a good-reduction model of $A_x$. Conversely, if $A_x$ extends to an abelian scheme over $\mathcal O_L$, the polarization extends (by the extension property for abelian schemes), and the tame torsion and level structure extend because orders prime to $p$ are étale over the valuation ring. These data give an integral moduli point. Locally, the criterion for lying in $\mathfrak X_\eta$ is that the coordinate functions of an affine integral chart are bounded, by the general adic factorization criterion above. $\square$
 
 For a $\mathbf Q_p$-valued point the corresponding statement uses an extension over **$\mathbf Z_p$**. An abelian variety that acquires good reduction only after a nontrivial finite extension $L/\mathbf Q_p$ has *potentially good reduction*; this should not be confused with good reduction already over $\mathbf Q_p$.
 
-#### 6.4.1 The analogy with compactification
+#### Comparison with compactification
 
 The Siegel moduli space $X$ is smooth but non-proper. It admits compactifications $X\hookrightarrow X^*$, just as
 
@@ -713,7 +599,7 @@ $$
 
 A point of $X_C^{\mathrm{ad}}$ extends, by properness, into a suitable proper integral compactification. But its specialization may land **on the boundary** $X^*\setminus X$, so it need not extend to the open moduli space parameterizing abelian schemes. Thus the boundary of the integral compactification records possible degenerations.
 
-> [!remark]- Remark 6.6 (Good reduction at deep $p$-level)
+> [!remark]- Remark 6.5 (Good reduction at deep $p$-level)
 > If $U\subseteq G(\mathbf Z_p)$ is a deeper $p$-level, write $X_U^{\mathrm{ad}}\to X^{\mathrm{ad}}$ for its generic-fibre cover and define
 >
 > $$
