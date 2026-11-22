@@ -246,24 +246,61 @@ Since $\operatorname{Hom}_{\mathcal O_S}(\omega,\omega^{\otimes p})
 > \quad}
 > $$
 
-> [!proposition] Proposition 3.2 (Ordinary criterion)
-> For a geometric point $\bar s\to S$, the abelian variety $A_{\bar s}$ is **ordinary** if and only if $\operatorname{Ha}(A/S)$ is nonzero at $\bar s$. Equivalently, its $p$-rank is $g$:
+> [!proposition] Proposition 3.2 (Ordinary criterion; Zhu §3.6)
+> Let $A/k$ be an abelian variety of dimension $g$ over an algebraically closed field of characteristic $p$. The following conditions are equivalent:
 >
-> $$
-> \#A_{\bar s}[p](k(\bar s))=p^g.
-> $$
+> 1. $A$ is ordinary, i.e. $\#A[p](k)=p^g$;
+> 2. the maximal étale quotient $A[p]^{\mathrm{ét}}$ has rank $p^g$;
+> 3. $\operatorname{Ha}(A/k)\neq0$;
+> 4. $\ker(V:A^{(p)}\to A)$ is étale.
+>
+> In particular, for an abelian scheme $A/S$ in characteristic $p$, all geometric fibres are ordinary precisely when the Hasse invariant is nowhere vanishing, equivalently an invertible section of $\omega_{A/S}^{\otimes(p-1)}$.
 
-> [!proof]- Standard Hasse–Witt criterion
-> At $\bar s$, nonvanishing of the determinant is equivalent to $V^*$ being an isomorphism on invariant differentials. The Hasse–Witt criterion identifies this with maximal $p$-rank. We use this standard criterion here, as in Zhu's discussion. $\square$
+> [!proof]- Proof (via Frobenius and Verschiebung)
+> Since $F:A\to A^{(p)}$ is a faithfully flat isogeny of degree $p^g$, the relation $V\circ F=[p]_A$ gives a short exact sequence **of finite flat group schemes (in the fppf topology)**
+>
+> $$
+> \boxed{\quad
+> 0\longrightarrow\ker F\longrightarrow A[p]
+> \xrightarrow{\ F\ }\ker V\longrightarrow0.
+> \quad}
+> $$
+>
+> Indeed, the kernel of $F$ on $A[p]$ is $\ker F$, and for $y\in\ker V$, fppf-locally choose $x\in A$ with $F(x)=y$. Then $[p]x=V(F(x))=0$, so $x\in A[p]$.
+>
+> Relative Frobenius is radicial, so $\ker F$ is **connected** over $k$. Consequently, any morphism from $\ker F$ to a finite étale group scheme is trivial. The displayed exact sequence therefore identifies the **maximal étale quotient** of $A[p]$ with that of $\ker V$:
+>
+> $$
+> A[p]^{\mathrm{ét}}\simeq(\ker V)^{\mathrm{ét}}.
+> $$
+>
+> Since $\ker V$ has rank $p^g$, its maximal étale quotient has rank $p^g$ if and only if $\ker V$ itself is étale. This proves (2) $\Longleftrightarrow$ (4). Over the algebraically closed field $k$, the $k$-points of a finite group scheme are precisely the points of its étale quotient, proving (1) $\Longleftrightarrow$ (2).
+>
+> Finally, $V$ is a finite locally free morphism between smooth abelian varieties of the same dimension. It is étale if and only if its differential at the identity is an isomorphism, since translations identify its differential at all points. Equivalently,
+>
+> $$
+> V^*:\mathbb E_{A/k}\longrightarrow\mathbb E_{A^{(p)}/k}
+> $$
+>
+> is an isomorphism. This holds exactly when $\det(V^*)\neq0$, namely $\operatorname{Ha}(A/k)\neq0$. As $V$ is an isogeny, $V$ is étale if and only if its finite kernel $\ker V$ is étale. Hence (3) $\Longleftrightarrow$ (4), completing the proof. $\square$
 
-> [!example] Example 3.3 (Ordinary elliptic curve)
-> For an ordinary elliptic curve $E$ over an algebraically closed field of characteristic $p$,
+> [!example] Example 3.3 (Elliptic curve)
+> For an elliptic curve $E/k$ over an algebraically closed field of characteristic $p$, the proposition specializes to the equivalence of
 >
 > $$
-> E[p]\simeq\mu_p\oplus(\mathbf Z/p\mathbf Z).
+> \begin{gathered}
+> |E[p](k)|=p,\qquad E[p](k)\simeq\mathbf Z/p\mathbf Z,\\
+> \operatorname{rank}(E[p]^{\mathrm{ét}})=p,\qquad
+> \operatorname{Ha}(E/k)\neq0,\qquad
+> \ker(V:E^{(p)}\to E)\text{ is étale}.
+> \end{gathered}
 > $$
 >
-> The subgroup $\ker F=\mu_p$ is the connected multiplicative part, while the étale factor has order $p$. For a supersingular elliptic curve, the $p$-rank is zero and the Hasse invariant vanishes.
+> In this ordinary case, $E[p]\simeq\mu_p\oplus(\mathbf Z/p\mathbf Z)$, $\ker F\simeq\mu_p$, and the exact sequence identifies
+> $E[p]/\ker F\simeq\ker V\simeq\mathbf Z/p\mathbf Z$.
+> In the supersingular case, the étale quotient is trivial and $\operatorname{Ha}(E/k)=0$.
+>
+> **Caution:** the conclusion is **not** $\ker V=E[p]$; $\ker V$ has rank $p$, whereas $E[p]$ has rank $p^2$.
 
 ## 4. From ordinary to a neighborhood
 
