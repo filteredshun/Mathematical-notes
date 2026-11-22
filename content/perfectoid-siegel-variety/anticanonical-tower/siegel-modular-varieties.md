@@ -466,6 +466,49 @@ $$
 
 This need not be surjective. We shall see why through coordinates.
 
+#### General adic factorization criterion
+
+We can formulate the underlying extension condition **directly in the category of adic spaces**, without restricting to $\mathbf Q_p$-rational points.
+
+> [!proposition] Adic factorization criterion
+> Let $X$ be a separated finite-type scheme over $\mathbf Z_p$ and let
+>
+> $$
+> j:(\widehat X)_\eta\hookrightarrow(X_{\mathbf Q_p})^{\mathrm{ad}}
+> $$
+>
+> be the natural open immersion. Let $L/\mathbf Q_p$ be a complete rank-one valued extension with valuation ring $\mathcal O_L$. For a morphism
+>
+> $$
+> x:\operatorname{Spa}(L,\mathcal O_L)\longrightarrow
+> (X_{\mathbf Q_p})^{\mathrm{ad}},
+> $$
+>
+> the following are equivalent:
+>
+> 1. There exists an adic morphism $\widetilde x:\operatorname{Spa}(L,\mathcal O_L)\to(\widehat X)_\eta$ such that $j\circ\widetilde x=x$.
+> 2. The corresponding algebraic $L$-point of $X_{\mathbf Q_p}$ extends to an $\mathcal O_L$-point of the chosen integral model $X$.
+>
+> As $j$ is an open immersion, the factorization in (1), when it exists, is unique.
+
+> [!proof]- Proof (affine-local)
+> First suppose $X=\operatorname{Spec}R$ and put $\widehat R=\varprojlim_nR/p^nR$. Then
+>
+> $$
+> (\widehat X)_\eta=
+> \operatorname{Spa}(\widehat R[1/p],\widehat R).
+> $$
+>
+> The map $x$ is given by a homomorphism $\alpha:R[1/p]\to L$. A factorization through the displayed affinoid exists if and only if $\alpha(R)\subseteq\mathcal O_L$:
+>
+> * In one direction, a factorization induces a continuous map of Huber pairs $(\widehat R[1/p],\widehat R)\to(L,\mathcal O_L)$, so $R$ maps into $\mathcal O_L$.
+> * Conversely, if $\alpha(R)\subseteq\mathcal O_L$, the map $R\to\mathcal O_L$ is $p$-adically continuous. Completeness of $\mathcal O_L$ extends it to $\widehat R\to\mathcal O_L$; inverting $p$ gives the required Huber-pair map and hence the factorization.
+>
+> For general $X$, use affine opens $U_i=\operatorname{Spec}R_i$. If the adic point factors through $(\widehat X)_\eta$, it lies in one of $(\widehat U_i)_\eta$, and the affine argument constructs an integral extension. Conversely, if an integral extension exists, choose an affine open of $X$ containing the image of the closed point of $\operatorname{Spec}\mathcal O_L$. Since the generic point specializes to the closed point, the map factors through this affine open; the affine argument supplies the desired adic factorization. $\square$
+
+> [!remark]- Remark (Valuative criterion versus factorization)
+> This is a *pointwise factorization criterion* through an open immersion of adic spaces, not the full Huber valuative criterion for properness. The latter involves more general valuations and their specializations. In the statement above we work only with complete rank-one valued-field points.
+
 ### 6.2 The affine line: an integral point means $|T|\leq1$
 
 Let
@@ -544,27 +587,38 @@ For example, the point $T=p^{-1}$ lies on the right but not on the left.
 
 #### 6.2.3 What does “extend to the integral model” mean?
 
-A $\mathbf Q_p$-point of $\mathbf A^1_{\mathbf Q_p}$ is an element $a\in\mathbf Q_p$, via the map $T\mapsto a$. It extends to a $\mathbf Z_p$-point of $\mathbf A^1_{\mathbf Z_p}$ precisely if this evaluation takes $\mathbf Z_p[T]$ into $\mathbf Z_p$, which is equivalent to $a\in\mathbf Z_p$.
+Let $L/\mathbf Q_p$ be any complete rank-one valued extension. An $L$-valued analytic point is a morphism
 
-> [!proposition] Proposition 6.2 (The affine-line extension criterion)
-> For $a\in\mathbf Q_p$,
+$
+x_a:\operatorname{Spa}(L,\mathcal O_L)\longrightarrow
+(\mathbf A^1_{\mathbf Q_p})^{\mathrm{ad}}
+$
+
+specified by $T\mapsto a\in L$. We ask whether it admits an **adic factorization** through the closed unit disc.
+
+> [!proposition] Proposition 6.2 (The affine-line adic criterion)
+> The morphism $x_a$ factors through
 >
-> $$
-> \boxed{
-> a\in(\widehat{\mathbf A^1_{\mathbf Z_p}})_\eta
-> \iff |a|\leq1
-> \iff a\in\mathbf Z_p
-> \iff
-> \operatorname{Spec}\mathbf Q_p\xrightarrow{a}\mathbf A^1_{\mathbf Q_p}
-> \text{ extends over }\operatorname{Spec}\mathbf Z_p .
-> }
-> $$
+> $
+> (\widehat{\mathbf A^1_{\mathbf Z_p}})_\eta
+> =\operatorname{Spa}(\mathbf Q_p\langle T\rangle,\mathbf Z_p\langle T\rangle)
+> $
 >
-> The same assertion holds with $\mathbf Q_p,\mathbf Z_p$ replaced by a complete rank-one valued extension $L,\mathcal O_L$.
+> if and only if
+>
+> $
+> \boxed{\quad |a|\leq1\quad\Longleftrightarrow\quad a\in\mathcal O_L.\quad}
+> $
 
 > [!proof]- Proof
-> An extension corresponds to a ring homomorphism
-> $\mathbf Z_p[T]\to\mathcal O_L$ carrying $T$ to $a$, so it exists exactly when $a\in\mathcal O_L$. Equivalently $|a|\leq1$, which is the defining inequality of the formal generic fibre in (6.2). For $|a|\leq1$, every restricted power series converges at $a$ and evaluation maps $\mathbf Z_p\langle T\rangle$ to $\mathcal O_L$. $\square$
+> A factorization is induced by a continuous Huber-pair homomorphism
+>
+> $
+> (\mathbf Q_p\langle T\rangle,\mathbf Z_p\langle T\rangle)
+> \longrightarrow(L,\mathcal O_L),\qquad T\longmapsto a.
+> $
+>
+> Because $T$ belongs to the plus-ring, necessarily $a\in\mathcal O_L$. Conversely, if $|a|\leq1$, evaluation at $a$ converges for every restricted power series and maps $\mathbf Z_p\langle T\rangle$ into $\mathcal O_L$. It therefore defines the required morphism. $\square$
 
 **Key observation.** We have inverted $p$, but the Huber pair
 
