@@ -109,67 +109,67 @@ This identifies the subgroup that we will lift in the theory of canonical subgro
 
 Let $\pi:A\to S$ be an abelian scheme of relative dimension $g$, with identity section $e:S\to A$. Write
 
-$
+$$
 \mathbb E_{A/S}:=e^*\Omega^1_{A/S}.
-$
+$$
 
 This is a locally free $\mathcal O_S$-module of rank $g$, called the **Hodge bundle** (or the sheaf of invariant differentials). Its determinant line bundle will be denoted by $\omega_{A/S}$ below.
 
 > [!proposition] Proposition 2.1 (Invariant differentials; Zhu §3.5)
 > There are natural isomorphisms
 >
-> $
+> $$
 > \boxed{\quad
 > \pi^*\mathbb E_{A/S}\xrightarrow{\sim}\Omega^1_{A/S},
 > \qquad
 > \mathcal O_S\xrightarrow{\sim}\pi_*\mathcal O_A.
 > \quad}
-> $
+> $$
 >
 > Consequently, restriction to the identity induces
 >
-> $
+> $$
 > \boxed{\quad
 > \pi_*\Omega^1_{A/S}\xrightarrow[\ e^*\ ]{\sim}
 > e^*\Omega^1_{A/S}=\mathbb E_{A/S}.
 > \quad}
-> $
+> $$
 >
 > In particular, every relative global differential on an abelian scheme is translation-invariant.
 
 > [!proof]- Proof
 > **(1) Translation-invariant trivialization.** For any smooth group scheme $G/S$, let $m:G\times_S G\to G$ be multiplication and $\mathbb E_G=e^*\Omega^1_{G/S}$. Pull back $dm$ along the map $s:G\to G\times_S G$, $a\mapsto(a,e(\pi(a)))$, and project to the differential in the second factor. This gives a natural morphism
 >
-> $
+> $$
 > v:\Omega^1_{G/S}\longrightarrow\pi^*\mathbb E_G.
-> $
+> $$
 >
 > At a geometric point $a$ of a fibre, $v_a$ is the cotangent map of translation by $a$ at the identity:
 >
-> $
+> $$
 > (d\,t_a)_e^*:T_a^*G_{\bar s}\xrightarrow{\sim}T_e^*G_{\bar s}.
-> $
+> $$
 >
 > Translation by $a$ is an isomorphism with inverse translation by $-a$, so $v$ is an isomorphism on all geometric fibres. Both sides are locally free of the same rank, hence $v$ is an isomorphism; its inverse is the required $\pi^*\mathbb E_G\simeq\Omega^1_{G/S}$. Associativity of the group law shows that the resulting forms are translation-invariant. This part does **not** use properness.
 >
 > **(2) Functions on an abelian scheme.** For a geometric point $\bar s\to S$, the fibre $A_{\bar s}$ is proper, smooth and connected, hence geometrically integral. Therefore
 >
-> $
+> $$
 > H^0(A_{\bar s},\mathcal O_{A_{\bar s}})=k(\bar s):
-> $
+> $$
 >
 > a regular function on a connected proper variety over an algebraically closed field is constant. Since $\pi$ is proper and flat with geometrically reduced, connected fibres, cohomology and base change in degree zero gives that $\pi_*\mathcal O_A$ is locally free of rank one and commutes with base change. The natural map $\mathcal O_S\to\pi_*\mathcal O_A$ is an isomorphism on every geometric fibre, hence is an isomorphism.
 >
 > **(3) Conclusion.** Apply $\pi_*$ to (1) and use the projection formula:
 >
-> $
+> $$
 > \begin{aligned}
 > \pi_*\Omega^1_{A/S}
 > &\simeq\pi_*\pi^*\mathbb E_{A/S}\\
 > &\simeq\mathbb E_{A/S}\otimes_{\mathcal O_S}\pi_*\mathcal O_A\\
 > &\simeq\mathbb E_{A/S}.
 > \end{aligned}
-> $
+> $$
 >
 > The inverse of this identification is pullback along the identity section, giving the stated canonical isomorphism. $\square$
 
