@@ -484,4 +484,192 @@ Fix from now on \(0\leq\epsilon<\frac12\). The **radius at level \(m\)** is \(p^
 > Proposition 3.9.9 of §1 identifies the successive canonical subgroups and proves the quotient compatibility. The formal finiteness/flatness and relative-Frobenius reductions are part of Scholze III.2.15; on generic fibres, the finite étale property follows also from the cartesian finite-level \(\Gamma_0(p^m)\)-diagram of Theorem 4.3 below (Zhu 3.9.21(2)). These maps are generally **not** the inclusions \(\mathcal X(p^{-(m+1)}\epsilon)\subset\mathcal X(p^{-m}\epsilon)\). \(\square\)
 
 
+
+## 4. The Overconvergent Anticanonical Tower
+
+The formal Frobenius tower of §3 is not yet a tower of level structures. To relate it to Siegel modular varieties at \(\Gamma_0(p^m)\)-level, we follow [Scholze, Theorem III.2.15](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), [Zhu, Proposition 3.9.21](https://yhzhumath.github.io/HT%20final.pdf), and [Caraiani, Lemma 4.3.2](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf).
+
+### 4.1 Finite-level adic spaces and canonical quotient maps
+
+As in Ordinary Locus §5.2, let \(\mathcal Y_m\) be the **adic analytification** of the characteristic-zero Siegel moduli scheme with \(K^p\Gamma_0(p^m)\)-level, after the chosen cyclotomic base change. Write \(\mathcal Y_0\) for the hyperspecial analytification. The map
+
+$
+\pi_m:\mathcal Y_m\longrightarrow\mathcal Y_0
+$
+
+forgets the \(\Gamma_0(p^m)\)-level. With \(\mathcal X\subset\mathcal Y_0\) the good-reduction open space and \(\mathcal X(\epsilon)\subset\mathcal X\) from §2, define
+
+$
+\boxed{
+\begin{aligned}
+\mathcal X_{\Gamma_0(p^m)}
+&:=\mathcal Y_m\times_{\mathcal Y_0}\mathcal X,\\
+\mathcal X_{\Gamma_0(p^m)}(\epsilon)
+&:=\mathcal Y_m\times_{\mathcal Y_0}\mathcal X(\epsilon).
+\end{aligned}}
+$
+
+These are **fibre products of adic spaces**. In particular, the second is not defined by taking only geometric points. Its valued-field points have moduli data \((B,\lambda_B,\eta_B^p,D)\), where \(D\subset B[p^m]\) is a Lagrangian subgroup of standard \(\Gamma_0(p^m)\)-type and the underlying \(B\) lies in the Hasse neighborhood \(\mathcal X(\epsilon)\).
+
+> [!proposition] Proposition 4.1 (Canonical-quotient morphism)
+> For each \(m\geq1\), the universal strong canonical subgroup on \(\mathfrak X(p^{-m}\epsilon)\) induces a morphism of adic spaces
+>
+> $
+> \boxed{
+> \begin{aligned}
+> \Phi_{m,\epsilon}:\mathcal X(p^{-m}\epsilon)
+> &\longrightarrow\mathcal X_{\Gamma_0(p^m)}(\epsilon),\\
+> A&\longmapsto
+> \left(
+> B=A/C_m(A),\
+> D=A[p^m]/C_m(A)\subset B[p^m]
+> \right).
+> \end{aligned}}
+> $
+>
+> The quotient \(B\) carries the canonical **principal polarization** and **transported \(K^p\)-level**. The subgroup \(D\) is a finite étale Lagrangian subgroup of free type \((\mathbf Z/p^m\mathbf Z)^g\) on each geometric generic fibre. The map is compatible with the finite-level forgetting maps as \(m\) varies.
+
+> [!proof]- Construction from the universal analytic family
+> By Proposition 3.1 the formal universal family over \(\mathfrak X(p^{-m}\epsilon)\) has a base-change-compatible strong canonical subgroup \(C_m\). Its quotient is principally polarized because \(C_m\) is Lagrangian, exactly as in Ordinary Locus, Proposition 5.1. Prime-to-\(p\) level transports along this \(p\)-power isogeny.
+>
+> The image \(D=A[p^m]/C_m\) is of rank \(p^{mg}\) and free of rank \(g\) on geometric generic fibres by the strong canonical subgroup theorem in §1. It is Lagrangian in \(B[p^m]\), by the Weil-pairing calculation for the quotient polarization.
+>
+> Lemma 3.2 applied successively shows that \(B\) has Hasse height at most \(\epsilon\), so the map lands in \(\mathcal X_{\Gamma_0(p^m)}(\epsilon)\), rather than merely \(\mathcal Y_m\). These operations define morphisms of families and commute with base change, hence give a **morphism of adic spaces** after passing to generic fibres, not merely a map on geometric points. \(\square\)
+
+### 4.2 Open immersion and the anticanonical image
+
+The next point is the geometric heart of the construction: the map \(\Phi_{m,\epsilon}\) is **open**. This is not an automatic consequence of a bijection on geometric fibres.
+
+> [!lemma] Lemma 4.2 (The étale-section argument)
+> Let \(X\xrightarrow{f}Y\xrightarrow{g}Z\) be morphisms of analytic adic spaces. If \(g\) is étale and \(g\circ f\) is an open immersion, then \(f\) is an **open immersion**.
+>
+> If, in addition, \(g\) is finite étale and the composite identifies \(X\) with an open subspace \(U\subset Z\), then \(f(X)\) is open-and-closed inside \(g^{-1}(U)\).
+
+> [!proof]- Proof by base change
+> Identify \(X\) with its image \(U\subset Z\). Base change \(g\) to \(U\): the morphism \(Y_U=Y\times_ZU\to U\) is étale, and \(f\) becomes a **section** \(U\to Y_U\). A section of an étale morphism is an open immersion (its graph is a base change of the open diagonal). If \(g\) is finite étale, the same section is also closed because finite étale maps are separated; locally the associated finite étale algebra splits as a product. The result follows after composing with \(Y_U\hookrightarrow Y\). \(\square\)
+
+> [!proposition] Proposition 4.3 (Open immersion; Scholze III.2.15(ii))
+> The morphism \(\Phi_{m,\epsilon}\) of Proposition 4.1 is an **open immersion**.
+>
+> In fact, the diagram
+>
+> $
+> \begin{array}{ccc}
+> \mathcal X(p^{-(m+1)}\epsilon)
+> &\xrightarrow{\ \Phi_{m+1,\epsilon}\ }&
+> \mathcal X_{\Gamma_0(p^{m+1})}(\epsilon)\\
+> {\scriptstyle \widetilde F}\downarrow&&
+> \downarrow{\scriptstyle D\mapsto D[p^m]}\\
+> \mathcal X(p^{-m}\epsilon)
+> &\xrightarrow{\ \Phi_{m,\epsilon}\ }&
+> \mathcal X_{\Gamma_0(p^m)}(\epsilon)
+> \end{array}
+> $
+>
+> is **cartesian** for \(m\geq1\), where the right vertical arrow forgets part of the \(p\)-level. Thus the corresponding inverse system is genuinely a pullback of the finite-level \(\Gamma_0\)-tower.
+
+> [!proof]- Proof of open immersion and cartesian compatibility
+> Let \(\Psi_m:\mathcal X_{\Gamma_0(p^m)}\to\mathcal X\) be the **quotient-by-level** map \((B,D)\mapsto B/D\), with its induced polarization and normalized tame level. This is a finite étale Hecke-type morphism on the characteristic-zero level space: up to the familiar Atkin–Lehner/diamond normalization, it is the finite étale forgetting-level map followed by a level automorphism.
+>
+> The composite with \(\Phi_{m,\epsilon}\) sends \(A\) to
+>
+> $
+> (A/C_m)/(A[p^m]/C_m)
+> \simeq A/A[p^m]\simeq A.
+> $
+>
+> Under the full moduli data this is the **natural open embedding** \(\mathcal X(p^{-m}\epsilon)\hookrightarrow\mathcal X\), possibly composed with the harmless central tame-level automorphism determined by the chosen normalization. Lemma 4.2 applies, so \(\Phi_{m,\epsilon}\) is an open immersion.
+>
+> For the cartesian square, apply the compatibility of canonical subgroups under quotient from §1, Proposition 3.9.9. The two resulting \(p^m\)-level subgroups agree after forgetting one level. Both sides are finite étale over the generic-fibre moduli base, with the same degree \([\Gamma_0(p^m):\Gamma_0(p^{m+1})]=p^{g(g+1)/2}\); the square is therefore cartesian. See [Scholze III.2.15(ii)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) for the full scheme-theoretic comparison. \(\square\)
+
+> [!definition] Definition 4.4 (Overconvergent anticanonical locus: image definition)
+> **Following Scholze**, define the *anticanonical part* as the image of the **open immersion**:
+>
+> $
+> \boxed{\quad
+> \mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}
+> :=\operatorname{im}\bigl(
+> \Phi_{m,\epsilon}:
+> \mathcal X(p^{-m}\epsilon)
+> \hookrightarrow\mathcal X_{\Gamma_0(p^m)}(\epsilon)
+> \bigr).
+> \quad}
+> $
+>
+> It is therefore a **defined open adic subspace**. The intersection condition in the next theorem is its *geometric characterization*, not its definition.
+
+> [!theorem] Theorem 4.5 (Anticanonical identification and transversality)
+> The anticanonical image is **open and closed** in \(\mathcal X_{\Gamma_0(p^m)}(\epsilon)\), and \(\Phi_{m,\epsilon}\) induces an isomorphism
+>
+> $
+> \boxed{\qquad
+> \mathcal X(p^{-m}\epsilon)
+> \xrightarrow{\sim}
+> \mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}.
+> \qquad}
+> $
+>
+> Let \(C_1^{\mathrm{weak}}(B)\subset B[p]\) denote the **weak** canonical subgroup of the underlying abelian scheme on \(\mathcal X(\epsilon)\) (available because \(\operatorname{Ha}\mid p^\epsilon\)). Then the anticanonical image is precisely the locus where the universal level subgroup \(D\subset B[p^m]\) satisfies
+>
+> $
+> \boxed{\qquad
+> D[p]\cap C_1^{\mathrm{weak}}(B)=\{0\}.
+> \qquad}
+> $
+>
+> For \(\epsilon=0\), this reduces to Ordinary Locus, Proposition 5.3. For positive \(\epsilon\), **do not replace** the weak subgroup on \(\mathcal X(\epsilon)\) by an ordinary Frobenius kernel: the reduction need not be ordinary.
+
+> [!proof]- Why the image is clopen and how transversality enters
+> Openness follows from Proposition 4.3. For **closedness**, consider the commutative diagram
+>
+> $
+> \begin{array}{ccc}
+> \mathcal X(p^{-m}\epsilon)&
+> \xrightarrow{\ \Phi_{m,\epsilon}\ }&
+> \mathcal X_{\Gamma_0(p^m)}(\epsilon)\\
+> {\scriptstyle\widetilde F^{(m)}}\downarrow&&
+> \downarrow{\scriptstyle\pi_m}\\
+> \mathcal X(\epsilon)&=&\mathcal X(\epsilon).
+> \end{array}
+> $
+>
+> The iterated Frobenius lift \(\widetilde F^{(m)}\) is finite, and \(\pi_m\) is finite étale, in particular separated. The graph of \(\Phi_{m,\epsilon}\) is a closed immersion into the base change of \(\mathcal X(p^{-m}\epsilon)\) along \(\pi_m\), whose projection to \(\mathcal X_{\Gamma_0(p^m)}(\epsilon)\) is finite. Hence \(\Phi_{m,\epsilon}\) is finite, so **its image is closed**. Together with openness, the image is clopen.
+>
+> The transversality characterization is the deeper assertion in [Scholze III.2.15(iii)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf); see also [Zhu 3.9.21(3)](https://yhzhumath.github.io/HT%20final.pdf) and [Caraiani 4.3.2](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf). Its proof uses rigidity of sections (Lemma 3.9.5 in §1), rather than the simple connected–étale decomposition available on the ordinary special fibre.
+>
+> In particular, at rank-one points the condition can be checked in the generic fibre as the vanishing of the scheme-theoretic intersection of two finite étale \(p\)-subgroups. But the **adic locus** is already defined as an image and characterized by the theorem; one does not need to reconstruct it from rank-one points. \(\square\)
+
+### 4.3 The fixed-radius anticanonical tower
+
+By Proposition 4.3 and Theorem 4.5, the anticanonical loci form a tower with finite étale transition maps,
+
+$
+\boxed{
+\cdots\longrightarrow
+\mathcal X_{\Gamma_0(p^{m+1})}(\epsilon)_{\mathrm{anti}}
+\longrightarrow
+\mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}
+\longrightarrow\cdots\longrightarrow
+\mathcal X_{\Gamma_0(p)}(\epsilon)_{\mathrm{anti}}.
+}
+$
+
+Its identification with the canonical Frobenius tower is
+
+$
+\boxed{
+\left\{\mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}\right\}_m
+\ \cong\
+\left\{\mathcal X(p^{-m}\epsilon)\right\}_m,
+}
+$
+
+where the transition maps on the right are **canonical quotient/Frobenius lifts**, not inclusions.
+
+> [!remark]- Remark 4.6 (Why this is an *overconvergent tower*)
+> For a fixed \(m\), the level-\(m\) canonical subgroup exists on a neighborhood whose radius is on the order of \(p^{-m}\epsilon\). These neighborhoods **shrink to the ordinary locus** as \(m\to\infty\). Therefore the *canonical subgroup tower on the hyperspecial base does not overconverge at a fixed positive radius*.
+>
+> By contrast, each anticanonical space above is defined **over the same** \(\mathcal X(\epsilon)\). The cartesian square of Proposition 4.3 shows that all higher anticanonical levels are obtained by pulling back the level-one anticanonical open along the ordinary level-forgetting tower. This is the geometric meaning of **overconvergence of the anticanonical tower**.
+
+
 [[perfectoid-siegel-variety/anticanonical-tower/index|Back to Anticanonical Tower]]
