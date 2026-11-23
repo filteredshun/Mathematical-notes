@@ -251,13 +251,14 @@ Since $\operatorname{Hom}_{\mathcal O_S}(\omega,\omega^{\otimes p})
 >
 > 1. $A$ is ordinary, i.e. $\#A[p](k)=p^g$;
 > 2. the maximal étale quotient $A[p]^{\mathrm{ét}}$ has rank $p^g$;
-> 3. $\operatorname{Ha}(A/k)\neq0$;
-> 4. $\ker(V:A^{(p)}\to A)$ is étale.
+> 3. $\operatorname{Ha}(A/k)\ne0$;
+> 4. the finite group scheme $\ker(V:A^{(p)}\to A)$ is étale;
+> 5. the Verschiebung isogeny $V:A^{(p)}\to A$ is étale.
 >
-> In particular, for an abelian scheme $A/S$ in characteristic $p$, all geometric fibres are ordinary precisely when the Hasse invariant is nowhere vanishing, equivalently an invertible section of $\omega_{A/S}^{\otimes(p-1)}$.
+> For an abelian scheme $A/S$ in characteristic $p$, all geometric fibres are ordinary if and only if $\operatorname{Ha}(A/S)$ is nowhere vanishing, i.e. is an invertible section of $\omega_{A/S}^{\otimes(p-1)}$.
 
-> [!proof]- Proof (via Frobenius and Verschiebung)
-> Since $F:A\to A^{(p)}$ is a faithfully flat isogeny of degree $p^g$, the relation $V\circ F=[p]_A$ gives a short exact sequence **of finite flat group schemes (in the fppf topology)**
+> [!proof]- Proof: connectedness, étale kernels, and the Hasse invariant
+> **Step 1 — Frobenius–Verschiebung exact sequence.** Relative Frobenius $F:A\to A^{(p)}$ is a finite faithfully flat isogeny of degree $p^g$. The identity $V\circ F=[p]_A$ yields a short exact sequence of finite flat group schemes in the **fppf topology**:
 >
 > $$
 > \boxed{\quad
@@ -266,23 +267,65 @@ Since $\operatorname{Hom}_{\mathcal O_S}(\omega,\omega^{\otimes p})
 > \quad}
 > $$
 >
-> Indeed, the kernel of $F$ on $A[p]$ is $\ker F$, and for $y\in\ker V$, fppf-locally choose $x\in A$ with $F(x)=y$. Then $[p]x=V(F(x))=0$, so $x\in A[p]$.
+> For surjectivity, take $y\in\ker V$ and choose an fppf-local lift $x\in A$ with $F(x)=y$. Then $[p]x=V(F(x))=V(y)=0$, hence $x\in A[p]$. Both $\ker F$ and $\ker V$ have rank $p^g$.
 >
-> Relative Frobenius is radicial, so $\ker F$ is **connected** over $k$. Consequently, any morphism from $\ker F$ to a finite étale group scheme is trivial. The displayed exact sequence therefore identifies the **maximal étale quotient** of $A[p]$ with that of $\ker V$:
->
-> $$
-> A[p]^{\mathrm{ét}}\simeq(\ker V)^{\mathrm{ét}}.
-> $$
->
-> Since $\ker V$ has rank $p^g$, its maximal étale quotient has rank $p^g$ if and only if $\ker V$ itself is étale. This proves (2) $\Longleftrightarrow$ (4). Over the algebraically closed field $k$, the $k$-points of a finite group scheme are precisely the points of its étale quotient, proving (1) $\Longleftrightarrow$ (2).
->
-> Finally, $V$ is a finite locally free morphism between smooth abelian varieties of the same dimension. It is étale if and only if its differential at the identity is an isomorphism, since translations identify its differential at all points. Equivalently,
+> **Step 2 — Why is $\ker F$ connected?** Recall that a scheme is **connected** when its underlying topological space cannot be decomposed into two disjoint nonempty open subsets. Relative Frobenius is *radicial* (universally injective): for every algebraically closed extension $\Omega/k$, the map $F:A(\Omega)\to A^{(p)}(\Omega)$ is injective. Therefore
 >
 > $$
-> V^*:\mathbb E_{A/k}\longrightarrow\mathbb E_{A^{(p)}/k}
+> \ker F(\Omega)=\{e\}.
 > $$
 >
-> is an isomorphism. This holds exactly when $\det(V^*)\neq0$, namely $\operatorname{Ha}(A/k)\neq0$. As $V$ is an isogeny, $V$ is étale if and only if its finite kernel $\ker V$ is étale. Hence (3) $\Longleftrightarrow$ (4), completing the proof. $\square$
+> Since $\ker F$ is finite over the algebraically closed field $k$, its topological space consists of exactly one point. It is therefore connected. This **does not** imply $\ker F$ is the trivial group scheme: it has length $p^g$, and may be nonreduced. For example, in characteristic $p$,
+>
+> $$
+> \mu_p=\operatorname{Spec}k[u]/(u^p)
+> $$
+>
+> is connected (one point), although it has rank $p$.
+>
+> **Step 3 — The maximal étale quotient.** A homomorphism from a connected finite $k$-group scheme to a finite étale one must be trivial: over the algebraically closed field $k$, a finite étale scheme is a discrete collection of points, and a group homomorphism sends the identity to the identity. Thus every homomorphism from $A[p]$ to a finite étale group scheme kills $\ker F$ and factors uniquely through the fppf quotient $\ker V$. By the universal property of the maximal étale quotient,
+>
+> $$
+> \boxed{\quad A[p]^{\mathrm{ét}}\simeq(\ker V)^{\mathrm{ét}}.\quad}
+> $$
+>
+> Since $\ker V$ has rank $p^g$, its maximal étale quotient has rank $p^g$ precisely when $\ker V$ itself is étale. Therefore **(2) $\Longleftrightarrow$ (4)**.
+>
+> For any finite group scheme $G$ over $k=\bar k$, its $k$-points are the points of $G^{\mathrm{ét}}$, and $\#G(k)=\operatorname{rank}(G^{\mathrm{ét}})$. Hence **(1) $\Longleftrightarrow$ (2)**. Equivalently, the exact sequence above gives a bijection $A[p](k)\simeq\ker V(k)$: its kernel has only the identity $k$-point, and every nonempty finite fibre over $k$ has a $k$-point.
+>
+> **Step 4 — Why is $V$ étale if and only if $\ker V$ is étale?** The forward implication is immediate, since $\ker V\to\operatorname{Spec}k$ is the base change of $V$ by the identity section of $A$.
+>
+> For the converse put $K=\ker V$. Because $V$ is a faithfully flat group homomorphism, there is an isomorphism
+>
+> $$
+> A^{(p)}\times_A A^{(p)}
+> \xrightarrow{\sim}K\times_k A^{(p)},
+> \qquad (x,y)\longmapsto(x-y,y).
+> $$
+>
+> Under this identification, the base change of $V$ along $V$ becomes the projection $K\times_k A^{(p)}\to A^{(p)}$. If $K$ is étale, this projection is étale. Since **étaleness descends along faithfully flat base change**, $V$ itself is étale. Thus **(4) $\Longleftrightarrow$ (5)**.
+>
+> **Step 5 — The Hasse invariant.** Since $A$ and $A^{(p)}$ are smooth of dimension $g$, $V$ is étale exactly when its differential at the identity
+>
+> $$
+> dV_e:\operatorname{Lie}A^{(p)}\longrightarrow\operatorname{Lie}A
+> $$
+>
+> is an isomorphism: by translation invariance the same then holds at every point. Dualizing gives the map on invariant differentials
+>
+> $$
+> V^*:\mathbb E_{A/k}\longrightarrow\mathbb E_{A^{(p)}/k}.
+> $$
+>
+> Its determinant is, by Definition 3.1, the Hasse invariant. Hence
+>
+> $$
+> V\text{ étale}\iff dV_e\text{ invertible}
+> \iff V^*\text{ invertible}
+> \iff\operatorname{Ha}(A/k)\ne0.
+> $$
+>
+> This establishes **(5) $\Longleftrightarrow$ (3)** and proves all five equivalences. Applying the result to every geometric fibre proves the assertion over $S$. $\square$
 
 > [!example] Example 3.3 (Elliptic curve)
 > For an elliptic curve $E/k$ over an algebraically closed field of characteristic $p$, the proposition specializes to the equivalence of
@@ -298,7 +341,7 @@ Since $\operatorname{Hom}_{\mathcal O_S}(\omega,\omega^{\otimes p})
 >
 > In this ordinary case, $E[p]\simeq\mu_p\oplus(\mathbf Z/p\mathbf Z)$, $\ker F\simeq\mu_p$, and the exact sequence identifies
 > $E[p]/\ker F\simeq\ker V\simeq\mathbf Z/p\mathbf Z$.
-> In the supersingular case, the étale quotient is trivial and $\operatorname{Ha}(E/k)=0$.
+> In the supersingular case, $\ker F\simeq\alpha_p$ and $\ker V\simeq\alpha_p$: both are connected, the étale quotient of $E[p]$ is trivial, and $\operatorname{Ha}(E/k)=0$. Thus $\ker F$ is connected even when it is strictly smaller than the connected group scheme $E[p]$.
 >
 > **Caution:** the conclusion is **not** $\ker V=E[p]$; $\ker V$ has rank $p$, whereas $E[p]$ has rank $p^2$.
 
