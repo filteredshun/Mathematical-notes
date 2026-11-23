@@ -306,29 +306,29 @@ Since $\operatorname{Hom}_{\mathcal O_S}(\omega,\omega^{\otimes p})
 
 For $m\geq1$, write $A^{(p^m)}$ for the $m$-fold Frobenius twist, and let
 
-$
+$$
 F^m:A\longrightarrow A^{(p^m)},\qquad
 V^m:A^{(p^m)}\longrightarrow A
-$
+$$
 
 be the successive compositions of relative Frobenius and Verschiebung (with the appropriate twists at each stage). In particular,
 
-$
+$$
 V^m\circ F^m=[p^m]_A,\qquad
 F^m\circ V^m=[p^m]_{A^{(p^m)}}.
-$
+$$
 
 > [!proposition] Proposition 3.4 (The $p^m$-torsion sequence)
 > There is a short exact sequence of finite locally free group schemes, exact as fppf sheaves,
 >
-> $
+> $$
 > \boxed{\quad
 > 0\longrightarrow\ker F^m
 > \longrightarrow A[p^m]
 > \xrightarrow{\ F^m\ }\ker V^m
 > \longrightarrow0.
 > \quad}
-> $
+> $$
 >
 > Both $\ker F^m$ and $\ker V^m$ have rank $p^{mg}$. Over an algebraically closed field of characteristic $p$, $\ker F^m$ is connected. If $A$ is ordinary, then $\ker V^m$ is finite étale.
 
@@ -347,30 +347,30 @@ We now lift the connected subgroup $\ker F^n$ from an **ordinary special fibre**
 
 Let $R$ be a $p$-adically complete, flat $\mathbf Z_p$-algebra and $A/\operatorname{Spec}R$ an abelian scheme of relative dimension $g$. Put $R_0=R/pR$ and $A_0=A\times_R R_0$, and assume that $A_0$ is ordinary (equivalently, its Hasse invariant is invertible). The preceding section gives, for each $n\geq1$, an exact sequence over $R_0$:
 
-$
+$$
 0\longrightarrow\ker(F^n_{A_0/R_0})
 \longrightarrow A_0[p^n]
 \xrightarrow{F^n}\ker(V^n_{A_0/R_0})
 \longrightarrow0.
-$
+$$
 
 The last term is finite étale of rank $p^{ng}$. This allows us to lift the sequence.
 
 > [!proposition] Proposition 4.1 (Canonical subgroup over the ordinary locus; Zhu §3.7)
 > Under the assumptions above, for every $n\geq1$ there is a **unique finite locally free closed subgroup scheme**
 >
-> $
+> $$
 > \boxed{\quad C_n(A)\subset A[p^n]\quad}
-> $
+> $$
 >
 > whose reduction modulo $p$ is $\ker(F^n_{A_0/R_0})$. It has rank $p^{ng}$ and fits into a canonical exact sequence
 >
-> $
+> $$
 > \boxed{\quad
 > 0\longrightarrow C_n(A)\longrightarrow A[p^n]
 > \longrightarrow\mathcal G_n\longrightarrow0,
 > \quad}
-> $
+> $$
 >
 > where $\mathcal G_n/R$ is finite étale and reduces to $\ker(V^n_{A_0/R_0})$.
 >
@@ -438,7 +438,7 @@ The last term is finite étale of rank $p^{ng}$. This allows us to lift the sequ
 
 The essential mechanism is
 
-$
+$$
 \boxed{
 \ker V^n\ \text{finite étale}
 \quad\Longrightarrow\quad
@@ -446,7 +446,7 @@ $
 \quad\Longrightarrow\quad
 C_n(A)=\ker(A[p^n]\to\mathcal G_n).
 }
-$
+$$
 
 ### Quotients by canonical subgroups
 
