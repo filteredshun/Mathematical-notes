@@ -557,37 +557,37 @@ Here $D_n$ is **finite étale of rank $p^{ng}$**, since it identifies with the f
 >
 > **Lifting triviality from the special fibre (Nakayama).** Let
 >
-> $
+> $$
 > H:=D_n\cap C'_1.
-> $
+> $$
 >
 > The scheme-theoretic intersection is a closed subgroup scheme of $D_n$. Because $D_n$ is finite étale over $R$, the morphism $H\to\operatorname{Spec}R$ is **finite** (we do not assume $H$ is flat). Its special fibre is the identity group scheme $H_0\simeq\operatorname{Spec}(R/p)$, as proved above.
 >
 > Set $B:=\Gamma(H,\mathcal O_H)$, a finite $R$-algebra. The identity section $e:\operatorname{Spec}R\to H$ induces the **augmentation**
 >
-> $
+> $$
 > \varepsilon=e^\#:B\longrightarrow R.
-> $
+> $$
 >
 > Since $\varepsilon$ splits the structure homomorphism $R\to B$, there is an $R$-module direct sum
 >
-> $
+> $$
 > B=R\oplus I,\qquad I=\ker\varepsilon.
-> $
+> $$
 >
 > In particular, $I$ is a finite $R$-module. Reduction modulo $p$ gives
 >
-> $
+> $$
 > B/pB\simeq R/p\oplus I/pI.
-> $
+> $$
 >
 > On the other hand $H_0$ is exactly the identity section, so its coordinate ring is $R/p$ and the reduced augmentation $B/pB\to R/p$ is an isomorphism. Thus $I/pI=0$, i.e. $I=pI$.
 >
 > Finally $R$ is $p$-adically complete, hence $pR\subseteq\operatorname{Jac}(R)$. **Nakayama's lemma** applied to the finite $R$-module $I$ implies $I=0$. Consequently
 >
-> $
+> $$
 > B=R,\qquad H=\operatorname{Spec}R,
-> $
+> $$
 >
 > and the embedding $H\hookrightarrow A'[p^n]$ is its identity section. This proves $D_n\cap C'_1=\{0\}$. Note that **flatness of $H$ is unnecessary**.
 >
