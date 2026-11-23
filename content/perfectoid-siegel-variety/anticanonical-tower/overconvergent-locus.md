@@ -259,27 +259,27 @@ Let $A/R$ be an abelian scheme of relative dimension $g$, and set $A_1=A\otimes_
 
 In the ordinary note, we restricted the formal hyperspecial moduli space to the *nonvanishing locus* of the Hasse invariant. We now retain a **strict neighborhood** where the Hasse invariant need not be a unit but is sufficiently close to one. Our principal sources are [Zhu, Definition–Proposition 3.9.15](https://yhzhumath.github.io/HT%20final.pdf), [Scholze, Lemma III.2.13](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), and [Caraiani, §4.3](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf).
 
-Fix a sufficiently small tame level \(K^p\), hyperspecial \(K_p=G(\mathbf Z_p)\), and let
+Fix a sufficiently small tame level $K^p$, hyperspecial $K_p=G(\mathbf Z_p)$, and let
 
 $$
 \mathcal O_K=\mathbf Z_p^{\mathrm{cycl}},
 \qquad K=\mathbf Q_p^{\mathrm{cycl}}.
 $$
 
-Write \(\mathfrak X\) for the \(p\)-adic completion of the integral hyperspecial Siegel moduli space after base change to \(\mathcal O_K\), and \(\mathcal X=\mathfrak X_\eta\) for its adic generic fibre (the **good-reduction locus**). It carries the completed universal principally polarized abelian family \(\mathfrak A\) and its determinant Hodge line \(\omega\). The Hasse section is
+Write $\mathfrak X$ for the $p$-adic completion of the integral hyperspecial Siegel moduli space after base change to $\mathcal O_K$, and $\mathcal X=\mathfrak X_\eta$ for its adic generic fibre (the **good-reduction locus**). It carries the completed universal principally polarized abelian family $\mathfrak A$ and its determinant Hodge line $\omega$. The Hasse section is
 
 $$
 \operatorname{Ha}\in H^0(\mathfrak X/p,\omega^{\otimes(p-1)}/p).
 $$
 
-As in §1, write \(p^\delta\in\mathcal O_K\) for a chosen element of valuation \(\delta\), defined up to a unit. We use exponents in the cyclotomic value group, stable under division by \(p\).
+As in §1, write $p^\delta\in\mathcal O_K$ for a chosen element of valuation $\delta$, defined up to a unit. We use exponents in the cyclotomic value group, stable under division by $p$.
 
 ### 2.1 The formal Hasse neighborhood
 
 > [!definition] Definition 2.1 (Formal Hasse neighborhood; Zhu 3.9.15)
-> Fix \(0\leq\delta<1\). Define the formal moduli space \(\mathfrak X(\delta)\to\mathfrak X\) on \(p\)-adically complete, flat \(\mathcal O_K\)-algebras \(R\) as follows.
+> Fix $0\leq\delta<1$. Define the formal moduli space $\mathfrak X(\delta)\to\mathfrak X$ on $p$-adically complete, flat $\mathcal O_K$-algebras $R$ as follows.
 >
-> A point consists of a formal moduli point \(f:\operatorname{Spf}R\to\mathfrak X\) together with a class of sections
+> A point consists of a formal moduli point $f:\operatorname{Spf}R\to\mathfrak X$ together with a class of sections
 >
 > $$
 > u\in H^0(\operatorname{Spf}R,f^*\omega^{\otimes(1-p)})
@@ -294,12 +294,12 @@ As in §1, write \(p^\delta\in\mathcal O_K\) for a chosen element of valuation \
 > \qquad}
 > $$
 >
-> Here \(A/R\) is the abelian scheme classified by \(f\). Two choices \(u,u'\) are equivalent when they differ by the prescribed multiplicative correction \(1+p^{1-\delta}h\), \(h\in R\). This is the relative divisibility condition \(\operatorname{Ha}(A_0)\mid p^\delta\), rather than an additional choice in the final generic-fibre moduli problem.
+> Here $A/R$ is the abelian scheme classified by $f$. Two choices $u,u'$ are equivalent when they differ by the prescribed multiplicative correction $1+p^{1-\delta}h$, $h\in R$. This is the relative divisibility condition $\operatorname{Ha}(A_0)\mid p^\delta$, rather than an additional choice in the final generic-fibre moduli problem.
 >
-> At \(\delta=0\) this construction recovers the **formal ordinary locus** \(\mathfrak X(0)\) of the preceding note.
+> At $\delta=0$ this construction recovers the **formal ordinary locus** $\mathfrak X(0)$ of the preceding note.
 
 > [!proposition] Proposition 2.2 (Local equation and adic generic fibre)
-> Choose an affine formal chart \(\operatorname{Spf}R_0\subset\mathfrak X\), trivialize \(\omega\) there, and choose an integral lift \(\widetilde{\operatorname{Ha}}\in R_0\) of the Hasse invariant. Then
+> Choose an affine formal chart $\operatorname{Spf}R_0\subset\mathfrak X$, trivialize $\omega$ there, and choose an integral lift $\widetilde{\operatorname{Ha}}\in R_0$ of the Hasse invariant. Then
 >
 > $$
 > \boxed{\quad
@@ -311,7 +311,7 @@ As in §1, write \(p^\delta\in\mathcal O_K\) for a chosen element of valuation \
 > \quad}
 > $$
 >
-> Its adic generic fibre \(\mathcal X(\delta):=\mathfrak X(\delta)_\eta\) is the **rational open subspace**
+> Its adic generic fibre $\mathcal X(\delta):=\mathfrak X(\delta)_\eta$ is the **rational open subspace**
 >
 > $$
 > \boxed{\quad
@@ -331,21 +331,21 @@ As in §1, write \(p^\delta\in\mathcal O_K\) for a chosen element of valuation \
 > $$
 
 > [!proof]- Proof and why formal restriction is different
-> Over \(\operatorname{Spf}R_0\), choosing \(u\) corresponds to imposing \(u\widetilde{\operatorname{Ha}}=p^\delta\). The functor in Definition 2.1 determines this normalized representative uniquely: if the relation holds only modulo \(p\), multiplication by a unit of the form \(1+p^{1-\delta}h\) corrects the discrepancy. This is the local representability argument in Zhu 3.9.15 and Scholze III.2.13; \(p\)-torsion-freeness ensures uniqueness.
+> Over $\operatorname{Spf}R_0$, choosing $u$ corresponds to imposing $u\widetilde{\operatorname{Ha}}=p^\delta$. The functor in Definition 2.1 determines this normalized representative uniquely: if the relation holds only modulo $p$, multiplication by a unit of the form $1+p^{1-\delta}h$ corrects the discrepancy. This is the local representability argument in Zhu 3.9.15 and Scholze III.2.13; $p$-torsion-freeness ensures uniqueness.
 >
-> Inverting \(p\), \(u=p^\delta/\widetilde{\operatorname{Ha}}\) is power bounded exactly where \(|p^\delta|\leq|\widetilde{\operatorname{Ha}}|\). This is a Huber rational domain. **The formal morphism** \(\mathfrak X(\delta)\to\mathfrak X\) **is generally not an open immersion**; its **adic generic-fibre morphism** \(\mathcal X(\delta)\hookrightarrow\mathcal X\) **is**.
+> Inverting $p$, $u=p^\delta/\widetilde{\operatorname{Ha}}$ is power bounded exactly where $|p^\delta|\leq|\widetilde{\operatorname{Ha}}|$. This is a Huber rational domain. **The formal morphism** $\mathfrak X(\delta)\to\mathfrak X$ **is generally not an open immersion**; its **adic generic-fibre morphism** $\mathcal X(\delta)\hookrightarrow\mathcal X$ **is**.
 >
-> If \(\delta=0\), the equation \(u\widetilde{\operatorname{Ha}}=1\) makes the reduction of \(\operatorname{Ha}\) a unit, recovering the open formal ordinary locus. \(\square\)
+> If $\delta=0$, the equation $u\widetilde{\operatorname{Ha}}=1$ makes the reduction of $\operatorname{Ha}$ a unit, recovering the open formal ordinary locus. $\square$
 
 > [!remark]- Remark 2.3 (Hasse height)
-> On a rank-one valued point with normalized \(v(p)=1\), define the truncated Hasse height \(h(x)=\min(1,v(\widetilde{\operatorname{Ha}}(x)))\), using a local integral trivialization. Then \(\mathcal X(\delta)\) is the locus \(h(x)\leq\delta\). For \(\delta>0\), **ordinary reduction is no longer required**; its role is replaced by this small-height condition.
+> On a rank-one valued point with normalized $v(p)=1$, define the truncated Hasse height $h(x)=\min(1,v(\widetilde{\operatorname{Ha}}(x)))$, using a local integral trivialization. Then $\mathcal X(\delta)$ is the locus $h(x)\leq\delta$. For $\delta>0$, **ordinary reduction is no longer required**; its role is replaced by this small-height condition.
 >
-> The local chart in Proposition 2.2 is a *dilatation-type formal model*, not the restriction of \(\mathfrak X\) to an open subset of its original special fibre.
+> The local chart in Proposition 2.2 is a *dilatation-type formal model*, not the restriction of $\mathfrak X$ to an open subset of its original special fibre.
 
-### 2.2 Frobenius twists of neighborhoods in characteristic \(p\)
+### 2.2 Frobenius twists of neighborhoods in characteristic $p$
 
 > [!lemma] Lemma 2.4 (Frobenius twist of the Hasse neighborhood; Zhu 3.9.17 / Scholze III.2.14)
-> For \(0\leq\delta<1\), the special fibres of the Hasse-neighborhood models satisfy a natural isomorphism
+> For $0\leq\delta<1$, the special fibres of the Hasse-neighborhood models satisfy a natural isomorphism
 >
 > $$
 > \boxed{\quad
@@ -355,19 +355,19 @@ As in §1, write \(p^\delta\in\mathcal O_K\) for a chosen element of valuation \
 > \quad}
 > $$
 >
-> Here \((p)\) denotes base change by the absolute Frobenius of \(\mathcal O_K/p\), *not* a tensor power. Relative Frobenius on the universal abelian scheme is compatible with this identification.
+> Here $(p)$ denotes base change by the absolute Frobenius of $\mathcal O_K/p$, *not* a tensor power. Relative Frobenius on the universal abelian scheme is compatible with this identification.
 
 > [!proof]- Local explanation
-> The local equation for \(\mathfrak X(p^{-1}\delta)\) is \(u\widetilde{\operatorname{Ha}}=p^{\delta/p}\). In characteristic \(p\), Frobenius raises that relation to \(u^p\operatorname{Ha}^p=p^\delta\). The Hasse invariant of the Frobenius twist of an abelian scheme is the \(p\)-th power of the original Hasse section, with the corresponding Hodge-line twist. Because the hyperspecial moduli space descends from \(\mathbf Z_p\), the Frobenius of the cyclotomic coefficient ring gives the required identification of the two moduli problems, rather than merely a pointwise comparison. See the proof of Zhu 3.9.17. \(\square\)
+> The local equation for $\mathfrak X(p^{-1}\delta)$ is $u\widetilde{\operatorname{Ha}}=p^{\delta/p}$. In characteristic $p$, Frobenius raises that relation to $u^p\operatorname{Ha}^p=p^\delta$. The Hasse invariant of the Frobenius twist of an abelian scheme is the $p$-th power of the original Hasse section, with the corresponding Hodge-line twist. Because the hyperspecial moduli space descends from $\mathbf Z_p$, the Frobenius of the cyclotomic coefficient ring gives the required identification of the two moduli problems, rather than merely a pointwise comparison. See the proof of Zhu 3.9.17. $\square$
 
 ## 3. Canonical Frobenius Lifts on Shrinking Neighborhoods
 
-Fix from now on \(0\leq\epsilon<\frac12\). The **radius at level \(m\)** is \(p^{-m}\epsilon\). The point of this choice is that \(\mathcal X(p^{-m}\epsilon)\) carries a **strong** canonical subgroup of level \(m\), although \(\mathcal X(\epsilon)\) itself generally only carries a **weak** level-one subgroup.
+Fix from now on $0\leq\epsilon<\frac12$. The **radius at level $m$** is $p^{-m}\epsilon$. The point of this choice is that $\mathcal X(p^{-m}\epsilon)$ carries a **strong** canonical subgroup of level $m$, although $\mathcal X(\epsilon)$ itself generally only carries a **weak** level-one subgroup.
 
 ### 3.1 Existence and the Hasse transformation
 
 > [!proposition] Proposition 3.1 (Uniform strong canonical subgroup; Zhu 3.9.21(2))
-> For each \(m\geq1\), the universal abelian family over \(\mathfrak X(p^{-m}\epsilon)\) is **strongly \(O(m,\epsilon)\)** in the sense of §1:
+> For each $m\geq1$, the universal abelian family over $\mathfrak X(p^{-m}\epsilon)$ is **strongly $O(m,\epsilon)$** in the sense of §1:
 >
 > $$
 > \boxed{\quad
@@ -375,14 +375,14 @@ Fix from now on \(0\leq\epsilon<\frac12\). The **radius at level \(m\)** is \(p^
 > \quad}
 > $$
 >
-> Consequently, it possesses a base-change-compatible, level-\(m\) canonical subgroup
+> Consequently, it possesses a base-change-compatible, level-$m$ canonical subgroup
 >
 > $$
 > C_m\subseteq\mathfrak A(p^{-m}\epsilon)[p^m],
 > \qquad \operatorname{rank}C_m=p^{mg}.
 > $$
 >
-> This subgroup is isotropic for the universal principal polarization, and the quotient \(\mathfrak B_m=\mathfrak A(p^{-m}\epsilon)/C_m\) carries the induced principal polarization and transported tame level.
+> This subgroup is isotropic for the universal principal polarization, and the quotient $\mathfrak B_m=\mathfrak A(p^{-m}\epsilon)/C_m$ carries the induced principal polarization and transported tame level.
 
 > [!proof]- Hasse divisibility and polarized quotient
 > Locally, the defining relation of the neighborhood is
@@ -392,12 +392,12 @@ Fix from now on \(0\leq\epsilon<\frac12\). The **radius at level \(m\)** is \(p^
 > \qquad\text{modulo }p.
 > $$
 >
-> Raising to the \(p^m\)-th power gives \(\operatorname{Ha}^{p^m}\mid p^\epsilon\), up to a unit stemming from the choice of compatible elements of the cyclotomic valuation ring. The **strong canonical subgroup theorem** in §1 therefore applies.
+> Raising to the $p^m$-th power gives $\operatorname{Ha}^{p^m}\mid p^\epsilon$, up to a unit stemming from the choice of compatible elements of the cyclotomic valuation ring. The **strong canonical subgroup theorem** in §1 therefore applies.
 >
-> The subgroup is Lagrangian for the polarization by canonical-subgroup duality. As in Ordinary Locus, Proposition 5.1, the quotient by a Lagrangian subgroup of order \(p^{mg}\) carries a principal polarization with \(q^\vee\lambda_Bq=p^m\lambda_A\); the prime-to-\(p\) level transports along the \(p\)-power isogeny \(q\). \(\square\)
+> The subgroup is Lagrangian for the polarization by canonical-subgroup duality. As in Ordinary Locus, Proposition 5.1, the quotient by a Lagrangian subgroup of order $p^{mg}$ carries a principal polarization with $q^\vee\lambda_Bq=p^m\lambda_A$; the prime-to-$p$ level transports along the $p$-power isogeny $q$. $\square$
 
 > [!lemma] Lemma 3.2 (Hasse invariant after canonical quotient)
-> Let \(A/R\) be strongly \(O(1,\epsilon)\), \(q:A\to B=A/C_1(A)\), and \(0\leq\epsilon<1/2\). Since
+> Let $A/R$ be strongly $O(1,\epsilon)$, $q:A\to B=A/C_1(A)$, and $0\leq\epsilon<1/2$. Since
 >
 > $$
 > q\bmod p^{1-\epsilon}=F_{A\bmod p^{1-\epsilon}},
@@ -412,10 +412,10 @@ Fix from now on \(0\leq\epsilon<\frac12\). The **radius at level \(m\)** is \(p^
 > \quad}
 > $$
 >
-> In particular, for \(\operatorname{Ha}(A)\mid p^{\epsilon/p}\), the quotient \(B\) lies in the \(\epsilon\)-neighborhood.
+> In particular, for $\operatorname{Ha}(A)\mid p^{\epsilon/p}$, the quotient $B$ lies in the $\epsilon$-neighborhood.
 
 > [!proof]- Functoriality under relative Frobenius
-> The defining property of the canonical subgroup yields \(B\bmod p^{1-\epsilon}\simeq A^{(p)}\bmod p^{1-\epsilon}\). The Hasse invariant of \(A^{(p)}\) is the Frobenius pullback of the Hasse invariant of \(A\), which in a local trivialization is its \(p\)-th power. Thus \(\operatorname{Ha}(B)\) is congruent to \(\operatorname{Ha}(A)^p\) at the stated precision. If \(u\,\operatorname{Ha}(A)=p^{\epsilon/p}\), then its \(p\)-th power gives the required divisibility for \(B\). \(\square\)
+> The defining property of the canonical subgroup yields $B\bmod p^{1-\epsilon}\simeq A^{(p)}\bmod p^{1-\epsilon}$. The Hasse invariant of $A^{(p)}$ is the Frobenius pullback of the Hasse invariant of $A$, which in a local trivialization is its $p$-th power. Thus $\operatorname{Ha}(B)$ is congruent to $\operatorname{Ha}(A)^p$ at the stated precision. If $u\,\operatorname{Ha}(A)=p^{\epsilon/p}$, then its $p$-th power gives the required divisibility for $B$. $\square$
 
 ### 3.2 Constructing the Frobenius lift
 
@@ -434,22 +434,22 @@ Fix from now on \(0\leq\epsilon<\frac12\). The **radius at level \(m\)** is \(p^
 > \end{array}
 > $$
 >
-> The top map is quotient by the level-one **strong canonical subgroup**. After reduction modulo \(p^{1-\epsilon}\), and the identifications of Lemma 2.4, the two maps coincide with the **relative Frobenius** of the universal abelian scheme and the moduli space.
+> The top map is quotient by the level-one **strong canonical subgroup**. After reduction modulo $p^{1-\epsilon}$, and the identifications of Lemma 2.4, the two maps coincide with the **relative Frobenius** of the universal abelian scheme and the moduli space.
 >
 > These maps are **Frobenius lifts**, not the natural inclusion morphisms between nested Hasse neighborhoods.
 
 > [!proof]- Constructing the map on the formal moduli functor
-> For a point \((A,\lambda,\eta^p,[u])\) of \(\mathfrak X(p^{-1}\epsilon)\), take \(B=A/C_1(A)\) with its quotient polarization and transported tame level. Proposition 3.1 constructs \(C_1\), and Lemma 3.2 shows \(B\) belongs to \(\mathfrak X(\epsilon)\). In Hasse coordinates, the auxiliary divisor datum is transported by the \(p\)-power operation, symbolically
+> For a point $(A,\lambda,\eta^p,[u])$ of $\mathfrak X(p^{-1}\epsilon)$, take $B=A/C_1(A)$ with its quotient polarization and transported tame level. Proposition 3.1 constructs $C_1$, and Lemma 3.2 shows $B$ belongs to $\mathfrak X(\epsilon)$. In Hasse coordinates, the auxiliary divisor datum is transported by the $p$-power operation, symbolically
 >
 > $$
 > (A,[u])\longmapsto
 > \bigl(A/C_1(A),[u^p]\bigr),
 > $$
 >
-> with the Hodge-line identifications and the equivalence relation of Definition 2.1 understood. This determines a morphism by the formal moduli property. Uniqueness comes from the uniqueness of the canonical subgroup and the normalized Hasse-divisibility datum. The defining congruence of \(C_1\) with \(\ker F\) gives the asserted reduction modulo \(p^{1-\epsilon}\). \(\square\)
+> with the Hodge-line identifications and the equivalence relation of Definition 2.1 understood. This determines a morphism by the formal moduli property. Uniqueness comes from the uniqueness of the canonical subgroup and the normalized Hasse-divisibility datum. The defining congruence of $C_1$ with $\ker F$ gives the asserted reduction modulo $p^{1-\epsilon}$. $\square$
 
 > [!proposition] Proposition 3.4 (Iterated Frobenius tower and its degrees)
-> For each \(m\geq0\) put
+> For each $m\geq0$ put
 >
 > $$
 > \mathfrak X_m(\epsilon):=\mathfrak X(p^{-m}\epsilon),
@@ -469,7 +469,7 @@ Fix from now on \(0\leq\epsilon<\frac12\). The **radius at level \(m\)** is \(p^
 > }
 > $$
 >
-> The composite \(\widetilde F^{(m)}:\mathfrak X_m(\epsilon)\to\mathfrak X_0(\epsilon)\) is induced by **quotienting by \(C_m\)**. Every transition is a finite locally free Frobenius lift of relative degree \(p^{g(g+1)/2}\) on the formal moduli spaces, and on adic generic fibres it is **finite étale**. The transition maps reduce to relative Frobenius modulo \(p^{1-\epsilon}\) with the compatible twists.
+> The composite $\widetilde F^{(m)}:\mathfrak X_m(\epsilon)\to\mathfrak X_0(\epsilon)$ is induced by **quotienting by $C_m$**. Every transition is a finite locally free Frobenius lift of relative degree $p^{g(g+1)/2}$ on the formal moduli spaces, and on adic generic fibres it is **finite étale**. The transition maps reduce to relative Frobenius modulo $p^{1-\epsilon}$ with the compatible twists.
 >
 > The compatibility
 >
@@ -478,28 +478,28 @@ Fix from now on \(0\leq\epsilon<\frac12\). The **radius at level \(m\)** is \(p^
 > =C_m(A/C_1(A))
 > $$
 >
-> follows from §1, Proposition 3.9.9, and identifies \(m\) successive level-one quotients with one quotient by \(C_m\).
+> follows from §1, Proposition 3.9.9, and identifies $m$ successive level-one quotients with one quotient by $C_m$.
 
 > [!proof]- Compatibility and the distinction from inclusions
-> Proposition 3.9.9 of §1 identifies the successive canonical subgroups and proves the quotient compatibility. The formal finiteness/flatness and relative-Frobenius reductions are part of Scholze III.2.15; on generic fibres, the finite étale property follows also from the cartesian finite-level \(\Gamma_0(p^m)\)-diagram of Theorem 4.3 below (Zhu 3.9.21(2)). These maps are generally **not** the inclusions \(\mathcal X(p^{-(m+1)}\epsilon)\subset\mathcal X(p^{-m}\epsilon)\). \(\square\)
+> Proposition 3.9.9 of §1 identifies the successive canonical subgroups and proves the quotient compatibility. The formal finiteness/flatness and relative-Frobenius reductions are part of Scholze III.2.15; on generic fibres, the finite étale property follows also from the cartesian finite-level $\Gamma_0(p^m)$-diagram of Theorem 4.3 below (Zhu 3.9.21(2)). These maps are generally **not** the inclusions $\mathcal X(p^{-(m+1)}\epsilon)\subset\mathcal X(p^{-m}\epsilon)$. $\square$
 
 
 
 ## 4. The Overconvergent Anticanonical Tower
 
-The formal Frobenius tower of §3 is not yet a tower of level structures. To relate it to Siegel modular varieties at \(\Gamma_0(p^m)\)-level, we follow [Scholze, Theorem III.2.15](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), [Zhu, Proposition 3.9.21](https://yhzhumath.github.io/HT%20final.pdf), and [Caraiani, Lemma 4.3.2](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf).
+The formal Frobenius tower of §3 is not yet a tower of level structures. To relate it to Siegel modular varieties at $\Gamma_0(p^m)$-level, we follow [Scholze, Theorem III.2.15](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), [Zhu, Proposition 3.9.21](https://yhzhumath.github.io/HT%20final.pdf), and [Caraiani, Lemma 4.3.2](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf).
 
 ### 4.1 Finite-level adic spaces and canonical quotient maps
 
-As in Ordinary Locus §5.2, let \(\mathcal Y_m\) be the **adic analytification** of the characteristic-zero Siegel moduli scheme with \(K^p\Gamma_0(p^m)\)-level, after the chosen cyclotomic base change. Write \(\mathcal Y_0\) for the hyperspecial analytification. The map
+As in Ordinary Locus §5.2, let $\mathcal Y_m$ be the **adic analytification** of the characteristic-zero Siegel moduli scheme with $K^p\Gamma_0(p^m)$-level, after the chosen cyclotomic base change. Write $\mathcal Y_0$ for the hyperspecial analytification. The map
 
-$
+$$
 \pi_m:\mathcal Y_m\longrightarrow\mathcal Y_0
-$
+$$
 
-forgets the \(\Gamma_0(p^m)\)-level. With \(\mathcal X\subset\mathcal Y_0\) the good-reduction open space and \(\mathcal X(\epsilon)\subset\mathcal X\) from §2, define
+forgets the $\Gamma_0(p^m)$-level. With $\mathcal X\subset\mathcal Y_0$ the good-reduction open space and $\mathcal X(\epsilon)\subset\mathcal X$ from §2, define
 
-$
+$$
 \boxed{
 \begin{aligned}
 \mathcal X_{\Gamma_0(p^m)}
@@ -507,14 +507,14 @@ $
 \mathcal X_{\Gamma_0(p^m)}(\epsilon)
 &:=\mathcal Y_m\times_{\mathcal Y_0}\mathcal X(\epsilon).
 \end{aligned}}
-$
+$$
 
-These are **fibre products of adic spaces**. In particular, the second is not defined by taking only geometric points. Its valued-field points have moduli data \((B,\lambda_B,\eta_B^p,D)\), where \(D\subset B[p^m]\) is a Lagrangian subgroup of standard \(\Gamma_0(p^m)\)-type and the underlying \(B\) lies in the Hasse neighborhood \(\mathcal X(\epsilon)\).
+These are **fibre products of adic spaces**. In particular, the second is not defined by taking only geometric points. Its valued-field points have moduli data $(B,\lambda_B,\eta_B^p,D)$, where $D\subset B[p^m]$ is a Lagrangian subgroup of standard $\Gamma_0(p^m)$-type and the underlying $B$ lies in the Hasse neighborhood $\mathcal X(\epsilon)$.
 
 > [!proposition] Proposition 4.1 (Canonical-quotient morphism)
-> For each \(m\geq1\), the universal strong canonical subgroup on \(\mathfrak X(p^{-m}\epsilon)\) induces a morphism of adic spaces
+> For each $m\geq1$, the universal strong canonical subgroup on $\mathfrak X(p^{-m}\epsilon)$ induces a morphism of adic spaces
 >
-> $
+> $$
 > \boxed{
 > \begin{aligned}
 > \Phi_{m,\epsilon}:\mathcal X(p^{-m}\epsilon)
@@ -525,35 +525,35 @@ These are **fibre products of adic spaces**. In particular, the second is not de
 > D=A[p^m]/C_m(A)\subset B[p^m]
 > \right).
 > \end{aligned}}
-> $
+> $$
 >
-> The quotient \(B\) carries the canonical **principal polarization** and **transported \(K^p\)-level**. The subgroup \(D\) is a finite étale Lagrangian subgroup of free type \((\mathbf Z/p^m\mathbf Z)^g\) on each geometric generic fibre. The map is compatible with the finite-level forgetting maps as \(m\) varies.
+> The quotient $B$ carries the canonical **principal polarization** and **transported $K^p$-level**. The subgroup $D$ is a finite étale Lagrangian subgroup of free type $(\mathbf Z/p^m\mathbf Z)^g$ on each geometric generic fibre. The map is compatible with the finite-level forgetting maps as $m$ varies.
 
 > [!proof]- Construction from the universal analytic family
-> By Proposition 3.1 the formal universal family over \(\mathfrak X(p^{-m}\epsilon)\) has a base-change-compatible strong canonical subgroup \(C_m\). Its quotient is principally polarized because \(C_m\) is Lagrangian, exactly as in Ordinary Locus, Proposition 5.1. Prime-to-\(p\) level transports along this \(p\)-power isogeny.
+> By Proposition 3.1 the formal universal family over $\mathfrak X(p^{-m}\epsilon)$ has a base-change-compatible strong canonical subgroup $C_m$. Its quotient is principally polarized because $C_m$ is Lagrangian, exactly as in Ordinary Locus, Proposition 5.1. Prime-to-$p$ level transports along this $p$-power isogeny.
 >
-> The image \(D=A[p^m]/C_m\) is of rank \(p^{mg}\) and free of rank \(g\) on geometric generic fibres by the strong canonical subgroup theorem in §1. It is Lagrangian in \(B[p^m]\), by the Weil-pairing calculation for the quotient polarization.
+> The image $D=A[p^m]/C_m$ is of rank $p^{mg}$ and free of rank $g$ on geometric generic fibres by the strong canonical subgroup theorem in §1. It is Lagrangian in $B[p^m]$, by the Weil-pairing calculation for the quotient polarization.
 >
-> Lemma 3.2 applied successively shows that \(B\) has Hasse height at most \(\epsilon\), so the map lands in \(\mathcal X_{\Gamma_0(p^m)}(\epsilon)\), rather than merely \(\mathcal Y_m\). These operations define morphisms of families and commute with base change, hence give a **morphism of adic spaces** after passing to generic fibres, not merely a map on geometric points. \(\square\)
+> Lemma 3.2 applied successively shows that $B$ has Hasse height at most $\epsilon$, so the map lands in $\mathcal X_{\Gamma_0(p^m)}(\epsilon)$, rather than merely $\mathcal Y_m$. These operations define morphisms of families and commute with base change, hence give a **morphism of adic spaces** after passing to generic fibres, not merely a map on geometric points. $\square$
 
 ### 4.2 Open immersion and the anticanonical image
 
-The next point is the geometric heart of the construction: the map \(\Phi_{m,\epsilon}\) is **open**. This is not an automatic consequence of a bijection on geometric fibres.
+The next point is the geometric heart of the construction: the map $\Phi_{m,\epsilon}$ is **open**. This is not an automatic consequence of a bijection on geometric fibres.
 
 > [!lemma] Lemma 4.2 (The étale-section argument)
-> Let \(X\xrightarrow{f}Y\xrightarrow{g}Z\) be morphisms of analytic adic spaces. If \(g\) is étale and \(g\circ f\) is an open immersion, then \(f\) is an **open immersion**.
+> Let $X\xrightarrow{f}Y\xrightarrow{g}Z$ be morphisms of analytic adic spaces. If $g$ is étale and $g\circ f$ is an open immersion, then $f$ is an **open immersion**.
 >
-> If, in addition, \(g\) is finite étale and the composite identifies \(X\) with an open subspace \(U\subset Z\), then \(f(X)\) is open-and-closed inside \(g^{-1}(U)\).
+> If, in addition, $g$ is finite étale and the composite identifies $X$ with an open subspace $U\subset Z$, then $f(X)$ is open-and-closed inside $g^{-1}(U)$.
 
 > [!proof]- Proof by base change
-> Identify \(X\) with its image \(U\subset Z\). Base change \(g\) to \(U\): the morphism \(Y_U=Y\times_ZU\to U\) is étale, and \(f\) becomes a **section** \(U\to Y_U\). A section of an étale morphism is an open immersion (its graph is a base change of the open diagonal). If \(g\) is finite étale, the same section is also closed because finite étale maps are separated; locally the associated finite étale algebra splits as a product. The result follows after composing with \(Y_U\hookrightarrow Y\). \(\square\)
+> Identify $X$ with its image $U\subset Z$. Base change $g$ to $U$: the morphism $Y_U=Y\times_ZU\to U$ is étale, and $f$ becomes a **section** $U\to Y_U$. A section of an étale morphism is an open immersion (its graph is a base change of the open diagonal). If $g$ is finite étale, the same section is also closed because finite étale maps are separated; locally the associated finite étale algebra splits as a product. The result follows after composing with $Y_U\hookrightarrow Y$. $\square$
 
 > [!proposition] Proposition 4.3 (Open immersion; Scholze III.2.15(ii))
-> The morphism \(\Phi_{m,\epsilon}\) of Proposition 4.1 is an **open immersion**.
+> The morphism $\Phi_{m,\epsilon}$ of Proposition 4.1 is an **open immersion**.
 >
 > In fact, the diagram
 >
-> $
+> $$
 > \begin{array}{ccc}
 > \mathcal X(p^{-(m+1)}\epsilon)
 > &\xrightarrow{\ \Phi_{m+1,\epsilon}\ }&
@@ -564,28 +564,28 @@ The next point is the geometric heart of the construction: the map \(\Phi_{m,\ep
 > &\xrightarrow{\ \Phi_{m,\epsilon}\ }&
 > \mathcal X_{\Gamma_0(p^m)}(\epsilon)
 > \end{array}
-> $
+> $$
 >
-> is **cartesian** for \(m\geq1\), where the right vertical arrow forgets part of the \(p\)-level. Thus the corresponding inverse system is genuinely a pullback of the finite-level \(\Gamma_0\)-tower.
+> is **cartesian** for $m\geq1$, where the right vertical arrow forgets part of the $p$-level. Thus the corresponding inverse system is genuinely a pullback of the finite-level $\Gamma_0$-tower.
 
 > [!proof]- Proof of open immersion and cartesian compatibility
-> Let \(\Psi_m:\mathcal X_{\Gamma_0(p^m)}\to\mathcal X\) be the **quotient-by-level** map \((B,D)\mapsto B/D\), with its induced polarization and normalized tame level. This is a finite étale Hecke-type morphism on the characteristic-zero level space: up to the familiar Atkin–Lehner/diamond normalization, it is the finite étale forgetting-level map followed by a level automorphism.
+> Let $\Psi_m:\mathcal X_{\Gamma_0(p^m)}\to\mathcal X$ be the **quotient-by-level** map $(B,D)\mapsto B/D$, with its induced polarization and normalized tame level. This is a finite étale Hecke-type morphism on the characteristic-zero level space: up to the familiar Atkin–Lehner/diamond normalization, it is the finite étale forgetting-level map followed by a level automorphism.
 >
-> The composite with \(\Phi_{m,\epsilon}\) sends \(A\) to
+> The composite with $\Phi_{m,\epsilon}$ sends $A$ to
 >
-> $
+> $$
 > (A/C_m)/(A[p^m]/C_m)
 > \simeq A/A[p^m]\simeq A.
-> $
+> $$
 >
-> Under the full moduli data this is the **natural open embedding** \(\mathcal X(p^{-m}\epsilon)\hookrightarrow\mathcal X\), possibly composed with the harmless central tame-level automorphism determined by the chosen normalization. Lemma 4.2 applies, so \(\Phi_{m,\epsilon}\) is an open immersion.
+> Under the full moduli data this is the **natural open embedding** $\mathcal X(p^{-m}\epsilon)\hookrightarrow\mathcal X$, possibly composed with the harmless central tame-level automorphism determined by the chosen normalization. Lemma 4.2 applies, so $\Phi_{m,\epsilon}$ is an open immersion.
 >
-> For the cartesian square, apply the compatibility of canonical subgroups under quotient from §1, Proposition 3.9.9. The two resulting \(p^m\)-level subgroups agree after forgetting one level. Both sides are finite étale over the generic-fibre moduli base, with the same degree \([\Gamma_0(p^m):\Gamma_0(p^{m+1})]=p^{g(g+1)/2}\); the square is therefore cartesian. See [Scholze III.2.15(ii)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) for the full scheme-theoretic comparison. \(\square\)
+> For the cartesian square, apply the compatibility of canonical subgroups under quotient from §1, Proposition 3.9.9. The two resulting $p^m$-level subgroups agree after forgetting one level. Both sides are finite étale over the generic-fibre moduli base, with the same degree $[\Gamma_0(p^m):\Gamma_0(p^{m+1})]=p^{g(g+1)/2}$; the square is therefore cartesian. See [Scholze III.2.15(ii)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) for the full scheme-theoretic comparison. $\square$
 
 > [!definition] Definition 4.4 (Overconvergent anticanonical locus: image definition)
 > **Following Scholze**, define the *anticanonical part* as the image of the **open immersion**:
 >
-> $
+> $$
 > \boxed{\quad
 > \mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}
 > :=\operatorname{im}\bigl(
@@ -594,35 +594,35 @@ The next point is the geometric heart of the construction: the map \(\Phi_{m,\ep
 > \hookrightarrow\mathcal X_{\Gamma_0(p^m)}(\epsilon)
 > \bigr).
 > \quad}
-> $
+> $$
 >
 > It is therefore a **defined open adic subspace**. The intersection condition in the next theorem is its *geometric characterization*, not its definition.
 
 > [!theorem] Theorem 4.5 (Anticanonical identification and transversality)
-> The anticanonical image is **open and closed** in \(\mathcal X_{\Gamma_0(p^m)}(\epsilon)\), and \(\Phi_{m,\epsilon}\) induces an isomorphism
+> The anticanonical image is **open and closed** in $\mathcal X_{\Gamma_0(p^m)}(\epsilon)$, and $\Phi_{m,\epsilon}$ induces an isomorphism
 >
-> $
+> $$
 > \boxed{\qquad
 > \mathcal X(p^{-m}\epsilon)
 > \xrightarrow{\sim}
 > \mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}.
 > \qquad}
-> $
+> $$
 >
-> Let \(C_1^{\mathrm{weak}}(B)\subset B[p]\) denote the **weak** canonical subgroup of the underlying abelian scheme on \(\mathcal X(\epsilon)\) (available because \(\operatorname{Ha}\mid p^\epsilon\)). Then the anticanonical image is precisely the locus where the universal level subgroup \(D\subset B[p^m]\) satisfies
+> Let $C_1^{\mathrm{weak}}(B)\subset B[p]$ denote the **weak** canonical subgroup of the underlying abelian scheme on $\mathcal X(\epsilon)$ (available because $\operatorname{Ha}\mid p^\epsilon$). Then the anticanonical image is precisely the locus where the universal level subgroup $D\subset B[p^m]$ satisfies
 >
-> $
+> $$
 > \boxed{\qquad
 > D[p]\cap C_1^{\mathrm{weak}}(B)=\{0\}.
 > \qquad}
-> $
+> $$
 >
-> For \(\epsilon=0\), this reduces to Ordinary Locus, Proposition 5.3. For positive \(\epsilon\), **do not replace** the weak subgroup on \(\mathcal X(\epsilon)\) by an ordinary Frobenius kernel: the reduction need not be ordinary.
+> For $\epsilon=0$, this reduces to Ordinary Locus, Proposition 5.3. For positive $\epsilon$, **do not replace** the weak subgroup on $\mathcal X(\epsilon)$ by an ordinary Frobenius kernel: the reduction need not be ordinary.
 
 > [!proof]- Why the image is clopen and how transversality enters
 > Openness follows from Proposition 4.3. For **closedness**, consider the commutative diagram
 >
-> $
+> $$
 > \begin{array}{ccc}
 > \mathcal X(p^{-m}\epsilon)&
 > \xrightarrow{\ \Phi_{m,\epsilon}\ }&
@@ -631,19 +631,19 @@ The next point is the geometric heart of the construction: the map \(\Phi_{m,\ep
 > \downarrow{\scriptstyle\pi_m}\\
 > \mathcal X(\epsilon)&=&\mathcal X(\epsilon).
 > \end{array}
-> $
+> $$
 >
-> The iterated Frobenius lift \(\widetilde F^{(m)}\) is finite, and \(\pi_m\) is finite étale, in particular separated. The graph of \(\Phi_{m,\epsilon}\) is a closed immersion into the base change of \(\mathcal X(p^{-m}\epsilon)\) along \(\pi_m\), whose projection to \(\mathcal X_{\Gamma_0(p^m)}(\epsilon)\) is finite. Hence \(\Phi_{m,\epsilon}\) is finite, so **its image is closed**. Together with openness, the image is clopen.
+> The iterated Frobenius lift $\widetilde F^{(m)}$ is finite, and $\pi_m$ is finite étale, in particular separated. The graph of $\Phi_{m,\epsilon}$ is a closed immersion into the base change of $\mathcal X(p^{-m}\epsilon)$ along $\pi_m$, whose projection to $\mathcal X_{\Gamma_0(p^m)}(\epsilon)$ is finite. Hence $\Phi_{m,\epsilon}$ is finite, so **its image is closed**. Together with openness, the image is clopen.
 >
 > The transversality characterization is the deeper assertion in [Scholze III.2.15(iii)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf); see also [Zhu 3.9.21(3)](https://yhzhumath.github.io/HT%20final.pdf) and [Caraiani 4.3.2](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf). Its proof uses rigidity of sections (Lemma 3.9.5 in §1), rather than the simple connected–étale decomposition available on the ordinary special fibre.
 >
-> In particular, at rank-one points the condition can be checked in the generic fibre as the vanishing of the scheme-theoretic intersection of two finite étale \(p\)-subgroups. But the **adic locus** is already defined as an image and characterized by the theorem; one does not need to reconstruct it from rank-one points. \(\square\)
+> In particular, at rank-one points the condition can be checked in the generic fibre as the vanishing of the scheme-theoretic intersection of two finite étale $p$-subgroups. But the **adic locus** is already defined as an image and characterized by the theorem; one does not need to reconstruct it from rank-one points. $\square$
 
 ### 4.3 The fixed-radius anticanonical tower
 
 By Proposition 4.3 and Theorem 4.5, the anticanonical loci form a tower with finite étale transition maps,
 
-$
+$$
 \boxed{
 \cdots\longrightarrow
 \mathcal X_{\Gamma_0(p^{m+1})}(\epsilon)_{\mathrm{anti}}
@@ -652,68 +652,68 @@ $
 \longrightarrow\cdots\longrightarrow
 \mathcal X_{\Gamma_0(p)}(\epsilon)_{\mathrm{anti}}.
 }
-$
+$$
 
 Its identification with the canonical Frobenius tower is
 
-$
+$$
 \boxed{
 \left\{\mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}\right\}_m
 \ \cong\
 \left\{\mathcal X(p^{-m}\epsilon)\right\}_m,
 }
-$
+$$
 
 where the transition maps on the right are **canonical quotient/Frobenius lifts**, not inclusions.
 
 > [!remark]- Remark 4.6 (Why this is an *overconvergent tower*)
-> For a fixed \(m\), the level-\(m\) canonical subgroup exists on a neighborhood whose radius is on the order of \(p^{-m}\epsilon\). These neighborhoods **shrink to the ordinary locus** as \(m\to\infty\). Therefore the *canonical subgroup tower on the hyperspecial base does not overconverge at a fixed positive radius*.
+> For a fixed $m$, the level-$m$ canonical subgroup exists on a neighborhood whose radius is on the order of $p^{-m}\epsilon$. These neighborhoods **shrink to the ordinary locus** as $m\to\infty$. Therefore the *canonical subgroup tower on the hyperspecial base does not overconverge at a fixed positive radius*.
 >
-> By contrast, each anticanonical space above is defined **over the same** \(\mathcal X(\epsilon)\). The cartesian square of Proposition 4.3 shows that all higher anticanonical levels are obtained by pulling back the level-one anticanonical open along the ordinary level-forgetting tower. This is the geometric meaning of **overconvergence of the anticanonical tower**.
+> By contrast, each anticanonical space above is defined **over the same** $\mathcal X(\epsilon)$. The cartesian square of Proposition 4.3 shows that all higher anticanonical levels are obtained by pulling back the level-one anticanonical open along the ordinary level-forgetting tower. This is the geometric meaning of **overconvergence of the anticanonical tower**.
 
 
 
 ## 5. Perfectoidness of the Overconvergent Tower
 
-The construction now works without requiring ordinary reduction. The key is **not merely Frobenius surjectivity modulo \(p\)**, but a specific Frobenius **isomorphism between two different reductions** of the completed limit ring. This is the noncompactified case of [Scholze, Corollary III.2.19](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf).
+The construction now works without requiring ordinary reduction. The key is **not merely Frobenius surjectivity modulo $p$**, but a specific Frobenius **isomorphism between two different reductions** of the completed limit ring. This is the noncompactified case of [Scholze, Corollary III.2.19](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf).
 
 ### 5.1 Completed formal limit and the Frobenius criterion
 
-Fix \(0\leq\epsilon<1/2\) and let
+Fix $0\leq\epsilon<1/2$ and let
 
-$
+$$
 \mathfrak X_m:=\mathfrak X(p^{-m}\epsilon),
 \qquad
 \mathfrak X_\infty(\epsilon)
 :=\varprojlim_m\mathfrak X_m.
-$
+$$
 
-The inverse limit uses the **Frobenius-lift maps**, not the inclusions of Hasse neighborhoods. For compatible affine formal charts \(\operatorname{Spf}R_m\subset\mathfrak X_m\), the local ring is
+The inverse limit uses the **Frobenius-lift maps**, not the inclusions of Hasse neighborhoods. For compatible affine formal charts $\operatorname{Spf}R_m\subset\mathfrak X_m$, the local ring is
 
-$
+$$
 \boxed{\quad
 R_\infty
 :=\widehat{\varinjlim_m R_m}^{\,p}.
 \quad}
-$
+$$
 
 > [!lemma] Lemma 5.1 (Frobenius on the limit ring)
 > The absolute Frobenius of the completed limit induces an **isomorphism**
 >
-> $
+> $$
 > \boxed{\quad
 > \varphi:
 > R_\infty/p^{(1-\epsilon)/p}
 > \xrightarrow{\sim}R_\infty/p^{1-\epsilon}.
 > \quad}
-> $
+> $$
 >
 > The exponents are understood as principal ideals generated by elements of the prescribed valuations in the cyclotomic valuation ring.
 
 > [!proof]- Proof from the relative Frobenius transition maps
-> By §3 and Scholze III.2.15, each transition \(R_m\to R_{m+1}\) reduces modulo \(p^{1-\epsilon}\) to the **relative Frobenius** (with the corresponding twist of the cyclotomic base). Passing to the direct limit and applying the absolute Frobenius gives
+> By §3 and Scholze III.2.15, each transition $R_m\to R_{m+1}$ reduces modulo $p^{1-\epsilon}$ to the **relative Frobenius** (with the corresponding twist of the cyclotomic base). Passing to the direct limit and applying the absolute Frobenius gives
 >
-> $
+> $$
 > \begin{aligned}
 > R_\infty/p^{(1-\epsilon)/p}
 > &\simeq\varinjlim_mR_{m+1}/p^{(1-\epsilon)/p}\\
@@ -721,139 +721,139 @@ $
 > \varinjlim_mR_m/p^{1-\epsilon}\\
 > &\simeq R_\infty/p^{1-\epsilon}.
 > \end{aligned}
-> $
+> $$
 >
-> The isomorphism in the middle combines the relative Frobenius description of the tower with Frobenius on the perfectoid coefficient ring \(\mathcal O_K\). Completion does not alter these fixed reductions. This is the key calculation in [Scholze, proof of Corollary III.2.19](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf). \(\square\)
+> The isomorphism in the middle combines the relative Frobenius description of the tower with Frobenius on the perfectoid coefficient ring $\mathcal O_K$. Completion does not alter these fixed reductions. This is the key calculation in [Scholze, proof of Corollary III.2.19](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf). $\square$
 
 > [!theorem] Theorem 5.2 (Perfectoid overconvergent anticanonical tower)
-> For each fixed \(0\leq\epsilon<1/2\), there exists a perfectoid space over \(K=\mathbf Q_p^{\mathrm{cycl}}\), denoted \(\mathcal X_{\Gamma_0(p^\infty)}(\epsilon)_{\mathrm{anti}}\), such that
+> For each fixed $0\leq\epsilon<1/2$, there exists a perfectoid space over $K=\mathbf Q_p^{\mathrm{cycl}}$, denoted $\mathcal X_{\Gamma_0(p^\infty)}(\epsilon)_{\mathrm{anti}}$, such that
 >
-> $
+> $$
 > \boxed{\quad
 > \mathcal X_{\Gamma_0(p^\infty)}(\epsilon)_{\mathrm{anti}}
 > \sim\varprojlim_m
 > \mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}.
 > \quad}
-> $
+> $$
 >
-> It is the adic generic fibre of the completed formal Frobenius tower \(\mathfrak X_\infty(\epsilon)\). The symbol \(\sim\) denotes the **tilde-limit**, not simply a set-theoretic inverse limit.
+> It is the adic generic fibre of the completed formal Frobenius tower $\mathfrak X_\infty(\epsilon)$. The symbol $\sim$ denotes the **tilde-limit**, not simply a set-theoretic inverse limit.
 
 > [!proof]- The integral perfectoid criterion and gluing
-> The rings \(R_\infty\) are \(p\)-adically complete and \(\mathcal O_K\)-flat. By Lemma 5.1, their Frobenius maps induce
+> The rings $R_\infty$ are $p$-adically complete and $\mathcal O_K$-flat. By Lemma 5.1, their Frobenius maps induce
 >
-> $
+> $$
 > R_\infty/p^{(1-\epsilon)/p}
 > \xrightarrow{\sim}R_\infty/p^{1-\epsilon}.
-> $
+> $$
 >
-> This is the **integral perfectoid criterion** over the perfectoid valuation ring \(\mathcal O_K\), applied at the nonzero topologically nilpotent exponent \(1-\epsilon\). Thus \(R_\infty\) is integral perfectoid and the local generic fibre
+> This is the **integral perfectoid criterion** over the perfectoid valuation ring $\mathcal O_K$, applied at the nonzero topologically nilpotent exponent $1-\epsilon$. Thus $R_\infty$ is integral perfectoid and the local generic fibre
 >
-> $
+> $$
 > \operatorname{Spa}(R_\infty[1/p],R_\infty)
-> $
+> $$
 >
-> is affinoid perfectoid. These charts glue. Their underlying topologies and completed structure rings give the tilde-limit, not merely a bijection on rank-one points. By Theorem 4.5 the generic fibres of \(\mathfrak X_m\) are exactly the anticanonical level spaces in the statement. \(\square\)
+> is affinoid perfectoid. These charts glue. Their underlying topologies and completed structure rings give the tilde-limit, not merely a bijection on rank-one points. By Theorem 4.5 the generic fibres of $\mathfrak X_m$ are exactly the anticanonical level spaces in the statement. $\square$
 
 > [!remark]- Remark 5.3 (Tilt and the ordinary case)
-> Scholze's Corollary III.2.19 also identifies the **tilt** with a characteristic-\(p\) **perfection of the corresponding Hasse neighborhood**. Thus the relative Frobenius tower has a literal perfection as its characteristic-\(p\) geometry.
+> Scholze's Corollary III.2.19 also identifies the **tilt** with a characteristic-$p$ **perfection of the corresponding Hasse neighborhood**. Thus the relative Frobenius tower has a literal perfection as its characteristic-$p$ geometry.
 >
-> When \(\epsilon=0\), Theorem 5.2 reduces to Ordinary Locus, Theorem 6.3. For \(\epsilon>0\), it works on an actual strict neighborhood, even when the special fibre is not ordinary.
+> When $\epsilon=0$, Theorem 5.2 reduces to Ordinary Locus, Theorem 6.3. For $\epsilon>0$, it works on an actual strict neighborhood, even when the special fibre is not ordinary.
 
-## 6. From Anticanonical \(\Gamma_0\)-Level to Full \(p\)-Level
+## 6. From Anticanonical $\Gamma_0$-Level to Full $p$-Level
 
-We work here on the **noncompactified good-reduction locus**. We first pass from anticanonical \(\Gamma_0\)-level to full level by almost purity, then cover the entire full-level Hasse neighborhood with finitely many symplectic translates. See [Caraiani, §4.4](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf).
+We work here on the **noncompactified good-reduction locus**. We first pass from anticanonical $\Gamma_0$-level to full level by almost purity, then cover the entire full-level Hasse neighborhood with finitely many symplectic translates. See [Caraiani, §4.4](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf).
 
 ### 6.1 Full-level anticanonical covers
 
-Let \(\mathcal X_{\Gamma(p^m)}(\epsilon)\) be the inverse image of \(\mathcal X(\epsilon)\) in the characteristic-zero **full \(p^m\)-level** adic cover (with the chosen cyclotomic base). Define the **full-level anticanonical part by base change**:
+Let $\mathcal X_{\Gamma(p^m)}(\epsilon)$ be the inverse image of $\mathcal X(\epsilon)$ in the characteristic-zero **full $p^m$-level** adic cover (with the chosen cyclotomic base). Define the **full-level anticanonical part by base change**:
 
-$
+$$
 \boxed{
 \mathcal U_m(\epsilon):=
 \mathcal X_{\Gamma(p^m)}(\epsilon)
 \times_{\mathcal X_{\Gamma_0(p^m)}(\epsilon)}
 \mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}.
 }
-$
+$$
 
 > [!proposition] Proposition 6.1 (Perfectoid full-level anticanonical limit)
-> There is a perfectoid \(K\)-space \(\mathcal U_\infty(\epsilon)\) satisfying
+> There is a perfectoid $K$-space $\mathcal U_\infty(\epsilon)$ satisfying
 >
-> $
+> $$
 > \boxed{\quad
 > \mathcal U_\infty(\epsilon)
 > \sim\varprojlim_m\mathcal U_m(\epsilon).
 > \quad}
-> $
+> $$
 
 > [!proof]- Finite étale towers and almost purity
-> For every \(m\), the morphism
+> For every $m$, the morphism
 >
-> $
+> $$
 > \mathcal U_m(\epsilon)\to
 > \mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}
-> $
+> $$
 >
-> is finite étale, since it forgets part of the full \(p\)-level. Pulling these covers back to the **perfectoid anticanonical limit** from Theorem 5.2 produces a compatible inverse system of finite étale covers of a perfectoid base.
+> is finite étale, since it forgets part of the full $p$-level. Pulling these covers back to the **perfectoid anticanonical limit** from Theorem 5.2 produces a compatible inverse system of finite étale covers of a perfectoid base.
 >
-> By Faltings' **almost purity theorem**, finite étale covers of affinoid perfectoid spaces are affinoid perfectoid; the completed inverse limit of a profinite étale tower can be constructed affinoid-locally and remains perfectoid. These affinoids glue to the asserted \(\mathcal U_\infty(\epsilon)\). This is the construction of [Caraiani, Theorem 4.4.3](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf). \(\square\)
+> By Faltings' **almost purity theorem**, finite étale covers of affinoid perfectoid spaces are affinoid perfectoid; the completed inverse limit of a profinite étale tower can be constructed affinoid-locally and remains perfectoid. These affinoids glue to the asserted $\mathcal U_\infty(\epsilon)$. This is the construction of [Caraiani, Theorem 4.4.3](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf). $\square$
 
 ### 6.2 Finite translates and the whole full-level neighborhood
 
 > [!proposition] Proposition 6.2 (Finite symplectic translates; no boundary)
 > There exist finitely many
 >
-> $
+> $$
 > \gamma_1,\ldots,\gamma_N
 > \in\operatorname{Sp}_{2g}(\mathbf Z_p),
-> $
+> $$
 >
-> **independent of \(m\)**, for which
+> **independent of $m$**, for which
 >
-> $
+> $$
 > \boxed{
 > \mathcal X_{\Gamma(p^m)}(\epsilon)
 > =\bigcup_{i=1}^{N}\gamma_i\mathcal U_m(\epsilon)
 > \quad(m\geq1).
 > }
-> $
+> $$
 >
 > Every translate is **open-and-closed** inside the indicated full-level Hasse neighborhood.
 
 > [!proof]- Lagrangian complements, rank-one density, and closedness
-> By Theorem 4.5, \(\mathcal U_m(\epsilon)\) is the clopen inverse image of the anticanonical locus; so are all its symplectic translates.
+> By Theorem 4.5, $\mathcal U_m(\epsilon)$ is the clopen inverse image of the anticanonical locus; so are all its symplectic translates.
 >
-> The Lagrangian subspaces of \(\mathbf F_p^{2g}\) form a **finite set**. Choose once and for all a lift in \(\operatorname{Sp}_{2g}(\mathbf Z_p)\) that moves the standard Lagrangian to each such subspace.
+> The Lagrangian subspaces of $\mathbf F_p^{2g}$ form a **finite set**. Choose once and for all a lift in $\operatorname{Sp}_{2g}(\mathbf Z_p)$ that moves the standard Lagrangian to each such subspace.
 >
-> At any rank-one point, full \(p\)-level identifies the generic fibre of the **weak** canonical subgroup \(C_1(B)\subset B[p]\) with a Lagrangian \(W\subset\mathbf F_p^{2g}\). Choose a complementary Lagrangian \(L\), and one of the predetermined symplectic elements carrying the chosen \(\Gamma_0\)-direction to \(L\). The resulting level satisfies \(D[p]\cap C_1(B)=0\), so it is **anticanonical** by Theorem 4.5.
+> At any rank-one point, full $p$-level identifies the generic fibre of the **weak** canonical subgroup $C_1(B)\subset B[p]$ with a Lagrangian $W\subset\mathbf F_p^{2g}$. Choose a complementary Lagrangian $L$, and one of the predetermined symplectic elements carrying the chosen $\Gamma_0$-direction to $L$. The resulting level satisfies $D[p]\cap C_1(B)=0$, so it is **anticanonical** by Theorem 4.5.
 >
-> Thus all rank-one points lie in the finite union of translates. The union is **closed** because its finitely many members are clopen; rank-one points are dense in analytic adic spaces. Hence the union equals the entire \(\mathcal X_{\Gamma(p^m)}(\epsilon)\). The argument uses only the mod-\(p\) Lagrangian and therefore gives the **same finite family** at every \(m\). \(\square\)
+> Thus all rank-one points lie in the finite union of translates. The union is **closed** because its finitely many members are clopen; rank-one points are dense in analytic adic spaces. Hence the union equals the entire $\mathcal X_{\Gamma(p^m)}(\epsilon)$. The argument uses only the mod-$p$ Lagrangian and therefore gives the **same finite family** at every $m$. $\square$
 
 > [!corollary] Corollary 6.3 (Perfectoid full-level overconvergent locus; no boundary)
-> There exists a perfectoid space \(\mathcal X_{\Gamma(p^\infty)}(\epsilon)\) satisfying
+> There exists a perfectoid space $\mathcal X_{\Gamma(p^\infty)}(\epsilon)$ satisfying
 >
-> $
+> $$
 > \boxed{
 > \mathcal X_{\Gamma(p^\infty)}(\epsilon)
 > \sim\varprojlim_m\mathcal X_{\Gamma(p^m)}(\epsilon).
 > }
-> $
+> $$
 >
-> It is obtained by **gluing finitely many symplectic translates** of the full-level anticanonical perfectoid space \(\mathcal U_\infty(\epsilon)\).
+> It is obtained by **gluing finitely many symplectic translates** of the full-level anticanonical perfectoid space $\mathcal U_\infty(\epsilon)$.
 
 > [!proof]- Gluing along open overlaps
-> Proposition 6.1 constructs the perfectoid space \(\mathcal U_\infty(\epsilon)\). Changing full \(p\)-level framing by \(\gamma_i\in\operatorname{Sp}_{2g}(\mathbf Z_p)\) gives an isomorphic perfectoid space \(\gamma_i\mathcal U_\infty(\epsilon)\).
+> Proposition 6.1 constructs the perfectoid space $\mathcal U_\infty(\epsilon)$. Changing full $p$-level framing by $\gamma_i\in\operatorname{Sp}_{2g}(\mathbf Z_p)$ gives an isomorphic perfectoid space $\gamma_i\mathcal U_\infty(\epsilon)$.
 >
-> By Proposition 6.2 these finitely many clopen translates cover every finite level compatibly, hence also the inverse-limit topology. Their intersections are **open perfectoid subspaces**. Gluing along the overlaps yields a perfectoid space, and the completed direct-limit description of the affinoid structure sheaves gives the required **tilde-limit**. \(\square\)
+> By Proposition 6.2 these finitely many clopen translates cover every finite level compatibly, hence also the inverse-limit topology. Their intersections are **open perfectoid subspaces**. Gluing along the overlaps yields a perfectoid space, and the completed direct-limit description of the affinoid structure sheaves gives the required **tilde-limit**. $\square$
 
 > [!remark]- Remark 6.4 (Which infinite-level space is perfectoid?)
 > We have established three distinct conclusions:
 >
-> 1. The **shrinking-radius formal Frobenius tower** \(\{\mathcal X(p^{-m}\epsilon)\}\) has a perfectoid limit.
-> 2. The **fixed-radius anticanonical \(\Gamma_0\)-tower** is isomorphic to that tower, hence perfectoid at infinite level.
-> 3. The **full-level tower** \(\{\mathcal X_{\Gamma(p^m)}(\epsilon)\}\) is covered by finitely many translates of its anticanonical part and therefore has a perfectoid limit.
+> 1. The **shrinking-radius formal Frobenius tower** $\{\mathcal X(p^{-m}\epsilon)\}$ has a perfectoid limit.
+> 2. The **fixed-radius anticanonical $\Gamma_0$-tower** is isomorphic to that tower, hence perfectoid at infinite level.
+> 3. The **full-level tower** $\{\mathcal X_{\Gamma(p^m)}(\epsilon)\}$ is covered by finitely many translates of its anticanonical part and therefore has a perfectoid limit.
 >
-> None of these assertions says that the **unrestricted** \(\Gamma_0(p^\infty)\)-tower is perfectoid. The extension to the minimal compactification and the use of \(\operatorname{GSp}_{2g}(\mathbf Q_p)\)-translates to cover the entire infinite-level Siegel modular variety are separate arguments in [Scholze §§III.2–III.3](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf).
+> None of these assertions says that the **unrestricted** $\Gamma_0(p^\infty)$-tower is perfectoid. The extension to the minimal compactification and the use of $\operatorname{GSp}_{2g}(\mathbf Q_p)$-translates to cover the entire infinite-level Siegel modular variety are separate arguments in [Scholze §§III.2–III.3](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf).
 
 ---
 
