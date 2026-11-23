@@ -1134,90 +1134,90 @@ is again an ordinary abelian scheme by Proposition 4.2. The following result exp
 > [!proposition] Proposition 5.1 (Polarization and prime-to-$p$ level on the canonical quotient)
 > Let $(A,\lambda,\eta^p)/R$ be a principally polarized abelian scheme with sufficiently small tame level $K^p$ and ordinary reduction. For $m\geq1$, put
 >
-> $
+> $$
 > n=p^m,\qquad C=C_m(A),\qquad
 > q:A\longrightarrow B:=A/C.
-> $
+> $$
 >
 > Since $C$ is **Lagrangian** for $e_{\lambda,n}$ (Proposition 4.4), there is a **unique principal polarization** $\lambda_B:B\xrightarrow{\sim}B^\vee$ satisfying
 >
-> $
+> $$
 > \boxed{\quad q^\vee\lambda_B q=n\lambda.\quad}
-> $
+> $$
 >
 > Moreover, $q$ is a $p$-power isogeny and induces $T^pq:T^pA\xrightarrow{\sim}T^pB$. Transport along this isomorphism defines a $K^p$-level structure
 >
-> $
+> $$
 > \boxed{\quad \eta_B^p=(T^pq)_*\eta_A^p.\quad}
-> $
+> $$
 >
 > It is compatible with $\lambda_B$. More explicitly, for the full tame level $(\eta_N,t_N)$ of Definition 2.3 in the preceding Siegel moduli note, where $(N,p)=1$, the transported data are
 >
-> $
+> $$
 > \boxed{\quad
 > \eta_{N,B}=\eta_N\circ(q|_{A[N]})^{-1},
 > \qquad t_{N,B}=[n]^{-1}\circ t_N.
 > \quad}
-> $
+> $$
 >
 > Thus $(B,\lambda_B,\eta_B^p)$ belongs to the **same Siegel moduli problem**. This construction is functorial and compatible with base change.
 
 > [!proof]- Proof: polarization descent and level transport
 > **(1) Constructing the polarization.** Let $C^\perp\subseteq A^\vee[n]$ denote the annihilator of $C$ under the Weil pairing. Proposition 4.4 gives $C^\perp=\lambda(C)$. Consider
 >
-> $
+> $$
 > \beta=q\circ\lambda^{-1}\circ q^\vee:
 > B^\vee\longrightarrow B.
-> $
+> $$
 >
 > For $x\in C$ and $y\in B^\vee[n]$, functoriality of the Weil pairing yields
 >
-> $
+> $$
 > e_{A,n}(x,q^\vee y)=e_{B,n}(qx,y)=1.
-> $
+> $$
 >
 > Thus $q^\vee(B^\vee[n])\subseteq C^\perp=\lambda(C)$. The image and $\lambda(C)$ both have rank $n^g$: indeed $\ker q^\vee$ has rank $n^g$ and lies inside $B^\vee[n]$, which has rank $n^{2g}$. The inclusion is therefore an equality. Consequently $\beta(B^\vee[n])=q(C)=0$.
 >
 > The fppf-exact sequence for multiplication by $n$ now implies that $\beta$ factors **uniquely** through $[n]_{B^\vee}$:
 >
-> $
+> $$
 > \beta=\mu\circ[n]_{B^\vee},\qquad
 > \mu:B^\vee\longrightarrow B.
-> $
+> $$
 >
 > This is the meaning of the notation $\mu=(1/n)q\lambda^{-1}q^\vee$; no division by $n$ in $R$ is involved. Since $\deg q=n^g$ and $\lambda$ is principal,
 >
-> $
+> $$
 > \deg\beta=n^{2g}=\deg[n]_{B^\vee},
 > \qquad \deg\mu=1.
-> $
+> $$
 >
 > Hence $\mu$ is an isomorphism. Set $\lambda_B=\mu^{-1}$. In the rational isogeny category, its defining identity gives $q^\vee\lambda_B q=n\lambda$; hence this equality holds for integral morphisms. The usual descent criterion for polarizations along isogenies shows that $\lambda_B$ is a polarization, since its pullback is the polarization $n\lambda$. As $\lambda_B$ is an isomorphism, it is **principal**. The pullback identity also proves uniqueness.
 >
 > **(2) Transporting the prime-to-$p$ level.** Because $\ker q$ is killed by $n=p^m$, for every $N$ prime to $p$ the induced map
 >
-> $
+> $$
 > q_N:A[N]\xrightarrow{\sim}B[N]
-> $
+> $$
 >
 > is an isomorphism, and likewise for all prime-to-$p$ Tate modules. However, $q_N$ is a *similitude*, not necessarily a symplectic isometry. From the polarization pullback identity, Weil-pairing functoriality gives
 >
-> $
+> $$
 > \boxed{\quad e_{\lambda_B,N}(q_Nx,q_Ny)
 > =e_{\lambda,N}(x,y)^n.\quad}
-> $
+> $$
 >
 > Consequently a $K^p$-orbit of symplectic-similitude frames transports along $T^pq$ to a valid $K^p$-orbit on $B$. In the full level-$N$ convention, set
 >
-> $
+> $$
 > \eta_{N,B}=\eta_N\circ q_N^{-1},
 > \qquad t_{N,B}=[n]^{-1}\circ t_N
 > \quad\text{on }\mu_N.
-> $
+> $$
 >
 > Here $[n]^{-1}$ exists on $\mathbf Z/N\mathbf Z$ since $(n,N)=1$. For $x,y\in A[N]$, their compatibility is checked explicitly:
 >
-> $
+> $$
 > \begin{aligned}
 > t_{N,B}(e_{\lambda_B,N}(q_Nx,q_Ny))
 > &=n^{-1}t_N(e_{\lambda,N}(x,y)^n)\\
@@ -1225,7 +1225,7 @@ is again an ordinary abelian scheme by Proposition 4.2. The following result exp
 > &=\psi_N(\eta_N(x),\eta_N(y))\\
 > &=\psi_N(\eta_{N,B}(q_Nx),\eta_{N,B}(q_Ny)).
 > \end{aligned}
-> $
+> $$
 >
 > Thus the cyclotomic trivialization $t_N$ must be **renormalized** if we transport $\eta_N$ by $q_N$. Both the polarization and level constructions commute with base change; ordinarity of $B$ follows separately from Proposition 4.2. $\square$
 
