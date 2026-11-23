@@ -1524,7 +1524,63 @@ By Proposition 5.3 the finite-level spaces identify with the anticanonical loci,
 >
 > It is obtained by passing to the generic fibre of the completed direct limit of the canonical Frobenius-lift tower.
 
-> [!remark]- Remark 6.4 (Beyond the ordinary locus)
+> [!remark]- Remark 6.4 (Finite symplectic translates on the ordinary full-level locus; no boundary)
+> This observation concerns **only the ordinary locus without compactification**. Let $m\geq1$ and set
+>
+> $
+> Y_m:=\mathcal X_{\Gamma(p^m)}(0),\qquad
+> U_m:=Y_m\times_{\mathcal X_{\Gamma_0(p^m)}(0)}
+> \mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}.
+> $
+>
+> Thus $U_m$ is the inverse image of the anticanonical locus under the map forgetting part of the full $p^m$-level. There exist **finitely many elements, independent of $m$**,
+>
+> $
+> \gamma_1,\ldots,\gamma_N\in\operatorname{Sp}_{2g}(\mathbf Z_p),
+> \qquad
+> \boxed{\quad Y_m=\bigcup_{i=1}^{N}\gamma_i U_m.\quad}
+> $
+>
+> Each translate is **open and closed** in $Y_m$. We use the symplectic subgroup to keep the chosen cyclotomic similitude datum fixed.
+
+> [!proof]- Proof via Lagrangian complements and rank-one points
+> By Proposition 5.3, the anticanonical locus inside $\mathcal X_{\Gamma_0(p^m)}(0)$ is **clopen**. Hence its inverse image $U_m\subseteq Y_m$, and each of its $\operatorname{Sp}_{2g}(\mathbf Z_p)$-translates, is clopen.
+>
+> Let $V=\mathbf F_p^{2g}$ with its standard symplectic form and $L_0=\mathbf F_p^g\oplus0$ the standard Lagrangian. The finite set $\operatorname{Lag}(V)$ of Lagrangian subspaces is a single orbit under $\operatorname{Sp}_{2g}(\mathbf F_p)$. Since the reduction homomorphism
+>
+> $
+> \operatorname{Sp}_{2g}(\mathbf Z_p)
+> \longrightarrow\operatorname{Sp}_{2g}(\mathbf F_p)
+> $
+>
+> is surjective, choose once and for all finitely many lifts $\gamma_L\in\operatorname{Sp}_{2g}(\mathbf Z_p)$, one for each $L\in\operatorname{Lag}(V)$, sending $L_0$ to $L$ (up to the action convention).
+>
+> Let $x\in Y_m$ be any **rank-one point**. After passage to an algebraically closed complete valued extension, the full level structure modulo $p$ identifies $B_x[p]$ with $V$. By Proposition 4.4, the generic fibre of $C_1(B_x)$ is a Lagrangian subspace $W_x\subset V$. Choose a Lagrangian complement $L$:
+>
+> $
+> V=W_x\oplus L.
+> $
+>
+> For the corresponding $\gamma_L$, the changed full level structure determines a $\Gamma_0(p^m)$-subgroup $D$ with $D[p]$ corresponding to $L$. Thus
+>
+> $
+> D[p]\cap C_1(B_x)=0
+> \quad\Longleftrightarrow\quad L\cap W_x=0.
+> $
+>
+> Proposition 5.3 characterizes this as the **anticanonical** condition, so $x\in\gamma_L U_m$ (possibly replacing $\gamma_L$ by its inverse according to the action convention). The condition can be tested after the valued-field extension. Hence the finite union
+>
+> $
+> Z_m:=\bigcup_{i=1}^{N}\gamma_iU_m
+> $
+>
+> contains every rank-one point of $Y_m$.
+>
+> Because this is a **finite union of clopen subspaces**, $Z_m$ is closed in $Y_m$. Rank-one points are dense in an analytic adic space: every point is a specialization of a rank-one generalization. Therefore $Z_m=Y_m$.
+>
+> Importantly, the same list of $\gamma_i$ works for all $m$, because the condition $D[p]\cap C_1(B)=0$ depends only on the **modulo-$p$ Lagrangian**. Whenever the infinite full $p$-level limit is constructed, the same finite translates cover its ordinary part. This argument does not address minimal-compactification boundary points or the later $G(\mathbf Q_p)$-translate covering. $\square$
+
+> [!remark]- Remark 6.5 (Beyond the ordinary locus)
 > The above argument concerns $\epsilon=0$. Scholze extends it to strict neighborhoods using the Hasse invariant: for $0\leq\epsilon<1/2$, transition maps agree with relative Frobenius modulo $p^{1-\epsilon}$, and the corresponding Frobenius isomorphism has the form
 >
 > $$
