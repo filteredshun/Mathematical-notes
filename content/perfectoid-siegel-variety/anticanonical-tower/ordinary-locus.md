@@ -112,73 +112,73 @@ The following identities will be used in Proposition 4.4. They are valid for **a
 > [!proposition] Proposition 1.2 (Dual isogenies and their kernels)
 > Let $f:A\to B$ be an isogeny of abelian schemes over a base $S$, with finite locally free kernel $K$. Its dual isogeny is
 >
-> $
+> $$
 > f^\vee:B^\vee\longrightarrow A^\vee.
-> $
+> $$
 >
 > There is a canonical isomorphism of finite locally free group schemes
 >
-> $
+> $$
 > \boxed{\qquad \ker(f^\vee)\simeq(\ker f)^D=K^D.\qquad}
-> $
+> $$
 >
 > In particular, for the relative Frobenius and Verschiebung of $A/S$ in characteristic $p$, using $(A^{(p)})^\vee\simeq(A^\vee)^{(p)}$, we have
 >
-> $
+> $$
 > \boxed{\quad
 > (F_A)^\vee=V_{A^\vee},\qquad
 > (V_A)^\vee=F_{A^\vee}.
 > \quad}
-> $
+> $$
 >
 > Consequently,
 >
-> $
+> $$
 > \boxed{
 > \begin{aligned}
 > (\ker F_A)^D&\simeq\ker V_{A^\vee},\\
 > (\ker V_A)^D&\simeq\ker F_{A^\vee}.
 > \end{aligned}}
-> $
+> $$
 >
 > The same identities hold for iterated Frobenius and Verschiebung:
 >
-> $
+> $$
 > \boxed{
 > \begin{aligned}
 > (\ker F_A^n)^D&\simeq\ker V_{A^\vee}^n,\\
 > (\ker V_A^n)^D&\simeq\ker F_{A^\vee}^n.
 > \end{aligned}}
-> $
+> $$
 
 > [!proof]- Explanation of the two dualities
 > **(1) Kernels of dual isogenies.** The dual abelian scheme $A^\vee$ represents the relative $\operatorname{Pic}^0$ functor; $f^\vee$ is pullback of line bundles along $f$. The standard dual-isogeny theorem gives an fppf-exact sequence
 >
-> $
+> $$
 > 0\longrightarrow K^D
 > \longrightarrow B^\vee
 > \xrightarrow{\,f^\vee\,}A^\vee
 > \longrightarrow0.
-> $
+> $$
 >
 > To see the role of $K^D$, note that $f:A\to B$ is an fppf $K$-torsor. A line bundle on $B$ whose pullback to $A$ is trivial can, after the relevant fppf localization, be described by a $K$-linearization of the trivial line bundle on $A$. Such a linearization is a character $K\to\mathbf G_m$, i.e. a point of $K^D$. The exactness and representability are provided by the dual-isogeny theorem.
 >
 > **(2) Duality interchanges $F$ and $V$.** Dualization commutes with Frobenius base change:
 >
-> $
+> $$
 > (A^{(p)})^\vee\simeq(A^\vee)^{(p)}.
-> $
+> $$
 >
 > The fundamental Frobenius–Verschiebung duality theorem identifies the dual of the relative Frobenius with the Verschiebung of the dual abelian scheme, and vice versa:
 >
-> $
+> $$
 > (F_A)^\vee=V_{A^\vee},
 > \qquad (V_A)^\vee=F_{A^\vee}.
-> $
+> $$
 >
 > The *directions* are important:
 >
-> $
+> $$
 > \begin{aligned}
 > F_A &:A\to A^{(p)}
 > &&\rightsquigarrow&
@@ -187,26 +187,26 @@ The following identities will be used in Proposition 4.4. They are valid for **a
 > &&\rightsquigarrow&
 > (V_A)^\vee&:A^\vee\to(A^\vee)^{(p)}.
 > \end{aligned}
-> $
+> $$
 >
 > The first dual arrow has exactly the direction of $V_{A^\vee}$, and the second that of $F_{A^\vee}$.
 >
 > **(3) Taking kernels.** Apply (1) to $f=V_A$:
 >
-> $
+> $$
 > (\ker V_A)^D
 > \simeq\ker((V_A)^\vee)
 > =\ker F_{A^\vee}.
-> $
+> $$
 >
 > Similarly, applying it to $f=F_A$ gives $(\ker F_A)^D\simeq\ker V_{A^\vee}$. The same argument applies to the iterated isogenies $F_A^n:A\to A^{(p^n)}$ and $V_A^n:A^{(p^n)}\to A$, whose duals are $V_{A^\vee}^n$ and $F_{A^\vee}^n$, respectively. $\square$
 
 > [!remark]- Remark 1.3 (What is used later)
 > For an abelian scheme $A/R$ over a mixed-characteristic ring, these identities apply to its characteristic-$p$ special fibre $A_0$. In Proposition 4.4 we use
 >
-> $
+> $$
 > (\ker V_{A_0}^n)^D\simeq\ker F_{A_0^\vee}^n
-> $
+> $$
 >
 > to identify the reduction of the Cartier dual of the finite étale quotient $A[p^n]/C_n(A)$. This does **not** require a principal polarization.
 
