@@ -558,22 +558,267 @@ Let $C_n(A)^\perp\subset A^\vee[p^n]$ be the annihilator of $C_n(A)$ under this 
 > [!remark]- Remark 4.5 (Ordinary versus near-ordinary)
 > The construction above uses an **ordinary reduction modulo $p$** and works at every level $n$. Canonical subgroups on larger Hasse-invariant neighborhoods require a separate canonical subgroup theorem, with restrictions on the Hasse height. We will distinguish these two settings when constructing the anticanonical tower.
 
-## 5. From ordinary to a neighborhood
+## 5. Construction of the Anticanonical Tower
 
-For a good-reduction point over a complete rank-one valued extension $L/\mathbf Q_p$, evaluate a local integral lift of the Hasse invariant, and normalize $v(p)=1$. In the relevant range $0\leq\epsilon<1$, the condition that the valuation is at most $\epsilon$ defines a neighborhood $\mathcal X(\epsilon)$ of the ordinary locus:
+We now follow [Caraiani, §4.2](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf). Fix a sufficiently small tame level $K^p$ and work over the ring of integers $\mathcal O_K$ of the completed cyclotomic extension $K=\widehat{\mathbf Q_p(\mu_{p^\infty})}$. Write $\mathfrak X(0)$ for the formal ordinary locus of the hyperspecial Siegel moduli space. It carries the universal ordinary abelian scheme $\mathcal A$, with its principal polarization and $K^p$-level structure.
+
+### 5.1 Canonical Frobenius lifts
+
+For $m\geq0$, let $\mathfrak X(m,0)$ be a **copy** of $\mathfrak X(0)$ as a formal scheme; the index $m$ will specify its map to level zero. The canonical subgroup $C_m(\mathcal A)$ is available at every level because the reduction is ordinary (put $C_0=0$). The quotient
 
 $$
-\mathcal X(0)\subseteq\mathcal X(\epsilon)\subseteq\mathcal X.
+\mathcal A\longmapsto \mathcal A/C_m(\mathcal A)
 $$
 
-Here $\mathcal X$ is the good-reduction locus from the preceding note. **A point in $\mathcal X(\epsilon)$ need not have ordinary special fibre** when $\epsilon>0$.
+is again an ordinary abelian scheme. Since $C_m$ is Lagrangian for the Weil pairing, the quotient carries the induced principal polarization; the $p$-power isogeny also transports the prime-to-$p$ level structure, with the usual normalization.
 
-> [!remark]- Remark 5.1 (What comes next?)
-> The canonical subgroup theorem applies when the Hasse invariant is sufficiently small. It constructs a finite flat subgroup lifting the kernel of relative Frobenius to characteristic zero. This gives the Frobenius-lift mechanism behind the anticanonical tower.
+Thus the moduli interpretation yields a map of formal schemes
+
+$$
+\boxed{\quad
+\widetilde F_m:\mathfrak X(m,0)\longrightarrow\mathfrak X(0,0),
+\qquad
+A\longmapsto A/C_m(A).
+\quad}
+$$
+
+By Proposition 4.2, its special fibre agrees, under the canonical Frobenius-twist identification, with the $m$-fold **relative Frobenius** of the ordinary Siegel moduli space.
+
+Moreover, the compatibility of canonical subgroups
+
+$$
+C_m(A)\subseteq C_{m+1}(A),
+\qquad
+C_{m+1}(A)/C_m(A)=C_1(A/C_m(A))
+$$
+
+gives transition maps between successive copies of the formal ordinary locus:
+
+$$
+\boxed{\qquad
+\cdots\longrightarrow\mathfrak X(2,0)
+\xrightarrow{\widetilde F}
+\mathfrak X(1,0)
+\xrightarrow{\widetilde F}
+\mathfrak X(0,0).
+\qquad}
+$$
+
+Every transition map reduces to relative Frobenius modulo $p$. **These are Frobenius lifts, not inclusion maps.**
+
+### 5.2 Anticanonical $\Gamma_0(p^m)$-levels
+
+Let $\mathcal X_{\Gamma_0(p^m)}(0)$ denote the inverse image of the ordinary good-reduction locus in the $\Gamma_0(p^m)$ generic-fibre cover. Its points parametrize pairs $(B,D)$ (with the fixed polarization and tame level data), where
+
+$$
+D\subset B[p^m]
+$$
+
+is a locally free rank-$g$ Lagrangian subgroup, of order $p^{mg}$.
+
+> [!definition] Definition 5.1 (Anticanonical locus)
+> The **anticanonical locus** $\mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}$ is the open-and-closed locus of pairs $(B,D)$ with ordinary good reduction such that
+>
+> $$
+> \boxed{\qquad D[p]\cap C_1(B)=\{0\}.\qquad}
+> $$
+>
+> Here the intersection is taken inside $B[p]$ on the integral ordinary model. The condition says that the chosen $p$-level points in the direction *transverse* to the canonical subgroup.
+
+Starting with an ordinary abelian scheme $A$, form
+
+$$
+B=A/C_m(A),\qquad D=A[p^m]/C_m(A)\subset B[p^m].
+$$
+
+The subgroup $D$ is finite étale of order $p^{mg}$ and totally isotropic. Proposition 4.3 gives $D[p]\cap C_1(B)=0$. We therefore obtain a map
+
+$$
+\Phi_m:\mathcal X(m,0)\longrightarrow
+\mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}},
+\qquad
+A\longmapsto
+\left(A/C_m(A),\ A[p^m]/C_m(A)\right),
+$$
+
+where $\mathcal X(m,0)$ is the adic generic fibre of $\mathfrak X(m,0)$.
+
+> [!proposition] Proposition 5.2 (Caraiani, Lemma 4.2.2)
+> For every $m\geq1$, $\Phi_m$ is a natural isomorphism
+>
+> $$
+> \boxed{\quad
+> \mathcal X(m,0)\xrightarrow{\sim}
+> \mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}.
+> \quad}
+> $$
+>
+> These isomorphisms are compatible with the Frobenius-lift transition maps on the left and the level-forgetting maps on the right.
+
+> [!proof]- Geometric argument
+> The construction above lands in the anticanonical locus by the transverse-intersection result in §4.
+>
+> In the opposite direction, consider the *quotient-by-level* map
+>
+> $$
+> \Psi_m:(B,D)\longmapsto B/D
+> $$
+>
+> with its induced principal polarization and tame level. This is a finite étale Hecke-type morphism on the characteristic-zero level spaces. The composite $\Psi_m\circ\Phi_m$ sends $A$ to
+>
+> $$
+> (A/C_m(A))/(A[p^m]/C_m(A))
+> \simeq A/A[p^m]\simeq A,
+> $$
+>
+> with the standard normalization of the resulting polarization and tame level. Thus $\Phi_m$ is a section of the étale map $\Psi_m$ and therefore an open immersion.
+>
+> To identify the image, start with an anticanonical pair $(B,D)$. The condition $D[p]\cap C_1(B)=0$ forces $D$ to be finite étale on the ordinary integral model. The isogeny $B\to B/D$ then has a complementary $p^m$-isogeny $B/D\to B$; its kernel reduces to the connected subgroup $\ker F^m$, so by uniqueness it is the level-$m$ canonical subgroup of $B/D$. This reconstructs $(B,D)$ from $A=B/D$ and proves that the image is precisely the anticanonical locus. For the full moduli-space argument, see Caraiani, Lemma 4.2.2. $\square$
+
+> [!remark]- Remark 5.3 (Two different quotient maps)
+> The Frobenius lift is defined by **quotienting by the canonical subgroup** $C_m(A)$. In contrast, $\Psi_m$ quotients an anticanonical point $(B,D)$ by its **chosen level subgroup** $D$. These two maps play different roles and should not be confused.
+
+Therefore the anticanonical $\Gamma_0$-tower is the **same inverse system**, after the finite-level identifications, as the canonical Frobenius-lift tower:
+
+$$
+\boxed{
+\{\mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}\}_m
+\ \cong\
+\{\mathcal X(m,0)\}_m.
+}
+$$
+
+## 6. Perfectoidness of the Frobenius Tower
+
+We now prove the algebraic mechanism underlying the ordinary case of [Scholze, Corollary III.2.19](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf). **The point is not merely that Frobenius is surjective modulo $p$, but that the completed direct limit satisfies an integral perfectoid criterion.**
+
+Let $K=\widehat{\mathbf Q_p(\mu_{p^\infty})}$ as above; it is a perfectoid field. Choose $\varpi\in\mathcal O_K$ with $\varpi^p/p\in\mathcal O_K^\times$. Frobenius on the base induces an isomorphism
+
+$$
+\varphi:\mathcal O_K/\varpi\xrightarrow{\sim}\mathcal O_K/p,
+\qquad \bar a\longmapsto\overline{a^p}.
+$$
+
+### 6.1 A local Frobenius-tower criterion
+
+Choose compatible affine formal charts of the inverse system in §5,
+
+$$
+\operatorname{Spf}R_m\subseteq\mathfrak X(m,0),
+\qquad
+R_0\longrightarrow R_1\longrightarrow R_2\longrightarrow\cdots,
+$$
+
+with each $R_m$ $p$-adically complete and flat over $\mathcal O_K$. Put
+
+$$
+\boxed{\qquad
+R_\infty:=\widehat{\varinjlim_m R_m}^{\,p}.
+\qquad}
+$$
+
+Here the hat means **$p$-adic completion after taking the direct limit**.
+
+> [!proposition] Proposition 6.1 (Perfectoidness of the ordinary Frobenius tower)
+> Assume the transition maps reduce modulo $p$ to the relative Frobenius of the ordinary smooth moduli chart over $\mathbf F_p$. Then absolute Frobenius induces an isomorphism
+>
+> $$
+> \boxed{\quad
+> \varphi:R_\infty/\varpi
+> \xrightarrow{\sim}R_\infty/p.
+> \quad}
+> $$
+>
+> Consequently, $R_\infty$ is an integral perfectoid $\mathcal O_K$-algebra, and $R_\infty[1/p]$ is a perfectoid $K$-algebra.
+
+> [!proof]- Proof
+> The formal ordinary locus is the base change of a smooth integral Siegel moduli scheme. On a suitable special-fibre affine chart, denote the $\mathbf F_p$-algebra by $B$. Modulo either $p$ or $\varpi$, the rings $R_m$ are identified locally with $B\otimes_{\mathbf F_p}\mathcal O_K/I$, and the transition maps act as
+>
+> $$
+> b\otimes c\longmapsto b^p\otimes c
+> \qquad (I=(p)\text{ or }(\varpi)).
+> $$
+>
+> The first factor is **relative Frobenius**; the coefficients in the second factor remain unchanged. Passing to the direct limit in the geometric factor gives the perfection
+>
+> $$
+> B^{\mathrm{perf}}
+> :=\varinjlim_{b\mapsto b^p} B.
+> $$
+>
+> Hence, after the completion (which does not alter these fixed reductions),
+>
+> $$
+> \begin{aligned}
+> R_\infty/\varpi
+> &\simeq B^{\mathrm{perf}}\otimes_{\mathbf F_p}\mathcal O_K/\varpi,\\
+> R_\infty/p
+> &\simeq B^{\mathrm{perf}}\otimes_{\mathbf F_p}\mathcal O_K/p.
+> \end{aligned}
+> $$
+>
+> Absolute Frobenius between these two rings is the tensor product of the bijective Frobenius on $B^{\mathrm{perf}}$ and the isomorphism
+> $\mathcal O_K/\varpi\xrightarrow{\sim}\mathcal O_K/p$. It is therefore an isomorphism.
+>
+> The ring $R_\infty$ is $p$-adically complete and flat in this standard formal setting. The displayed Frobenius isomorphism is the **integral perfectoid criterion**, so $R_\infty[1/p]$ is a perfectoid $K$-algebra. $\square$
+
+> [!example] Example 6.2 (A coordinate model)
+> For the tower
+>
+> $$
+> \mathcal O_K\langle T_0\rangle
+> \longrightarrow\mathcal O_K\langle T_1\rangle
+> \longrightarrow\cdots,\qquad
+> T_m\longmapsto T_{m+1}^p,
+> $$
+>
+> we have
+>
+> $$
+> R_\infty=
+> \mathcal O_K\langle T^{1/p^\infty}\rangle^{\wedge},
+> \qquad
+> R_\infty[1/p]=K\langle T^{1/p^\infty}\rangle,
+> $$
+>
+> the standard perfectoid closed disc with all $p$-power roots of the coordinate.
+
+### 6.2 The perfectoid anticanonical limit
+
+The affinoids $\operatorname{Spa}(R_\infty[1/p],R_\infty)$ from Proposition 6.1 glue along the compatible formal charts to a perfectoid space $\mathcal X_\infty$. Its underlying topology is the inverse limit of those at finite level, and its structure sheaf is obtained from the completed colimit; in Scholze's notation this is a **tilde-limit**:
+
+$$
+\mathcal X_\infty\sim\varprojlim_m\mathcal X(m,0).
+$$
+
+By Proposition 5.2 the finite-level spaces identify with the anticanonical loci, compatibly with transition maps. Therefore:
+
+> [!theorem] Theorem 6.3 (Perfectoid anticanonical tower over the ordinary locus)
+> There exists a perfectoid space $\mathcal X_{\Gamma_0(p^\infty)}(0)_{\mathrm{anti}}$ over $K$ such that
+>
+> $$
+> \boxed{\quad
+> \mathcal X_{\Gamma_0(p^\infty)}(0)_{\mathrm{anti}}
+> \sim\varprojlim_m
+> \mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}.
+> \quad}
+> $$
+>
+> It is obtained by passing to the generic fibre of the completed direct limit of the canonical Frobenius-lift tower.
+
+> [!remark]- Remark 6.4 (Beyond the ordinary locus)
+> The above argument concerns $\epsilon=0$. Scholze extends it to strict neighborhoods using the Hasse invariant: for $0\leq\epsilon<1/2$, transition maps agree with relative Frobenius modulo $p^{1-\epsilon}$, and the corresponding Frobenius isomorphism has the form
+>
+> $$
+> R_\infty/p^{(1-\epsilon)/p}
+> \xrightarrow{\ \varphi\ }R_\infty/p^{1-\epsilon}.
+> $$
+>
+> This is the overconvergent anticanonical tower, treated separately in Scholze §III.2 and Caraiani §4.3.
 
 ## References
 
-- P. Scholze, [*On torsion in the cohomology of locally symmetric varieties*](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), Chapter III, §III.2.
-- Y. Zhu, [*The Hodge–Tate period map on perfectoid Shimura variety*](https://yhzhumath.github.io/HT%20final.pdf), §3.3 (Frobenius and Verschiebung), §3.5 (translation-invariant differentials), §3.6 (Hasse invariant and iterated Frobenius–Verschiebung), and §§3.7–3.9; A. Caraiani, [*Perfectoid Shimura Varieties*](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf), §4.2.
+- P. Scholze, [*On torsion in the cohomology of locally symmetric varieties*](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), Chapter III, §III.2, especially Corollary III.2.19.
+- Y. Zhu, [*The Hodge–Tate period map on perfectoid Shimura variety*](https://yhzhumath.github.io/HT%20final.pdf), §3.3 (Frobenius and Verschiebung), §3.5 (translation-invariant differentials), §3.6 (Hasse invariant and iterated Frobenius–Verschiebung), and §§3.7–3.9; A. Caraiani, [*Perfectoid Shimura Varieties*](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf), §§4.2–4.3, especially Lemma 4.2.2.
 
 [[perfectoid-siegel-variety/anticanonical-tower/index|Back to Anticanonical Tower]]
