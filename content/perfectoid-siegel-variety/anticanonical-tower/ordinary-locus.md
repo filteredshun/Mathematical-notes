@@ -621,18 +621,41 @@ Write $\mathcal L_A=\det\omega_{A_0/S}$ and similarly $\mathcal L_{A^\vee}=\det\
 > Let $G=A_0[p^\infty]$, and let $G^D=A_0^\vee[p^\infty]$ be its Cartier dual. Evaluate the **contravariant Dieudonné crystal** of $G$ on $S$:
 >
 > $$
-> \mathcal E=\mathbb D(G)_S,
-> \qquad \operatorname{rk}\mathcal E=2g,
+> \mathcal E=\mathbb D(G)_S,\qquad \operatorname{rk}\mathcal E=2g.
 > $$
 >
-> with Frobenius and Verschiebung
+> **Why can we identify this with de Rham cohomology?** This is a special fact about $G=A_0[p^\infty]$ coming from the **abelian scheme** $\pi:A_0\to S$. The crystalline Dieudonné comparison theorem (Messing; Berthelot–Breen–Messing) identifies the crystals
 >
 > $$
-> F:\mathcal E^{(p)}\to\mathcal E,
-> \qquad V:\mathcal E\to\mathcal E^{(p)}.
+> \mathbb D(A_0[p^\infty])
+> \simeq R^1\pi_{\mathrm{cris},*}\mathcal O_{A_0/\mathrm{cris}}.
 > $$
 >
-> **(1) Two complementary-rank filtrations.** The Hodge filtration gives a rank-$g$ subbundle $\mathcal F=\omega_G\subset\mathcal E$, and an exact sequence
+> Evaluating on the trivial PD thickening $S\hookrightarrow S$ and using crystalline–de Rham comparison for the smooth proper morphism $A_0/S$ gives
+>
+> $$
+> \boxed{\quad
+> \mathcal E=\mathbb D(G)_S
+> \xrightarrow{\sim}H^1_{\mathrm{dR}}(A_0/S).\quad}
+> $$
+>
+> **For a general $p$-divisible group $G$, $\mathbb D(G)$ need not be the cohomology of an abelian scheme.** Conversely, smooth proper reduction alone is not the reason for the identification: the essential input is that $G$ is the $p$-divisible group of an abelian scheme. Because $A/R$ is a smooth proper lift, de Rham base change also gives $H^1_{\mathrm{dR}}(A_0/S)\simeq H^1_{\mathrm{dR}}(A/R)\otimes_R R/p$; this is a separate comparison, not the definition of $\mathbb D(G)$.
+>
+> The crystal carries Frobenius and Verschiebung, expressed on $\mathcal E$ as
+>
+> $$
+> F:\mathcal E^{(p)}\to\mathcal E,\qquad
+> V:\mathcal E\to\mathcal E^{(p)}.
+> $$
+>
+> Under the comparison with $H^1_{\mathrm{dR}}(A_0/S)$, these agree respectively with the contravariant pullbacks induced by the geometric relative Frobenius $F_{A_0}:A_0\to A_0^{(p)}$ and Verschiebung $V_{A_0}:A_0^{(p)}\to A_0$. In particular,
+>
+> $$
+> V=V_{A_0}^*:H^1_{\mathrm{dR}}(A_0/S)
+> \longrightarrow H^1_{\mathrm{dR}}(A_0^{(p)}/S).
+> $$
+>
+> > **(1) Two complementary-rank filtrations.** The Hodge filtration gives a rank-$g$ subbundle $\mathcal F=\omega_G\subset\mathcal E$, and an exact sequence
 >
 > $$
 > 0\longrightarrow\mathcal F\longrightarrow\mathcal E
