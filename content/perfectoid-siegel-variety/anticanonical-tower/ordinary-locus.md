@@ -1129,7 +1129,105 @@ $$
 \mathcal A\longmapsto \mathcal A/C_m(\mathcal A)
 $$
 
-is again an ordinary abelian scheme. Since $C_m$ is Lagrangian for the Weil pairing, the quotient carries the induced principal polarization; the $p$-power isogeny also transports the prime-to-$p$ level structure, with the usual normalization.
+is again an ordinary abelian scheme by Proposition 4.2. The following result explains why the quotient also carries the required **polarization and tame level**; the essential input is that the canonical subgroup is **Lagrangian**.
+
+> [!proposition] Proposition 5.1 (Polarization and prime-to-$p$ level on the canonical quotient)
+> Let $(A,\lambda,\eta^p)/R$ be a principally polarized abelian scheme with sufficiently small tame level $K^p$ and ordinary reduction. For $m\geq1$, put
+>
+> $
+> n=p^m,\qquad C=C_m(A),\qquad
+> q:A\longrightarrow B:=A/C.
+> $
+>
+> Since $C$ is **Lagrangian** for $e_{\lambda,n}$ (Proposition 4.4), there is a **unique principal polarization** $\lambda_B:B\xrightarrow{\sim}B^\vee$ satisfying
+>
+> $
+> \boxed{\quad q^\vee\lambda_B q=n\lambda.\quad}
+> $
+>
+> Moreover, $q$ is a $p$-power isogeny and induces $T^pq:T^pA\xrightarrow{\sim}T^pB$. Transport along this isomorphism defines a $K^p$-level structure
+>
+> $
+> \boxed{\quad \eta_B^p=(T^pq)_*\eta_A^p.\quad}
+> $
+>
+> It is compatible with $\lambda_B$. More explicitly, for the full tame level $(\eta_N,t_N)$ of Definition 2.3 in the preceding Siegel moduli note, where $(N,p)=1$, the transported data are
+>
+> $
+> \boxed{\quad
+> \eta_{N,B}=\eta_N\circ(q|_{A[N]})^{-1},
+> \qquad t_{N,B}=[n]^{-1}\circ t_N.
+> \quad}
+> $
+>
+> Thus $(B,\lambda_B,\eta_B^p)$ belongs to the **same Siegel moduli problem**. This construction is functorial and compatible with base change.
+
+> [!proof]- Proof: polarization descent and level transport
+> **(1) Constructing the polarization.** Let $C^\perp\subseteq A^\vee[n]$ denote the annihilator of $C$ under the Weil pairing. Proposition 4.4 gives $C^\perp=\lambda(C)$. Consider
+>
+> $
+> \beta=q\circ\lambda^{-1}\circ q^\vee:
+> B^\vee\longrightarrow B.
+> $
+>
+> For $x\in C$ and $y\in B^\vee[n]$, functoriality of the Weil pairing yields
+>
+> $
+> e_{A,n}(x,q^\vee y)=e_{B,n}(qx,y)=1.
+> $
+>
+> Thus $q^\vee(B^\vee[n])\subseteq C^\perp=\lambda(C)$. The image and $\lambda(C)$ both have rank $n^g$: indeed $\ker q^\vee$ has rank $n^g$ and lies inside $B^\vee[n]$, which has rank $n^{2g}$. The inclusion is therefore an equality. Consequently $\beta(B^\vee[n])=q(C)=0$.
+>
+> The fppf-exact sequence for multiplication by $n$ now implies that $\beta$ factors **uniquely** through $[n]_{B^\vee}$:
+>
+> $
+> \beta=\mu\circ[n]_{B^\vee},\qquad
+> \mu:B^\vee\longrightarrow B.
+> $
+>
+> This is the meaning of the notation $\mu=(1/n)q\lambda^{-1}q^\vee$; no division by $n$ in $R$ is involved. Since $\deg q=n^g$ and $\lambda$ is principal,
+>
+> $
+> \deg\beta=n^{2g}=\deg[n]_{B^\vee},
+> \qquad \deg\mu=1.
+> $
+>
+> Hence $\mu$ is an isomorphism. Set $\lambda_B=\mu^{-1}$. In the rational isogeny category, its defining identity gives $q^\vee\lambda_B q=n\lambda$; hence this equality holds for integral morphisms. The usual descent criterion for polarizations along isogenies shows that $\lambda_B$ is a polarization, since its pullback is the polarization $n\lambda$. As $\lambda_B$ is an isomorphism, it is **principal**. The pullback identity also proves uniqueness.
+>
+> **(2) Transporting the prime-to-$p$ level.** Because $\ker q$ is killed by $n=p^m$, for every $N$ prime to $p$ the induced map
+>
+> $
+> q_N:A[N]\xrightarrow{\sim}B[N]
+> $
+>
+> is an isomorphism, and likewise for all prime-to-$p$ Tate modules. However, $q_N$ is a *similitude*, not necessarily a symplectic isometry. From the polarization pullback identity, Weil-pairing functoriality gives
+>
+> $
+> \boxed{\quad e_{\lambda_B,N}(q_Nx,q_Ny)
+> =e_{\lambda,N}(x,y)^n.\quad}
+> $
+>
+> Consequently a $K^p$-orbit of symplectic-similitude frames transports along $T^pq$ to a valid $K^p$-orbit on $B$. In the full level-$N$ convention, set
+>
+> $
+> \eta_{N,B}=\eta_N\circ q_N^{-1},
+> \qquad t_{N,B}=[n]^{-1}\circ t_N
+> \quad\text{on }\mu_N.
+> $
+>
+> Here $[n]^{-1}$ exists on $\mathbf Z/N\mathbf Z$ since $(n,N)=1$. For $x,y\in A[N]$, their compatibility is checked explicitly:
+>
+> $
+> \begin{aligned}
+> t_{N,B}(e_{\lambda_B,N}(q_Nx,q_Ny))
+> &=n^{-1}t_N(e_{\lambda,N}(x,y)^n)\\
+> &=t_N(e_{\lambda,N}(x,y))\\
+> &=\psi_N(\eta_N(x),\eta_N(y))\\
+> &=\psi_N(\eta_{N,B}(q_Nx),\eta_{N,B}(q_Ny)).
+> \end{aligned}
+> $
+>
+> Thus the cyclotomic trivialization $t_N$ must be **renormalized** if we transport $\eta_N$ by $q_N$. Both the polarization and level constructions commute with base change; ordinarity of $B$ follows separately from Proposition 4.2. $\square$
 
 Thus the moduli interpretation yields a map of formal schemes
 
@@ -1175,7 +1273,7 @@ $$
 
 is a locally free rank-$g$ Lagrangian subgroup, of order $p^{mg}$.
 
-> [!definition] Definition 5.1 (Anticanonical locus)
+> [!definition] Definition 5.2 (Anticanonical locus)
 > The **anticanonical locus** $\mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}$ is the open-and-closed locus of pairs $(B,D)$ with ordinary good reduction such that
 >
 > $$
@@ -1202,7 +1300,7 @@ $$
 
 where $\mathcal X(m,0)$ is the adic generic fibre of $\mathfrak X(m,0)$.
 
-> [!proposition] Proposition 5.2 (Caraiani, Lemma 4.2.2)
+> [!proposition] Proposition 5.3 (Caraiani, Lemma 4.2.2)
 > For every $m\geq1$, $\Phi_m$ is a natural isomorphism
 >
 > $$
@@ -1234,7 +1332,7 @@ where $\mathcal X(m,0)$ is the adic generic fibre of $\mathfrak X(m,0)$.
 >
 > To identify the image, start with an anticanonical pair $(B,D)$. The condition $D[p]\cap C_1(B)=0$ forces $D$ to be finite étale on the ordinary integral model. The isogeny $B\to B/D$ then has a complementary $p^m$-isogeny $B/D\to B$; its kernel reduces to the connected subgroup $\ker F^m$, so by uniqueness it is the level-$m$ canonical subgroup of $B/D$. This reconstructs $(B,D)$ from $A=B/D$ and proves that the image is precisely the anticanonical locus. For the full moduli-space argument, see Caraiani, Lemma 4.2.2. $\square$
 
-> [!remark]- Remark 5.3 (Two different quotient maps)
+> [!remark]- Remark 5.4 (Two different quotient maps)
 > The Frobenius lift is defined by **quotienting by the canonical subgroup** $C_m(A)$. In contrast, $\Psi_m$ quotients an anticanonical point $(B,D)$ by its **chosen level subgroup** $D$. These two maps play different roles and should not be confused.
 
 Therefore the anticanonical $\Gamma_0$-tower is the **same inverse system**, after the finite-level identifications, as the canonical Frobenius-lift tower:
@@ -1350,7 +1448,7 @@ $$
 \mathcal X_\infty\sim\varprojlim_m\mathcal X(m,0).
 $$
 
-By Proposition 5.2 the finite-level spaces identify with the anticanonical loci, compatibly with transition maps. Therefore:
+By Proposition 5.3 the finite-level spaces identify with the anticanonical loci, compatibly with transition maps. Therefore:
 
 > [!theorem] Theorem 6.3 (Perfectoid anticanonical tower over the ordinary locus)
 > There exists a perfectoid space $\mathcal X_{\Gamma_0(p^\infty)}(0)_{\mathrm{anti}}$ over $K$ such that
