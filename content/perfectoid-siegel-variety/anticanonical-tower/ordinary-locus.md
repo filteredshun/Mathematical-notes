@@ -195,34 +195,30 @@ $$
 \omega_{A'/S'}\simeq g^*\omega_{A/S}.
 $$
 
-### Frobenius twist of a vector bundle
+#### Frobenius twist of a vector bundle
 
 Suppose $S$ is an $\mathbf F_p$-scheme. Its **absolute Frobenius** $\operatorname{Fr}_S:S\to S$ is the identity on points and sends a local function $b$ to $b^p$. For **any vector bundle** $\mathcal V$ on $S$, define its *Frobenius twist* by
 
-$
+$$
 \boxed{\quad\mathcal V^{(p)}:=\operatorname{Fr}_S^*\mathcal V.\quad}
-$
+$$
 
 This means ordinary pullback along the absolute Frobenius; it is **not** the $p$-fold tensor product of $\mathcal V$. If $U=\operatorname{Spec}B\subset S$ and $\mathcal V|_U=\widetilde M$, then
 
-$
+$$
 M^{(p)}=M\otimes_{B,\operatorname{Fr}_B}B,
 \qquad \operatorname{Fr}_B(b)=b^p.
-$
+$$
 
 If $\mathcal V$ is glued from trivial bundles by transition matrices $g_{ij}=(g_{ij,ab})$, then $\mathcal V^{(p)}$ is glued by the matrices
 
-$
+$$
 g_{ij}^{(p)}=(g_{ij,ab}^{\,p})_{a,b}.
-$
+$$
 
 Here the notation means **entrywise** $p$th powers, not the matrix power $g_{ij}^{p}$. In general, there is no canonical isomorphism $\mathcal V\simeq\mathcal V^{(p)}$; nor is $\operatorname{Fr}_S$ necessarily an automorphism when $S$ is nonperfect or nonreduced.
 
-For a **line bundle** $\mathcal L$, however, the Frobenius pullback and the $p$th tensor power have the same transition functions. Thus
-
-$
-\boxed{\quad\mathcal L^{(p)}\simeq\mathcal L^{\otimes p}.\quad}
-$
+For a **line bundle**, the Frobenius pullback *does* identify canonically with its $p$th tensor power; the transition-function proof appears immediately below.
 
 This notation is also used below for the Hodge and Dieudonné bundles: $\mathcal F^{(p)}=\operatorname{Fr}_S^*\mathcal F$ and $\mathcal E^{(p)}=\operatorname{Fr}_S^*\mathcal E$.
 
