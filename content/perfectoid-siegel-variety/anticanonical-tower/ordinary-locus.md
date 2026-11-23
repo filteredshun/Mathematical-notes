@@ -604,134 +604,134 @@ Write $\mathcal L_A=\det\omega_{A_0/S}$ and similarly $\mathcal L_{A^\vee}=\det\
 > [!lemma] Duality of the Hasse invariant (Fargues; Bijakowski, Theorem 2.1.4)
 > There is a natural isomorphism of invertible sheaves on $S$,
 >
-> $
+> $$
 > \boxed{\quad \mathcal L_A^{\otimes(p-1)}
 > \xrightarrow{\ \sim\ }
 > \mathcal L_{A^\vee}^{\otimes(p-1)},\quad}
-> $
+> $$
 >
 > under which $\operatorname{Ha}(A_0)$ corresponds to $\operatorname{Ha}(A_0^\vee)$. In particular, the two sections generate the same ideal after local trivialization, and
 >
-> $
+> $$
 > \boxed{\quad A_0\text{ is ordinary}
 > \quad\Longleftrightarrow\quad A_0^\vee\text{ is ordinary}.\quad}
-> $
+> $$
 
 > [!proof]- Proof using the Hodge and conjugate filtrations
 > Let $G=A_0[p^\infty]$, and let $G^D=A_0^\vee[p^\infty]$ be its Cartier dual. Evaluate the **contravariant Dieudonné crystal** of $G$ on $S$:
 >
-> $
+> $$
 > \mathcal E=\mathbb D(G)_S,
 > \qquad \operatorname{rk}\mathcal E=2g,
-> $
+> $$
 >
 > with Frobenius and Verschiebung
 >
-> $
+> $$
 > F:\mathcal E^{(p)}\to\mathcal E,
 > \qquad V:\mathcal E\to\mathcal E^{(p)}.
-> $
+> $$
 >
 > **(1) Two complementary-rank filtrations.** The Hodge filtration gives a rank-$g$ subbundle $\mathcal F=\omega_G\subset\mathcal E$, and an exact sequence
 >
-> $
+> $$
 > 0\longrightarrow\mathcal F\longrightarrow\mathcal E
 > \longrightarrow\omega_{G^D}^{\vee}\longrightarrow0.
-> $
+> $$
 >
 > Define the *conjugate filtration* $\widetilde{\mathcal F}:=\ker V=\operatorname{im}F\subset\mathcal E$, also of rank $g$. Standard Dieudonné identities yield **isomorphisms of vector bundles**
 >
-> $
+> $$
 > \begin{aligned}
 > \overline V:\mathcal E/\widetilde{\mathcal F}
 > &\xrightarrow{\ \sim\ }\mathcal F^{(p)},\\
 > \overline F:(\mathcal E/\mathcal F)^{(p)}
 > &\xrightarrow{\ \sim\ }\widetilde{\mathcal F}.
 > \end{aligned}
-> $
+> $$
 >
 > These identifications are essential: $\widetilde{\mathcal F}$ is not the Hodge subbundle, and the two subbundles need not be transverse.
 >
 > **(2) The Hasse map of $G$.** By definition, the Verschiebung induces
 >
-> $
+> $$
 > V|_{\mathcal F}:\mathcal F\longrightarrow\mathcal F^{(p)}.
-> $
+> $$
 >
 > After using $\overline V$, this is exactly the composite
 >
-> $
+> $$
 > \boxed{\quad
 > \mathcal F\hookrightarrow\mathcal E
 > \twoheadrightarrow\mathcal E/\widetilde{\mathcal F}.
 > \quad}
-> $
+> $$
 >
 > Its determinant is $\operatorname{Ha}(G)$, viewed as a section of
 >
-> $
+> $$
 > \det(\mathcal E/\widetilde{\mathcal F})\otimes
 > (\det\mathcal F)^{-1}
 > \simeq(\det\mathcal F)^{\otimes(p-1)}.
-> $
+> $$
 >
 > **(3) The Hasse map of the dual.** The Dieudonné module of $G^D$ is $\mathcal E^\vee$, with Hodge subbundle
 >
-> $
+> $$
 > \omega_{G^D}\simeq(\mathcal E/\mathcal F)^\vee
 > \subset\mathcal E^\vee.
-> $
+> $$
 >
 > Cartier duality exchanges Frobenius and Verschiebung: the Verschiebung of $\mathcal E^\vee$ is the transpose $F^\vee$ of the original Frobenius. Dualizing its Hasse map thus gives
 >
-> $
+> $$
 > F:(\mathcal E/\mathcal F)^{(p)}
 > \longrightarrow\mathcal E/\mathcal F.
-> $
+> $$
 >
 > By $\overline F$, this is the projection
 >
-> $
+> $$
 > \boxed{\quad
 > \widetilde{\mathcal F}\hookrightarrow\mathcal E
 > \twoheadrightarrow\mathcal E/\mathcal F.
 > \quad}
-> $
+> $$
 >
 > Taking its determinant (equivalently, the determinant of the dual Hasse map) gives $\operatorname{Ha}(G^D)$ in the line
 >
-> $
+> $$
 > \det(\mathcal E/\mathcal F)\otimes
 > (\det\widetilde{\mathcal F})^{-1}
 > \simeq(\det\omega_{G^D})^{\otimes(p-1)}.
-> $
+> $$
 >
 > **(4) Why the two determinants agree.** The two determinant lines above are both naturally isomorphic to
 >
-> $
+> $$
 > \mathscr D:=
 > \det\mathcal E\otimes
 > (\det\mathcal F)^{-1}\otimes
 > (\det\widetilde{\mathcal F})^{-1}.
-> $
+> $$
 >
 > Under these identifications the determinants in (2) and (3) both become the determinant of the single map
 >
-> $
+> $$
 > \boxed{\quad
 > \mathcal F\oplus\widetilde{\mathcal F}
 > \longrightarrow\mathcal E,\qquad(x,y)\longmapsto x+y.
 > \quad}
-> $
+> $$
 >
 > More concretely, if $f_1,\ldots,f_g$ and $t_1,\ldots,t_g$ are local bases of $\mathcal F$ and $\widetilde{\mathcal F}$, the common section of $\mathscr D$ is represented (with the natural determinant conventions) by
 >
-> $
+> $$
 > (f_1\wedge\cdots\wedge f_g\wedge
 > t_1\wedge\cdots\wedge t_g)
 > \otimes(f_1\wedge\cdots\wedge f_g)^{-1}
 > \otimes(t_1\wedge\cdots\wedge t_g)^{-1}.
-> $
+> $$
 >
 > In particular, the two Hasse maps are invertible **precisely when** $\mathcal F$ and $\widetilde{\mathcal F}$ are transverse. The determinant-line identification makes their Hasse invariants equal, not merely simultaneously nonzero. This is [Bijakowski, Proposition 2.1.3 and Theorem 2.1.4](https://stephane-bijakowski.perso.math.cnrs.fr/filtration_dual.pdf), §2.1. $\square$
 
@@ -739,10 +739,10 @@ We therefore know **over the original mixed-characteristic base $R$** that $A^\v
 
 For a *principally polarized* Siegel abelian scheme there is also a shorter check. A principal polarization $\lambda:A\xrightarrow{\sim}A^\vee$ identifies their Hodge bundles on $S$. If $M$, $M^\vee$ are the local matrices of the two Hasse maps and $P$ is the matrix of $\lambda_0^*:\omega_{A_0^\vee}\to\omega_{A_0}$, naturality of Verschiebung gives
 
-$
+$$
 MP=P^{(p)}M^\vee,\qquad
 \det M^\vee=(\det P)^{1-p}\det M.
-$
+$$
 
 Since $P$ is invertible, this already proves simultaneous ordinarity; the Dieudonné argument above shows the stronger duality statement **without** assuming a polarization.
 
