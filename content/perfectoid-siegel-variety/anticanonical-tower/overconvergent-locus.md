@@ -22,9 +22,9 @@ The first section follows **Yihang Zhu, [*The Hodge–Tate Period Map on Perfect
 >
 > The classical intuition comes from the formal-group $p$-series
 >
-> $ 
+> $$
 > [p](T)=pT+aT^p+\cdots+uT^{p^2}+\cdots,
-> $
+> $$
 >
 > where $a\bmod p$ encodes the Hasse invariant (after choosing a coordinate). Under the smallness bound, a distinct slope of its Newton polygon singles out the subgroup of order $p$ consisting of the torsion points closest to the identity. See also Lubin, [*Canonicity of a Cyclic Subgroup of an Elliptic Curve*](https://archive.numdam.org/item/AST_1979__63__165_0/) (1979).
 >
