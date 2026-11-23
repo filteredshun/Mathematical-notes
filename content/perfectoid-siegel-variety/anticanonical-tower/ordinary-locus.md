@@ -1263,79 +1263,140 @@ $$
 
 Every transition map reduces to relative Frobenius modulo $p$. **These are Frobenius lifts, not inclusion maps.**
 
-### 5.2 Anticanonical $\Gamma_0(p^m)$-levels
+### 5.2 The $\Gamma_0(p^m)$-cover and the anticanonical locus
 
-Let $\mathcal X_{\Gamma_0(p^m)}(0)$ denote the inverse image of the ordinary good-reduction locus in the $\Gamma_0(p^m)$ generic-fibre cover. Its points parametrize pairs $(B,D)$ (with the fixed polarization and tame level data), where
+We now distinguish **the finite-level adic space**, **its ordinary restriction**, and **its anticanonical part**. The last is defined as the *image of a morphism of adic spaces*, not merely as a collection of geometric points. This follows [Scholze, Theorem III.2.15 and the definition immediately after its proof](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), and [Caraiani, Lemma 4.2.2](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf).
 
-$$
-D\subset B[p^m]
-$$
-
-is a locally free rank-$g$ Lagrangian subgroup, of order $p^{mg}$.
-
-> [!definition] Definition 5.2 (Anticanonical locus)
-> The **anticanonical locus** $\mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}$ is the open-and-closed locus of pairs $(B,D)$ with ordinary good reduction such that
->
-> $$
-> \boxed{\qquad D[p]\cap C_1(B)=\{0\}.\qquad}
-> $$
->
-> Here the intersection is taken inside $B[p]$ on the integral ordinary model. The condition says that the chosen $p$-level points in the direction *transverse* to the canonical subgroup.
-
-Starting with an ordinary abelian scheme $A$, form
+**(1) The $\Gamma_0(p^m)$-cover and ordinary inverse image.** Fix $K^p$ as before. Denote by $\mathcal Y_m$ the analytification of the characteristic-zero Siegel moduli space with $K^p\Gamma_0(p^m)$-level, base changed to our chosen completed cyclotomic field $K$. Forgetting the $p$-level defines a finite étale morphism
 
 $$
-B=A/C_m(A),\qquad D=A[p^m]/C_m(A)\subset B[p^m].
+\pi_m:\mathcal Y_m\longrightarrow
+\mathcal Y_0:=(X_{K^pK_p,K})^{\mathrm{ad}}.
 $$
 
-The subgroup $D$ is finite étale of order $p^{mg}$ and totally isotropic. Proposition 4.3 gives $D[p]\cap C_1(B)=0$. We therefore obtain a map
+The level-$m$ space classifies, on geometric characteristic-zero points, tuples $(B,\lambda_B,\eta_B^p,D)$, where $D\subset B[p^m]$ is a **Lagrangian direct summand of standard $\Gamma_0(p^m)$-type** (étale-locally of type $(\mathbf Z/p^m\mathbf Z)^g$). The tame polarization and cyclotomic conventions are those fixed in the preceding Siegel moduli note. This pointwise description is an explanation of the already constructed adic moduli space, not its definition.
+
+Let $\mathcal X=\mathfrak X_\eta\subset\mathcal Y_0$ be the hyperspecial **good-reduction locus**, and $\mathcal X(0)=(\mathfrak X(0))_\eta$ its **ordinary** open subspace from §3. Set
 
 $$
-\Phi_m:\mathcal X(m,0)\longrightarrow
-\mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}},
+\mathcal X_{\Gamma_0(p^m)}
+:=\mathcal Y_m\times_{\mathcal Y_0}\mathcal X,
 \qquad
-A\longmapsto
-\left(A/C_m(A),\ A[p^m]/C_m(A)\right),
+\boxed{\quad
+\mathcal X_{\Gamma_0(p^m)}(0)
+:=\mathcal Y_m\times_{\mathcal Y_0}\mathcal X(0).
+\quad}
 $$
 
-where $\mathcal X(m,0)$ is the adic generic fibre of $\mathfrak X(m,0)$.
+Thus the notation $(0)$ means *ordinary good reduction of the underlying abelian scheme*; no anticanonical condition has been imposed on $D$ yet. These are definitions by **fibre products of adic spaces**, not by geometric-point sets.
 
-> [!proposition] Proposition 5.3 (Caraiani, Lemma 4.2.2)
-> For every $m\geq1$, $\Phi_m$ is a natural isomorphism
+**(2) The canonical-quotient map.** Let $\mathcal X(m,0)$ be the adic generic fibre of the $m$th copy of the formal ordinary locus constructed in §5.1. The universal canonical subgroup produces a morphism
+
+$$
+\boxed{
+\begin{aligned}
+\Phi_m:\mathcal X(m,0)&\longrightarrow
+\mathcal X_{\Gamma_0(p^m)},\\
+(A,\lambda,\eta^p)&\longmapsto
+\left(B=A/C_m(A),\;
+D=A[p^m]/C_m(A)\subset B[p^m]\right).
+\end{aligned}}
+$$
+
+The quotient $B$ carries the **induced principal polarization and transported $K^p$-level** from Proposition 5.1. The subgroup $D$ is a Lagrangian of rank $p^{mg}$: it is the finite étale quotient from Proposition 4.1, and its isotropy follows from the quotient-polarization construction. By Proposition 4.2, $B$ has ordinary reduction, so $\Phi_m$ actually lands in $\mathcal X_{\Gamma_0(p^m)}(0)$.
+
+> [!definition] Definition 5.2 (Anticanonical locus: Scholze's image definition)
+> The **anticanonical ordinary locus** is the image of the canonical-quotient morphism:
 >
 > $$
 > \boxed{\quad
-> \mathcal X(m,0)\xrightarrow{\sim}
-> \mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}.
+> \mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}
+> :=\operatorname{im}\!\left(
+> \Phi_m:\mathcal X(m,0)\longrightarrow
+> \mathcal X_{\Gamma_0(p^m)}(0)
+> \right).
 > \quad}
 > $$
 >
-> These isomorphisms are compatible with the Frobenius-lift transition maps on the left and the level-forgetting maps on the right.
+> Here *image* means the open adic subspace determined by $\Phi_m$, which is an **open immersion** by the theorem below. This definition does not rely on reconstructing an adic space from its valued-field points.
 
-> [!proof]- Geometric argument
-> The construction above lands in the anticanonical locus by the transverse-intersection result in §4.
+> [!proposition] Proposition 5.3 (Scholze III.2.15; Caraiani, Lemma 4.2.2)
+> For every $m\ge1$:
 >
-> In the opposite direction, consider the *quotient-by-level* map
+> 1. The morphism $\Phi_m$ is an **open immersion** and induces an isomorphism of adic spaces
+>
+>    $$
+>    \boxed{\quad
+>    \mathcal X(m,0)
+>    \xrightarrow{\sim}
+>    \mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}.
+>    \quad}
+>    $$
+>
+> 2. Its image is **open and closed** in $\mathcal X_{\Gamma_0(p^m)}(0)$.
+>
+> 3. On the ordinary integral model, let $C_1(B)\subset B[p]$ be the canonical subgroup, and let $D\subset B[p^m]$ denote the chosen universal level subgroup (interpreted on the relevant integral chart). The image is **characterized** by
+>
+>    $$
+>    \boxed{\qquad D[p]\cap C_1(B)=\{0\}.\qquad}
+>    $$
+>
+> The isomorphisms in (1) are compatible with the transition maps in the anticanonical tower.
+
+> [!proof]- Proof and relation with Caraiani's argument
+> The assertion that $\Phi_m$ is an **open immersion** is [Scholze, Theorem III.2.15(ii)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf). The same theorem, especially part (iii) and its cartesian diagrams, identifies the image as the **open-and-closed** locus on which the chosen $p$-level is transverse to the (weak) canonical subgroup. In the ordinary case the weak canonical subgroup is exactly $C_1(B)$ from §4. This proves all three claims without attempting to recover the structure sheaf from geometric points.
+>
+> Here is the geometric mechanism behind Caraiani's Lemma 4.2.2. By Proposition 4.3, the étale subgroup
 >
 > $$
-> \Psi_m:(B,D)\longmapsto B/D
+> D=A[p^m]/C_m(A)\subset
+> \bigl(A/C_m(A)\bigr)[p^m]
 > $$
 >
-> with its induced principal polarization and tame level. This is a finite étale Hecke-type morphism on the characteristic-zero level spaces. The composite $\Psi_m\circ\Phi_m$ sends $A$ to
+> satisfies $D[p]\cap C_1(B)=0$. In the reverse direction, an anticanonical subgroup is transverse to the connected Frobenius direction; quotienting by this *chosen level subgroup* gives the complementary isogeny used to recover the canonical quotient description.
+>
+> More precisely, Caraiani also considers the **quotient-by-level** morphism
+>
+> $$
+> \Psi_m:(B,D)\longmapsto B/D,
+> $$
+>
+> which is étale in characteristic zero. The composite $\Psi_m\circ\Phi_m$ is the natural forgetful/open map after the appropriate normalization of the principal polarization and tame level; on the underlying abelian schemes it is
 >
 > $$
 > (A/C_m(A))/(A[p^m]/C_m(A))
-> \simeq A/A[p^m]\simeq A,
+> \simeq A/A[p^m]\simeq A.
 > $$
 >
-> with the standard normalization of the resulting polarization and tame level. Thus $\Phi_m$ is a section of the étale map $\Psi_m$ and therefore an open immersion.
+> The final identification **must be understood with the induced moduli data**; it is not enough to identify the bare abelian schemes while ignoring the tame-level normalization. As the composite is an open immersion and $\Psi_m$ is étale, $\Phi_m$ is an open immersion (locally it is a section of the pullback of the étale morphism). Scholze's theorem supplies the full identification of the image and its open-and-closed property. $\square$
+
+> [!remark]- Remark 5.4 (What is a definition, and what is a theorem?)
+> The expression
 >
-> To identify the image, start with an anticanonical pair $(B,D)$. The condition $D[p]\cap C_1(B)=0$ forces $D$ to be finite étale on the ordinary integral model. The isogeny $B\to B/D$ then has a complementary $p^m$-isogeny $B/D\to B$; its kernel reduces to the connected subgroup $\ker F^m$, so by uniqueness it is the level-$m$ canonical subgroup of $B/D$. This reconstructs $(B,D)$ from $A=B/D$ and proves that the image is precisely the anticanonical locus. For the full moduli-space argument, see Caraiani, Lemma 4.2.2. $\square$
+> $$
+> \mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}}
+> =\operatorname{im}(\Phi_m)
+> $$
+>
+> is the **definition**. The equation $D[p]\cap C_1(B)=0$ is the **geometric characterization supplied by the theorem**. This distinction matters: matching geometric points alone would not define the whole adic subspace.
+>
+> For later use in the separate *Overconvergent Locus* note, Scholze makes the more general definitions for $0\le\epsilon<1/2$:
+>
+> $$
+> \mathcal X_{K_p}(\epsilon)
+> :=\pi_{K_p}^{-1}\bigl(\mathcal X(\epsilon)\bigr),
+> \qquad
+> \mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}
+> :=\operatorname{im}\!\left(
+> \mathcal X(p^{-m}\epsilon)
+> \xrightarrow{\ \Phi_{m,\epsilon}\ }
+> \mathcal X_{\Gamma_0(p^m)}
+> \right).
+> $$
+>
+> In that setting $C_1$ is a **weak canonical subgroup** on $\mathcal X(\epsilon)$. Scholze shows that this image is open and closed in $\mathcal X_{\Gamma_0(p^m)}(\epsilon)$ and is characterized by $D[p]\cap C_1=0$. The present section is exactly the case $\epsilon=0$.
 
-> [!remark]- Remark 5.4 (Two different quotient maps)
-> The Frobenius lift is defined by **quotienting by the canonical subgroup** $C_m(A)$. In contrast, $\Psi_m$ quotients an anticanonical point $(B,D)$ by its **chosen level subgroup** $D$. These two maps play different roles and should not be confused.
-
-Therefore the anticanonical $\Gamma_0$-tower is the **same inverse system**, after the finite-level identifications, as the canonical Frobenius-lift tower:
+Therefore the ordinary anticanonical $\Gamma_0$-tower is the same inverse system, after the finite-level identifications, as the Frobenius-lift tower:
 
 $$
 \boxed{
