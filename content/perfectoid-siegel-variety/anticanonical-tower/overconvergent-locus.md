@@ -17,6 +17,19 @@ The first section follows **Yihang Zhu, [*The Hodge–Tate Period Map on Perfect
 
 ## 1. Canonical Subgroups over the Overconvergent Locus
 
+> [!remark] Historical remark (Lubin–Katz)
+> The **canonical subgroup** predates the perfectoid approach. In the introduction to his 1973 [*p-adic Properties of Modular Schemes and Modular Forms*](https://web.math.princeton.edu/~nmk/old/padicpropMFMS.pdf), Katz explicitly attributes the theory to **Jonathan Lubin**; Chapter 3, especially Theorem 3.1, develops the construction for elliptic curves over $p$-adic bases when the Hasse invariant is sufficiently small. In Katz's normalized *$r$-situation*, the level-one existence bound is $v_p(r)<p/(p+1)$.
+>
+> The classical intuition comes from the formal-group $p$-series
+>
+> $ 
+> [p](T)=pT+aT^p+\cdots+uT^{p^2}+\cdots,
+> $
+>
+> where $a\bmod p$ encodes the Hasse invariant (after choosing a coordinate). Under the smallness bound, a distinct slope of its Newton polygon singles out the subgroup of order $p$ consisting of the torsion points closest to the identity. See also Lubin, [*Canonicity of a Cyclic Subgroup of an Elliptic Curve*](https://archive.numdam.org/item/AST_1979__63__165_0/) (1979).
+>
+> Katz–Mazur, [*Arithmetic Moduli of Elliptic Curves*](https://doi.org/10.1515/9781400881710) (1985), especially Chapter 12 on characteristic-$p$ moduli problems and Igusa curves, provides the related integral-moduli background. The statements below are **not the original Lubin–Katz theorem**: Zhu follows Scholze's higher-dimensional, higher-level formulation using Lie complexes and Illusie-style deformation theory.
+
 ### 1.1 Ground rings, Lie complexes, and a lifting theorem
 
 > [!definition] Notation 3.9.1 (Cyclotomic base and small exponents)
