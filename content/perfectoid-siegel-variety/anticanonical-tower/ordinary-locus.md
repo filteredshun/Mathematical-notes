@@ -524,81 +524,81 @@ We now turn the fibrewise ordinary condition into a **formal moduli space** over
 
 **(1) Universal family on the hyperspecial integral model.** Fix the hyperspecial level $K_p=G(\mathbf Z_p)$ and a sufficiently small tame level $K^p$ (for instance a neat level contained in a principal congruence subgroup of level $N\ge3$ prime to $p$). By the fine Siegel moduli theorem recalled in [[perfectoid-siegel-variety/anticanonical-tower/siegel-modular-varieties|Siegel Modular Varieties and Level Structures, §1.2]], the smooth integral model $X=X_{K^pK_p,\mathbf Z_{(p)}}$ represents the functor of triples $(A,\lambda,\eta^p)$ consisting of an abelian scheme, a principal polarization, and a $K^p$-level structure. In particular, it carries a **universal triple**
 
-$
+$$
 \boxed{\quad
 \pi:\mathcal A\longrightarrow X,\qquad
 \lambda_{\mathrm{univ}}:\mathcal A\xrightarrow{\sim}\mathcal A^\vee,
 \qquad\eta^p_{\mathrm{univ}}.
 \quad}
-$
+$$
 
 The reason is simply representability: under the moduli-functor isomorphism, the identity $\operatorname{id}_X\in\operatorname{Hom}(X,X)$ corresponds to this family (Yoneda). Every family classified by a map $f:T\to X$ is its pullback along $f$. The **fine** hypothesis is important: a coarse moduli space need not carry a universal family.
 
 **(2) Special fibre and ordinary open subset.** Base change to $\mathbf Z_p$, and write
 
-$
+$$
 X_p=X\times_{\mathbf Z_{(p)}}\operatorname{Spec}\mathbf Z_p,
 \qquad
 X_0=X_p\times_{\mathbf Z_p}\operatorname{Spec}\mathbf F_p.
-$
+$$
 
 The universal abelian scheme restricts to $\mathcal A_0/X_0$. By Proposition 3.2, the ordinary locus is exactly the open subset on which the Hasse invariant of $\mathcal A_0$ is invertible:
 
-$
+$$
 \boxed{\quad
 X_0^{\mathrm{ord}}
 :=\{x\in X_0:\operatorname{Ha}(\mathcal A_{0,x})\neq0\}
 \subseteq X_0.
 \quad}
-$
+$$
 
 More invariantly, this is the nonvanishing locus of the Hasse section of the appropriate determinant Hodge line bundle; it makes sense without a global trivialization.
 
 **(3) Formal restriction is not the special fibre.** Let
 
-$
+$$
 \mathfrak X:=\widehat{X_p}^{\,p}
-$
+$$
 
 be the $p$-adic formal completion. Its underlying topological space is canonically
 
-$
+$$
 |\mathfrak X|=|X_0|.
-$
+$$
 
 Since $X_0^{\mathrm{ord}}$ is an **open** subset of this space, it determines an **open formal subscheme**, which we define to be the *formal ordinary locus*:
 
-$
+$$
 \boxed{\quad
 \mathfrak X(0):=
 \mathfrak X\big|_{\,X_0^{\mathrm{ord}}}.
 \quad}
-$
+$$
 
-Here the vertical bar means **restriction of the formal structure sheaf to the indicated open subset**, *not* the fibre product $\mathfrak X\times_{X_0}X_0^{\mathrm{ord}}$ (which is not the intended construction). Thus $\mathfrak X(0)$ retains the compatible thickenings modulo $p^r$ for every $r\ge1$; it is not merely the characteristic-$p$ scheme $X_0^{\mathrm{ord}}$.
+Here the vertical bar means **restriction of the formal structure sheaf to the indicated open subset**, *not* the special fibre (formed by setting $p=0$). Thus $\mathfrak X(0)$ retains the compatible thickenings modulo $p^r$ for every $r\ge1$; it is not merely the characteristic-$p$ scheme $X_0^{\mathrm{ord}}$.
 
 > [!example] Example 3.5 (What formal restriction looks like on an affine chart)
 > For $\mathfrak X=\operatorname{Spf}\mathbf Z_p\langle T\rangle$, the special fibre is $\operatorname{Spec}\mathbf F_p[T]$. If $U=D(\bar T)$ is the open subset where $\bar T$ is invertible, then
 >
-> $
+> $$
 > \mathfrak X|_U
 > =\operatorname{Spf}\bigl(\mathbf Z_p\langle T,T^{-1}\rangle\bigr),
 > \qquad
 > (\mathfrak X|_U)_0=\operatorname{Spec}\mathbf F_p[T,T^{-1}].
-> $
+> $$
 >
 > The first space still has a $p$-adic formal structure (and hence a characteristic-zero generic fibre); the second is only its special fibre. In general, for $\mathfrak X=\operatorname{Spf}B$ and $U=D(\bar f)\subseteq\operatorname{Spec}(B/p)$, the formal restriction is $\operatorname{Spf}\widehat{B[1/f]}^{\,p}$, where $f\in B$ lifts $\bar f$.
 
 **(4) Restricting the universal family.** Complete the universal family and its moduli data along the ordinary formal open:
 
-$
+$$
 \boxed{\quad
 \bigl(\widehat{\mathcal A}^{\mathrm{ord}},
 \widehat\lambda_{\mathrm{univ}},
 \widehat\eta^p_{\mathrm{univ}}\bigr)
 \longrightarrow\mathfrak X(0).
 \quad}
-$
+$$
 
 Concretely, on each infinitesimal thickening of $\mathfrak X(0)$ modulo $p^r$, this is just the base change of $(\mathcal A,\lambda_{\mathrm{univ}},\eta^p_{\mathrm{univ}})$; these abelian schemes and their structures are compatible in $r$. We call this the **universal ordinary formal abelian scheme**. The adjective *ordinary* refers only to its special fibre, which lies over $X_0^{\mathrm{ord}}$; it does not mean that the characteristic-zero torsion splits.
 
