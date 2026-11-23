@@ -675,30 +675,63 @@ Write $\mathcal L_A=\det\omega_{A_0/S}$ and similarly $\mathcal L_{A^\vee}=\det\
 >
 > These identifications are essential: $\widetilde{\mathcal F}$ is not the Hodge subbundle, and the two subbundles need not be transverse.
 >
-> **(2) The Hasse map of $G$.** By definition, the Verschiebung induces
+> **(2) Why is this the Hasse invariant from Definition 3.1?** First, the Hodge filtration identifies $\mathcal F=\omega_G$ with $\omega_{A_0/S}$, and the corresponding subbundle $\mathcal F^{(p)}\subset\mathcal E^{(p)}$ with $\omega_{A_0^{(p)}/S}$. The geometric Verschiebung induces the map
 >
 > $$
-> V|_{\mathcal F}:\mathcal F\longrightarrow\mathcal F^{(p)}.
+> V_{A_0}^*:\omega_{A_0/S}
+> \longrightarrow\omega_{A_0^{(p)}/S}
+> \simeq\omega_{A_0/S}^{(p)}.
 > $$
 >
-> After using $\overline V$, this is exactly the composite
+> **This was the original definition in §3.** Functoriality of the Hodge filtration, together with the comparison between the geometric Verschiebung and the Dieudonné operator $V$, gives a commutative square:
+>
+> $$
+> \begin{array}{ccc}
+> \mathcal F & \xrightarrow{\ \iota\ } & \mathcal E\\
+> {\scriptstyle V_{A_0}^*}\big\downarrow && \big\downarrow{\scriptstyle V}\\
+> \mathcal F^{(p)} & \xrightarrow{\ \iota^{(p)}\ } & \mathcal E^{(p)}.
+> \end{array}
+> $$
+>
+> We also have $\ker V=\widetilde{\mathcal F}$ and $\operatorname{im}V=\mathcal F^{(p)}$, so $V$ factors through the **isomorphism**
+>
+> $$
+> \overline V:\mathcal E/\widetilde{\mathcal F}
+> \xrightarrow{\sim}\mathcal F^{(p)}.
+> $$
+>
+> Writing $q:\mathcal E\twoheadrightarrow\mathcal E/\widetilde{\mathcal F}$, the commutative square says precisely that
 >
 > $$
 > \boxed{\quad
-> \mathcal F\hookrightarrow\mathcal E
-> \twoheadrightarrow\mathcal E/\widetilde{\mathcal F}.
+> V_{A_0}^*=\overline V\circ q\circ\iota:
+> \mathcal F\longrightarrow\mathcal F^{(p)}.
 > \quad}
 > $$
 >
-> Its determinant is $\operatorname{Ha}(G)$, viewed as a section of
+> Thus the projection
 >
 > $$
-> \det(\mathcal E/\widetilde{\mathcal F})\otimes
-> (\det\mathcal F)^{-1}
+> \mathcal F\hookrightarrow\mathcal E
+> \twoheadrightarrow\mathcal E/\widetilde{\mathcal F}
+> $$
+>
+> is **not a new definition of the Hasse map**: after identifying its target by $\overline V$, it is *exactly* $V_{A_0}^*$ from Definition 3.1. Taking determinants gives the original Hasse section
+>
+> $$
+> \det(V_{A_0}^*)=\operatorname{Ha}(A_0)
+> \in H^0\bigl(S,(\det\mathcal F)^{\otimes(p-1)}\bigr).
+> $$
+>
+> Equivalently, the determinant of the projection is this section, when viewed in the naturally identified line
+>
+> $$
+> \det(\mathcal E/\widetilde{\mathcal F})
+> \otimes(\det\mathcal F)^{-1}
 > \simeq(\det\mathcal F)^{\otimes(p-1)}.
 > $$
 >
-> **(3) The Hasse map of the dual.** The Dieudonné module of $G^D$ is $\mathcal E^\vee$, with Hodge subbundle
+> > **(3) The Hasse map of the dual.** The Dieudonné module of $G^D$ is $\mathcal E^\vee$, with Hodge subbundle
 >
 > $$
 > \omega_{G^D}\simeq(\mathcal E/\mathcal F)^\vee
