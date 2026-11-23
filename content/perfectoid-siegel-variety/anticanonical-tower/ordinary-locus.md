@@ -1583,59 +1583,59 @@ By Proposition 5.3 the finite-level spaces identify with the anticanonical loci,
 > [!corollary] Corollary 6.5 (Perfectoidness of the full-level ordinary locus; no boundary)
 > There exists a perfectoid space over $K=\widehat{\mathbf Q_p(\mu_{p^\infty})}$, denoted by $\mathcal X_{\Gamma(p^\infty)}(0)$, such that
 >
-> $
+> $$
 > \boxed{\quad
 > \mathcal X_{\Gamma(p^\infty)}(0)
 > \sim\varprojlim_m\mathcal X_{\Gamma(p^m)}(0).
 > \quad}
-> $
+> $$
 >
 > Thus **the entire ordinary locus at infinite *full* $p$-level is perfectoid**, not only its anticanonical part.
 
 > [!proof]- Proof: pass to full level, then glue finitely many translates
 > Put
 >
-> $
+> $$
 > V_m=\mathcal X_{\Gamma_0(p^m)}(0)_{\mathrm{anti}},
 > \qquad
 > U_m=\mathcal X_{\Gamma(p^m)}(0)\times_{\mathcal X_{\Gamma_0(p^m)}(0)}V_m.
-> $
+> $$
 >
 > **Step 1: The full-level anticanonical limit is perfectoid.** Theorem 6.3 supplies a perfectoid tilde-limit
 >
-> $
+> $$
 > V_\infty:=\mathcal X_{\Gamma_0(p^\infty)}(0)_{\mathrm{anti}}
 > \sim\varprojlim_m V_m.
-> $
+> $$
 >
 > Each $U_m\to V_m$ is finite étale, since it is the restriction of the finite étale generic-fibre level-forgetting morphism. Therefore the base changes
 >
-> $
+> $$
 > W_m:=V_\infty\times_{V_m}U_m\longrightarrow V_\infty
-> $
+> $$
 >
 > are finite étale and form a compatible inverse system. Locally on an affinoid perfectoid chart of $V_\infty$, the inverse limit of this finite étale system is affinoid perfectoid. The local limits glue to a perfectoid space $U_\infty$ with
 >
-> $
+> $$
 > U_\infty\sim\varprojlim_m U_m.
-> $
+> $$
 >
 > This is the standard stability of perfectoid spaces under profinite étale covers; compare [Scholze, Theorem III.2.36](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), which establishes the full-level anticanonical perfectoid space (also in the compactified setting).
 >
 > **Step 2: Finite translates cover the entire ordinary full-level tower.** By Remark 6.4, the *same finite family* $\gamma_1,\ldots,\gamma_N\in\operatorname{Sp}_{2g}(\mathbf Z_p)$ satisfies
 >
-> $
+> $$
 > \mathcal X_{\Gamma(p^m)}(0)
 > =\bigcup_{i=1}^{N}\gamma_iU_m
 > \qquad\text{for every }m.
-> $
+> $$
 >
 > Every $\gamma_iU_\infty$ is perfectoid, since the $\operatorname{Sp}_{2g}(\mathbf Z_p)$-action changes the full $p$-level framing by an isomorphism. The intersections of these pieces are inverse limits of the compatible **clopen** intersections at finite level, hence are open perfectoid subspaces. We can therefore glue the finitely many translates along their overlaps. The resulting adic space is perfectoid, and the compatibility of the finite-level covers with forgetting level shows it is a tilde-limit of the full-level ordinary tower:
 >
-> $
+> $$
 > \mathcal X_{\Gamma(p^\infty)}(0)
 > \sim\varprojlim_m\mathcal X_{\Gamma(p^m)}(0).
-> $
+> $$
 >
 > This is an **ordinary, noncompactified** argument: it does not require the boundary or the additional $G(\mathbf Q_p)$-translates needed for the full Siegel space. $\square$
 
