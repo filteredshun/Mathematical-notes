@@ -602,7 +602,60 @@ $$
 
 Concretely, on each infinitesimal thickening of $\mathfrak X(0)$ modulo $p^r$, this is just the base change of $(\mathcal A,\lambda_{\mathrm{univ}},\eta^p_{\mathrm{univ}})$; these abelian schemes and their structures are compatible in $r$. We call this the **universal ordinary formal abelian scheme**. The adjective *ordinary* refers only to its special fibre, which lies over $X_0^{\mathrm{ord}}$; it does not mean that the characteristic-zero torsion splits.
 
-Equivalently, if an abelian scheme $(A,\lambda,\eta^p)$ over a $p$-adically complete integral base $R$ is classified by a point of the hyperspecial moduli space, its corresponding formal point factors through $\mathfrak X(0)$ **if and only if** its reduction $A\otimes_RR/p$ is ordinary on every geometric fibre. Thus Proposition 4.1 can be applied compatibly to the universal family, producing the canonical subgroups needed in §5.
+> [!proposition] Proposition 3.6 (Moduli interpretation of the formal ordinary locus)
+> Let $R$ be a $p$-adically complete $\mathbf Z_p$-algebra, and write $R_r=R/p^rR$. Then $\operatorname{Hom}(\operatorname{Spf}R,\mathfrak X(0))$ is naturally identified with the set of isomorphism classes of **compatible systems of triples**
+>
+> $$
+> (A_r,\lambda_r,\eta_r^p)/R_r,\qquad r\ge1,
+> $$
+>
+> such that $A_r/R_r$ is an abelian scheme of dimension $g$, $\lambda_r$ is a principal polarization, $\eta_r^p$ is the fixed tame level structure, and
+>
+> $$
+> \boxed{\qquad A_1/R_1\text{ is ordinary on every geometric fibre}.\qquad}
+> $$
+>
+> In particular, for a triple $(A,\lambda,\eta^p)$ over $R$ with ordinary reduction, its classifying map factors canonically through $\mathfrak X(0)$. When such compatible formal data are algebraizable over $R$ (as in the standard noetherian polarized setting), one may write the moduli interpretation suggestively as
+>
+> $$
+> \boxed{
+> \mathfrak X(0)(R)=
+> \bigl\{(A,\lambda,\eta^p)/R:
+> A\otimes_R R/p\text{ is ordinary}\bigr\}/\cong.
+> }
+> $$
+>
+> Here $\mathfrak X(0)(R)$ abbreviates $\operatorname{Hom}(\operatorname{Spf}R,\mathfrak X(0))$, and the fine-moduli hypotheses on $K^p$ remain in force.
+
+> [!proof]- Proof from the formal restriction
+> By the definition of $p$-adic formal completion,
+>
+> $$
+> \operatorname{Hom}(\operatorname{Spf}R,\mathfrak X)
+> \simeq\varprojlim_r\operatorname{Hom}_{\mathbf Z_p}
+> (\operatorname{Spec}R_r,X_p).
+> $$
+>
+> Because $X_p$ is a **fine moduli scheme**, the term at level $r$ classifies $(A_r,\lambda_r,\eta_r^p)/R_r$; the inverse limit imposes compatibility under reduction $R_{r+1}\to R_r$.
+>
+> A morphism $f:\operatorname{Spf}R\to\mathfrak X$ factors through the open formal subscheme
+>
+> $$
+> \mathfrak X(0)=\mathfrak X|_{X_0^{\mathrm{ord}}}
+> $$
+>
+> **if and only if** the underlying morphism on special fibres
+>
+> $$
+> f_1:\operatorname{Spec}(R/p)\longrightarrow X_0
+> $$
+>
+> lands in $X_0^{\mathrm{ord}}$. By the Hasse-invariant criterion of Proposition 3.2, this means that the special fibre $A_1$ is ordinary at every geometric point, or equivalently that its Hasse invariant is an invertible section. This proves the asserted description. $\square$
+
+> [!remark]- Remark 3.7 (Formal versus analytic moduli)
+> The special fibre $X_0^{\mathrm{ord}}$ classifies abelian schemes **in characteristic $p$**. The formal ordinary locus $\mathfrak X(0)$ classifies **compatible $p$-adic thickenings** of such objects; its generic fibre $\mathcal X(0)=\mathfrak X(0)_\eta$ is the corresponding analytic ordinary-good-reduction locus. In particular, the latter should not be confused with a moduli scheme of abelian varieties over characteristic $p$.
+
+Thus Proposition 4.1 applies functorially to the universal ordinary family on $\mathfrak X(0)$, and its level-$m$ canonical subgroup is compatible with pullback along every formal moduli point. This is precisely the input for the quotient construction in §5.
 
 Finally, all of these constructions may be base changed from $\mathbf Z_p$ to the ring of integers $\mathcal O_K$ of the perfectoid field used in §5. In that case the formal ordinary locus is the corresponding base change, with the same ordinary condition on the geometric special fibres.
 
