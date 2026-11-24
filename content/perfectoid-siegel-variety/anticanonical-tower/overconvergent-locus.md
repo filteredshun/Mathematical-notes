@@ -1266,25 +1266,132 @@ The next point is the geometric heart of the construction: the map $\Phi_{m,\eps
 >
 > For $\epsilon=0$, this reduces to Ordinary Locus, Proposition 5.3. For positive $\epsilon$, **do not replace** the weak subgroup on $\mathcal X(\epsilon)$ by an ordinary Frobenius kernel: the reduction need not be ordinary.
 
-> [!proof]- Why the image is clopen and how transversality enters
-> Openness follows from Proposition 4.3. For **closedness**, consider the commutative diagram
+> [!proof]- Identifying the anticanonical locus by transversality
+> We first prove the statement for **level one**, following the argument of [Scholze, Theorem III.2.15(iii)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), and then use the **cartesian level tower** of III.2.15(ii). Put $d=g(g+1)/2$.
+>
+> **Step 1 — Every point in the image is transverse (level $p$).** Let $A$ be an abelian scheme corresponding to a point of $\mathcal X(p^{-1}\epsilon)$. Let $C_0=C_1(A)\subset A[p]$ be its **strong canonical subgroup** and set
 >
 > $$
-> \begin{array}{ccc}
-> \mathcal X(p^{-m}\epsilon)&
-> \xrightarrow{\ \Phi_{m,\epsilon}\ }&
-> \mathcal X_{\Gamma_0(p^m)}(\epsilon)\\
-> {\scriptstyle\widetilde F^{(m)}}\downarrow&&
-> \downarrow{\scriptstyle\pi_m}\\
-> \mathcal X(\epsilon)&=&\mathcal X(\epsilon).
-> \end{array}
+> B:=A/C_0,\qquad
+> D:=A[p]/C_0\subset B[p].
 > $$
 >
-> The iterated Frobenius lift $\widetilde F^{(m)}$ is finite, and $\pi_m$ is finite étale, in particular separated. The graph of $\Phi_{m,\epsilon}$ is a closed immersion into the base change of $\mathcal X(p^{-m}\epsilon)$ along $\pi_m$, whose projection to $\mathcal X_{\Gamma_0(p^m)}(\epsilon)$ is finite. Hence $\Phi_{m,\epsilon}$ is finite, so **its image is closed**. Together with openness, the image is clopen.
+> The quotient $B$ lies in $\mathcal X(\epsilon)$ and therefore admits its own **weak canonical subgroup** $C=C_1^{\mathrm{weak}}(B)\subset B[p]$. Notice that $C$ is a subgroup of $B[p]$, whereas $C_0$ is a subgroup of $A[p]$; confusing these two would obscure the argument. We claim
 >
-> The transversality characterization is the deeper assertion in [Scholze III.2.15(iii)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf); see also [Zhu 3.9.21(3)](https://yhzhumath.github.io/HT%20final.pdf) and [Caraiani 4.3.2](https://www.ma.imperial.ac.uk/~acaraian/papers/arizona_notes.pdf). Its proof uses rigidity of sections (Lemma 3.9.5 in §1), rather than the simple connected–étale decomposition available on the ordinary special fibre.
+> $$
+> \boxed{\qquad D\cap C=\{0\}.\qquad}
+> $$
 >
-> In particular, at rank-one points the condition can be checked in the generic fibre as the vanishing of the scheme-theoretic intersection of two finite étale $p$-subgroups. But the **adic locus** is already defined as an image and characterized by the theorem; one does not need to reconstruct it from rank-one points. $\square$
+> It suffices to verify this after passing to geometric rank-one points, since on the characteristic-zero generic fibre $D$ and $C$ are finite étale group schemes. Let $K$ be a complete algebraically closed non-archimedean extension and work with the induced abelian schemes over its valuation ring $\mathcal O_K$. Suppose that
+>
+> $$
+> t\in D(K)\cap C(K).
+> $$
+>
+> Since the groups are finite over the integrally closed valuation ring, $t$ extends to an integral section of both $D$ and $C$. Put $\alpha=1-\epsilon$. Membership in the weak canonical subgroup of $B$ gives
+>
+> $$
+> F_B(t\bmod p^\alpha)=0.
+> $$
+>
+> By the **corrected Frobenius criterion** of Theorem 3.9.7(2), this is the condition that the augmentation-ideal coordinates of $t$ have $p$-th powers vanishing modulo $p^\alpha$. Since $\mathcal O_K$ is a **valuation ring**, the valuation calculation *is valid here*, and yields
+>
+> $$
+> \boxed{\quad t\equiv0\pmod{p^{\delta}},
+> \qquad\delta:=\frac{1-\epsilon}{p}.\quad}
+> $$
+>
+> Now regard $t$ as a section of $H:=A[p]/C_0=D$ over $\mathcal O_K$. On the source neighborhood $\mathcal X(p^{-1}\epsilon)$ we have $\operatorname{Ha}(A)\mid p^{\epsilon/p}$; the differential estimate for the quotient by its level-one canonical subgroup gives
+>
+> $$
+> p^{\epsilon/p}\Omega^1_{H/\mathcal O_K}=0.
+> $$
+>
+> Because $\epsilon<1/2$,
+>
+> $$
+> \delta=\frac{1-\epsilon}{p}>\frac{\epsilon}{p}.
+> $$
+>
+> Hence the **rigidity lemma** (Lemma 3.9.5, Scholze III.2.4) says that
+>
+> $$
+> H(\mathcal O_K)\longrightarrow H(\mathcal O_K/p^\delta)
+> $$
+>
+> is injective. Our section $t$ maps to zero on the right, so $t=0$. This proves $D\cap C=0$ and therefore
+>
+> $$
+> \operatorname{im}(\Phi_{1,\epsilon})
+> \subseteq
+> \left\{(B,D):D\cap C_1^{\mathrm{weak}}(B)=0\right\}.
+> $$
+>
+> **Step 2 — The converse by counting finite étale fibres.** Fix a geometric characteristic-zero point $B\in\mathcal X(\epsilon)$. The Weil pairing makes $V=B[p](\overline K)$ a $2g$-dimensional symplectic $\mathbf F_p$-vector space, and $C=C_1^{\mathrm{weak}}(B)(\overline K)$ is a Lagrangian subspace of dimension $g$. Choose a complementary Lagrangian $W$ with $V=C\oplus W$.
+>
+> Every $g$-dimensional subspace $D\subset V$ transverse to $C$ is uniquely the graph of a linear map
+>
+> $$
+> f:W\longrightarrow C,\qquad
+> D=\{f(w)+w:w\in W\}.
+> $$
+>
+> Via the symplectic pairing $C\simeq W^\vee$, the condition that $D$ be Lagrangian is exactly that the bilinear form associated with $f$ be **symmetric**. Therefore the number of transverse Lagrangians in a geometric fibre is
+>
+> $$
+> \#\{D\subset V:D\text{ Lagrangian},\ D\cap C=0\}
+> =p^{g(g+1)/2}=p^d.
+> $$
+>
+> Denote by $T_1\subset\mathcal X_{\Gamma_0(p)}(\epsilon)$ the transverse locus. Since $B[p]$ and the weak canonical subgroup $C$ are finite étale on the generic fibre, the condition $D\cap C=0$ is locally constant in the associated finite étale local systems. Hence $T_1$ is **open and closed** and $T_1\to\mathcal X(\epsilon)$ is finite étale of degree $p^d$.
+>
+> On the other hand, Scholze III.2.15(i) identifies the quotient-by-canonical-subgroup Frobenius lift
+>
+> $$
+> \widetilde F_\epsilon:
+> \mathcal X(p^{-1}\epsilon)\longrightarrow\mathcal X(\epsilon)
+> $$
+>
+> as finite étale on the generic fibre, also of degree $p^d$ (the relative Frobenius degree in dimension $d$). By Step 1, the open immersion $\Phi_{1,\epsilon}$ factors through $T_1$ over $\mathcal X(\epsilon)$. On every geometric fibre it is injective between two sets of **the same cardinality** $p^d$, hence bijective. As a morphism between finite étale covers, it is an isomorphism:
+>
+> $$
+> \boxed{\quad
+> \mathcal X(p^{-1}\epsilon)
+> \xrightarrow{\sim}T_1
+> =
+> \left\{(B,D):D\cap C_1^{\mathrm{weak}}(B)=0\right\}.
+> \quad}
+> $$
+>
+> This proves both the **reverse inclusion** and **open-and-closedness** at level $p$. The degree comparison is essential: transversality alone has so far established only the inclusion in Step 1.
+>
+> **Step 3 — Arbitrary level $p^m$ reduces to level $p$.** By the **cartesian square** in Proposition 4.3 (Scholze III.2.15(ii)), for each $m\ge1$ the image of $\Phi_{m+1,\epsilon}$ is the inverse image of the image of $\Phi_{m,\epsilon}$ under the level-forgetting morphism. Iterating gives
+>
+> $$
+> \mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}
+> =
+> \operatorname{forget}_{m,1}^{-1}
+> \bigl(\mathcal X_{\Gamma_0(p)}(\epsilon)_{\mathrm{anti}}\bigr),
+> $$
+>
+> where, on the finite-level generic-fibre moduli problem,
+>
+> $$
+> \operatorname{forget}_{m,1}(B,D)=(B,D[p]).
+> $$
+>
+> By the level-one characterization, we conclude
+>
+> $$
+> \boxed{\quad
+> (B,D)\in\mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}
+> \iff D[p]\cap C_1^{\mathrm{weak}}(B)=\{0\}.
+> \quad}
+> $$
+>
+> Since the level-one anticanonical locus is clopen, its inverse image under the finite étale level-forgetting map is likewise **clopen**. This identifies the image of $\Phi_{m,\epsilon}$ as the stated subspace, and Proposition 4.3 supplies the resulting isomorphism $\mathcal X(p^{-m}\epsilon)\simeq\mathcal X_{\Gamma_0(p^m)}(\epsilon)_{\mathrm{anti}}$.
+>
+> **Geometric point.** Constructing the image uses the level-$m$ canonical subgroup on the shrinking source neighborhood $\mathcal X(p^{-m}\epsilon)$, but detecting that image in the *fixed* target neighborhood $\mathcal X(\epsilon)$ needs only the **level-one weak** canonical subgroup of $B$ and the $p$-torsion $D[p]$. This is the mechanism behind the fixed-radius overconvergent anticanonical tower. $\square$
 
 ### 4.3 The fixed-radius anticanonical tower
 
