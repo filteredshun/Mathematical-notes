@@ -924,6 +924,118 @@ As in §1, write $p^\delta\in\mathcal O_K$ for a chosen element of valuation $\d
 >
 > Here $(p)$ denotes base change by the absolute Frobenius of $\mathcal O_K/p$, *not* a tensor power. Relative Frobenius on the universal abelian scheme is compatible with this identification.
 
+> [!proof]- Proof by functor of points (Zhu, Proposition 3.9.17)
+> **(1) Twisting the structure map of the test algebra.** Put
+>
+> $
+> B:=\mathcal O_K/p,\qquad
+> Y_\delta:=\mathfrak X(\delta)/p.
+> $
+>
+> Let $R$ be a test $B$-algebra with structure map $\iota:B\to R$. Write $\operatorname{Fr}_*R$ for the **same underlying ring** $R$, equipped instead with the structure map
+>
+> $
+> B\xrightarrow{\operatorname{Fr}_B}B
+> \xrightarrow{\iota}R,\qquad
+> b\longmapsto\iota(b^p).
+> $
+>
+> In particular, $\operatorname{Fr}_*R$ is restriction of scalars along Frobenius, not the tensor product $R\otimes_{B,\operatorname{Fr}_B}B$. The fibre-product definition of the Frobenius twist gives the natural equality
+>
+> $
+> \boxed{\quad
+> Y^{(p)}(R)=Y(\operatorname{Fr}_*R)
+> \quad}
+> $
+>
+> for any $B$-scheme $Y$ (and similarly for formal schemes with the appropriate continuous maps). Indeed, an $R$-point of $Y^{(p)}$ is a map to the upper-left corner of the cartesian square
+>
+> $
+> \begin{array}{ccc}
+> Y^{(p)}&\longrightarrow&Y\\
+> \downarrow&&\downarrow\\
+> \operatorname{Spec}B&\xrightarrow{\operatorname{Fr}_B}&
+> \operatorname{Spec}B .
+> \end{array}
+> $
+>
+> By the universal property, this is precisely a map $\operatorname{Spec}R\to Y$ whose composite with the right vertical arrow is induced by $\iota\circ\operatorname{Fr}_B$. Equivalently, it is a $B$-point with test algebra $\operatorname{Fr}_*R$.
+>
+> **(2) The underlying abelian scheme does not change.** Applying (1) to $Y_{\delta/p}$, we obtain
+>
+> $
+> (Y_{\delta/p})^{(p)}(R)=
+> Y_{\delta/p}(\operatorname{Fr}_*R).
+> $
+>
+> A point on the right consists of an underlying hyperspecial moduli point
+>
+> $
+> f:\operatorname{Spec}(\operatorname{Fr}_*R)\longrightarrow
+> X_B=X_{\mathbf F_p}\times_{\operatorname{Spec}\mathbf F_p}
+> \operatorname{Spec}B
+> $
+>
+> together with the auxiliary Hasse-divisibility datum. Here $X_{\mathbf F_p}$ is the reduction of the original Siegel moduli scheme over $\mathbf Z_p$.
+>
+> The crucial observation is that $\operatorname{Fr}_*R$ and $R$ are identical as $\mathbf F_p$-algebras, since Frobenius on $\mathbf F_p$ is the identity. By the universal property of base change,
+>
+> $
+> \begin{aligned}
+> \operatorname{Hom}_B(\operatorname{Spec}(\operatorname{Fr}_*R),X_B)
+> &\simeq\operatorname{Hom}_{\mathbf F_p}
+> (\operatorname{Spec}(\operatorname{Fr}_*R),X_{\mathbf F_p})\\
+> &=\operatorname{Hom}_{\mathbf F_p}
+> (\operatorname{Spec}R,X_{\mathbf F_p})\\
+> &\simeq\operatorname{Hom}_B(\operatorname{Spec}R,X_B).
+> \end{aligned}
+> $
+>
+> Thus the same triple $(A,\lambda,\eta^p)/R$ is classified on either side. In particular, neither the abelian scheme nor its Hodge line nor its Hasse invariant is replaced by its Frobenius twist in this identification. This is where descent of the original moduli problem to $\mathbf F_p$ is essential.
+>
+> **(3) Only the scalar in the divisibility equation changes.** Write $c_\gamma$ for the reduction of our chosen element $p^\gamma\in\mathcal O_K$ in $B$, with $c_{\delta/p}^p=c_\delta$. By the normalized local equation of Proposition 2.2, the reduction $Y_{\delta/p}$ classifies the moduli datum together with a section
+>
+> $
+> u\in H^0(\operatorname{Spec}R,\omega_{A/R}^{\otimes(1-p)})
+> $
+>
+> satisfying, in the ring $\operatorname{Fr}_*R$,
+>
+> $
+> u\,\operatorname{Ha}(A/R)
+> =c_{\delta/p}\cdot1
+> =\iota\bigl(c_{\delta/p}^{\,p}\bigr)
+> =\iota(c_\delta).
+> $
+>
+> In this formula the product on the left is the natural contraction of the Hasse line with its inverse. The equality on the right uses the *twisted structure map*, not Frobenius on the section $u$ or on $\operatorname{Ha}(A/R)$. Under the identity of underlying rings $\operatorname{Fr}_*R=R$, the equation therefore becomes exactly the equation for an $R$-point of $Y_\delta$:
+>
+> $
+> \boxed{\quad u\,\operatorname{Ha}(A/R)=\iota(c_\delta).\quad}
+> $
+>
+> We use the normalized auxiliary coordinate on the reduced model, rather than reapplying the original mixed-characteristic moduli functor (which was stated for flat, complete $\mathcal O_K$-algebras) to an arbitrary characteristic-$p$ ring.
+>
+> The construction and its inverse are natural in $R$, preserve the underlying moduli datum and the auxiliary section, and respect changes of Hodge-line trivialization. Hence Yoneda's lemma gives
+>
+> $
+> \boxed{\quad
+> \bigl(\mathfrak X(\delta/p)/p\bigr)^{(p)}
+> \xrightarrow{\sim}
+> \mathfrak X(\delta)/p.
+> \quad}
+> $
+>
+> **Important distinction.** This isomorphism identifies the *target* of relative Frobenius. The separate relative Frobenius map
+>
+> $
+> \mathfrak X(\delta/p)/p
+> \xrightarrow{F_{\mathrm{rel}}}
+> \bigl(\mathfrak X(\delta/p)/p\bigr)^{(p)}
+> $
+>
+> does raise local moduli and auxiliary coordinates to their $p$-th powers. The isomorphism just proved does not. No canonical-subgroup theorem is needed for this lemma; the canonical subgroup enters only when lifting this composite to mixed characteristic. $\square$
+
 > [!proof]- Proof by Frobenius base change on local coordinate rings
 > We distinguish the **Frobenius of the cyclotomic coefficient ring** from the relative Frobenius of the Hasse neighborhood.
 >
