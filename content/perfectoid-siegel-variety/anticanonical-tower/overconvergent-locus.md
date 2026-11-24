@@ -268,105 +268,105 @@ Let $A/R$ be an abelian scheme of relative dimension $g$, and set $A_1=A\otimes_
 >
 > **Step I — Existence from the Lie complex.** In characteristic $p$ there is an fppf-exact sequence
 >
-> $
+> $$
 > 0\longrightarrow\ker F^n
 > \longrightarrow A_1[p^n]
 > \xrightarrow{F^n}
 > H_1:=\ker(V^n:A_1^{(p^n)}\to A_1)
 > \longrightarrow0.
-> $
+> $$
 >
 > The quotient we want to lift is $H_1$. By Remark 3.9.3, its Lie complex is
 >
-> $
+> $$
 > \boxed{\quad
 > \check\ell_{H_1}\simeq
 > [\,\operatorname{Lie}A_1^{(p^n)}
 > \xrightarrow{\,dV^n\,}\operatorname{Lie}A_1\,].
 > \quad}
-> $
+> $$
 >
 > The determinant of the iterated Verschiebung is the product of the Hasse invariants on the successive Frobenius twists:
 >
-> $
+> $$
 > \begin{aligned}
 > \det(dV^n)
 > &\doteq\prod_{i=0}^{n-1}\operatorname{Ha}(A_1)^{p^i}\\
 > &=\operatorname{Ha}(A_1)^{N_n},
 > \qquad N_n=1+p+\cdots+p^{n-1}.
 > \end{aligned}
-> $
+> $$
 >
 > Here $\doteq$ means equality after the natural determinant-line identifications (or after choosing local bases). Since $A$ is $O(n,\epsilon)$, we may write
 >
-> $
+> $$
 > p^\epsilon=u\det(dV^n)
-> $
+> $$
 >
 > with $u$ a local function. For a matrix $M$ representing $dV^n$, its adjugate satisfies
 >
-> $
+> $$
 > M\operatorname{adj}(M)
 > =\operatorname{adj}(M)M
 > =(\det M)I_g.
-> $
+> $$
 >
 > Hence the map $u\,\operatorname{adj}(M)$ is a **chain homotopy** between multiplication by $p^\epsilon$ and zero on the two-term complex $\check\ell_{H_1}$. This is stronger than saying only that $p^\epsilon$ kills $\operatorname{Lie}(H_1)$. Applying Theorem 3.9.2 to
 >
-> $
+> $$
 > G=A[p^n],\qquad C_1^{\mathrm{aux}}=\ker F^n\subset A_1[p^n]
-> $
+> $$
 >
 > yields a finite locally free closed subgroup $C_n\subset A[p^n]$ satisfying
 >
-> $
+> $$
 > C_n\otimes_R R/p^{1-\epsilon}
 > =(\ker F^n)\otimes_{R/p}R/p^{1-\epsilon}.
-> $
+> $$
 >
 > Since $\deg F^n=p^{ng}$, the subgroup $C_n$ has rank $p^{ng}$.
 >
 > **Step II — $p^\epsilon$ kills the quotient differentials.** Put $H=A[p^n]/C_n$ and write $\Omega=\Omega^1_{H/R}$. By construction,
 >
-> $
+> $$
 > H\otimes_R R/p^{1-\epsilon}
 > \simeq H_1\otimes_{R/p}R/p^{1-\epsilon}.
-> $
+> $$
 >
 > The null-homotopy on $\check\ell_{H_1}$ also annihilates the degree-zero cohomology of the **dual cotangent complex**, hence $p^\epsilon e^*\Omega^1_{H_1/(R/p)}=0$. Translation invariance of differentials on group schemes yields
 >
-> $
+> $$
 > \Omega^1_{H_1/(R/p)}
 > \simeq \pi^*e^*\Omega^1_{H_1/(R/p)},
-> $
+> $$
 >
 > so $p^\epsilon$ kills all of $\Omega^1_{H_1/(R/p)}$. By reduction,
 >
-> $
+> $$
 > p^\epsilon\Omega\subseteq p^{1-\epsilon}\Omega
 > =p^{1-2\epsilon}(p^\epsilon\Omega).
-> $
+> $$
 >
 > Iterating gives $p^\epsilon\Omega\subseteq p^{r(1-2\epsilon)}\Omega$ for every $r\ge1$. As $\epsilon<1/2$, the exponents tend to infinity. The module $\Omega$ is $p$-adically separated: $H$ is finite over the complete ring $R$, and its module of differentials is finite. Hence
 >
-> $
+> $$
 > \boxed{\qquad p^\epsilon\Omega^1_{H/R}=0.\qquad}
-> $
+> $$
 >
 > **Step III — Characterization of sections.** Let $R'$ be any allowed $p$-adically complete flat algebra over $R$, and set $\delta=1-\epsilon$.
 >
 > First suppose $s\in C_n(R')$. Modulo $p^\delta$, the section lies in $\ker F^n$. The **Frobenius congruence test** for an $R'$-section of the finite torsion scheme $A[p^n]$ says that its reduction is killed by relative $F^n$ modulo $p^\delta$ precisely when it reduces to the identity modulo $p^{\delta/p^n}$. In local coordinates this is the $p^n$-power behavior of relative Frobenius (with the Frobenius twist on the target taken into account). It gives
 >
-> $
+> $$
 > s\equiv0\pmod{p^{(1-\epsilon)/p^n}}.
-> $
+> $$
 >
 > Conversely, if $s\in A[p^n](R')$ satisfies this congruence, the same Frobenius calculation shows that $s\bmod p^{1-\epsilon}$ lies in $\ker F^n=C_n\bmod p^{1-\epsilon}$. Its image $t\in H(R')$ therefore reduces to the identity modulo $p^{1-\epsilon}$. Step II and Lemma 3.9.5 give the injectivity
 >
-> $
+> $$
 > H(R')\longrightarrow H(R'/p^{1-\epsilon}),
 > \qquad 1-\epsilon>\epsilon;
-> $
+> $$
 >
 > thus $t=0$ and $s\in C_n(R')$. We have proved the stated equality of sets of sections. This is the argument of [Scholze, Corollary III.2.6](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) and [Zhu, Theorem 3.9.7, Step III](https://yhzhumath.github.io/HT%20final.pdf). The Frobenius congruence test is used for these torsion sections; it should not be confused with an assertion about the kernel of the $p^n$-power map on *arbitrary* nonreduced rings.
 >
