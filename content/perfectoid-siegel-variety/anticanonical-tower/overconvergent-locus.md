@@ -64,6 +64,51 @@ The first section follows **Yihang Zhu, [*The Hodge–Tate Period Map on Perfect
 >
 > In particular, when $\epsilon=0$, the hypothesis is equivalent to $H_1$ being finite étale, and the subgroup lifts with its prescribed full reduction modulo $p$.
 
+
+> [!proof]- Proof: Illusie's obstruction classes and Scholze's two thickenings
+> **Input from Illusie.** We use [Scholze, Theorem III.2.1](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf), which is an application of Illusie's deformation theory of finite flat group schemes. Given a homomorphism $C_1\hookrightarrow G_1$ and two *square-zero thickenings* $B_i\twoheadrightarrow R/p$ with augmentation ideals $J_i$, the obstruction to lifting the subgroup homomorphism lies in an Ext group controlled by the cone of Lie complexes
+>
+> $$
+> \mathcal K=\operatorname{Cone}
+> \bigl(\check\ell_{C_1}\longrightarrow\check\ell_{G_1}\bigr)
+> \simeq\check\ell_{H_1}
+> \quad\text{(up to the usual cohomological shift).}
+> $$
+>
+> The crucial property is **functoriality in the thickening**: under a map $B_1\to B_2$ of thickenings, the second obstruction is the image of the first under the corresponding coefficient map $J_1\to J_2$. This is the non-elementary theorem we invoke, not a claim proved by linear algebra alone.
+>
+> **The choice of thickenings.** Take
+>
+> $$
+> \begin{aligned}
+> B_1&=R/p^{2-\epsilon},\\
+> B_2&=(R/p^{2-2\epsilon})
+> \times_{R/p^{1-\epsilon}}(R/p),
+> \qquad B_i\twoheadrightarrow R/p.
+> \end{aligned}
+> $$
+>
+> Here $B_1\to B_2$ sends $x$ to its two reductions. Both augmentation ideals $J_i=\ker(B_i\to R/p)$ are square-zero and, as $R/p$-modules, are isomorphic to $R/p^{1-\epsilon}$. The identifications use multiplication by $p$ on $J_1$ and by $p^{1-\epsilon}$ on $J_2$. Under them the map on ideals is precisely
+>
+> $$
+> J_1\longrightarrow J_2,\qquad
+> x\longmapsto p^\epsilon x.
+> $$
+>
+> By hypothesis, multiplication by $p^\epsilon$ on $\check\ell_{H_1}$ is null-homotopic. It follows that the induced map on the obstruction Ext group is zero, so the obstruction to lifting the subgroup along $B_2$ vanishes. A lift over $B_2$ is the same as a lift over $R/p^{2-2\epsilon}$ agreeing with the original subgroup modulo $p^{1-\epsilon}$.
+>
+> The inequality
+>
+> $$
+> 2-2\epsilon>1
+> \qquad\Longleftrightarrow\qquad
+> \epsilon<\tfrac12
+> $$
+>
+> ensures that the lift passes beyond the initial modulo-$p$ precision. Repeating the same obstruction-theoretic improvement on successively deeper square-zero thickenings, while preserving the prescribed reduction modulo $p^{1-\epsilon}$, constructs a compatible system of finite locally free subgroups. $p$-adic completeness and finite presentation allow passage to the inverse limit, giving $C\subset G$ as asserted.
+>
+> **Scope.** The key vanishing of the obstruction uses the *null-homotopy of the full Lie complex*, not merely vanishing of the action on its cohomology. This is why an arbitrary lift of $\ker F^n$ cannot be asserted without the Hasse smallness hypothesis. $\square$
+
 > [!remark] Remark 3.9.3 (Lie complex)
 > For a finite locally free commutative group scheme $H/S$, the Lie complex $\check\ell_H$ is a perfect complex of amplitude $[0,1]$ with
 >
@@ -89,6 +134,17 @@ The first section follows **Yihang Zhu, [*The Hodge–Tate Period Map on Perfect
 > $$
 >
 > In particular, **null-homotopic multiplication by $p^\epsilon$** is a stronger, derived condition than merely annihilating $\operatorname{Lie}(H)$.
+
+
+> [!proof]- Why the two-term Lie complex appears
+> For $H=\ker(f:G_1\to G_2)$ with $G_1,G_2$ smooth and $f$ faithfully flat, the transitivity triangle for the cotangent complex of the fibre of $f$ identifies the cotangent complex at the identity with a two-term complex built from the cotangent spaces of $G_2$ and $G_1$. Dualizing, with the indicated cohomological convention, yields
+>
+> $$
+> \check\ell_H\simeq
+> [\,\operatorname{Lie}G_1\xrightarrow{df}\operatorname{Lie}G_2\,].
+> $$
+>
+> Its homotopy class is independent of the choices of local bases. This is the calculation used below for $H=\ker V^n$. $\square$
 
 > [!example] Example 3.9.4 (An étale group)
 > If $N$ is invertible on $R_1$ and $H_1=\mu_N$, the presentation
@@ -119,6 +175,32 @@ The first section follows **Yihang Zhu, [*The Hodge–Tate Period Map on Perfect
 > $$
 > \boxed{\quad X(R)\longrightarrow X(R/p^\delta R).\quad}
 > $$
+
+
+> [!proof]- Proof by successive improvement of the congruence
+> Let $s,t\in X(R)$ coincide modulo $p^\delta$, with $\delta>\epsilon$. We show that they coincide modulo a **strictly higher** power.
+>
+> Consider the square-zero extension $R/p^{2\delta}\twoheadrightarrow R/p^\delta$. The set of lifts of the common reduced section, when nonempty, is a torsor under
+>
+> $$
+> \operatorname{Hom}_{R/p^\delta}
+> \bigl(s^*\Omega^1_{X/R}\otimes_RR/p^\delta,\;
+> p^\delta R/p^{2\delta}\bigr).
+> $$
+>
+> Identifying the target with $R/p^\delta$, we see that every such homomorphism has image in the ideal $p^{\delta-\epsilon}(R/p^\delta)$, since $p^\epsilon$ annihilates its source and $R$ is flat over the valuation ring. Therefore any two lifts that agree modulo $p^\delta$ in fact agree modulo
+>
+> $$
+> p^{\,2\delta-\epsilon}.
+> $$
+>
+> Starting from $\delta_0=\delta$, define $\delta_{r+1}=2\delta_r-\epsilon$. Then
+>
+> $$
+> \delta_r=\epsilon+2^r(\delta-\epsilon)\xrightarrow[r\to\infty]{}\infty.
+> $$
+>
+> Applying the same argument repeatedly and using the $p$-adic separatedness of the base, we deduce $s=t$. This is [Scholze, Lemma III.2.4](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf). $\square$
 
 ### 1.2 Hasse smallness and weak canonical subgroups
 
