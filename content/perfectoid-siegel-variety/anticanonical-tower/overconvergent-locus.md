@@ -481,7 +481,7 @@ Let $A/R$ be an abelian scheme of relative dimension $g$, and set $A_1=A\otimes_
 > $$
 >
 > In this case, and **only under such an additional condition on the test ring**, the criterion becomes the usual congruence $s\equiv0\bmod p^{(1-\epsilon)/p^n}$. For a general flat algebra, $\ker(\mathrm{Fr}_B^n)$ can contain additional nilpotents (for example, in $\mathcal O_C[T]/(T^p-1)$, $(T-1)^p=0$), so the congruence version must not be used without checking this ideal equality. Compare [Scholze, Corollary III.2.6](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) and [Zhu, Theorem 3.9.7](https://yhzhumath.github.io/HT%20final.pdf).
-
+>
 > **Step IV — Uniqueness by Yoneda.** The right-hand side of the section formula depends only on $(A,n,\epsilon)$, not on the chosen lift. If $C_n'$ is another finite locally free subgroup with the required reduction, Steps II–III apply equally to it. The functors of points of $C_n$ and $C_n'$ therefore coincide on all allowed flat complete base changes.
 >
 > In particular, take $R'$ to be the coordinate algebra of $C_n$ (and conversely of $C_n'$), which is finite locally free and $p$-adically complete over $R$. Evaluating on its universal section proves $C_n\subseteq C_n'$ and the reverse inclusion. Hence $C_n=C_n'$ as subgroup schemes. $\square$
