@@ -11,6 +11,18 @@ tags:
 
 *Extending the anticanonical tower beyond the ordinary locus*
 
+> [!theorem] Scholze’s theorem (the perfectoid Siegel space)
+> Fix a tame level $K^p\subset\mathrm{GSp}_{2g}(\mathbf A_f^p)$ contained in a principal congruence subgroup of level $N\geq 3$ prime to $p$. For $m\geq 1$, let $\mathcal X^*_{\Gamma(p^m)}$ be the adic minimal compactification of the Siegel variety with tame level $K^p$ and full level $p^m$ at $p$. There is a unique perfectoid space over $\mathbf Q_p^{\mathrm{cycl}}=\widehat{\mathbf Q_p(\mu_{p^\infty})}$ with the following tilde-limit description.
+>
+> $$
+> \mathcal X^*_{\Gamma(p^\infty)}
+> \;\sim\; \varprojlim_{m\geq 1}\mathcal X^*_{\Gamma(p^m)}.
+> $$
+>
+> The symbol $\sim$ denotes the tilde-limit of adic spaces. [Scholze, *On torsion in the cohomology of locally symmetric varieties*, Theorem III.1.2(i)](https://annals.math.princeton.edu/wp-content/uploads/annals-v182-n3-p03-p.pdf#page=27)
+
+Scholze first constructs a perfectoid neighborhood in this tower. Over a strict neighborhood of the ordinary locus, quotienting by the canonical subgroup gives a lift of Frobenius. These Frobenius lifts describe the transition maps in the anticanonical $\Gamma_0(p^m)$-tower. Passing to full $p$-level gives a perfectoid open whose $\mathrm{GSp}_{2g}(\mathbf Q_p)$-translates cover the infinite-level Siegel space.
+
 The [[perfectoid-siegel-variety/anticanonical-tower/ordinary-locus|Ordinary Locus]] note constructs the canonical subgroups and the anticanonical tower when the reduction is ordinary. We now replace ordinarity by a quantitative **smallness condition on the Hasse invariant**.
 
 The first section follows **Yihang Zhu, [*The Hodge–Tate Period Map on Perfectoid Shimura Variety*, §3.9.1](https://yhzhumath.github.io/HT%20final.pdf)** (PDF pp. 44–48). We retain Zhu's original numbering **3.9.1–3.9.11**. The original statements are retained below, with **collapsible proofs** for the deformation-theoretic steps and the resulting canonical-subgroup properties. The subsequent construction of canonical Frobenius lifts (§3.9.2 in Zhu) belongs to a later section of these notes.
