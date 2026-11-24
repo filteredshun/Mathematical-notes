@@ -357,8 +357,88 @@ As in §1, write $p^\delta\in\mathcal O_K$ for a chosen element of valuation $\d
 >
 > Here $(p)$ denotes base change by the absolute Frobenius of $\mathcal O_K/p$, *not* a tensor power. Relative Frobenius on the universal abelian scheme is compatible with this identification.
 
-> [!proof]- Local explanation
-> The local equation for $\mathfrak X(p^{-1}\delta)$ is $u\widetilde{\operatorname{Ha}}=p^{\delta/p}$. In characteristic $p$, Frobenius raises that relation to $u^p\operatorname{Ha}^p=p^\delta$. The Hasse invariant of the Frobenius twist of an abelian scheme is the $p$-th power of the original Hasse section, with the corresponding Hodge-line twist. Because the hyperspecial moduli space descends from $\mathbf Z_p$, the Frobenius of the cyclotomic coefficient ring gives the required identification of the two moduli problems, rather than merely a pointwise comparison. See the proof of Zhu 3.9.17. $\square$
+> [!proof]- Proof by Frobenius base change on local coordinate rings
+> We distinguish the **Frobenius of the cyclotomic coefficient ring** from the relative Frobenius of the Hasse neighborhood.
+>
+> **(1) Three different kinds of coordinates.** Put
+>
+> $$
+> B:=\mathcal O_K/p,\qquad
+> \operatorname{Fr}_B:B\to B,\quad b\mapsto b^p.
+> $$
+>
+> Choose a sufficiently small affine chart of the hyperspecial Siegel moduli scheme **over \(\mathbf Z_p\)**, with special-fibre coordinate ring \(C_0\) over \(\mathbf F_p\). Trivialize the Hodge determinant line on this chart. The Hasse invariant is then represented by an element
+>
+> $$
+> h\in C_0.
+> $$
+>
+> Let \(c_\delta\in B\) be the reduction of the chosen element \(p^\delta\in\mathcal O_K\). The local model from Proposition 2.2, **after reduction modulo \(p\)**, has coordinate ring
+>
+> $$
+> \boxed{\quad
+> D_\delta=
+> \frac{(C_0\otimes_{\mathbf F_p}B)[U]}
+> {(Uh-c_\delta)}.
+> \quad}
+> $$
+>
+> These symbols have **different origins**: \(h\) is a function on the original characteristic-\(p\) Siegel moduli chart; \(c_\delta\) belongs to the cyclotomic coefficient ring \(B\); and **\(U\) is a new, independent polynomial coordinate**, the universal value of the auxiliary Hasse-divisibility section after trivializing its line bundle. In particular, \(U\) is **not** an element of the original ring \(C_0\otimes_{\mathbf F_p}B\). Zhu's Definition–Proposition 3.9.15 explains why the equivalence class \([u]\) has a unique normalized representative satisfying the exact formal equation \(U\widetilde h=p^\delta\).
+>
+> **(2) Twist only the coefficient-ring structure.** By definition,
+>
+> $$
+> D_{\delta/p}^{(p)}
+> :=D_{\delta/p}\otimes_{B,\operatorname{Fr}_B}B.
+> $$
+>
+> Since the original moduli chart and its Hasse section descend to \(\mathbf F_p\), there is a canonical \(B\)-algebra identification
+>
+> $$
+> \begin{aligned}
+> (C_0\otimes_{\mathbf F_p}B)
+> \otimes_{B,\operatorname{Fr}_B}B
+> &\xrightarrow{\ \sim\ } C_0\otimes_{\mathbf F_p}B,\\
+> (a\otimes b)\otimes b'
+> &\longmapsto a\otimes b^p b'.
+> \end{aligned}
+> $$
+>
+> Under this identification, **\(h\) and the new coordinate \(U\) stay unchanged**, whereas \(c_{\delta/p}\) becomes \(c_{\delta/p}^{\,p}=c_\delta\) (choose the elements \(p^{\delta/p}\) and \(p^\delta\) compatibly). It follows that
+>
+> $$
+> \begin{aligned}
+> D_{\delta/p}^{(p)}
+> &\simeq
+> \frac{(C_0\otimes_{\mathbf F_p}B)[U]}
+> {(Uh-c_{\delta/p}^{\,p})}\\
+> &=
+> \frac{(C_0\otimes_{\mathbf F_p}B)[U]}
+> {(Uh-c_\delta)}
+> =D_\delta.
+> \end{aligned}
+> $$
+>
+> The construction respects changes of the Hodge-line trivialization and glues across charts: both the moduli space and the Hasse section descend from \(\mathbf F_p\). This proves the **canonical isomorphism of formal special fibres**
+>
+> $$
+> \boxed{\quad
+> \bigl(\mathfrak X(\delta/p)/p\bigr)^{(p)}
+> \xrightarrow{\sim}\mathfrak X(\delta)/p.
+> \quad}
+> $$
+>
+> **(3) Do not confuse this with relative Frobenius.** The isomorphism just established comes from **base changing along \(\operatorname{Fr}_B\)**; it does **not** raise \(h\) or \(U\) to their \(p\)-th powers. Raising coordinates to \(p\)-th powers instead describes the separate **relative Frobenius** morphism. The Frobenius map used in the next construction is the composite
+>
+> $$
+> \mathfrak X(\delta/p)/p
+> \xrightarrow{\ F_{\mathrm{rel}}\ }
+> \bigl(\mathfrak X(\delta/p)/p\bigr)^{(p)}
+> \xrightarrow{\ \sim\ }
+> \mathfrak X(\delta)/p.
+> $$
+>
+> The first arrow is generally **not** an isomorphism; the second one **is**. This distinction is exactly what Zhu makes in Proposition 3.9.17 and Construction 3.9.19. \(\square\)
 
 ## 3. Canonical Frobenius Lifts on Shrinking Neighborhoods
 
