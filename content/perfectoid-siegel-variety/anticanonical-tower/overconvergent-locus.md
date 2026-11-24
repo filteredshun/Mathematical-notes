@@ -136,16 +136,83 @@ The first section follows **Yihang Zhu, [*The Hodge–Tate Period Map on Perfect
 > In particular, **null-homotopic multiplication by $p^\epsilon$** is a stronger, derived condition than merely annihilating $\operatorname{Lie}(H)$.
 
 
-> [!proof]- Why the two-term Lie complex appears
-> For $H=\ker(f:G_1\to G_2)$ with $G_1,G_2$ smooth and $f$ faithfully flat, the transitivity triangle for the cotangent complex of the fibre of $f$ identifies the cotangent complex at the identity with a two-term complex built from the cotangent spaces of $G_2$ and $G_1$. Dualizing, with the indicated cohomological convention, yields
+> [!remark]- Cotangent-complex origin of the Lie complex (transitivity triangle)
+> Recall the **transitivity triangle** for a composite of schemes $X\xrightarrow{f}Y\to S$:
 >
 > $$
-> \check\ell_H\simeq
-> [\,\operatorname{Lie}G_1\xrightarrow{df}\operatorname{Lie}G_2\,].
+> Lf^*\mathbb L_{Y/S}
+> \longrightarrow\mathbb L_{X/S}
+> \longrightarrow\mathbb L_{X/Y}
+> \xrightarrow{+1}.
 > $$
 >
-> Its homotopy class is independent of the choices of local bases. This is the calculation used below for $H=\ker V^n$. $\square$
-
+> It refines the usual right-exact sequence of Kähler differentials, retaining the information that may be lost at its left end.
+>
+> Now suppose $f:G_1\to G_2$ is a **faithfully flat** homomorphism of smooth commutative group schemes, and put $H=\ker f$. By definition $H$ is the cartesian fibre of $f$ over the identity $e_2:S\to G_2$:
+>
+> $$
+> \begin{array}{ccc}
+> H&\longrightarrow&G_1\\
+> \downarrow&&\downarrow{\scriptstyle f}\\
+> S&\xrightarrow{\ e_2\ }&G_2.
+> \end{array}
+> $$
+>
+> Because $f$ is flat, this square is Tor-independent. **Base change for cotangent complexes** gives
+>
+> $$
+> \mathbb L_{H/S}
+> \simeq\mathbb L_{G_1/G_2}\big|_H.
+> $$
+>
+> Apply transitivity to $G_1\xrightarrow{f}G_2\to S$. Since both $G_i/S$ are smooth, $\mathbb L_{G_i/S}\simeq\Omega^1_{G_i/S}[0]$, and thus
+>
+> $$
+> \mathbb L_{G_1/G_2}\simeq
+> \operatorname{Cone}\!\left(
+> f^*\Omega^1_{G_2/S}
+> \longrightarrow\Omega^1_{G_1/S}
+> \right).
+> $$
+>
+> Let $e_H:S\to H$ be the identity section and set $\omega_{G_i}=e_i^*\Omega^1_{G_i/S}=(\operatorname{Lie}G_i)^\vee$. Pulling this two-term, locally free complex back to $e_H$ identifies the **co-Lie complex** with
+>
+> $$
+> \boxed{\quad
+> \ell_H:=Le_H^*\mathbb L_{H/S}
+> \simeq
+> [\,\omega_{G_2}\xrightarrow{(df)^\vee}\omega_{G_1}\,],
+> \quad}
+> $$
+>
+> placed in **degrees $-1,0$**. The Lie complex is its **derived dual**, not a Grothendieck dualizing complex:
+>
+> $$
+> \boxed{\quad
+> \check\ell_H:=
+> R\mathcal Hom_S(\ell_H,\mathcal O_S)
+> \simeq
+> [\,\operatorname{Lie}G_1\xrightarrow{df}\operatorname{Lie}G_2\,],
+> \quad}
+> $$
+>
+> placed in **degrees $0,1$**. In particular,
+>
+> $$
+> H^0(\check\ell_H)=\ker(df)=\operatorname{Lie}H,
+> \qquad
+> H^0(\ell_H)=\operatorname{coker}((df)^\vee)
+> =e_H^*\Omega^1_{H/S}.
+> $$
+>
+> **Concrete alternative.** The immersion $H\hookrightarrow G_1$ is a base change of the regular identity immersion $S\hookrightarrow G_2$. Its conormal complex
+>
+> $$
+> [\,I/I^2\longrightarrow\Omega^1_{G_1/S}|_H\,]
+> $$
+>
+> gives the same formula, since $e_H^*(I/I^2)\simeq\omega_{G_2}$. This is the special case of the transitivity triangle needed for $H=\ker V^n$ in the canonical subgroup proof.
+>
 > [!example] Example 3.9.4 (An étale group)
 > If $N$ is invertible on $R_1$ and $H_1=\mu_N$, the presentation
 >
