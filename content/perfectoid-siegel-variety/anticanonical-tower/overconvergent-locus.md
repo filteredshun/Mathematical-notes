@@ -13,7 +13,7 @@ tags:
 
 The [[perfectoid-siegel-variety/anticanonical-tower/ordinary-locus|Ordinary Locus]] note constructs the canonical subgroups and the anticanonical tower when the reduction is ordinary. We now replace ordinarity by a quantitative **smallness condition on the Hasse invariant**.
 
-The first section follows **Yihang Zhu, [*The Hodge–Tate Period Map on Perfectoid Shimura Variety*, §3.9.1](https://yhzhumath.github.io/HT%20final.pdf)** (PDF pp. 44–48). We retain Zhu's original numbering **3.9.1–3.9.11**. This is a *statement-only reference sheet*: **no proofs are included yet**. The subsequent construction of canonical Frobenius lifts (§3.9.2 in Zhu) belongs to a later section of these notes.
+The first section follows **Yihang Zhu, [*The Hodge–Tate Period Map on Perfectoid Shimura Variety*, §3.9.1](https://yhzhumath.github.io/HT%20final.pdf)** (PDF pp. 44–48). We retain Zhu's original numbering **3.9.1–3.9.11**. The original statements are retained below, with **collapsible proofs** for the deformation-theoretic steps and the resulting canonical-subgroup properties. The subsequent construction of canonical Frobenius lifts (§3.9.2 in Zhu) belongs to a later section of these notes.
 
 ## 1. Canonical Subgroups over the Overconvergent Locus
 
@@ -398,6 +398,25 @@ Let $A/R$ be an abelian scheme of relative dimension $g$, and set $A_1=A\otimes_
 >
 > The stronger hypothesis is used to control **successive canonical quotients**, rather than merely the existence of a weak subgroup.
 
+
+> [!proof]- Verification of the elementary consequences
+> If $A$ is strongly $O(n,\epsilon)$, the divisibility $\operatorname{Ha}^{p^n}\mid p^\epsilon$ implies the weak $O(n,\epsilon)$ condition because $N_n\leq p^n$. The same reasoning gives weak and strong conditions of each smaller level whenever appropriate.
+>
+> For the nesting of weak canonical subgroups, fix $1\leq r\leq n$ and choose a common allowable exponent $\epsilon$ for both levels. By Theorem 3.9.7(2), for every allowed test algebra $R'$,
+>
+> $$
+> \begin{aligned}
+> C_r(A)(R')
+> &=\{s\in A[p^r](R'):
+> s\equiv0\pmod{p^{(1-\epsilon)/p^r}}\},\\
+> C_n(A)(R')
+> &=\{s\in A[p^n](R'):
+> s\equiv0\pmod{p^{(1-\epsilon)/p^n}}\}.
+> \end{aligned}
+> $$
+>
+> Since $(1-\epsilon)/p^r\geq(1-\epsilon)/p^n$, every section of the first subgroup lies in the second. Evaluating on their coordinate algebras, exactly as in the uniqueness argument, gives $C_r(A)\subseteq C_n(A)$ **as group schemes**, not just as subsets of geometric points. $\square$
+
 > [!proposition] Proposition 3.9.9 (Compatibility under canonical quotient)
 > Suppose $A$ is **strongly $O(n)$**, with canonical subgroup $C_n(A)$, and put
 >
@@ -426,6 +445,73 @@ Let $A/R$ be an abelian scheme of relative dimension $g$, and set $A_1=A\otimes_
 > }
 > $$
 
+
+> [!proof]- Proof: the Hasse transformation and rigidity of the quotient
+> **(1) Comparison of the Hasse conditions.** Let $q:A\to B=A/C_n(A)$, and choose $\epsilon_0<1/2$ witnessing the strong $O(n)$ condition on $A$. Modulo $p^{1-\epsilon_0}$, the canonical isogeny $q$ agrees with the relative $n$-fold Frobenius
+>
+> $$
+> F_A^n:A_1\longrightarrow A_1^{(p^n)}.
+> $$
+>
+> Consequently, under the Frobenius-twisted Hodge-line identifications,
+>
+> $$
+> \boxed{\quad
+> \operatorname{Ha}(B)\equiv
+> \operatorname{Ha}(A)^{p^n}
+> \pmod{p^{1-\epsilon_0}}.
+> \quad}
+> $$
+>
+> Since $1-\epsilon_0>1/2$, this congruence controls all the small Hasse valuations used in the strong canonical subgroup conditions. Locally, the condition for $B$ to be strongly $O(m)$ is exactly the condition for $A$ to be strongly $O(n+m)$, with a possibly different exponent smaller than $1/2$. This is the divisibility calculation in [Scholze, Proposition III.2.8(iii)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf); in a rank-one valuation ring, it reads transparently as
+>
+> $$
+> h(B)=p^n h(A),\qquad
+> h(B)<\frac{1}{2p^m}
+> \ \Longleftrightarrow\
+> h(A)<\frac{1}{2p^{n+m}}.
+> $$
+>
+> The valuation formula is an illustration; the formal proof uses the stated congruence of Hasse sections and their divisibility on the base.
+>
+> **(2) Nested subgroups and the $p^m$-torsion quotient.** Suppose the equivalent conditions hold. By the nesting argument above,
+>
+> $$
+> C_n(A)\subseteq C_{n+m}(A).
+> $$
+>
+> We need to prove that $q$ maps $C_{n+m}(A)$ into $C_m(B)$. To see first that $q(C_{n+m})$ is killed by $p^m$, one may use **Proposition 3.9.10 below**, which is proved independently of the present proposition: over each geometric generic fibre $C_{n+m}\simeq(\mathbf Z/p^{n+m})^g$ and $C_n=C_{n+m}[p^n]$, by inclusion and equality of their ranks. Hence $C_{n+m}/C_n$ is killed by $p^m$ on the generic fibre. Since these are finite locally free over the $p$-torsion-free base, this identity holds over $R$. Thus $q(C_{n+m})\subseteq B[p^m]$.
+>
+> **(3) Use rigidity instead of geometric points.** Take a common exponent $\epsilon<1/2$ for the relevant weak subgroups, and set
+>
+> $$
+> H_B:=B[p^m]/C_m(B).
+> $$
+>
+> Theorem 3.9.7(1) gives $p^\epsilon\Omega^1_{H_B/R}=0$, so Lemma 3.9.5 yields
+>
+> $$
+> H_B(R')\hookrightarrow H_B(R'/p^{1-\epsilon})
+> $$
+>
+> for any allowed flat, complete $R'$.
+>
+> Now work modulo $p^{1-\epsilon}$. The maps $A\to B$ and $B\to B/C_m(B)$ become the successive Frobenius maps $F^n$ and $F^m$. Their composite is $F^{n+m}$. Every section $s$ of $C_{n+m}(A)$ is killed by $F^{n+m}$ after this reduction, so its image in $H_B(R'/p^{1-\epsilon})$ is zero. By the displayed injection its image in $H_B(R')$ is already zero. Consequently
+>
+> $$
+> q(C_{n+m}(A))\subseteq C_m(B)
+> $$
+>
+> as finite locally free subgroup schemes (the assertion can be checked on the universal sections over their coordinate algebras).
+>
+> Finally, the induced map
+>
+> $$
+> C_{n+m}(A)/C_n(A)\longrightarrow C_m(B)
+> $$
+>
+> is an inclusion of finite locally free group schemes of the **same rank** $p^{mg}$, hence an isomorphism. Its kernel before quotienting is exactly $C_n(A)$, proving the claimed short exact sequence. $\square$
+
 > [!proposition] Proposition 3.9.10 (Generic fibre of the canonical subgroup)
 > Assume $A$ is **strongly $O(n)$** and let $C_n=C_n(A)$ be its canonical subgroup. For any geometric point $\bar x\to\operatorname{Spec}(R[1/p])$,
 >
@@ -439,14 +525,118 @@ Let $A/R$ be an abelian scheme of relative dimension $g$, and set $A_1=A\otimes_
 >
 > In particular, the generic fibre is a locally constant finite étale group of **standard rank-$g$ free type** over $\mathbf Z/p^n\mathbf Z$, not merely an abstract group of order $p^{ng}$.
 
+
+> [!proof]- Proof by the elementary divisors and a rigidity contradiction
+> **Reduction to a valuation ring.** Since the generic fibre of $C_n$ is finite étale, its abstract group structure is locally constant on connected components. The specialization argument of [Scholze, Proposition III.2.8(iv)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) reduces the verification to $R=\mathcal O_C$ for a complete algebraically closed extension $C/K$. A geometric generic-fibre point specializes to a point of the integral base, after passage to a suitable valuation ring, so this reduction detects any possible failure.
+>
+> Choose $\epsilon<1/2$ such that $A$ is strongly $O(n,\epsilon)$; in this valuation-ring case let $h$ be its Hasse height. Thus $p^nh\leq\epsilon$. We have a finite abelian group
+>
+> $$
+> C_n(C)\subseteq A[p^n](C)
+> \simeq(\mathbf Z/p^n\mathbf Z)^{2g},
+> \qquad |C_n(C)|=p^{ng}.
+> $$
+>
+> **Suppose it is not free of rank $g$.** By the elementary divisor theorem we can write
+>
+> $$
+> C_n(C)\simeq
+> \bigoplus_{j=1}^{r}\mathbf Z/p^{a_j}\mathbf Z,
+> \qquad 1\leq a_j\leq n,\quad
+> \sum_j a_j=ng.
+> $$
+>
+> If the group is not $(\mathbf Z/p^n)^g$, necessarily $r>g$. Hence its $p$-torsion has more than $p^g$ elements:
+>
+> $$
+> |C_n(C)[p]|=p^r>p^g=|C_1(C)|.
+> $$
+>
+> By the nesting of canonical subgroups we have $C_1\subseteq C_n$. Choose
+>
+> $$
+> s\in C_n(C)[p]\setminus C_1(C).
+> $$
+>
+> It determines a nontrivial point of $H:=A[p]/C_1$. Because $C_n$ and $H$ are finite over the integrally closed valuation ring $\mathcal O_C$, this point extends uniquely to integral sections $\widetilde s\in C_n(\mathcal O_C)$ and $\widetilde t\in H(\mathcal O_C)$.
+>
+> **Now apply the weak canonical subgroup criterion at level one.** Since $p^nh\leq\epsilon$, the level-one Hasse condition $h\leq\epsilon/p^n$ holds. Therefore $C_1$ is a **weak** level-one canonical subgroup with exponent
+>
+> $$
+> \epsilon_1:=\epsilon/p^n.
+> $$
+>
+> By Theorem 3.9.7(1), $p^{\epsilon_1}$ kills $\Omega^1_{H/\mathcal O_C}$. On the other hand, the characterization of sections for $C_n$ gives
+>
+> $$
+> \widetilde s\equiv0
+> \pmod{p^{\delta}},
+> \qquad
+> \delta:=\frac{1-\epsilon}{p^n}.
+> $$
+>
+> Its image $\widetilde t$ in $H$ is also zero modulo $p^\delta$. But
+>
+> $$
+> \delta>\epsilon_1
+> \quad\Longleftrightarrow\quad
+> 1-\epsilon>\epsilon,
+> $$
+>
+> which holds because $\epsilon<1/2$. The rigidity Lemma 3.9.5 forces $\widetilde t=0$, contradicting the choice of $s\notin C_1(C)$. Hence
+>
+> $$
+> \boxed{\quad C_n(C)\simeq(\mathbf Z/p^n\mathbf Z)^g.\quad}
+> $$
+>
+> This proves the generic-fibre claim. The smallness inequality $\epsilon<1/2$ is used a **second time** here, independently of its use in the Illusie lifting argument. $\square$
+
 > [!remark] Remark 3.9.11 (Principal polarization and isotropy)
 > If $A/R$ carries a **principal polarization**, uniqueness of the canonical subgroup and duality imply that $C_n(A)$ is **totally isotropic** for the induced Weil pairing. In particular, on each geometric generic fibre, $C_n(\bar x)[p]\subset A[p](\bar x)$ is isotropic and therefore has at most $p^g$ elements.
 >
 > Zhu notes that this gives a shorter route to Proposition 3.9.10 in the principally polarized setting.
 
+
+> [!proof]- Proof by Cartier duality and uniqueness
+> Let $\lambda:A\xrightarrow{\sim}A^\vee$ be a principal polarization. The finite locally free exact sequence
+>
+> $$
+> 0\to C_n(A)\to A[p^n]\to H_n\to0
+> $$
+>
+> gives, by Cartier duality and the perfect Weil pairing,
+>
+> $$
+> C_n(A)^\perp=H_n^D\subset A^\vee[p^n].
+> $$
+>
+> Modulo $p^{1-\epsilon}$, the quotient $H_n$ is $\ker V^n$; duality exchanges Frobenius and Verschiebung and gives
+>
+> $$
+> (H_n^D)\bmod p^{1-\epsilon}
+> \simeq(\ker V^n)^D
+> \simeq\ker F^n_{A^\vee}.
+> $$
+>
+> Under the principal polarization, $A^\vee$ has the same Hasse condition as $A$, so the weak canonical subgroup theorem applies to $A^\vee$. By **uniqueness**,
+>
+> $$
+> H_n^D=C_n(A^\vee)=\lambda(C_n(A)).
+> $$
+>
+> Thus, after identifying $A$ and $A^\vee$ through $\lambda$,
+>
+> $$
+> \boxed{\qquad C_n(A)^\perp=C_n(A).\qquad}
+> $$
+>
+> In particular the Weil pairing is trivial on $C_n(A)\times C_n(A)$, so $C_n(A)$ is Lagrangian, hence totally isotropic. This is the higher-level form of the duality argument already proved in *Ordinary Locus*, Proposition 4.4. $\square$
+
 ---
 
-**Next section (not written yet):** canonical Frobenius lifts on Hasse-invariant neighborhoods (Zhu §3.9.2), followed by the overconvergent anticanonical tower. No proofs from §3.9.1 have been added here.
+**The proofs above follow Zhu §3.9.1 and Scholze §III.2.1.** The Frobenius-lift construction is developed in §3 below; the remainder of the overconvergent tower is treated in §§4–6.
+
+
 
 
 ## 2. Hasse-Invariant Neighborhoods
