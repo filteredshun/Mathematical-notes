@@ -927,60 +927,60 @@ As in §1, write $p^\delta\in\mathcal O_K$ for a chosen element of valuation $\d
 > [!proof]- Proof by functor of points (Zhu, Proposition 3.9.17)
 > **(1) Twisting the structure map of the test algebra.** Put
 >
-> $
+> $$
 > B:=\mathcal O_K/p,\qquad
 > Y_\delta:=\mathfrak X(\delta)/p.
-> $
+> $$
 >
 > Let $R$ be a test $B$-algebra with structure map $\iota:B\to R$. Write $\operatorname{Fr}_*R$ for the **same underlying ring** $R$, equipped instead with the structure map
 >
-> $
+> $$
 > B\xrightarrow{\operatorname{Fr}_B}B
 > \xrightarrow{\iota}R,\qquad
 > b\longmapsto\iota(b^p).
-> $
+> $$
 >
 > In particular, $\operatorname{Fr}_*R$ is restriction of scalars along Frobenius, not the tensor product $R\otimes_{B,\operatorname{Fr}_B}B$. The fibre-product definition of the Frobenius twist gives the natural equality
 >
-> $
+> $$
 > \boxed{\quad
 > Y^{(p)}(R)=Y(\operatorname{Fr}_*R)
 > \quad}
-> $
+> $$
 >
 > for any $B$-scheme $Y$ (and similarly for formal schemes with the appropriate continuous maps). Indeed, an $R$-point of $Y^{(p)}$ is a map to the upper-left corner of the cartesian square
 >
-> $
+> $$
 > \begin{array}{ccc}
 > Y^{(p)}&\longrightarrow&Y\\
 > \downarrow&&\downarrow\\
 > \operatorname{Spec}B&\xrightarrow{\operatorname{Fr}_B}&
 > \operatorname{Spec}B .
 > \end{array}
-> $
+> $$
 >
 > By the universal property, this is precisely a map $\operatorname{Spec}R\to Y$ whose composite with the right vertical arrow is induced by $\iota\circ\operatorname{Fr}_B$. Equivalently, it is a $B$-point with test algebra $\operatorname{Fr}_*R$.
 >
 > **(2) The underlying abelian scheme does not change.** Applying (1) to $Y_{\delta/p}$, we obtain
 >
-> $
+> $$
 > (Y_{\delta/p})^{(p)}(R)=
 > Y_{\delta/p}(\operatorname{Fr}_*R).
-> $
+> $$
 >
 > A point on the right consists of an underlying hyperspecial moduli point
 >
-> $
+> $$
 > f:\operatorname{Spec}(\operatorname{Fr}_*R)\longrightarrow
 > X_B=X_{\mathbf F_p}\times_{\operatorname{Spec}\mathbf F_p}
 > \operatorname{Spec}B
-> $
+> $$
 >
 > together with the auxiliary Hasse-divisibility datum. Here $X_{\mathbf F_p}$ is the reduction of the original Siegel moduli scheme over $\mathbf Z_p$.
 >
 > The crucial observation is that $\operatorname{Fr}_*R$ and $R$ are identical as $\mathbf F_p$-algebras, since Frobenius on $\mathbf F_p$ is the identity. By the universal property of base change,
 >
-> $
+> $$
 > \begin{aligned}
 > \operatorname{Hom}_B(\operatorname{Spec}(\operatorname{Fr}_*R),X_B)
 > &\simeq\operatorname{Hom}_{\mathbf F_p}
@@ -989,50 +989,50 @@ As in §1, write $p^\delta\in\mathcal O_K$ for a chosen element of valuation $\d
 > (\operatorname{Spec}R,X_{\mathbf F_p})\\
 > &\simeq\operatorname{Hom}_B(\operatorname{Spec}R,X_B).
 > \end{aligned}
-> $
+> $$
 >
 > Thus the same triple $(A,\lambda,\eta^p)/R$ is classified on either side. In particular, neither the abelian scheme nor its Hodge line nor its Hasse invariant is replaced by its Frobenius twist in this identification. This is where descent of the original moduli problem to $\mathbf F_p$ is essential.
 >
 > **(3) Only the scalar in the divisibility equation changes.** Write $c_\gamma$ for the reduction of our chosen element $p^\gamma\in\mathcal O_K$ in $B$, with $c_{\delta/p}^p=c_\delta$. By the normalized local equation of Proposition 2.2, the reduction $Y_{\delta/p}$ classifies the moduli datum together with a section
 >
-> $
+> $$
 > u\in H^0(\operatorname{Spec}R,\omega_{A/R}^{\otimes(1-p)})
-> $
+> $$
 >
 > satisfying, in the ring $\operatorname{Fr}_*R$,
 >
-> $
+> $$
 > u\,\operatorname{Ha}(A/R)
 > =c_{\delta/p}\cdot1
 > =\iota\bigl(c_{\delta/p}^{\,p}\bigr)
 > =\iota(c_\delta).
-> $
+> $$
 >
 > In this formula the product on the left is the natural contraction of the Hasse line with its inverse. The equality on the right uses the *twisted structure map*, not Frobenius on the section $u$ or on $\operatorname{Ha}(A/R)$. Under the identity of underlying rings $\operatorname{Fr}_*R=R$, the equation therefore becomes exactly the equation for an $R$-point of $Y_\delta$:
 >
-> $
+> $$
 > \boxed{\quad u\,\operatorname{Ha}(A/R)=\iota(c_\delta).\quad}
-> $
+> $$
 >
 > We use the normalized auxiliary coordinate on the reduced model, rather than reapplying the original mixed-characteristic moduli functor (which was stated for flat, complete $\mathcal O_K$-algebras) to an arbitrary characteristic-$p$ ring.
 >
 > The construction and its inverse are natural in $R$, preserve the underlying moduli datum and the auxiliary section, and respect changes of Hodge-line trivialization. Hence Yoneda's lemma gives
 >
-> $
+> $$
 > \boxed{\quad
 > \bigl(\mathfrak X(\delta/p)/p\bigr)^{(p)}
 > \xrightarrow{\sim}
 > \mathfrak X(\delta)/p.
 > \quad}
-> $
+> $$
 >
 > **Important distinction.** This isomorphism identifies the *target* of relative Frobenius. The separate relative Frobenius map
 >
-> $
+> $$
 > \mathfrak X(\delta/p)/p
 > \xrightarrow{F_{\mathrm{rel}}}
 > \bigl(\mathfrak X(\delta/p)/p\bigr)^{(p)}
-> $
+> $$
 >
 > does raise local moduli and auxiliary coordinates to their $p$-th powers. The isomorphism just proved does not. No canonical-subgroup theorem is needed for this lemma; the canonical subgroup enters only when lifting this composite to mixed characteristic. $\square$
 
@@ -1246,9 +1246,9 @@ Fix from now on $0\leq\epsilon<\frac12$. The **radius at level $m$** is $p^{-m}\
 >
 > To lift finiteness, use the following elementary formal-algebra fact. If $R,S$ are $a$-adically complete rings, with $a=p^\alpha$, and $S/aS$ is finite over $R/aR$, choose lifts $s_1,\ldots,s_N$ of module generators. For any $s\in S$, successive approximation gives
 >
-> $
+> $$
 > s=\sum_{i=1}^N\left(\sum_{j\geq0}a^j r_{ij}\right)s_i,\qquad r_{ij}\in R.
-> $
+> $$
 >
 > The coefficient series converge by completeness. Thus $S$ is finite over $R$. Applied on affine formal charts (the inverse image is affine because its reduction is affine), this proves formal finiteness, hence finiteness on generic fibres.
 >
@@ -1256,23 +1256,23 @@ Fix from now on $0\leq\epsilon<\frac12$. The **radius at level $m$** is $p^{-m}\
 >
 > On an affine chart of the smooth hyperspecial space, let $h$ denote the Hasse section, $\widetilde h$ an integral lift, and $a_\epsilon=p^\epsilon$. Define the auxiliary flat formal model $\mathfrak X_{\mathrm{aux}}(\epsilon/p)$ by the Hasse-power divisibility datum $u h^p=a_\epsilon$ modulo $p$, using the inverse of the $p$-th tensor power of the Hasse line. Its local normalized equation is
 >
-> $
+> $$
 > \mathfrak X_{\mathrm{aux}}(\epsilon/p):
 > \qquad R_0\langle U\rangle/(U\widetilde h^{\,p}-a_\epsilon).
-> $
+> $$
 >
 > This is the same construction as Proposition 2.2, applied to $h^p$ instead of $h$; it glues via changes of line trivialization. Flatness follows from the non-zero-divisor property of the Hasse section on the smooth special fibre (one can check torsion-freeness on the local equation after descending to a discretely valued coefficient ring). After inverting $p$, the condition is $|\widetilde h|^p\geq|a_\epsilon|$, so its adic generic fibre is exactly $\mathcal X(\epsilon/p)$.
 >
 > The strong canonical subgroup exists on this auxiliary formal model, since $h^p\mid p^\epsilon$ holds there by construction. Quotient by it gives the same generic-fibre canonical quotient. Indeed, modulo $p^\alpha$ the quotient is relative Frobenius of the abelian scheme, and its Hasse section is $h^p$ in the corresponding Frobenius-twisted Hodge line. Thus the auxiliary section $U$ defines the target Hasse-divisibility datum modulo $p^\alpha$. It lifts uniquely to the normalized target datum: locally the error in $U\widetilde h_B=a_\epsilon$ is divisible by $p^\alpha$, and $\alpha>\epsilon$ lets one correct it by a unit congruent to $1$ modulo $p^{\alpha-\epsilon}$. Put $\beta:=\alpha-\epsilon=1-2\epsilon>0$. It is enough for the degree calculation that the normalized target auxiliary coordinate agrees with $U$ modulo $p^\beta$; we do not claim that this correction vanishes modulo the larger ideal $p^\alpha$. This constructs
 >
-> $
+> $$
 > \mathfrak X_{\mathrm{aux}}(\epsilon/p)
 > \longrightarrow\mathfrak X(\epsilon).
-> $
+> $$
 >
 > Crucially, modulo $p^\beta$ this morphism is the **base change of relative Frobenius of the smooth hyperspecial moduli space**, rather than relative Frobenius of the possibly singular Hasse-neighborhood model. On a chart it sends the target moduli coordinates by relative Frobenius and sends the target auxiliary variable to $U$ (not to $U^p$). In other words, the diagram after reduction modulo $p^\beta$ is cartesian:
 >
-> $
+> $$
 > \begin{array}{ccc}
 > \mathfrak X_{\mathrm{aux}}(\epsilon/p)/p^\beta
 > &\longrightarrow&\mathfrak X(\epsilon)/p^\beta\\
@@ -1280,7 +1280,7 @@ Fix from now on $0\leq\epsilon<\frac12$. The **radius at level $m$** is $p^{-m}\
 > \mathfrak X/p^\beta&\xrightarrow{F_{\mathrm{rel}}}&
 > (\mathfrak X/p^\beta)^{(p)}.
 > \end{array}
-> $
+> $$
 >
 > The target twist is identified using the $\mathbf F_p$-model of the hyperspecial special fibre. Indeed, pulling back the target equation $U h=a_\epsilon$ along this relative Frobenius gives precisely $U h^p=a_\epsilon$.
 >
@@ -1288,9 +1288,9 @@ Fix from now on $0\leq\epsilon<\frac12$. The **radius at level $m$** is $p^{-m}\
 >
 > Therefore the auxiliary formal morphism is finite locally free of rank $p^d$. Passing to generic fibres, where the two source models coincide, gives
 >
-> $
+> $$
 > \boxed{\deg\bigl(\widetilde F_\epsilon:\mathcal X(\epsilon/p)\to\mathcal X(\epsilon)\bigr)=p^d.}
-> $
+> $$
 >
 > **(3) Étaleness is a separate argument.** A finite morphism in characteristic zero need not be étale merely because it lifts Frobenius. Proposition 4.3 proves étaleness using the characteristic-zero Hecke correspondence and the open immersion $\Phi_{1,\epsilon}$, without assuming that its image is the entire transverse locus. Thus there is no circularity in the later fibre-counting argument. These transition maps are generally **not** inclusions of nested neighborhoods. $\square$
 >
@@ -1323,7 +1323,17 @@ $$
 \end{aligned}}
 $$
 
-These are **fibre products of adic spaces**. In particular, the second is not defined by taking only geometric points. Its valued-field points have moduli data $(B,\lambda_B,\eta_B^p,D)$, where $D\subset B[p^m]$ is a Lagrangian subgroup of standard $\Gamma_0(p^m)$-type and the underlying $B$ lies in the Hasse neighborhood $\mathcal X(\epsilon)$.
+These are **fibre products of adic spaces**. In particular, the second is not defined by taking only geometric points. By definition it is the inverse image of $\mathcal X(\epsilon)$ under the ambient forgetful projection $\pi_m$, and it imposes no transversality condition on the level subgroup. The following square is cartesian by construction:
+ 
+$$
+\begin{array}{ccc}
+\mathcal X_{\Gamma_0(p^m)}(\epsilon)&\hookrightarrow&\mathcal Y_m\\
+\downarrow&&\downarrow{\scriptstyle\pi_m}\\
+\mathcal X(\epsilon)&\hookrightarrow&\mathcal Y_0.
+\end{array}
+$$
+
+In particular the left vertical map is finite étale, by base change. Its valued-field points have moduli data $(B,\lambda_B,\eta_B^p,D)$, where $D\subset B[p^m]$ is a Lagrangian subgroup of standard $\Gamma_0(p^m)$-type and the underlying $B$ lies in the Hasse neighborhood $\mathcal X(\epsilon)$.
 
 > [!proposition] Proposition 4.1 (Canonical-quotient morphism)
 > For each $m\geq1$, the universal strong canonical subgroup on $\mathfrak X(p^{-m}\epsilon)$ induces a morphism of adic spaces
@@ -1343,67 +1353,214 @@ These are **fibre products of adic spaces**. In particular, the second is not de
 >
 > The quotient $B$ carries the canonical **principal polarization** and **transported $K^p$-level**. The subgroup $D$ is a finite étale Lagrangian subgroup of free type $(\mathbf Z/p^m\mathbf Z)^g$ on each geometric generic fibre. The map is compatible with the finite-level forgetting maps as $m$ varies.
 
-> [!proof]- Construction from the universal analytic family
-> By Proposition 3.1 the formal universal family over $\mathfrak X(p^{-m}\epsilon)$ has a base-change-compatible strong canonical subgroup $C_m$. Its quotient is principally polarized because $C_m$ is Lagrangian, exactly as in Ordinary Locus, Proposition 5.1. Prime-to-$p$ level transports along this $p$-power isogeny.
+> [!proof]- Construction by algebraic descent, analytification, and restriction (Zhu 3.9.21(2))
+> The point of the proof is to construct an actual **morphism of adic spaces**, rather than only an assignment on geometric points. We do not need to establish a moduli interpretation on arbitrary analytic test spaces.
 >
-> The image $D=A[p^m]/C_m$ is of rank $p^{mg}$ and free of rank $g$ on geometric generic fibres by the strong canonical subgroup theorem in §1. It is Lagrangian in $B[p^m]$, by the Weil-pairing calculation for the quotient polarization.
+> **Step 1 — The ambient target and the two restriction problems.** Put $\mathcal O=\mathbf Z_p^{\mathrm{cycl}}$, $K=\mathbf Q_p^{\mathrm{cycl}}$, and let $X_0/K$ and $X_m/K$ denote the algebraic Siegel moduli schemes at hyperspecial and $\Gamma_0(p^m)$-level, respectively. Thus $\mathcal Y_i=X_i^{\mathrm{ad}}$ for $i=0,m$. In Zhu's notation, after choosing the compatible cyclotomic trivializations, the algebraic space at $\Gamma_s(p^m)$-level over $K$ is identified with $X_m$ by his equation (3.9.1).
 >
-> Lemma 3.2 applied successively shows that $B$ has Hasse height at most $\epsilon$, so the map lands in $\mathcal X_{\Gamma_0(p^m)}(\epsilon)$, rather than merely $\mathcal Y_m$. These operations define morphisms of families and commute with base change, hence give a **morphism of adic spaces** after passing to generic fibres, not merely a map on geometric points. $\square$
+> By Proposition 3.4 the iterated canonical quotient defines a formal morphism
+>
+> $$
+> f:\mathfrak X(p^{-m}\epsilon)\longrightarrow\mathfrak X(\epsilon),
+> \qquad A\longmapsto A/C_m(A).
+> $$
+>
+> Composing its adic generic fibre with the natural inclusion into $\mathcal Y_0$ gives a map $f_\eta^{\mathrm{ad}}:\mathcal X(p^{-m}\epsilon)\to\mathcal Y_0$. We first construct a lift to the *entire* finite-level analytification:
+>
+> $$
+> \begin{array}{ccc}
+> &\mathcal Y_m&\\
+> {\scriptstyle\Phi'_{m,\epsilon}}\nearrow&&
+> \downarrow{\scriptstyle\pi_m}\\
+> \mathcal X(p^{-m}\epsilon)&
+> \xrightarrow{\ f_\eta^{\mathrm{ad}}\ }&\mathcal Y_0 .
+> \end{array}
+> $$
+>
+> Only after constructing this lift do we factor it through the Hasse neighborhood in the target. The latter factorization is formal because of the fibre-product definition preceding the proposition.
+>
+> **Step 2 — An algebraic lift on each affine formal chart.** Take a formal affine chart $\mathfrak U=\operatorname{Spf}R\subset\mathfrak X(p^{-m}\epsilon)$, with its algebraic abelian scheme $A/R$ obtained from the moduli problem. Write $S=R[1/p]$. The universal strong canonical subgroup $C_m$ is compatible with base change, and the quotient $B=A/C_m$ carries the induced principal polarization and transported tame level.
+>
+> The group scheme
+>
+> $$
+> D=A[p^m]/C_m\subset B[p^m]
+> $$
+>
+> gives a $\Gamma_0(p^m)$-level structure on $B_S$: it is finite étale over $S$, Lagrangian and étale-locally free of rank $g$ over $\mathbf Z/p^m\mathbf Z$. See the isotropy remark immediately below for the two polarization calculations and the free-module assertion.
+>
+> Therefore the **algebraic moduli interpretation** gives a morphism
+>
+> $$
+> \ell:\operatorname{Spec}S\longrightarrow X_m,
+> \qquad (B_S,\lambda_B,\eta_B^p,D_S),
+> $$
+>
+> whose composite with the algebraic forgetful map $\pi_m^{\mathrm{alg}}:X_m\to X_0$ is the classifying morphism $b:\operatorname{Spec}S\to X_0$ of $(B_S,\lambda_B,\eta_B^p)$.
+>
+> **Step 3 — Descend the algebraic morphism to a finite-type stage.** The ring $S=R[1/p]$ is not necessarily a finite-type $K$-algebra, so we should not simply write $(\operatorname{Spec}S)^{\mathrm{ad}}$ using the usual finite-type analytification functor. Instead write
+>
+> $$
+> R=\varinjlim_i R_i,\qquad
+> S=\varinjlim_i R_i[1/p],
+> $$
+>
+> where $R_i$ ranges over the finitely generated $\mathcal O$-subalgebras of $R$.
+>
+> Since the integral hyperspecial moduli scheme is finitely presented over $\mathcal O$, the algebraic classifying map for $B/R$ descends to some $b_i:\operatorname{Spec}R_i\to X_{\mathcal O}$. Since $X_m$ is finitely presented over $K$, the level morphism $\ell$ descends, after enlarging $R_i$ if necessary, to a morphism
+>
+> $$
+> \ell_i:\operatorname{Spec}R_i[1/p]\longrightarrow X_m.
+> $$
+>
+> The equality $\pi_m^{\mathrm{alg}}\ell_i=b_i[1/p]$ also holds after enlarging the stage: this follows from the finite-presentation limit property for the Hom functor. Thus one has an algebraic commutative diagram
+>
+> $$
+> \begin{array}{ccc}
+> \operatorname{Spec}R_i[1/p]&\xrightarrow{\ell_i}&X_m\\
+> &\searrow{\scriptstyle b_i[1/p]}&\downarrow{\scriptstyle\pi_m^{\mathrm{alg}}}\\
+> &&X_0.
+> \end{array}
+> $$
+>
+> Notice that we need to descend the **resulting algebraic moduli datum**, not to construct a canonical subgroup by the canonical-subgroup theorem over the possibly non-complete ring $R_i$ itself.
+>
+> **Step 4 — Analytify, restrict the source, and glue.** All schemes in the preceding diagram are of finite type over $K$, so analytification gives
+>
+> $$
+> \ell_i^{\mathrm{ad}}:
+> (\operatorname{Spec}R_i[1/p])^{\mathrm{ad}}
+> \longrightarrow\mathcal Y_m.
+> $$
+>
+> Let $\widehat R_i$ be the $p$-adic completion of $R_i$. Because $R$ is $p$-adically complete, the inclusion $R_i\to R$ extends continuously to $\widehat R_i\to R$. We also have the usual open immersion of the formal generic fibre of a finite-type affine model into its algebraic analytification,
+>
+> $$
+> (\operatorname{Spf}\widehat R_i)_\eta^{\mathrm{ad}}
+> \hookrightarrow
+> (\operatorname{Spec}R_i[1/p])^{\mathrm{ad}}.
+> $$
+>
+> Consequently the required morphism on $\mathfrak U_\eta^{\mathrm{ad}}$ is the composite
+>
+> $$
+> \boxed{
+> \begin{aligned}
+> (\operatorname{Spf}R)_\eta^{\mathrm{ad}}
+> &\longrightarrow(\operatorname{Spf}\widehat R_i)_\eta^{\mathrm{ad}}\\
+> &\hookrightarrow(\operatorname{Spec}R_i[1/p])^{\mathrm{ad}}\\
+> &\xrightarrow{\ell_i^{\mathrm{ad}}}\mathcal Y_m.
+> \end{aligned}}
+> $$
+>
+> The first arrow is induced by the continuous ring map, not necessarily an open immersion. The second arrow is restriction to the bounded formal generic fibre. For example, for $R_i=\mathcal O[T]$, this second arrow is the inclusion of the closed unit disc $\operatorname{Spa}(K\langle T\rangle,\mathcal O\langle T\rangle)$ into $(\mathbb A^1_K)^{\mathrm{ad}}$.
+>
+> The composite is independent of the choice of finite-type stage: two algebraic descents of the same $\ell$ agree at a common larger stage by finite presentation, and all the analytification and restriction maps are functorial. The construction also commutes with maps of affine formal charts, by base-change compatibility of the canonical subgroup and the same descent argument. Hence the local maps agree on overlaps and glue to
+>
+> $$
+> \Phi'_{m,\epsilon}:\mathcal X(p^{-m}\epsilon)\longrightarrow\mathcal Y_m,
+> \qquad
+> \pi_m\Phi'_{m,\epsilon}=f_\eta^{\mathrm{ad}}.
+> $$
+>
+> **Step 5 — Factor through the target Hasse neighborhood.** By the definition of the finite-level neighborhood there is a cartesian square
+>
+> $$
+> \begin{array}{ccc}
+> \mathcal X_{\Gamma_0(p^m)}(\epsilon)&\hookrightarrow&\mathcal Y_m\\
+> \downarrow&&\downarrow{\scriptstyle\pi_m}\\
+> \mathcal X(\epsilon)&\hookrightarrow&\mathcal Y_0.
+> \end{array}
+> $$
+>
+> By Step 1 the underlying quotient map already factors through $\mathcal X(\epsilon)$; this is the Hasse-height estimate for the iterated canonical quotient (Lemma 3.2 and Proposition 3.4). Thus the universal property of this fibre product gives a **unique** factorization
+>
+> $$
+> \boxed{\Phi_{m,\epsilon}:\mathcal X(p^{-m}\epsilon)
+> \longrightarrow\mathcal X_{\Gamma_0(p^m)}(\epsilon).}
+> $$
+>
+> Compatibility with the finite-level forgetting maps follows from the compatibility of successive canonical quotients and their quotient level subgroups (see Proposition 4.3). We have constructed a morphism of adic spaces without appealing to an unproved analytic moduli functor. $\square$
+>
+> **The two restrictions are different:** Step 4 restricts the *source* of a finite-type algebraic analytification to its formal generic fibre (and precomposes with the map from the given chart); Step 5 factors the resulting morphism through the *target* open subspace by its cartesian definition.
+
+> [!remark]- Zhu's comparison of algebraic and adic lifts
+> In the proof of [Zhu, Proposition 3.9.21(2)](https://yhzhumath.github.io/HT%20final.pdf), the finite-type descent argument is phrased in terms of sets of lifts. With the notation of the proof, and using the chosen cyclotomic identification of $\Gamma_s(p^m)$ with $\Gamma_0(p^m)$ at the level of moduli spaces, the three natural bijections are
+>
+> $$
+> \begin{aligned}
+> &\varinjlim_i\operatorname{Lift}(b_i[1/p]^{\mathrm{ad}},\pi_m)\\
+> &\qquad\simeq\varinjlim_i\operatorname{Lift}(b_i[1/p],\pi_m^{\mathrm{alg}})\\
+> &\qquad\simeq\operatorname{Lift}(b,\pi_m^{\mathrm{alg}})\\
+> &\qquad\simeq\{\Gamma_0(p^m)\text{-level structures on }B_S\}.
+> \end{aligned}
+> $$
+>
+> Here the direct limits range over finite-type stages carrying the descended underlying moduli map. The third bijection is the algebraic moduli interpretation; the second is descent by finite presentation. For the first, form the finite étale cover
+>
+> $$
+> Z_i=\operatorname{Spec}R_i[1/p],\qquad
+> P_i=X_m\times_{X_0}Z_i\longrightarrow Z_i.
+> $$
+>
+> A lift of the underlying morphism is a section of this pullback cover. For finite étale maps of finite-type $K$-schemes, algebraic and analytic sections agree: a section corresponds to an open-and-closed piece of the cover mapping isomorphically to the base; analytification preserves connected components of finite-type schemes, and the degree-one condition on such a piece can be checked after analytification. This is the general fact used by Zhu.
+>
+> For the **construction** of $\Phi_{m,\epsilon}$ only the algebraic-to-analytic direction of that first bijection is necessary: analytify an algebraic lift and then restrict as in Step 4. Zhu obtains a natural map from the colimit of adic lifts at finite-type stages to the lifts on $(\operatorname{Spf}R)_\eta^{\mathrm{ad}}$. We do not need, and do not claim, that this last map is a bijection for arbitrary complete $R$.
 
 > [!remark]- Two isotropic subgroups in the canonical quotient
 > In Proposition 4.1 there are **two distinct assertions of total isotropy**, both used in [Zhu, Proposition 3.9.21(2)](https://yhzhumath.github.io/HT%20final.pdf). Set $n=p^m$, let $\lambda_A:A\xrightarrow{\sim}A^\vee$ be the principal polarization, and write
 >
-> $
+> $$
 > C=C_m(A)\subset A[n],\qquad
 > q:A\longrightarrow B=A/C,\qquad
 > D=q(A[n])=A[n]/C\subset B[n].
-> $
+> $$
 >
 > **(1) Isotropy of the canonical subgroup $C$ on $A$.** Let $C^\perp\subset A^\vee[n]$ be the annihilator for the perfect Cartier pairing $e_{A,n}:A[n]\times A^\vee[n]\to\mu_n$. Cartier duality applied to the defining exact sequence of $C$ identifies
 >
-> $
+> $$
 > C^\perp=(A[n]/C)^D.
-> $
+> $$
 >
 > Put $R_0=R/p^{1-\epsilon}R$ and $A_0=A\otimes_R R_0$. By the defining congruence of the canonical subgroup,
 >
-> $
+> $$
 > C_{R_0}=\ker F^m_{A_0},\qquad
 > (A[n]/C)_{R_0}\simeq\ker V^m_{A_0}.
-> $
+> $$
 >
 > Cartier duality commutes with base change, and $(V^m_{A_0})^\vee=F^m_{A_0^\vee}$. Thus
 >
-> $
+> $$
 > (C^\perp)_{R_0}
 > \simeq(\ker V^m_{A_0})^D
 > =\ker F^m_{A_0^\vee}.
-> $
+> $$
 >
 > The last identification is the natural one inside $A_0^\vee[n]$ arising from the dual of the isogeny factorization $[n]=V^mF^m$. By **uniqueness of the canonical subgroup lift** and functoriality under $\lambda_A$,
 >
-> $
+> $$
 > \boxed{C^\perp=C_m(A^\vee)=\lambda_A(C).}
-> $
+> $$
 >
 > In particular, for the polarized Weil pairing $e_{A,n}^{\lambda_A}(x,y):=e_{A,n}(x,\lambda_A y)$, we have $e_{A,n}^{\lambda_A}|_{C\times C}=1$. Thus $C$ is Lagrangian. This is precisely the duality argument of Remark 3.9.11 in §1: Frobenius–Verschiebung duality is used **only after reduction to characteristic $p$**, and the equality over $R$ is recovered by uniqueness.
 >
 > Consequently the quotient $B=A/C$ has a unique induced principal polarization $\lambda_B$ satisfying
 >
-> $
+> $$
 > \boxed{q^\vee\lambda_Bq=n\lambda_A.}
-> $
+> $$
 >
 > **(2) Isotropy of the quotient subgroup $D$ on $B$.** This second assertion is a general fact about polarized isogenies; it does not require canonical-subgroup theory. By functoriality of the perfect Weil pairing under the isogeny $q$,
 >
-> $
+> $$
 > e_{B,n}(qx,z)=e_{A,n}(x,q^\vee z)
 > \qquad (x\in A[n],\ z\in B^\vee[n]).
-> $
+> $$
 >
 > Taking $z=\lambda_B(qy)$ for $y\in A[n]$, and using the defining identity for $\lambda_B$, gives
 >
-> $
+> $$
 > \begin{aligned}
 > e_{B,n}^{\lambda_B}(qx,qy)
 > &=e_{B,n}(qx,\lambda_B(qy))\\
@@ -1411,13 +1568,13 @@ These are **fibre products of adic spaces**. In particular, the second is not de
 > &=e_{A,n}(x,n\lambda_A(y))\\
 > &=e_{A,n}(x,0)=1.
 > \end{aligned}
-> $
+> $$
 >
 > Since $A[n]\to D$ is fppf-surjective, every pair of sections of $D$ lifts fppf-locally to sections of $A[n]$. Hence this calculation proves the equality of pairings as morphisms of group schemes:
 >
-> $
+> $$
 > \boxed{e_{B,n}^{\lambda_B}|_{D\times D}=1.}
-> $
+> $$
 >
 > Moreover, $\operatorname{rank}D=n^{2g}/n^g=n^g$, so $D$ is maximal isotropic (indeed self-annihilating under the principal polarization). On a geometric generic fibre, Proposition 3.9.10 gives $C\simeq(\mathbf Z/n\mathbf Z)^g$ inside $A[n]\simeq(\mathbf Z/n\mathbf Z)^{2g}$. Such a free subgroup is a direct summand, by Smith normal form over $\mathbf Z/p^m\mathbf Z$. Its quotient $D$ is therefore free of rank $g$ over $\mathbf Z/n\mathbf Z$ as well. Thus $D_\eta$ is a Lagrangian subgroup of the required $\Gamma_0(p^m)$-type on **$B_\eta=(A/C_m)_\eta$**, not on $A_\eta$.
 >
@@ -1458,32 +1615,32 @@ The next point is the geometric heart of the construction: the map $\Phi_{m,\eps
 > [!proof]- Proof of open immersion and cartesian compatibility
 > **(1) The two characteristic-zero Hecke maps.** On the ambient moduli spaces let $\pi_m:\mathcal Y_m\to\mathcal Y_0$ forget the level subgroup and let $\Psi_m:\mathcal Y_m\to\mathcal Y_0$ send $(B,D)$ to $B/D$ with its induced principal polarization and transported tame level. The first is finite étale since the level subgroup is a choice from a finite étale local system. The operation
 >
-> $
+> $$
 > w_m:(B,D)\longmapsto(B/D,B[p^m]/D)
-> $
+> $$
 >
 > is the Atkin–Lehner involution up to an invertible central tame-level action, because applying it twice gives the quotient by all of $B[p^m]$, canonically identified with $B$ by multiplication by $p^m$. Thus $w_m$ is an automorphism and $\Psi_m=\pi_m\circ w_m$ is finite étale.
 >
 > **(2) Checking the composite on the polarized moduli problem.** Put $n=p^m$, $B=A/C_m$, $D=A[n]/C_m$, and write $q:A\to B$, $r:B\to B/D$ for the quotient isogenies. Under the canonical identification
 >
-> $
+> $$
 > B/D=(A/C_m)/(A[n]/C_m)\simeq A/A[n]\simeq A,
-> $
+> $$
 >
 > we have $rq=[n]_A$. We must check not only the abelian schemes but also their polarizations and tame level.
 >
 > The polarized quotient theorem (Ordinary Locus, Proposition 5.1) gives
 >
-> $
+> $$
 > q^\vee\lambda_B q=n\lambda_A,\qquad
 > r^\vee\lambda_{B/D}r=n\lambda_B.
-> $
+> $$
 >
 > In particular,
 >
-> $
+> $$
 > (rq)^\vee\lambda_{B/D}(rq)=n^2\lambda_A.
-> $
+> $$
 >
 > Since $rq=[n]$, cancellation in the torsion-free group of abelian-scheme homomorphisms gives $\lambda_{B/D}=\lambda_A$ under $B/D\simeq A$. Thus the original principal polarization is recovered, not just its isogeny class.
 >
@@ -1493,10 +1650,10 @@ The next point is the geometric heart of the construction: the map $\Phi_{m,\eps
 >
 > **(3) Étaleness of the canonical Frobenius lift, independently of the cartesian square.** For $m=1$ the composition with the *other* Hecke projection is
 >
-> $
+> $$
 > \boxed{\widetilde F_\epsilon=\pi_1\circ\Phi_{1,\epsilon}:
 > \mathcal X(\epsilon/p)\to\mathcal X(\epsilon).}
-> $
+> $$
 >
 > Here the forgetful projection is restricted to the inverse image of $\mathcal X(\epsilon)$. The map $\Phi_{1,\epsilon}$ is an open immersion by (2), so this composition is étale. By Proposition 3.4 it is already finite, with degree $p^d$, $d=g(g+1)/2$. Hence it is finite étale of that degree. Replacing $\epsilon$ by $\epsilon/p^m$ proves the same for every transition in the Frobenius tower. This argument does **not** use the cartesian square or the identification of the anticanonical image.
 >
@@ -1618,21 +1775,21 @@ The next point is the geometric heart of the construction: the map $\Phi_{m,\eps
 >
 > **Why the first vertical map is finite étale.** On the characteristic-zero adic space $\mathcal X(\epsilon)$, multiplication by $p$ on the universal abelian scheme is a finite étale isogeny (its differential is multiplication by the invertible scalar $p$). Consequently $B[p]$ is a finite étale local system of rank $p^{2g}$; its subgroup $C$ is a finite étale local subsystem. After an étale cover trivializing these local systems and the Weil pairing (with the usual cyclotomic identification), the entire $\Gamma_0(p)$-cover is a disjoint union of copies of the base indexed by the Lagrangians in $\mathbf F_p^{2g}$. The condition $D\cap C=0$ selects a fixed subset of that finite set. It therefore defines a **clopen finite étale subcover** $T_1$, of degree $p^d$ by the graph calculation above:
 >
-> $
+> $$
 > \boxed{T_1\to\mathcal X(\epsilon)\quad\text{finite étale of degree }p^d.}
-> $
+> $$
 >
 > **Why the second vertical map is finite étale.** This has a different justification. Proposition 3.4 gives finiteness from reduction to finite relative Frobenius and adic completeness, and computes the degree $p^d$ using the auxiliary formal model and smooth hyperspecial Frobenius. Proposition 4.3(3) gives étaleness by factoring the generic-fibre canonical quotient as the open immersion $\Phi_{1,\epsilon}$ followed by the finite étale forgetful Hecke projection. In particular this proof does not presume the desired identification with $T_1$.
 >
 > By Step 1, $\Phi_{1,\epsilon}$ factors through $T_1$. The resulting diagram over $\mathcal X(\epsilon)$ is
 >
-> $
+> $$
 > \begin{array}{ccc}
 > \mathcal X(p^{-1}\epsilon)&\xrightarrow{\Phi_{1,\epsilon}}&T_1\\
 > {\scriptstyle\widetilde F_\epsilon}\downarrow&&\downarrow{\scriptstyle\pi_1}\\
 > \mathcal X(\epsilon)&=&\mathcal X(\epsilon).
 > \end{array}
-> $
+> $$
 >
 > Both vertical maps are finite étale of the **same degree** $p^d$. The top map is an open immersion, so it induces an injection on every geometric fibre. Since both fibres have cardinality $p^d$, this injection is bijective. A morphism of finite étale covers that is bijective on every geometric fibre is an isomorphism:
 >
