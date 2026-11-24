@@ -1151,28 +1151,28 @@ Fix from now on $0\leq\epsilon<\frac12$. The **radius at level $m$** is $p^{-m}\
 >
 > This is the same construction as Proposition 2.2, applied to $h^p$ instead of $h$; it glues via changes of line trivialization. Flatness follows from the non-zero-divisor property of the Hasse section on the smooth special fibre (one can check torsion-freeness on the local equation after descending to a discretely valued coefficient ring). After inverting $p$, the condition is $|\widetilde h|^p\geq|a_\epsilon|$, so its adic generic fibre is exactly $\mathcal X(\epsilon/p)$.
 >
-> The strong canonical subgroup exists on this auxiliary formal model, since $h^p\mid p^\epsilon$ holds there by construction. Quotient by it gives the same generic-fibre canonical quotient. Indeed, modulo $p^\alpha$ the quotient is relative Frobenius of the abelian scheme, and its Hasse section is $h^p$ in the corresponding Frobenius-twisted Hodge line. Thus the auxiliary section $U$ defines the target Hasse-divisibility datum modulo $p^\alpha$. It lifts uniquely to the normalized target datum: locally the error in $U\widetilde h_B=a_\epsilon$ is divisible by $p^\alpha$, and $\alpha>\epsilon$ lets one correct it by a unit congruent to $1$ modulo $p^{\alpha-\epsilon}$. This constructs
+> The strong canonical subgroup exists on this auxiliary formal model, since $h^p\mid p^\epsilon$ holds there by construction. Quotient by it gives the same generic-fibre canonical quotient. Indeed, modulo $p^\alpha$ the quotient is relative Frobenius of the abelian scheme, and its Hasse section is $h^p$ in the corresponding Frobenius-twisted Hodge line. Thus the auxiliary section $U$ defines the target Hasse-divisibility datum modulo $p^\alpha$. It lifts uniquely to the normalized target datum: locally the error in $U\widetilde h_B=a_\epsilon$ is divisible by $p^\alpha$, and $\alpha>\epsilon$ lets one correct it by a unit congruent to $1$ modulo $p^{\alpha-\epsilon}$. Put $\beta:=\alpha-\epsilon=1-2\epsilon>0$. It is enough for the degree calculation that the normalized target auxiliary coordinate agrees with $U$ modulo $p^\beta$; we do not claim that this correction vanishes modulo the larger ideal $p^\alpha$. This constructs
 >
 > $
 > \mathfrak X_{\mathrm{aux}}(\epsilon/p)
 > \longrightarrow\mathfrak X(\epsilon).
 > $
 >
-> Crucially, modulo $p^\alpha$ this morphism is the **base change of relative Frobenius of the smooth hyperspecial moduli space**, rather than relative Frobenius of the possibly singular Hasse-neighborhood model. On a chart it sends the target moduli coordinates by relative Frobenius and sends the target auxiliary variable to $U$ (not to $U^p$). In other words, the diagram after reduction modulo $p^\alpha$ is cartesian:
+> Crucially, modulo $p^\beta$ this morphism is the **base change of relative Frobenius of the smooth hyperspecial moduli space**, rather than relative Frobenius of the possibly singular Hasse-neighborhood model. On a chart it sends the target moduli coordinates by relative Frobenius and sends the target auxiliary variable to $U$ (not to $U^p$). In other words, the diagram after reduction modulo $p^\beta$ is cartesian:
 >
 > $
 > \begin{array}{ccc}
-> \mathfrak X_{\mathrm{aux}}(\epsilon/p)/p^\alpha
-> &\longrightarrow&\mathfrak X(\epsilon)/p^\alpha\\
+> \mathfrak X_{\mathrm{aux}}(\epsilon/p)/p^\beta
+> &\longrightarrow&\mathfrak X(\epsilon)/p^\beta\\
 > \downarrow&&\downarrow\\
-> \mathfrak X/p^\alpha&\xrightarrow{F_{\mathrm{rel}}}&
-> (\mathfrak X/p^\alpha)^{(p)}.
+> \mathfrak X/p^\beta&\xrightarrow{F_{\mathrm{rel}}}&
+> (\mathfrak X/p^\beta)^{(p)}.
 > \end{array}
 > $
 >
 > The target twist is identified using the $\mathbf F_p$-model of the hyperspecial special fibre. Indeed, pulling back the target equation $U h=a_\epsilon$ along this relative Frobenius gives precisely $U h^p=a_\epsilon$.
 >
-> The smooth relative Frobenius in the bottom row is finite locally free of rank $p^d$: in étale coordinates the basis consists of the monomials $x_1^{i_1}\cdots x_d^{i_d}$ with $0\leq i_j<p$. Its base change, the top row, has the same rank. This finite locally free structure lifts across $p^\alpha$: locally lift a basis of the reduced source algebra to a map $R^{p^d}\to S$. It is surjective by completeness as in (1); it is injective because a relation reduces to zero modulo $p^\alpha$, can be divided by $p^\alpha$ using torsion-freeness of $S$, and can then be iterated using separatedness of $R$.
+> The smooth relative Frobenius in the bottom row is finite locally free of rank $p^d$: in étale coordinates the basis consists of the monomials $x_1^{i_1}\cdots x_d^{i_d}$ with $0\leq i_j<p$. Its base change, the top row, has the same rank. This finite locally free structure lifts across $p^\beta$: locally lift a basis of the reduced source algebra to a map $R^{p^d}\to S$. It is surjective by completeness as in (1); it is injective because a relation reduces to zero modulo $p^\beta$, can be divided by $p^\beta$ using torsion-freeness of $S$, and can then be iterated using separatedness of $R$.
 >
 > Therefore the auxiliary formal morphism is finite locally free of rank $p^d$. Passing to generic fibres, where the two source models coincide, gives
 >
