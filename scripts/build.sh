@@ -22,6 +22,10 @@ config=root/'quartz.config.ts'
 s=config.read_text()
 s=s.replace('pageTitle: "Quartz 4",', 'pageTitle: "Mathematical Notes",')
 s=s.replace('baseUrl: "quartz.jzhao.xyz",', 'baseUrl: "filteredshun.github.io/Mathematical-notes",')
+# Social preview images are optional. Quartz's CustomOgImages emitter fetches
+# remote fonts during the build; intermittent failures there must not block
+# publication of the mathematical notes. Keep the regular page/font styling.
+s=s.replace('      Plugin.CustomOgImages(),\n', '')
 config.write_text(s)
 
 # Match the Explorer order to the seminar notes' logical order.
