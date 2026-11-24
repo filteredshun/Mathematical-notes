@@ -1116,7 +1116,7 @@ Fix from now on $0\leq\epsilon<\frac12$. The **radius at level $m$** is $p^{-m}\
 > }
 > $$
 >
-> The composite $\widetilde F^{(m)}:\mathfrak X_m(\epsilon)\to\mathfrak X_0(\epsilon)$ is induced by **quotienting by $C_m$**. Every transition is a finite locally free Frobenius lift of relative degree $p^{g(g+1)/2}$ on the formal moduli spaces, and on adic generic fibres it is **finite étale**. The transition maps reduce to relative Frobenius modulo $p^{1-\epsilon}$ with the compatible twists.
+> The composite $\widetilde F^{(m)}:\mathfrak X_m(\epsilon)\to\mathfrak X_0(\epsilon)$ is induced by **quotienting by $C_m$**. Every transition is finite on the formal moduli spaces and **finite étale of degree $p^{g(g+1)/2}$ on adic generic fibres**. The transition maps reduce to relative Frobenius modulo $p^{1-\epsilon}$ with the compatible twists. For the étaleness, see Proposition 4.3 below; finiteness and the degree calculation are independent of the anticanonical identification.
 >
 > The compatibility
 >
@@ -1127,8 +1127,63 @@ Fix from now on $0\leq\epsilon<\frac12$. The **radius at level $m$** is $p^{-m}\
 >
 > follows from §1, Proposition 3.9.9, and identifies $m$ successive level-one quotients with one quotient by $C_m$.
 
-> [!proof]- Compatibility and the distinction from inclusions
-> Proposition 3.9.9 of §1 identifies the successive canonical subgroups and proves the quotient compatibility. The formal finiteness/flatness and relative-Frobenius reductions are part of Scholze III.2.15; on generic fibres, the finite étale property follows also from the cartesian finite-level $\Gamma_0(p^m)$-diagram of Theorem 4.3 below (Zhu 3.9.21(2)). These maps are generally **not** the inclusions $\mathcal X(p^{-(m+1)}\epsilon)\subset\mathcal X(p^{-m}\epsilon)$. $\square$
+> [!proof]- Compatibility, finiteness, and generic-fibre degree
+> Proposition 3.9.9 of §1 identifies the successive canonical subgroups and proves the quotient compatibility. It suffices to treat one step, writing $d=g(g+1)/2$ and $\alpha=1-\epsilon$. All subsequent steps use the same argument with the smaller radius in place of $\epsilon$.
+>
+> **(1) Finiteness of the usual formal model.** By Theorem 3.3, reduction of the canonical-quotient map modulo $p^\alpha$ is the relative Frobenius of the Hasse-neighborhood models, under the twist identification of Lemma 2.4. Relative Frobenius of a finite-type scheme in characteristic $p$ is finite (étale-locally, finitely many algebra generators are integral over their $p$-th powers). Thus the reduction of the formal morphism is finite.
+>
+> To lift finiteness, use the following elementary formal-algebra fact. If $R,S$ are $a$-adically complete rings, with $a=p^\alpha$, and $S/aS$ is finite over $R/aR$, choose lifts $s_1,\ldots,s_N$ of module generators. For any $s\in S$, successive approximation gives
+>
+> $
+> s=\sum_{i=1}^N\left(\sum_{j\geq0}a^j r_{ij}\right)s_i,\qquad r_{ij}\in R.
+> $
+>
+> The coefficient series converge by completeness. Thus $S$ is finite over $R$. Applied on affine formal charts (the inverse image is affine because its reduction is affine), this proves formal finiteness, hence finiteness on generic fibres.
+>
+> **(2) Computing the degree without assuming that the Hasse model is smooth.** The original hyperspecial formal Siegel moduli scheme $\mathfrak X$ is smooth of relative dimension $d$. But its Hasse-neighborhood model $\mathfrak X(\epsilon/p)$, with local equation $U\widetilde h=p^{\epsilon/p}$, need not be smooth. We therefore use a different formal model of the *same generic-fibre rational domain*.
+>
+> On an affine chart of the smooth hyperspecial space, let $h$ denote the Hasse section, $\widetilde h$ an integral lift, and $a_\epsilon=p^\epsilon$. Define the auxiliary flat formal model $\mathfrak X_{\mathrm{aux}}(\epsilon/p)$ by the Hasse-power divisibility datum $u h^p=a_\epsilon$ modulo $p$, using the inverse of the $p$-th tensor power of the Hasse line. Its local normalized equation is
+>
+> $
+> \mathfrak X_{\mathrm{aux}}(\epsilon/p):
+> \qquad R_0\langle U\rangle/(U\widetilde h^{\,p}-a_\epsilon).
+> $
+>
+> This is the same construction as Proposition 2.2, applied to $h^p$ instead of $h$; it glues via changes of line trivialization. Flatness follows from the non-zero-divisor property of the Hasse section on the smooth special fibre (one can check torsion-freeness on the local equation after descending to a discretely valued coefficient ring). After inverting $p$, the condition is $|\widetilde h|^p\geq|a_\epsilon|$, so its adic generic fibre is exactly $\mathcal X(\epsilon/p)$.
+>
+> The strong canonical subgroup exists on this auxiliary formal model, since $h^p\mid p^\epsilon$ holds there by construction. Quotient by it gives the same generic-fibre canonical quotient. Indeed, modulo $p^\alpha$ the quotient is relative Frobenius of the abelian scheme, and its Hasse section is $h^p$ in the corresponding Frobenius-twisted Hodge line. Thus the auxiliary section $U$ defines the target Hasse-divisibility datum modulo $p^\alpha$. It lifts uniquely to the normalized target datum: locally the error in $U\widetilde h_B=a_\epsilon$ is divisible by $p^\alpha$, and $\alpha>\epsilon$ lets one correct it by a unit congruent to $1$ modulo $p^{\alpha-\epsilon}$. This constructs
+>
+> $
+> \mathfrak X_{\mathrm{aux}}(\epsilon/p)
+> \longrightarrow\mathfrak X(\epsilon).
+> $
+>
+> Crucially, modulo $p^\alpha$ this morphism is the **base change of relative Frobenius of the smooth hyperspecial moduli space**, rather than relative Frobenius of the possibly singular Hasse-neighborhood model. On a chart it sends the target moduli coordinates by relative Frobenius and sends the target auxiliary variable to $U$ (not to $U^p$). In other words, the diagram after reduction modulo $p^\alpha$ is cartesian:
+>
+> $
+> \begin{array}{ccc}
+> \mathfrak X_{\mathrm{aux}}(\epsilon/p)/p^\alpha
+> &\longrightarrow&\mathfrak X(\epsilon)/p^\alpha\\
+> \downarrow&&\downarrow\\
+> \mathfrak X/p^\alpha&\xrightarrow{F_{\mathrm{rel}}}&
+> (\mathfrak X/p^\alpha)^{(p)}.
+> \end{array}
+> $
+>
+> The target twist is identified using the $\mathbf F_p$-model of the hyperspecial special fibre. Indeed, pulling back the target equation $U h=a_\epsilon$ along this relative Frobenius gives precisely $U h^p=a_\epsilon$.
+>
+> The smooth relative Frobenius in the bottom row is finite locally free of rank $p^d$: in étale coordinates the basis consists of the monomials $x_1^{i_1}\cdots x_d^{i_d}$ with $0\leq i_j<p$. Its base change, the top row, has the same rank. This finite locally free structure lifts across $p^\alpha$: locally lift a basis of the reduced source algebra to a map $R^{p^d}\to S$. It is surjective by completeness as in (1); it is injective because a relation reduces to zero modulo $p^\alpha$, can be divided by $p^\alpha$ using torsion-freeness of $S$, and can then be iterated using separatedness of $R$.
+>
+> Therefore the auxiliary formal morphism is finite locally free of rank $p^d$. Passing to generic fibres, where the two source models coincide, gives
+>
+> $
+> \boxed{\deg\bigl(\widetilde F_\epsilon:\mathcal X(\epsilon/p)\to\mathcal X(\epsilon)\bigr)=p^d.}
+> $
+>
+> **(3) Étaleness is a separate argument.** A finite morphism in characteristic zero need not be étale merely because it lifts Frobenius. Proposition 4.3 proves étaleness using the characteristic-zero Hecke correspondence and the open immersion $\Phi_{1,\epsilon}$, without assuming that its image is the entire transverse locus. Thus there is no circularity in the later fibre-counting argument. These transition maps are generally **not** inclusions of nested neighborhoods. $\square$
+>
+> [!remark]- Formal-model caution
+> In [Scholze, Theorem III.2.15, proof, p. 40](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf#page=40), the stated generic-fibre degree used in the comparison is $p^{g(g+1)/2}$. One should not infer finite local freeness of the usual Hasse-neighborhood model just by treating it as a smooth scheme. For example, for $\epsilon>0$ a local model at a simple Hasse zero has special-fibre equation $Uh=0$ over the residue field; the relative Frobenius fibre at the node has ring $k[U,h]/(Uh,U^p,h^p)$ of length $2p-1$, not $p$. The auxiliary model above avoids this issue; the rank asserted here for the **generic fibre** is the one needed in the anticanonical argument.
 
 
 
@@ -1216,18 +1271,51 @@ The next point is the geometric heart of the construction: the map $\Phi_{m,\eps
 > is **cartesian** for $m\geq1$, where the right vertical arrow forgets part of the $p$-level. Thus the corresponding inverse system is genuinely a pullback of the finite-level $\Gamma_0$-tower.
 
 > [!proof]- Proof of open immersion and cartesian compatibility
-> Let $\Psi_m:\mathcal X_{\Gamma_0(p^m)}\to\mathcal X$ be the **quotient-by-level** map $(B,D)\mapsto B/D$, with its induced polarization and normalized tame level. This is a finite étale Hecke-type morphism on the characteristic-zero level space: up to the familiar Atkin–Lehner/diamond normalization, it is the finite étale forgetting-level map followed by a level automorphism.
+> **(1) The two characteristic-zero Hecke maps.** On the ambient moduli spaces let $\pi_m:\mathcal Y_m\to\mathcal Y_0$ forget the level subgroup and let $\Psi_m:\mathcal Y_m\to\mathcal Y_0$ send $(B,D)$ to $B/D$ with its induced principal polarization and transported tame level. The first is finite étale since the level subgroup is a choice from a finite étale local system. The operation
 >
-> The composite with $\Phi_{m,\epsilon}$ sends $A$ to
+> $
+> w_m:(B,D)\longmapsto(B/D,B[p^m]/D)
+> $
 >
-> $$
-> (A/C_m)/(A[p^m]/C_m)
-> \simeq A/A[p^m]\simeq A.
-> $$
+> is the Atkin–Lehner involution up to an invertible central tame-level action, because applying it twice gives the quotient by all of $B[p^m]$, canonically identified with $B$ by multiplication by $p^m$. Thus $w_m$ is an automorphism and $\Psi_m=\pi_m\circ w_m$ is finite étale.
 >
-> Under the full moduli data this is the **natural open embedding** $\mathcal X(p^{-m}\epsilon)\hookrightarrow\mathcal X$, possibly composed with the harmless central tame-level automorphism determined by the chosen normalization. Lemma 4.2 applies, so $\Phi_{m,\epsilon}$ is an open immersion.
+> **(2) Checking the composite on the polarized moduli problem.** Put $n=p^m$, $B=A/C_m$, $D=A[n]/C_m$, and write $q:A\to B$, $r:B\to B/D$ for the quotient isogenies. Under the canonical identification
 >
-> For the cartesian square, apply the compatibility of canonical subgroups under quotient from §1, Proposition 3.9.9. The two resulting $p^m$-level subgroups agree after forgetting one level. Both sides are finite étale over the generic-fibre moduli base, with the same degree $[\Gamma_0(p^m):\Gamma_0(p^{m+1})]=p^{g(g+1)/2}$; the square is therefore cartesian. See [Scholze III.2.15(ii)](https://www.math.uni-bonn.de/people/scholze/Torsion.pdf) for the full scheme-theoretic comparison. $\square$
+> $
+> B/D=(A/C_m)/(A[n]/C_m)\simeq A/A[n]\simeq A,
+> $
+>
+> we have $rq=[n]_A$. We must check not only the abelian schemes but also their polarizations and tame level.
+>
+> The polarized quotient theorem (Ordinary Locus, Proposition 5.1) gives
+>
+> $
+> q^\vee\lambda_B q=n\lambda_A,\qquad
+> r^\vee\lambda_{B/D}r=n\lambda_B.
+> $
+>
+> In particular,
+>
+> $
+> (rq)^\vee\lambda_{B/D}(rq)=n^2\lambda_A.
+> $
+>
+> Since $rq=[n]$, cancellation in the torsion-free group of abelian-scheme homomorphisms gives $\lambda_{B/D}=\lambda_A$ under $B/D\simeq A$. Thus the original principal polarization is recovered, not just its isogeny class.
+>
+> The tame $K^p$-level is transported by the prime-to-$p$ Tate-module isomorphisms $T^pq$ and $T^pr$. Their composite is $T^p[n]$, multiplication by $n$, an invertible central similitude away from $p$. Consequently the composite on tame level is the central automorphism associated with $n$ (or its inverse, according to the framing convention). One can normalize the second quotient map by the inverse central action, in which case the composite is literally the original tame level. Either convention suffices for the open-immersion argument. For full level $N$ prime to $p$, remember also to renormalize the cyclotomic pairing trivialization by the inverse similitude multiplier, as in Ordinary Locus, Proposition 5.1.
+>
+> Thus $\Psi_m\circ\Phi_{m,\epsilon}$ is the natural open embedding into $\mathcal Y_0$, up to that central automorphism. Since $\Psi_m$ is étale, Lemma 4.2 proves that $\Phi_{m,\epsilon}$ is an open immersion.
+>
+> **(3) Étaleness of the canonical Frobenius lift, independently of the cartesian square.** For $m=1$ the composition with the *other* Hecke projection is
+>
+> $
+> \boxed{\widetilde F_\epsilon=\pi_1\circ\Phi_{1,\epsilon}:
+> \mathcal X(\epsilon/p)\to\mathcal X(\epsilon).}
+> $
+>
+> Here the forgetful projection is restricted to the inverse image of $\mathcal X(\epsilon)$. The map $\Phi_{1,\epsilon}$ is an open immersion by (2), so this composition is étale. By Proposition 3.4 it is already finite, with degree $p^d$, $d=g(g+1)/2$. Hence it is finite étale of that degree. Replacing $\epsilon$ by $\epsilon/p^m$ proves the same for every transition in the Frobenius tower. This argument does **not** use the cartesian square or the identification of the anticanonical image.
+>
+> **(4) The cartesian square.** The compatibility of canonical subgroups under quotient (§1, Proposition 3.9.9) gives commutativity after forgetting one level. The right vertical map is finite étale, and for $m\geq1$ has degree $p^d$: after trivializing the symplectic local system, lifts of a fixed Lagrangian modulo $p^m$ to modulo $p^{m+1}$ are parametrized by symmetric $g\times g$ matrices over $\mathbf F_p$ (choose a lifted Lagrangian and a complementary summand; other lifts are graphs of $p^m$ times a symmetric matrix). The left vertical map is finite étale of degree $p^d$ by (3). The induced map from the upper left corner to the fibre product of the other three is an open immersion, since $\Phi_{m+1,\epsilon}$ is one; on geometric fibres it is an injection between sets of the same cardinality $p^d$. It is therefore an isomorphism, proving the cartesian assertion. $\square$
 
 > [!definition] Definition 4.4 (Overconvergent anticanonical locus: image definition)
 > **Following Scholze**, define the *anticanonical part* as the image of the **open immersion**:
@@ -1343,16 +1431,25 @@ The next point is the geometric heart of the construction: the map $\Phi_{m,\eps
 > =p^{g(g+1)/2}=p^d.
 > $$
 >
-> Denote by $T_1\subset\mathcal X_{\Gamma_0(p)}(\epsilon)$ the transverse locus. Since $B[p]$ and the weak canonical subgroup $C$ are finite étale on the generic fibre, the condition $D\cap C=0$ is locally constant in the associated finite étale local systems. Hence $T_1$ is **open and closed** and $T_1\to\mathcal X(\epsilon)$ is finite étale of degree $p^d$.
+> **Why the first vertical map is finite étale.** On the characteristic-zero adic space $\mathcal X(\epsilon)$, multiplication by $p$ on the universal abelian scheme is a finite étale isogeny (its differential is multiplication by the invertible scalar $p$). Consequently $B[p]$ is a finite étale local system of rank $p^{2g}$; its subgroup $C$ is a finite étale local subsystem. After an étale cover trivializing these local systems and the Weil pairing (with the usual cyclotomic identification), the entire $\Gamma_0(p)$-cover is a disjoint union of copies of the base indexed by the Lagrangians in $\mathbf F_p^{2g}$. The condition $D\cap C=0$ selects a fixed subset of that finite set. It therefore defines a **clopen finite étale subcover** $T_1$, of degree $p^d$ by the graph calculation above:
 >
-> On the other hand, Scholze III.2.15(i) identifies the quotient-by-canonical-subgroup Frobenius lift
+> $
+> \boxed{T_1\to\mathcal X(\epsilon)\quad\text{finite étale of degree }p^d.}
+> $
 >
-> $$
-> \widetilde F_\epsilon:
-> \mathcal X(p^{-1}\epsilon)\longrightarrow\mathcal X(\epsilon)
-> $$
+> **Why the second vertical map is finite étale.** This has a different justification. Proposition 3.4 gives finiteness from reduction to finite relative Frobenius and adic completeness, and computes the degree $p^d$ using the auxiliary formal model and smooth hyperspecial Frobenius. Proposition 4.3(3) gives étaleness by factoring the generic-fibre canonical quotient as the open immersion $\Phi_{1,\epsilon}$ followed by the finite étale forgetful Hecke projection. In particular this proof does not presume the desired identification with $T_1$.
 >
-> as finite étale on the generic fibre, also of degree $p^d$ (the relative Frobenius degree in dimension $d$). By Step 1, the open immersion $\Phi_{1,\epsilon}$ factors through $T_1$ over $\mathcal X(\epsilon)$. On every geometric fibre it is injective between two sets of **the same cardinality** $p^d$, hence bijective. As a morphism between finite étale covers, it is an isomorphism:
+> By Step 1, $\Phi_{1,\epsilon}$ factors through $T_1$. The resulting diagram over $\mathcal X(\epsilon)$ is
+>
+> $
+> \begin{array}{ccc}
+> \mathcal X(p^{-1}\epsilon)&\xrightarrow{\Phi_{1,\epsilon}}&T_1\\
+> {\scriptstyle\widetilde F_\epsilon}\downarrow&&\downarrow{\scriptstyle\pi_1}\\
+> \mathcal X(\epsilon)&=&\mathcal X(\epsilon).
+> \end{array}
+> $
+>
+> Both vertical maps are finite étale of the **same degree** $p^d$. The top map is an open immersion, so it induces an injection on every geometric fibre. Since both fibres have cardinality $p^d$, this injection is bijective. A morphism of finite étale covers that is bijective on every geometric fibre is an isomorphism:
 >
 > $$
 > \boxed{\quad
