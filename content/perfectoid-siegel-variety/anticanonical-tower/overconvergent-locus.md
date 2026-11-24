@@ -1305,53 +1305,107 @@ The formal Frobenius tower of §3 is not yet a tower of level structures. To rel
 
 ### 4.1 Finite-level adic spaces and canonical quotient maps
 
-As in Ordinary Locus §5.2, let $\mathcal Y_m$ be the **adic analytification** of the characteristic-zero Siegel moduli scheme with $K^p\Gamma_0(p^m)$-level, after the chosen cyclotomic base change. Write $\mathcal Y_0$ for the hyperspecial analytification. The map
+We follow the notation and order of construction in [Zhu, Definition 3.9.13 and Proposition 3.9.21(2)–(3)](https://yhzhumath.github.io/HT%20final.pdf#page=48). The target of the canonical-quotient morphism is defined by **analytification and pullback of open subspaces**, not by a new formal moduli problem.
 
-$$
-\pi_m:\mathcal Y_m\longrightarrow\mathcal Y_0
-$$
-
-forgets the $\Gamma_0(p^m)$-level. With $\mathcal X\subset\mathcal Y_0$ the good-reduction open space and $\mathcal X(\epsilon)\subset\mathcal X$ from §2, define
-
-$$
-\boxed{
-\begin{aligned}
-\mathcal X_{\Gamma_0(p^m)}
-&:=\mathcal Y_m\times_{\mathcal Y_0}\mathcal X,\\
-\mathcal X_{\Gamma_0(p^m)}(\epsilon)
-&:=\mathcal Y_m\times_{\mathcal Y_0}\mathcal X(\epsilon).
-\end{aligned}}
-$$
-
-These are **fibre products of adic spaces**. In particular, the second is not defined by taking only geometric points. By definition it is the inverse image of $\mathcal X(\epsilon)$ under the ambient forgetful projection $\pi_m$, and it imposes no transversality condition on the level subgroup. The following square is cartesian by construction:
- 
-$$
-\begin{array}{ccc}
-\mathcal X_{\Gamma_0(p^m)}(\epsilon)&\hookrightarrow&\mathcal Y_m\\
-\downarrow&&\downarrow{\scriptstyle\pi_m}\\
-\mathcal X(\epsilon)&\hookrightarrow&\mathcal Y_0.
-\end{array}
-$$
-
-In particular the left vertical map is finite étale, by base change. Its valued-field points have moduli data $(B,\lambda_B,\eta_B^p,D)$, where $D\subset B[p^m]$ is a Lagrangian subgroup of standard $\Gamma_0(p^m)$-type and the underlying $B$ lies in the Hasse neighborhood $\mathcal X(\epsilon)$.
-
-> [!proposition] Proposition 4.1 (Canonical-quotient morphism)
-> For each $m\geq1$, the universal strong canonical subgroup on $\mathfrak X(p^{-m}\epsilon)$ induces a morphism of adic spaces
+> [!definition] Definition (The ambient finite-level adic space and its Hasse neighborhood)
+> Write $K=\mathbf Q_p^{\mathrm{cycl}}$, $\mathcal O_K=\mathbf Z_p^{\mathrm{cycl}}$, and $X=X_{K^pG(\mathbf Z_p)}$ for the original hyperspecial Siegel moduli scheme. With the cyclotomic embedding $\mathbf Q(\mu_{p^m})\hookrightarrow K$ fixed, define
 >
 > $$
 > \boxed{
 > \begin{aligned}
-> \Phi_{m,\epsilon}:\mathcal X(p^{-m}\epsilon)
-> &\longrightarrow\mathcal X_{\Gamma_0(p^m)}(\epsilon),\\
-> A&\longmapsto
-> \left(
-> B=A/C_m(A),\
-> D=A[p^m]/C_m(A)\subset B[p^m]
-> \right).
+> X^{\mathrm{ad}}
+> &:=\left(X_{\mathbf Q}\times_{\operatorname{Spec}\mathbf Q}
+> \operatorname{Spec}K\right)^{\mathrm{ad}},\\
+> X_{\Gamma_s(p^m)}^{\mathrm{ad}}
+> &:=\left(X_{\Gamma_s(p^m),\mathbf Q}
+> \times_{\operatorname{Spec}\mathbf Q(\mu_{p^m})}
+> \operatorname{Spec}K\right)^{\mathrm{ad}}.
 > \end{aligned}}
 > $$
 >
-> The quotient $B$ carries the canonical **principal polarization** and **transported $K^p$-level**. The subgroup $D$ is a finite étale Lagrangian subgroup of free type $(\mathbf Z/p^m\mathbf Z)^g$ on each geometric generic fibre. The map is compatible with the finite-level forgetting maps as $m$ varies.
+> These are the analytifications of the indicated finite-type algebraic schemes over $K$. The algebraic forgetful morphism induces a finite étale morphism of adic spaces
+>
+> $$
+> \pi_m:X_{\Gamma_s(p^m)}^{\mathrm{ad}}\longrightarrow X^{\mathrm{ad}}.
+> $$
+>
+> The good-reduction locus $\mathcal X=\mathfrak X_\eta^{\mathrm{ad}}$ is an open subspace of $X^{\mathrm{ad}}$. Its Hasse neighborhood $\mathcal X(\epsilon)=\mathfrak X(\epsilon)_\eta^{\mathrm{ad}}$ is an open subspace of $\mathcal X$. Define, in this order,
+>
+> $$
+> \boxed{
+> \begin{aligned}
+> \mathcal X_{\Gamma_s(p^m)}
+> &:=X_{\Gamma_s(p^m)}^{\mathrm{ad}}
+> \times_{X^{\mathrm{ad}}}\mathcal X,\\
+> \mathcal X_{\Gamma_s(p^m)}(\epsilon)
+> &:=\mathcal X_{\Gamma_s(p^m)}
+> \times_{\mathcal X}\mathcal X(\epsilon)\\
+> &\simeq X_{\Gamma_s(p^m)}^{\mathrm{ad}}
+> \times_{X^{\mathrm{ad}}}\mathcal X(\epsilon).
+> \end{aligned}}
+> $$
+>
+> Equivalently, the following two squares are **cartesian by definition**:
+>
+> $$
+> \begin{array}{ccccc}
+> \mathcal X_{\Gamma_s(p^m)}(\epsilon)&\hookrightarrow&
+> \mathcal X_{\Gamma_s(p^m)}&\hookrightarrow&
+> X_{\Gamma_s(p^m)}^{\mathrm{ad}}\\
+> \downarrow&&\downarrow&&\downarrow{\scriptstyle\pi_m}\\
+> \mathcal X(\epsilon)&\hookrightarrow&\mathcal X&\hookrightarrow&X^{\mathrm{ad}}.
+> \end{array}
+> $$
+>
+> Thus $\mathcal X_{\Gamma_s(p^m)}(\epsilon)$ is exactly the inverse image $\pi_m^{-1}(\mathcal X(\epsilon))$ as an open adic subspace. All three vertical morphisms are finite étale by base change. The definition does not require canonical subgroups or any transversality condition.
+
+**Notation used in the rest of these notes.** By Zhu's equation (3.9.1), after the chosen cyclotomic base change the $\Gamma_s(p^m)$-scheme is identified with the $\Gamma_0(p^m)$-scheme over $K$. We therefore also write $\mathcal Y_m=X_{\Gamma_s(p^m)}^{\mathrm{ad}}$, $\mathcal Y_0=X^{\mathrm{ad}}$, and $\mathcal X_{\Gamma_0(p^m)}(\epsilon)=\mathcal X_{\Gamma_s(p^m)}(\epsilon)$. On geometric valued-field points the finite-level neighborhood parametrizes principally polarized abelian varieties of Hasse height at most $\epsilon$, with tame level and a Lagrangian subgroup of standard $\Gamma_0(p^m)$-type. This description is a consequence of the definition, not a substitute for it.
+
+> [!proposition] Proposition 4.1 (Canonical-quotient morphism)
+> For each $m\geq1$, the universal strong canonical subgroup on $\mathfrak X(p^{-m}\epsilon)$ defines a morphism of adic spaces
+>
+> $$
+> \boxed{\Phi'_{m,\epsilon}:\mathcal X(p^{-m}\epsilon)
+> \longrightarrow X_{\Gamma_s(p^m)}^{\mathrm{ad}}.}
+> $$
+>
+> The morphism is constructed on affine formal charts by descending the algebraic level morphism to a finite-type stage, analytifying it, and restricting to the formal generic fibre. It lifts the underlying canonical-quotient morphism $f_\eta^{\mathrm{ad}}:\mathcal X(p^{-m}\epsilon)\to X^{\mathrm{ad}}$.
+>
+> Since $f_\eta^{\mathrm{ad}}$ factors through $\mathcal X(\epsilon)$, the morphism $\Phi'_{m,\epsilon}$ has a unique factorization through the two open subspaces defined above:
+>
+> $$
+> \boxed{
+> \mathcal X(p^{-m}\epsilon)
+> \xrightarrow{\Phi_{m,\epsilon}}
+> \mathcal X_{\Gamma_s(p^m)}(\epsilon)
+> \hookrightarrow\mathcal X_{\Gamma_s(p^m)}
+> \hookrightarrow X_{\Gamma_s(p^m)}^{\mathrm{ad}}.
+> }
+> $$
+>
+> The composite into $\mathcal X_{\Gamma_s(p^m)}$ is Zhu's $\iota_m$ in Proposition 3.9.21(2). On geometric points this morphism has the description
+>
+> $$
+> A\longmapsto
+> \left(B=A/C_m(A),\
+> D=A[p^m]/C_m(A)\subset B[p^m]\right).
+> $$
+>
+> Here $B$ has the induced principal polarization and transported $K^p$-level, and $D$ is Lagrangian and free of rank $g$ over $\mathbf Z/p^m\mathbf Z$ on geometric generic fibres. The displayed pointwise rule describes the morphism; it is not its definition.
+
+**Construction of the adic morphism (before the detailed proof).** Let $\operatorname{Spf}R$ be an affine chart of the source. The quotient with its additional level defines an algebraic morphism $\ell:\operatorname{Spec}R[1/p]\to X_{\Gamma_s(p^m),K}$. Choose a finitely generated $\mathcal O_K$-subalgebra $R_0\subseteq R$ and a descent $\ell_0$ of $\ell$ over $R_0[1/p]$. On this chart the morphism $\Phi'_{m,\epsilon}$ is **defined** to be the composite
+
+$$
+\boxed{
+\begin{aligned}
+(\operatorname{Spf}R)_\eta^{\mathrm{ad}}
+&\longrightarrow(\operatorname{Spf}\widehat R_0)_\eta^{\mathrm{ad}}\\
+&\hookrightarrow(\operatorname{Spec}R_0[1/p])^{\mathrm{ad}}\\
+&\xrightarrow{\ell_0^{\mathrm{ad}}}X_{\Gamma_s(p^m)}^{\mathrm{ad}}.
+\end{aligned}}
+$$
+
+Finite-presentation descent makes this independent of the chosen stage, and the local morphisms glue. The *source restriction* in this composite is distinct from the *target factorization*: the latter follows from the cartesian square defining $\mathcal X_{\Gamma_s(p^m)}(\epsilon)$, once the underlying quotient map lands in $\mathcal X(\epsilon)$. The detailed proof below establishes these assertions.
 
 > [!proof]- Construction by algebraic descent, analytification, and restriction (Zhu 3.9.21(2))
 > The point of the proof is to construct an actual **morphism of adic spaces**, rather than only an assignment on geometric points. We do not need to establish a moduli interpretation on arbitrary analytic test spaces.
