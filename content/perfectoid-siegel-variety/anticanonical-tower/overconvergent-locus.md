@@ -727,40 +727,93 @@ Let $A/R$ be an abelian scheme of relative dimension $g$, and set $A_1=A\otimes_
 > Zhu notes that this gives a shorter route to Proposition 3.9.10 in the principally polarized setting.
 
 
-> [!proof]- Proof by Cartier duality and uniqueness
-> Let $\lambda:A\xrightarrow{\sim}A^\vee$ be a principal polarization. The finite locally free exact sequence
+> [!proof]- Proof by Cartier duality, reduction, and uniqueness
+> Let $\lambda:A\xrightarrow{\sim}A^\vee$ be a principal polarization, $C_n=C_n(A)$, $H_n=A[p^n]/C_n$, and $B=R/p^{1-\epsilon}$. We emphasize that **Frobenius–Verschiebung duality is used only over $B$**, not over $R$.
+>
+> **Step 1 (Cartier duality over $R$).** The finite locally free exact sequence
 >
 > $$
-> 0\to C_n(A)\to A[p^n]\to H_n\to0
+> 0\longrightarrow C_n\longrightarrow A[p^n]
+> \longrightarrow H_n\longrightarrow0
 > $$
 >
-> gives, by Cartier duality and the perfect Weil pairing,
+> becomes, by Cartier duality,
 >
 > $$
-> C_n(A)^\perp=H_n^D\subset A^\vee[p^n].
+> 0\longrightarrow H_n^D\longrightarrow A^\vee[p^n]
+> \longrightarrow C_n^D\longrightarrow0.
 > $$
 >
-> Modulo $p^{1-\epsilon}$, the quotient $H_n$ is $\ker V^n$; duality exchanges Frobenius and Verschiebung and gives
+> Under the perfect Weil pairing, the annihilator of $C_n$ is precisely the subgroup $H_n^D$:
 >
 > $$
-> (H_n^D)\bmod p^{1-\epsilon}
-> \simeq(\ker V^n)^D
-> \simeq\ker F^n_{A^\vee}.
+> \boxed{\quad C_n^\perp=H_n^D\subseteq A^\vee[p^n].\quad}
 > $$
 >
-> Under the principal polarization, $A^\vee$ has the same Hasse condition as $A$, so the weak canonical subgroup theorem applies to $A^\vee$. By **uniqueness**,
+> **Step 2 (identify the reduction over $B$).** By the weak canonical subgroup theorem, $(C_n)_B=\ker F^n_{A_B/B}$. Over the characteristic-$p$ ring $B$ we have the fppf-exact sequence
 >
 > $$
-> H_n^D=C_n(A^\vee)=\lambda(C_n(A)).
+> 0\longrightarrow\ker F^n_{A_B}
+> \longrightarrow A_B[p^n]
+> \xrightarrow{F^n}
+> \ker(V^n_{A_B}:A_B^{(p^n)}\to A_B)
+> \longrightarrow0.
 > $$
 >
-> Thus, after identifying $A$ and $A^\vee$ through $\lambda$,
+> It follows that $(H_n)_B\simeq\ker V^n_{A_B}$. Cartier duality commutes with base change, and the dual isogeny of Verschiebung equals Frobenius **in characteristic $p$**:
+>
+> $$
+> (V^n_{A_B})^\vee
+> =F^n_{A_B^\vee/B}:
+> A_B^\vee\longrightarrow(A_B^\vee)^{(p^n)}.
+> $$
+>
+> Taking the Cartier dual of the kernel of an isogeny identifies it with the kernel of the dual isogeny. Consequently, as subgroups of $A_B^\vee[p^n]$,
+>
+> $$
+> \boxed{\quad
+> \begin{aligned}
+> (H_n^D)_B
+> &\simeq((H_n)_B)^D\\
+> &\simeq(\ker V^n_{A_B})^D\\
+> &\simeq\ker (V^n_{A_B})^\vee
+> =\ker F^n_{A_B^\vee/B}.
+> \end{aligned}
+> \quad}
+> $$
+>
+> This proves **only an equality after reducing modulo $p^{1-\epsilon}$**. It does not assert the existence of Frobenius or Verschiebung isogenies over the original mixed-characteristic ring $R$.
+>
+> **Step 3 (lift the equality by uniqueness).** The principal polarization $\lambda:A\xrightarrow{\sim}A^\vee$ transfers the weak Hasse condition from $A$ to $A^\vee$. Frobenius is functorial under $\lambda_B$, so
+>
+> $$
+> \bigl(\lambda(C_n(A))\bigr)_B
+> =\lambda_B(\ker F^n_{A_B})
+> =\ker F^n_{A_B^\vee/B}.
+> $$
+>
+> Therefore $H_n^D$ and $\lambda(C_n(A))$ are **two finite locally free closed subgroups of $A^\vee[p^n]$ over $R$** with the same prescribed reduction to the Frobenius kernel over $B$. The **uniqueness** in Theorem 3.9.7, applied to $A^\vee$, gives
+>
+> $$
+> \boxed{\quad
+> H_n^D=C_n(A^\vee)=\lambda(C_n(A))
+> \quad\text{over }R.\quad}
+> $$
+>
+> Combining this equality with Step 1, we obtain
+>
+> $$
+> C_n(A)^\perp=\lambda(C_n(A))
+> \quad\text{inside }A^\vee[p^n].
+> $$
+>
+> Identifying $A$ and $A^\vee$ via $\lambda$ yields
 >
 > $$
 > \boxed{\qquad C_n(A)^\perp=C_n(A).\qquad}
 > $$
 >
-> In particular the Weil pairing is trivial on $C_n(A)\times C_n(A)$, so $C_n(A)$ is Lagrangian, hence totally isotropic. This is the higher-level form of the duality argument already proved in *Ordinary Locus*, Proposition 4.4. $\square$
+> Thus the Weil pairing is trivial on $C_n(A)\times C_n(A)$, and $C_n(A)$ is Lagrangian, hence totally isotropic. **The final step uses uniqueness among finite flat subgroup lifts with a prescribed reduction**, not uniqueness of arbitrary lifts of group schemes. This is the higher-level analogue of *Ordinary Locus*, Proposition 4.4. $\square$
 
 ---
 
