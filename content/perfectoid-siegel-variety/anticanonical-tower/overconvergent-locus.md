@@ -1350,6 +1350,79 @@ These are **fibre products of adic spaces**. In particular, the second is not de
 >
 > Lemma 3.2 applied successively shows that $B$ has Hasse height at most $\epsilon$, so the map lands in $\mathcal X_{\Gamma_0(p^m)}(\epsilon)$, rather than merely $\mathcal Y_m$. These operations define morphisms of families and commute with base change, hence give a **morphism of adic spaces** after passing to generic fibres, not merely a map on geometric points. $\square$
 
+> [!remark]- Two isotropic subgroups in the canonical quotient
+> In Proposition 4.1 there are **two distinct assertions of total isotropy**, both used in [Zhu, Proposition 3.9.21(2)](https://yhzhumath.github.io/HT%20final.pdf). Set $n=p^m$, let $\lambda_A:A\xrightarrow{\sim}A^\vee$ be the principal polarization, and write
+>
+> $
+> C=C_m(A)\subset A[n],\qquad
+> q:A\longrightarrow B=A/C,\qquad
+> D=q(A[n])=A[n]/C\subset B[n].
+> $
+>
+> **(1) Isotropy of the canonical subgroup $C$ on $A$.** Let $C^\perp\subset A^\vee[n]$ be the annihilator for the perfect Cartier pairing $e_{A,n}:A[n]\times A^\vee[n]\to\mu_n$. Cartier duality applied to the defining exact sequence of $C$ identifies
+>
+> $
+> C^\perp=(A[n]/C)^D.
+> $
+>
+> Put $R_0=R/p^{1-\epsilon}R$ and $A_0=A\otimes_R R_0$. By the defining congruence of the canonical subgroup,
+>
+> $
+> C_{R_0}=\ker F^m_{A_0},\qquad
+> (A[n]/C)_{R_0}\simeq\ker V^m_{A_0}.
+> $
+>
+> Cartier duality commutes with base change, and $(V^m_{A_0})^\vee=F^m_{A_0^\vee}$. Thus
+>
+> $
+> (C^\perp)_{R_0}
+> \simeq(\ker V^m_{A_0})^D
+> =\ker F^m_{A_0^\vee}.
+> $
+>
+> The last identification is the natural one inside $A_0^\vee[n]$ arising from the dual of the isogeny factorization $[n]=V^mF^m$. By **uniqueness of the canonical subgroup lift** and functoriality under $\lambda_A$,
+>
+> $
+> \boxed{C^\perp=C_m(A^\vee)=\lambda_A(C).}
+> $
+>
+> In particular, for the polarized Weil pairing $e_{A,n}^{\lambda_A}(x,y):=e_{A,n}(x,\lambda_A y)$, we have $e_{A,n}^{\lambda_A}|_{C\times C}=1$. Thus $C$ is Lagrangian. This is precisely the duality argument of Remark 3.9.11 in §1: Frobenius–Verschiebung duality is used **only after reduction to characteristic $p$**, and the equality over $R$ is recovered by uniqueness.
+>
+> Consequently the quotient $B=A/C$ has a unique induced principal polarization $\lambda_B$ satisfying
+>
+> $
+> \boxed{q^\vee\lambda_Bq=n\lambda_A.}
+> $
+>
+> **(2) Isotropy of the quotient subgroup $D$ on $B$.** This second assertion is a general fact about polarized isogenies; it does not require canonical-subgroup theory. By functoriality of the perfect Weil pairing under the isogeny $q$,
+>
+> $
+> e_{B,n}(qx,z)=e_{A,n}(x,q^\vee z)
+> \qquad (x\in A[n],\ z\in B^\vee[n]).
+> $
+>
+> Taking $z=\lambda_B(qy)$ for $y\in A[n]$, and using the defining identity for $\lambda_B$, gives
+>
+> $
+> \begin{aligned}
+> e_{B,n}^{\lambda_B}(qx,qy)
+> &=e_{B,n}(qx,\lambda_B(qy))\\
+> &=e_{A,n}(x,q^\vee\lambda_B qy)\\
+> &=e_{A,n}(x,n\lambda_A(y))\\
+> &=e_{A,n}(x,0)=1.
+> \end{aligned}
+> $
+>
+> Since $A[n]\to D$ is fppf-surjective, every pair of sections of $D$ lifts fppf-locally to sections of $A[n]$. Hence this calculation proves the equality of pairings as morphisms of group schemes:
+>
+> $
+> \boxed{e_{B,n}^{\lambda_B}|_{D\times D}=1.}
+> $
+>
+> Moreover, $\operatorname{rank}D=n^{2g}/n^g=n^g$, so $D$ is maximal isotropic (indeed self-annihilating under the principal polarization). On a geometric generic fibre, Proposition 3.9.10 gives $C\simeq(\mathbf Z/n\mathbf Z)^g$ inside $A[n]\simeq(\mathbf Z/n\mathbf Z)^{2g}$. Such a free subgroup is a direct summand, by Smith normal form over $\mathbf Z/p^m\mathbf Z$. Its quotient $D$ is therefore free of rank $g$ over $\mathbf Z/n\mathbf Z$ as well. Thus $D_\eta$ is a Lagrangian subgroup of the required $\Gamma_0(p^m)$-type on **$B_\eta=(A/C_m)_\eta$**, not on $A_\eta$.
+>
+> In summary, isotropy of $C$ is what allows the principal polarization to descend to $B$, whereas isotropy of $D$ is what makes the anticanonical level on $B$ a legitimate Siegel $\Gamma_0(p^m)$-level structure. The latter follows from the single identity $q^\vee\lambda_Bq=n\lambda_A$.
+
 ### 4.2 Open immersion and the anticanonical image
 
 The next point is the geometric heart of the construction: the map $\Phi_{m,\epsilon}$ is **open**. This is not an automatic consequence of a bijection on geometric fibres.
